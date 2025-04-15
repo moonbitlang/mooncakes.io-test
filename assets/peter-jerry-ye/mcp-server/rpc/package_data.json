@@ -1,0 +1,363 @@
+{
+  "name": "peter-jerry-ye/mcp-server/rpc",
+  "traits": [],
+  "types": [
+    {
+      "name": "Id",
+      "docstring": "",
+      "signature": "pub(all) enum Id {\n  String(String)\n  Number(Double)\n}",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server/rpc",
+        "file": "rpc.mbt",
+        "line": 143,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Id",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"peter-jerry-ye/mcp-server/rpc#Id\">Id</a>, <a href=\"peter-jerry-ye/mcp-server/rpc#Id\">Id</a>) -> Bool",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 146,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Id",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Hash", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "hash_combine",
+              "docstring": "automatically derived",
+              "signature": "fn hash_combine(<a href=\"peter-jerry-ye/mcp-server/rpc#Id\">Id</a>, <a href=\"moonbitlang/core/builtin#Hasher\">Hasher</a>) -> Unit",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 146,
+                "column": 20
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Id",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"peter-jerry-ye/mcp-server/rpc#Id\">Id</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 146,
+                "column": 14
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Id",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "",
+              "signature": "fn to_json(self : <a href=\"peter-jerry-ye/mcp-server/rpc#Id\">Id</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 158,
+                "column": 29
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Id",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "",
+              "signature": "fn from_json(json : <a href=\"moonbitlang/core/json#Json\">Json</a>, path : <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"peter-jerry-ye/mcp-server/rpc#Id\">Id</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 149,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Message",
+      "docstring": " https://www.jsonrpc.org/specification",
+      "signature": "pub(all) enum Message {\n  Request(<a href=\"peter-jerry-ye/mcp-server/rpc#Id\">Id</a>, String, <a href=\"moonbitlang/core/builtin#Map\">Map</a>[String, <a href=\"moonbitlang/core/json#Json\">Json</a>])\n  Notification(String, <a href=\"moonbitlang/core/builtin#Map\">Map</a>[String, <a href=\"moonbitlang/core/json#Json\">Json</a>])\n  Response(<a href=\"peter-jerry-ye/mcp-server/rpc#Id\">Id</a>, <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"moonbitlang/core/builtin#Map\">Map</a>[String, <a href=\"moonbitlang/core/json#Json\">Json</a>], <a href=\"peter-jerry-ye/mcp-server/rpc#RPCError\">RPCError</a>])\n}",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server/rpc",
+        "file": "rpc.mbt",
+        "line": 16,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Message",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"peter-jerry-ye/mcp-server/rpc#Message\">Message</a>, <a href=\"peter-jerry-ye/mcp-server/rpc#Message\">Message</a>) -> Bool",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 20,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Message",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"peter-jerry-ye/mcp-server/rpc#Message\">Message</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 20,
+                "column": 14
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Message",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "",
+              "signature": "fn to_json(self : <a href=\"peter-jerry-ye/mcp-server/rpc#Message\">Message</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 81,
+                "column": 34
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Message",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "",
+              "signature": "fn from_json(json : <a href=\"moonbitlang/core/json#Json\">Json</a>, path : <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"peter-jerry-ye/mcp-server/rpc#Message\">Message</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 23,
+                "column": 42
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RPCError",
+      "docstring": "",
+      "signature": "pub(all) struct RPCError {\n  code : Int\n  message : String\n  data : <a href=\"moonbitlang/core/json#Json\">Json</a>?\n}",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server/rpc",
+        "file": "rpc.mbt",
+        "line": 120,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RPCError",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"peter-jerry-ye/mcp-server/rpc#RPCError\">RPCError</a>, <a href=\"peter-jerry-ye/mcp-server/rpc#RPCError\">RPCError</a>) -> Bool",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 124,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RPCError",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"peter-jerry-ye/mcp-server/rpc#RPCError\">RPCError</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 124,
+                "column": 14
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RPCError",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "automatically derived",
+              "signature": "fn to_json(<a href=\"peter-jerry-ye/mcp-server/rpc#RPCError\">RPCError</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 124,
+                "column": 30
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RPCError",
+              "path": "peter-jerry-ye/mcp-server/rpc"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "automatically derived",
+              "signature": "fn from_json(<a href=\"moonbitlang/core/json#Json\">Json</a>, <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"peter-jerry-ye/mcp-server/rpc#RPCError\">RPCError</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/rpc",
+                "file": "rpc.mbt",
+                "line": 124,
+                "column": 20
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

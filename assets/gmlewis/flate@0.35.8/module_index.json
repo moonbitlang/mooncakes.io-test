@@ -1,0 +1,154 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "flate",
+      "package": {
+        "path": "gmlewis/flate",
+        "traits": [
+          {
+            "name": "@gmlewis/flate.Reader",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Buffer", "path": "gmlewis/io" },
+                  "arguments": []
+                },
+                "trait": { "name": "Reader", "path": "gmlewis/flate" },
+                "methods": [ "read", "read_byte" ]
+              }
+            ]
+          }
+        ],
+        "types": [
+          {
+            "name": "Decompressor",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Decompressor",
+                    "path": "gmlewis/flate"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Closer", "path": "gmlewis/io" },
+                "methods": [ "close" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Decompressor",
+                    "path": "gmlewis/flate"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Reader", "path": "gmlewis/io" },
+                "methods": [ "read" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "DictWriter",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "DictWriter",
+                    "path": "gmlewis/flate"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Writer", "path": "gmlewis/io" },
+                "methods": [ "write" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "Writer",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Writer",
+                    "path": "gmlewis/flate"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Closer", "path": "gmlewis/io" },
+                "methods": [ "close" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Writer",
+                    "path": "gmlewis/flate"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Writer", "path": "gmlewis/io" },
+                "methods": [ "write" ]
+              }
+            ],
+            "methods": [ "new", "new_dict" ]
+          }
+        ],
+        "typealias": [],
+        "values": [ "ioeof", "writer_closed_error" ],
+        "misc": [
+          {
+            "name": "Reader",
+            "impls": [
+              {
+                "self": { "name": "Reader", "path": "gmlewis/flate" },
+                "trait": { "name": "ByteReader", "path": "gmlewis/io" },
+                "methods": [ "read_byte" ]
+              },
+              {
+                "self": { "name": "Reader", "path": "gmlewis/flate" },
+                "trait": { "name": "Reader", "path": "gmlewis/io" },
+                "methods": [ "read" ]
+              }
+            ],
+            "methods": [ "new", "new_dict" ]
+          }
+        ]
+      },
+      "childs": [
+        {
+          "name": "decoder",
+          "package": {
+            "path": "gmlewis/flate/decoder",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "utf8" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "encoder",
+          "package": {
+            "path": "gmlewis/flate/encoder",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "utf8" ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

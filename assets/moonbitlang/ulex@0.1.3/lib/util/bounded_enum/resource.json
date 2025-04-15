@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "lib/util/bounded_enum",
+  "module_path": "moonbitlang/ulex",
+  "readme_content": "",
+  "package_data": "moonbitlang/ulex/lib/util/bounded_enum/package_data.json",
+  "source_files": [ "bounded_enum.mbt", "impl_for_char.mbt" ]
+}

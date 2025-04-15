@@ -1,0 +1,21 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "gmlewis/zlib",
+    "version": "0.20.8",
+    "deps": {
+      "gmlewis/flate": "0.35.8",
+      "gmlewis/hash": "0.19.9",
+      "gmlewis/io": "0.22.1"
+    },
+    "readme": "README.md",
+    "repository": "https://github.com/gmlewis/moonbit-zlib",
+    "license": "Apache-2.0",
+    "keywords": [ "zlib", "algorithm", "compress", "moonbit" ],
+    "description": "MoonBit zlib: provide simplified zlib format compressed data."
+  },
+  "readme_content": "# gmlewis/zlib\n[![check](https://github.com/gmlewis/moonbit-zlib/actions/workflows/check.yml/badge.svg)](https://github.com/gmlewis/moonbit-zlib/actions/workflows/check.yml)\n\nThis is a simplified zlib format compressed data package based on Go's implementation:\nhttps://cs.opensource.google/go/go/+/refs/tags/go1.23.3:src/compress/zlib/reader.go\nwhich has the copyright notice:\n\n```\n// Copyright 2009 The Go Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style\n// license that can be found in the LICENSE file.\n```\n\n## Status\n\nThe code has been updated to support compiler:\n\n```bash\n$ moon version --all\nmoon 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moon\nmoonc v0.1.20250410+15d580434 ~/.moon/bin/moonc\nmoonrun 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moonrun\n```\n",
+  "module_index": "gmlewis/zlib/module_index.json",
+  "package_data": "gmlewis/zlib/package_data.json",
+  "source_files": [ "reader.mbt", "writer.mbt" ]
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "alegreya_bolditalic",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/alegreya_bolditalic/package_data.json",
+  "source_files": [ "alegreya_bolditalic.mbt" ]
+}

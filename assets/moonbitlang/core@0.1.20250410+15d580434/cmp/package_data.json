@@ -1,0 +1,31 @@
+{
+  "name": "moonbitlang/core/cmp",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "maximum_by_key",
+      "docstring": " Returns the element that gives the maximum value from the specified function.\n\n Returns the second argument if the comparison determines them to be equal.\n\n # Examples\n\n ```\n inspect!(@cmp.maximum_by_key(-2, 1, @int.abs), content=\"-2\")\n inspect!(@cmp.maximum_by_key(-2, 2, @int.abs), content=\"2\")\n ```",
+      "signature": "fn maximum_by_key[T, K : <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](x : T, y : T, f : (T) -> K) -> T",
+      "loc": {
+        "path": "moonbitlang/core/cmp",
+        "file": "cmp.mbt",
+        "line": 25,
+        "column": 8
+      }
+    },
+    {
+      "name": "minimum_by_key",
+      "docstring": " Returns the element that gives the minimum value from the specified function.\n\n Returns the first argument if the comparison determines them to be equal.\n\n # Examples\n\n ```\n inspect!(@cmp.minimum_by_key(-2, 1, @int.abs), content=\"1\")\n inspect!(@cmp.minimum_by_key(-2, 2, @int.abs), content=\"-2\")\n ```",
+      "signature": "fn minimum_by_key[T, K : <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](x : T, y : T, f : (T) -> K) -> T",
+      "loc": {
+        "path": "moonbitlang/core/cmp",
+        "file": "cmp.mbt",
+        "line": 43,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

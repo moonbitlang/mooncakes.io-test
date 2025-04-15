@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "schema",
+  "module_path": "peter-jerry-ye/mcp-server",
+  "readme_content": "",
+  "package_data": "peter-jerry-ye/mcp-server/schema/package_data.json",
+  "source_files": [ "schema.mbt" ]
+}

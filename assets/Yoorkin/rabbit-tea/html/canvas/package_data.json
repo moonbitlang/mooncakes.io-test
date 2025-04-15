@@ -1,0 +1,396 @@
+{
+  "name": "Yoorkin/rabbit-tea/html/canvas",
+  "traits": [],
+  "types": [
+    {
+      "name": "Color",
+      "docstring": "",
+      "signature": "pub(all) enum Color {\n  RGB(Int, Int, Int)\n  RGBA(Int, Int, Int, Int)\n  Black\n  White\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 37,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "to_string",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Color\">Color</a>::to_string(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Color\">Color</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 45,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Color",
+              "path": "Yoorkin/rabbit-tea/html/canvas"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"Yoorkin/rabbit-tea/html/canvas#Color\">Color</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/html/canvas",
+                "file": "context2d.mbt",
+                "line": 42,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Context2D",
+      "docstring": "",
+      "signature": "type Context2D",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 2,
+        "column": 6
+      },
+      "methods": [
+        {
+          "name": "begin_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::begin_path(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 12,
+            "column": 8
+          }
+        },
+        {
+          "name": "clear_rect",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::clear_rect(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, x : Double, y : Double, width : Double, height : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 76,
+            "column": 8
+          }
+        },
+        {
+          "name": "fill_rect",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::fill_rect(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, x : Double, y : Double, width : Double, height : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 65,
+            "column": 8
+          }
+        },
+        {
+          "name": "fill_text",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::fill_text(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, text : String, x : Double, y : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 87,
+            "column": 8
+          }
+        },
+        {
+          "name": "line_to",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::line_to(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, x : Double, y : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 22,
+            "column": 8
+          }
+        },
+        {
+          "name": "move_to",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::move_to(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, x : Double, y : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 17,
+            "column": 8
+          }
+        },
+        {
+          "name": "set_fill_style",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::set_fill_style(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, color : <a href=\"Yoorkin/rabbit-tea/html/canvas#Color\">Color</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 60,
+            "column": 8
+          }
+        },
+        {
+          "name": "set_line_width",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::set_line_width(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, width : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 27,
+            "column": 8
+          }
+        },
+        {
+          "name": "set_stroke_style",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::set_stroke_style(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, color : <a href=\"Yoorkin/rabbit-tea/html/canvas#Color\">Color</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 55,
+            "column": 8
+          }
+        },
+        {
+          "name": "stroke",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::stroke(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 32,
+            "column": 8
+          }
+        },
+        {
+          "name": "to_unsafe_js",
+          "docstring": " Get the underlying `CanvasRenderingContext2D` js object.\n \n This function is unsafe and should be used rarely.",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>::to_unsafe_js(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">@Yoorkin/rabbit-tea/dom.CanvasRenderingContext2D</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "context2d.mbt",
+            "line": 7,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Model",
+      "docstring": "",
+      "signature": "type Model[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "canvas.mbt",
+        "line": 2,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "context2d",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Model\">Model</a>::context2d[Msg](self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Model\">Model</a>[Msg]) -> <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "canvas.mbt",
+            "line": 8,
+            "column": 8
+          }
+        },
+        {
+          "name": "to_html",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html/canvas#Model\">Model</a>::to_html[Msg](self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Model\">Model</a>[Msg]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">@Yoorkin/rabbit-tea/html.T</a>[Msg]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html/canvas",
+            "file": "canvas.mbt",
+            "line": 62,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "begin_path",
+      "docstring": "",
+      "signature": "fn begin_path(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 12,
+        "column": 8
+      }
+    },
+    {
+      "name": "clear_rect",
+      "docstring": "",
+      "signature": "fn clear_rect(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, x : Double, y : Double, width : Double, height : Double) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 76,
+        "column": 8
+      }
+    },
+    {
+      "name": "context2d",
+      "docstring": "",
+      "signature": "fn context2d[Msg](self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Model\">Model</a>[Msg]) -> <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "canvas.mbt",
+        "line": 8,
+        "column": 8
+      }
+    },
+    {
+      "name": "fill_rect",
+      "docstring": "",
+      "signature": "fn fill_rect(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, x : Double, y : Double, width : Double, height : Double) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 65,
+        "column": 8
+      }
+    },
+    {
+      "name": "fill_text",
+      "docstring": "",
+      "signature": "fn fill_text(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, text : String, x : Double, y : Double) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 87,
+        "column": 8
+      }
+    },
+    {
+      "name": "line_to",
+      "docstring": "",
+      "signature": "fn line_to(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, x : Double, y : Double) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 22,
+        "column": 8
+      }
+    },
+    {
+      "name": "move_to",
+      "docstring": "",
+      "signature": "fn move_to(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, x : Double, y : Double) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 17,
+        "column": 8
+      }
+    },
+    {
+      "name": "new",
+      "docstring": "",
+      "signature": "fn new[Msg](width~ : Double, height~ : Double, click? : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">@Yoorkin/rabbit-tea/html.Mouse</a>) -> Msg, mousemove? : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">@Yoorkin/rabbit-tea/html.Mouse</a>) -> Msg, mousedown? : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">@Yoorkin/rabbit-tea/html.Mouse</a>) -> Msg, mouseup? : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">@Yoorkin/rabbit-tea/html.Mouse</a>) -> Msg, mouseenter? : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">@Yoorkin/rabbit-tea/html.Mouse</a>) -> Msg, mouseleave? : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">@Yoorkin/rabbit-tea/html.Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html/canvas#Model\">Model</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "canvas.mbt",
+        "line": 13,
+        "column": 8
+      }
+    },
+    {
+      "name": "set_fill_style",
+      "docstring": "",
+      "signature": "fn set_fill_style(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, color : <a href=\"Yoorkin/rabbit-tea/html/canvas#Color\">Color</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 60,
+        "column": 8
+      }
+    },
+    {
+      "name": "set_line_width",
+      "docstring": "",
+      "signature": "fn set_line_width(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, width : Double) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 27,
+        "column": 8
+      }
+    },
+    {
+      "name": "set_stroke_style",
+      "docstring": "",
+      "signature": "fn set_stroke_style(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>, color : <a href=\"Yoorkin/rabbit-tea/html/canvas#Color\">Color</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 55,
+        "column": 8
+      }
+    },
+    {
+      "name": "stroke",
+      "docstring": "",
+      "signature": "fn stroke(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 32,
+        "column": 8
+      }
+    },
+    {
+      "name": "to_html",
+      "docstring": "",
+      "signature": "fn to_html[Msg](self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Model\">Model</a>[Msg]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">@Yoorkin/rabbit-tea/html.T</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "canvas.mbt",
+        "line": 62,
+        "column": 8
+      }
+    },
+    {
+      "name": "to_string",
+      "docstring": "",
+      "signature": "fn to_string(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Color\">Color</a>) -> String",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 45,
+        "column": 8
+      }
+    },
+    {
+      "name": "to_unsafe_js",
+      "docstring": " Get the underlying `CanvasRenderingContext2D` js object.\n \n This function is unsafe and should be used rarely.",
+      "signature": "fn to_unsafe_js(self : <a href=\"Yoorkin/rabbit-tea/html/canvas#Context2D\">Context2D</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">@Yoorkin/rabbit-tea/dom.CanvasRenderingContext2D</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html/canvas",
+        "file": "context2d.mbt",
+        "line": 7,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

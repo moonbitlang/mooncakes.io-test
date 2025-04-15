@@ -1,0 +1,109 @@
+{
+  "name": "illusory0x0",
+  "package": null,
+  "childs": [
+    {
+      "name": "adapton",
+      "package": {
+        "path": "illusory0x0/adapton",
+        "traits": [ { "name": "@illusory0x0/adapton.Source", "impls": [] } ],
+        "types": [
+          {
+            "name": "Cell",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Cell",
+                    "path": "illusory0x0/adapton"
+                  },
+                  "arguments": [ { "kind": "param", "name": "A" } ]
+                },
+                "trait": { "name": "Source", "path": "illusory0x0/adapton" },
+                "methods": [ "id", "incoming_edges", "to_node" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Cell",
+                    "path": "illusory0x0/adapton"
+                  },
+                  "arguments": [ { "kind": "param", "name": "A" } ]
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Cell",
+                    "path": "illusory0x0/adapton"
+                  },
+                  "arguments": [ { "kind": "param", "name": "A" } ]
+                },
+                "trait": {
+                  "name": "Hash",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "hash_combine" ]
+              }
+            ],
+            "methods": [ "get", "modify", "new", "set" ]
+          },
+          {
+            "name": "Thunk",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Thunk",
+                    "path": "illusory0x0/adapton"
+                  },
+                  "arguments": [ { "kind": "param", "name": "A" } ]
+                },
+                "trait": { "name": "Source", "path": "illusory0x0/adapton" },
+                "methods": [ "id", "incoming_edges", "to_node" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Thunk",
+                    "path": "illusory0x0/adapton"
+                  },
+                  "arguments": [ { "kind": "param", "name": "A" } ]
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Thunk",
+                    "path": "illusory0x0/adapton"
+                  },
+                  "arguments": [ { "kind": "param", "name": "A" } ]
+                },
+                "trait": {
+                  "name": "Hash",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "hash_combine" ]
+              }
+            ],
+            "methods": [ "get", "new" ]
+          }
+        ],
+        "typealias": [],
+        "values": [ "clear_memo", "memo", "memo_rec" ],
+        "misc": []
+      },
+      "childs": []
+    }
+  ]
+}

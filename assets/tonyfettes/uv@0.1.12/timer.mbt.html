@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+type Timer
+
+///|
+pub impl ToHandle for Timer with to_handle(self : Timer) -> Handle = "%identity"
+
+///|
+pub impl ToHandle for Timer with of_handle(self : Handle) -> Timer = "%identity"
+
+///|
+extern "c" fn uv_timer_make() -> Timer = "moonbit_uv_timer_make"
+
+///|
+extern "c" fn uv_timer_init(self : Loop, timer : Timer) -> Int = "moonbit_uv_timer_init"
+
+///|
+pub fn Timer::new(self : Loop) -> Timer!Errno {
+  let timer = uv_timer_make()
+  let status = uv_timer_init(self, timer)
+  if status < 0 {
+    raise Errno::of_int(status)
+  }
+  return timer
+}
+
+///|
+extern "c" fn uv_timer_start(
+  timer : Timer,
+  cb : (Timer) -> Unit,
+  // We shall never use Int/UInt for time, even in MoonBit.
+  timeout : UInt64,
+  repeat : UInt64
+) -> Int = "moonbit_uv_timer_start"
+
+///|
+pub fn Timer::start(
+  self : Timer,
+  timeout~ : UInt64,
+  repeat~ : UInt64,
+  cb : (Timer) -> Unit
+) -> Unit!Errno {
+  let status = uv_timer_start(self, cb, timeout, repeat)
+  if status < 0 {
+    raise Errno::of_int(status)
+  }
+}
+
+///|
+extern "c" fn uv_timer_stop(timer : Timer) -> Int = "moonbit_uv_timer_stop"
+
+///|
+pub fn Timer::stop(self : Timer) -> Unit!Errno {
+  let status = uv_timer_stop(self)
+  if status < 0 {
+    raise Errno::of_int(status)
+  }
+}
+
+///|
+extern "c" fn uv_timer_set_repeat(timer : Timer, repeat : UInt64) -> Unit = "moonbit_uv_timer_set_repeat"
+
+///|
+pub fn Timer::set_repeat(self : Timer, repeat : UInt64) -> Unit {
+  uv_timer_set_repeat(self, repeat)
+}
+
+///|
+extern "c" fn uv_timer_get_repeat(timer : Timer) -> UInt64 = "moonbit_uv_timer_get_repeat"
+
+///|
+pub fn Timer::get_repeat(self : Timer) -> UInt64 {
+  uv_timer_get_repeat(self)
+}
+
+///|
+extern "c" fn uv_timer_get_due_in(timer : Timer) -> UInt64 = "moonbit_uv_timer_get_due_in"
+
+///|
+pub fn Timer::get_due_in(self : Timer) -> UInt64 {
+  uv_timer_get_due_in(self)
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

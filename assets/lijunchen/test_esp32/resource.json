@@ -1,0 +1,24 @@
+{
+  "kind": "module",
+  "meta_info": {
+    "name": "lijunchen/test_esp32",
+    "version": "0.1.9",
+    "readme": "README.md",
+    "repository": "",
+    "license": "Apache-2.0",
+    "keywords": [
+      "mooncakes-test"
+    ],
+    "description": "",
+    "source": "src",
+    "scripts": {
+      "postadd": "python3 build.py"
+    }
+  },
+  "readme_content": "# username/hello",
+  "module_index": "lijunchen/test_esp32/module_index.json",
+  "publish_list": [
+    "0.1.8",
+    "0.1.9"
+  ]
+}

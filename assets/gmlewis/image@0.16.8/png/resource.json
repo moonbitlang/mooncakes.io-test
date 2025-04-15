@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "png",
+  "module_path": "gmlewis/image",
+  "readme_content": "",
+  "package_data": "gmlewis/image/png/package_data.json",
+  "source_files": [ "reader.mbt", "writer.mbt", "bufio.mbt", "paeth.mbt" ]
+}

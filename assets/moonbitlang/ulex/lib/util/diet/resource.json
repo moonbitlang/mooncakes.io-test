@@ -1,0 +1,11 @@
+{
+  "kind": "package",
+  "relative_path": "lib/util/diet",
+  "module_path": "moonbitlang/ulex",
+  "readme_content": "",
+  "package_data": "moonbitlang/ulex/lib/util/diet/package_data.json",
+  "source_files": [
+    "iter.mbt", "traits_impl.mbt", "wbt.mbt", "ops.mbt", "builders.mbt",
+    "util.mbt", "types.mbt", "inorder_iterator.mbt", "slice.mbt"
+  ]
+}

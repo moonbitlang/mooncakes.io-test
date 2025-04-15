@@ -1,0 +1,92 @@
+{
+  "name": "Yoorkin/rabbit-tea/http",
+  "traits": [],
+  "types": [
+    {
+      "name": "Body",
+      "docstring": "",
+      "signature": "pub(all) enum Body {\n  Json(<a href=\"moonbitlang/core/json#Json\">Json</a>)\n  Text(String)\n  Empty\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/http",
+        "file": "http.mbt",
+        "line": 11,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Expecting",
+      "docstring": "",
+      "signature": "pub(all) enum Expecting[Msg, Model] {\n  Json((<a href=\"moonbitlang/core/result#Result\">Result</a>[Model, String]) -> Msg, (<a href=\"moonbitlang/core/json#Json\">Json</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Model, String])\n  Text((<a href=\"moonbitlang/core/result#Result\">Result</a>[String, String]) -> Msg)\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/http",
+        "file": "http.mbt",
+        "line": 5,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [
+    {
+      "name": "Decoder",
+      "docstring": " ",
+      "signature": "type Decoder[Model] = (<a href=\"moonbitlang/core/json#Json\">Json</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Model, String]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/http",
+        "file": "http.mbt",
+        "line": 2,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "delete",
+      "docstring": " Create a command to send a PUT request.",
+      "signature": "fn delete[Msg, Model](url : String, expect~ : <a href=\"Yoorkin/rabbit-tea/http#Expecting\">Expecting</a>[Msg, Model]) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/http",
+        "file": "http.mbt",
+        "line": 118,
+        "column": 8
+      }
+    },
+    {
+      "name": "get",
+      "docstring": " Create a command to send a GET request.",
+      "signature": "fn get[Msg, Model](url : String, expect~ : <a href=\"Yoorkin/rabbit-tea/http#Expecting\">Expecting</a>[Msg, Model]) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/http",
+        "file": "http.mbt",
+        "line": 110,
+        "column": 8
+      }
+    },
+    {
+      "name": "patch",
+      "docstring": " Create a command to send a PATCH request.",
+      "signature": "fn patch[Msg, Model](url : String, body : <a href=\"Yoorkin/rabbit-tea/http#Body\">Body</a>, expect~ : <a href=\"Yoorkin/rabbit-tea/http#Expecting\">Expecting</a>[Msg, Model]) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/http",
+        "file": "http.mbt",
+        "line": 135,
+        "column": 8
+      }
+    },
+    {
+      "name": "post",
+      "docstring": " Create a command to send a POST request.",
+      "signature": "fn post[Msg, Model](url : String, body : <a href=\"Yoorkin/rabbit-tea/http#Body\">Body</a>, expect~ : <a href=\"Yoorkin/rabbit-tea/http#Expecting\">Expecting</a>[Msg, Model]) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/http",
+        "file": "http.mbt",
+        "line": 126,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

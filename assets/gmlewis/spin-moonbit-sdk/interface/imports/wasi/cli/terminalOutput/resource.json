@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/cli/terminalOutput",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "Terminal output.\n\nIn the future, this may include functions for querying the terminal\nsize, being notified of terminal size changes, querying supported\nfeatures, and so on.",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput/package_data.json",
+  "source_files": [ "top.mbt" ]
+}

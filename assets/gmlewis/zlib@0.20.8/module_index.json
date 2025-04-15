@@ -1,0 +1,76 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "zlib",
+      "package": {
+        "path": "gmlewis/zlib",
+        "traits": [ { "name": "@gmlewis/zlib.Resetter", "impls": [] } ],
+        "types": [
+          {
+            "name": "Reader",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Reader", "path": "gmlewis/zlib" },
+                  "arguments": []
+                },
+                "trait": { "name": "Closer", "path": "gmlewis/io" },
+                "methods": [ "close" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Reader", "path": "gmlewis/zlib" },
+                  "arguments": []
+                },
+                "trait": { "name": "Reader", "path": "gmlewis/io" },
+                "methods": [ "read" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Reader", "path": "gmlewis/zlib" },
+                  "arguments": []
+                },
+                "trait": { "name": "Resetter", "path": "gmlewis/zlib" },
+                "methods": [ "reset" ]
+              }
+            ],
+            "methods": [ "new", "new_dict" ]
+          },
+          {
+            "name": "Writer",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Writer", "path": "gmlewis/zlib" },
+                  "arguments": []
+                },
+                "trait": { "name": "Closer", "path": "gmlewis/io" },
+                "methods": [ "close" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Writer", "path": "gmlewis/zlib" },
+                  "arguments": []
+                },
+                "trait": { "name": "Writer", "path": "gmlewis/io" },
+                "methods": [ "write" ]
+              }
+            ],
+            "methods": [ "flush", "new", "new_dict", "reset" ]
+          }
+        ],
+        "typealias": [],
+        "values": [ "err_checksum", "err_dictionary", "err_header", "flush" ],
+        "misc": []
+      },
+      "childs": []
+    }
+  ]
+}

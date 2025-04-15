@@ -1,0 +1,20 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/instanceNetwork",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "instance_network",
+      "docstring": "\n Get a handle to the default network.",
+      "signature": "fn instance_network() -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network#Network\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network.Network</a>",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/instanceNetwork",
+        "file": "top.mbt",
+        "line": 5,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

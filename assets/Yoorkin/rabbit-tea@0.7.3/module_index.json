@@ -1,0 +1,995 @@
+{
+  "name": "Yoorkin",
+  "package": null,
+  "childs": [
+    {
+      "name": "rabbit-tea",
+      "package": {
+        "path": "Yoorkin/rabbit-tea",
+        "traits": [],
+        "types": [],
+        "typealias": [ "Cmd", "Command" ],
+        "values": [
+          "application", "attempt", "batch", "none", "perform", "startup",
+          "task"
+        ],
+        "misc": []
+      },
+      "childs": [
+        {
+          "name": "cmd",
+          "package": {
+            "path": "Yoorkin/rabbit-tea/cmd",
+            "traits": [],
+            "types": [
+              { "name": "Cmd", "impls": [], "methods": [ "map" ] },
+              {
+                "name": "Events",
+                "impls": [],
+                "methods": [
+                  "new", "trigger_update", "trigger_url_changed",
+                  "trigger_url_request"
+                ]
+              }
+            ],
+            "typealias": [ "Command" ],
+            "values": [
+              "attempt", "batch", "map", "none", "perform", "task"
+            ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "dialog",
+          "package": {
+            "path": "Yoorkin/rabbit-tea/dialog",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "close", "request_close", "show" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "dom",
+          "package": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "traits": [],
+            "types": [
+              {
+                "name": "CanvasGradient",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "CanvasGradient",
+                        "path": "Yoorkin/rabbit-tea/dom"
+                      },
+                      "arguments": []
+                    },
+                    "trait": { "name": "Cast", "path": "rami3l/js-ffi/js" },
+                    "methods": [ "from", "into" ]
+                  }
+                ],
+                "methods": [ "add_color_stop" ]
+              },
+              { "name": "CanvasLineCap", "impls": [], "methods": [] },
+              { "name": "CanvasLineJoin", "impls": [], "methods": [] },
+              {
+                "name": "CanvasPattern",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "CanvasPattern",
+                        "path": "Yoorkin/rabbit-tea/dom"
+                      },
+                      "arguments": []
+                    },
+                    "trait": { "name": "Cast", "path": "rami3l/js-ffi/js" },
+                    "methods": [ "from", "into" ]
+                  }
+                ],
+                "methods": [ "set_transform" ]
+              },
+              {
+                "name": "CanvasRenderingContext2D",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "CanvasRenderingContext2D",
+                        "path": "Yoorkin/rabbit-tea/dom"
+                      },
+                      "arguments": []
+                    },
+                    "trait": { "name": "Cast", "path": "rami3l/js-ffi/js" },
+                    "methods": [ "from", "into" ]
+                  }
+                ],
+                "methods": [
+                  "arc", "arc_to", "begin_path", "bezier_curve_to",
+                  "clear_rect", "clip", "clip_with_path", "close_path",
+                  "create_image_data", "create_image_data_with_data",
+                  "create_linear_gradient", "create_radial_gradient",
+                  "draw_image", "draw_image_with_size",
+                  "draw_image_with_src_and_dst_size", "ellipse", "fill",
+                  "fill_path", "fill_rect", "fill_text", "get_fill_style",
+                  "get_image_data", "get_image_smoothing_quality",
+                  "get_line_cap", "get_line_join", "get_line_with",
+                  "get_stroke_style", "image_smoothing_enabled",
+                  "is_context_lost", "is_point_in_path",
+                  "is_point_in_path_with_path", "is_point_in_stroke",
+                  "is_point_in_stroke_with_path", "line_to", "move_to",
+                  "put_image_data", "put_image_data_with_dirty",
+                  "quardratic_curve_to", "rect", "reset", "reset_transform",
+                  "restore", "rotate", "round_rect", "save", "scale",
+                  "set_fill_style", "set_image_smoothing_quality",
+                  "set_line_cap", "set_line_join", "set_line_width",
+                  "set_stroke_style", "set_transform", "stroke",
+                  "stroke_rect", "stroke_text", "stroke_with_path",
+                  "transform", "translate"
+                ]
+              },
+              {
+                "name": "ClipboardEvent",
+                "impls": [],
+                "methods": [ "clipboard_data" ]
+              },
+              { "name": "DOMMatrix2DInit", "impls": [], "methods": [] },
+              {
+                "name": "DOMRect",
+                "impls": [],
+                "methods": [
+                  "get_bottom", "get_height", "get_left", "get_right",
+                  "get_top", "get_width", "get_x", "get_y"
+                ]
+              },
+              {
+                "name": "DataTransfer",
+                "impls": [],
+                "methods": [
+                  "drop_effect", "effect_allowed", "items", "set_drog_image"
+                ]
+              },
+              {
+                "name": "DataTransferItemList",
+                "impls": [],
+                "methods": [ "add", "clear", "length", "op_get", "remove" ]
+              },
+              {
+                "name": "Document",
+                "impls": [],
+                "methods": [
+                  "create_document_fragment", "create_element",
+                  "create_text_node", "get_element_by_id", "to_node"
+                ]
+              },
+              {
+                "name": "DocumentFragment",
+                "impls": [],
+                "methods": [ "to_node" ]
+              },
+              {
+                "name": "Element",
+                "impls": [],
+                "methods": [
+                  "append_children", "children", "get_attribute",
+                  "get_bounding_client_rect", "get_property",
+                  "remove_attribute", "remove_children", "remove_property",
+                  "scroll_into_view", "set_attribute", "set_inner_html",
+                  "set_property", "to_html_element", "to_node"
+                ]
+              },
+              {
+                "name": "Event",
+                "impls": [],
+                "methods": [
+                  "prevent_default", "stop_propagation", "target",
+                  "to_clipboard_event", "to_ui_event"
+                ]
+              },
+              {
+                "name": "EventTarget",
+                "impls": [],
+                "methods": [
+                  "add_event_listener", "dispatch_event",
+                  "remove_event_listener", "to_node"
+                ]
+              },
+              {
+                "name": "FocusEvent",
+                "impls": [],
+                "methods": [ "related_target" ]
+              },
+              { "name": "GPUCanvasContext", "impls": [], "methods": [] },
+              {
+                "name": "HTMLCanvasElement",
+                "impls": [],
+                "methods": [
+                  "get_context", "get_height", "get_width", "to_html_element"
+                ]
+              },
+              {
+                "name": "HTMLDialogElement",
+                "impls": [],
+                "methods": [
+                  "close", "open", "request_close", "return_value", "show",
+                  "show_modal"
+                ]
+              },
+              {
+                "name": "HTMLElement",
+                "impls": [],
+                "methods": [
+                  "remove_style", "set_style", "to_element",
+                  "to_html_canvas_element", "to_html_dialog_element",
+                  "to_html_input_element", "to_html_select_element"
+                ]
+              },
+              {
+                "name": "HTMLInputElement",
+                "impls": [],
+                "methods": [ "value" ]
+              },
+              {
+                "name": "HTMLSelectElement",
+                "impls": [],
+                "methods": [ "value" ]
+              },
+              {
+                "name": "ImageBitmapRenderingContext",
+                "impls": [],
+                "methods": []
+              },
+              {
+                "name": "ImageData",
+                "impls": [],
+                "methods": [
+                  "get_color_space", "get_data", "get_height", "get_width",
+                  "new", "new_with_data"
+                ]
+              },
+              {
+                "name": "ImageDataSettings",
+                "impls": [],
+                "methods": [ "new" ]
+              },
+              {
+                "name": "InputEvent",
+                "impls": [],
+                "methods": [ "data", "input_type", "is_composing" ]
+              },
+              {
+                "name": "KeyboardEvent",
+                "impls": [],
+                "methods": [
+                  "alt_key", "code", "ctrl_key", "is_composing", "key",
+                  "location", "meta_key", "repeat", "shift_key"
+                ]
+              },
+              {
+                "name": "MouseEvent",
+                "impls": [],
+                "methods": [
+                  "client_x", "client_y", "offset_x", "offset_y", "screen_x",
+                  "screen_y"
+                ]
+              },
+              {
+                "name": "Node",
+                "impls": [],
+                "methods": [
+                  "append_child", "count_child", "first_child",
+                  "insert_before", "last_child", "next_sibling", "node_name",
+                  "node_type", "node_value", "nth_child", "parent_node",
+                  "previous_sibling", "remove_child", "replace_child",
+                  "to_document", "to_document_fragment", "to_element",
+                  "to_event_target", "to_text"
+                ]
+              },
+              {
+                "name": "Path2D",
+                "impls": [],
+                "methods": [ "add_path", "new" ]
+              },
+              { "name": "Text", "impls": [], "methods": [ "to_node" ] },
+              {
+                "name": "UIEvent",
+                "impls": [],
+                "methods": [
+                  "to_event", "to_focus_event", "to_input_event",
+                  "to_keyboard_event", "to_mouse_event"
+                ]
+              },
+              { "name": "Uint8ClampedArray", "impls": [], "methods": [] },
+              {
+                "name": "WebGL2RenderingContext",
+                "impls": [],
+                "methods": []
+              },
+              { "name": "WebGLRenderingContext", "impls": [], "methods": [] },
+              {
+                "name": "Window",
+                "impls": [],
+                "methods": [
+                  "alert", "confirm", "current_url", "history_go_back",
+                  "history_go_forward", "load_url", "push_url", "reload_url",
+                  "replace_url", "request_animination_frame", "scroll_by",
+                  "scroll_to", "scroll_to_bottom", "scroll_to_top",
+                  "to_event_target"
+                ]
+              }
+            ],
+            "typealias": [ "Listener", "PredefinedColorSpace" ],
+            "values": [
+              "DOM_KEY_LOCATION_LEFT", "DOM_KEY_LOCATION_NUMPAD",
+              "DOM_KEY_LOCATION_RIGHT", "DOM_KEY_LOCATION_STANDARD",
+              "add_event_listener", "append_child", "count_child",
+              "create_document_fragment", "create_element",
+              "create_text_node", "current_url", "dispatch_event",
+              "document", "first_child", "get_element_by_id",
+              "history_go_back", "history_go_forward", "insert_before",
+              "last_child", "load_url", "next_sibling", "node_name",
+              "node_type", "node_value", "nth_child", "parent_node",
+              "previous_sibling", "push_url", "reload_url", "remove_child",
+              "remove_event_listener", "replace_child", "replace_url",
+              "request_animination_frame", "scroll_by", "scroll_to",
+              "scroll_to_bottom", "scroll_to_top", "to_document",
+              "to_document_fragment", "to_element", "to_event_target",
+              "to_node", "to_text", "window"
+            ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "example",
+          "package": null,
+          "childs": [
+            {
+              "name": "async",
+              "package": {
+                "path": "Yoorkin/rabbit-tea/example/async",
+                "traits": [],
+                "types": [
+                  { "name": "Message", "impls": [], "methods": [] },
+                  { "name": "Model", "impls": [], "methods": [] }
+                ],
+                "typealias": [],
+                "values": [ "suspend" ],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "canvas",
+              "package": {
+                "path": "Yoorkin/rabbit-tea/example/canvas",
+                "traits": [],
+                "types": [
+                  { "name": "Drawing", "impls": [], "methods": [] },
+                  { "name": "Message", "impls": [], "methods": [] },
+                  { "name": "Model", "impls": [], "methods": [] }
+                ],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "counter",
+              "package": {
+                "path": "Yoorkin/rabbit-tea/example/counter",
+                "traits": [],
+                "types": [ { "name": "Msg", "impls": [], "methods": [] } ],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "custom_command",
+              "package": {
+                "path": "Yoorkin/rabbit-tea/example/custom_command",
+                "traits": [],
+                "types": [
+                  { "name": "Message", "impls": [], "methods": [] },
+                  { "name": "Model", "impls": [], "methods": [] }
+                ],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "dialog",
+              "package": {
+                "path": "Yoorkin/rabbit-tea/example/dialog",
+                "traits": [],
+                "types": [ { "name": "Msg", "impls": [], "methods": [] } ],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "form",
+              "package": {
+                "path": "Yoorkin/rabbit-tea/example/form",
+                "traits": [],
+                "types": [ { "name": "Msg", "impls": [], "methods": [] } ],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "todoMVC",
+              "package": {
+                "path": "Yoorkin/rabbit-tea/example/todoMVC",
+                "traits": [],
+                "types": [
+                  {
+                    "name": "Message",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Message",
+                            "path": "Yoorkin/rabbit-tea/example/todoMVC"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": []
+                  },
+                  { "name": "Model", "impls": [], "methods": [] }
+                ],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": [
+                {
+                  "name": "editor",
+                  "package": {
+                    "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Card",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Card",
+                                "path": "Yoorkin/rabbit-tea/example/todoMVC/editor"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      { "name": "Model", "impls": [], "methods": [] },
+                      {
+                        "name": "Msg",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Msg",
+                                "path": "Yoorkin/rabbit-tea/example/todoMVC/editor"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [ "decode_card", "load", "update", "view" ],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "home",
+                  "package": {
+                    "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "CardModel",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "CardModel",
+                                "path": "Yoorkin/rabbit-tea/example/todoMVC/home"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "Model",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Model",
+                                "path": "Yoorkin/rabbit-tea/example/todoMVC/home"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "Msg",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Msg",
+                                "path": "Yoorkin/rabbit-tea/example/todoMVC/home"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [ "load", "update", "view" ],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "views",
+                  "package": {
+                    "path": "Yoorkin/rabbit-tea/example/todoMVC/views",
+                    "traits": [],
+                    "types": [],
+                    "typealias": [],
+                    "values": [ "button" ],
+                    "misc": []
+                  },
+                  "childs": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "html",
+          "package": {
+            "path": "Yoorkin/rabbit-tea/html",
+            "traits": [],
+            "types": [
+              { "name": "Attribute", "impls": [], "methods": [] },
+              { "name": "AutoComplete", "impls": [], "methods": [] },
+              { "name": "InputType", "impls": [], "methods": [] },
+              {
+                "name": "Mouse",
+                "impls": [],
+                "methods": [ "client_pos", "offset_pos", "screen_pos" ]
+              },
+              { "name": "Pos", "impls": [], "methods": [] },
+              { "name": "Scope", "impls": [], "methods": [] },
+              {
+                "name": "T",
+                "impls": [],
+                "methods": [ "map", "to_virtual_dom" ]
+              },
+              { "name": "Target", "impls": [], "methods": [] }
+            ],
+            "typealias": [ "Html" ],
+            "values": [
+              "a", "attribute", "b", "blockquote", "br", "button", "caption",
+              "code", "col", "colgroup", "dd", "dialog", "div", "dl", "dt",
+              "em", "external", "form", "h1", "h2", "h3", "h4", "h5", "h6",
+              "hr", "href", "i", "iframe", "img", "input", "label", "li",
+              "map", "node", "nothing", "ol", "on_change", "on_click",
+              "on_double_click", "on_input", "on_mouse_down",
+              "on_mouse_enter", "on_mouse_leave", "on_mouse_move",
+              "on_mouse_out", "on_mouse_over", "on_mouse_up", "option", "p",
+              "pre", "property", "section", "select", "span", "strong",
+              "style", "sub", "sup", "table", "target", "tbody", "td",
+              "text", "tfoot", "th", "thead", "to_virtual_dom", "tr", "u",
+              "ul"
+            ],
+            "misc": []
+          },
+          "childs": [
+            {
+              "name": "canvas",
+              "package": {
+                "path": "Yoorkin/rabbit-tea/html/canvas",
+                "traits": [],
+                "types": [
+                  {
+                    "name": "Color",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Color",
+                            "path": "Yoorkin/rabbit-tea/html/canvas"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": [ "to_string" ]
+                  },
+                  {
+                    "name": "Context2D",
+                    "impls": [],
+                    "methods": [
+                      "begin_path", "clear_rect", "fill_rect", "fill_text",
+                      "line_to", "move_to", "set_fill_style",
+                      "set_line_width", "set_stroke_style", "stroke",
+                      "to_unsafe_js"
+                    ]
+                  },
+                  {
+                    "name": "Model",
+                    "impls": [],
+                    "methods": [ "context2d", "to_html" ]
+                  }
+                ],
+                "typealias": [],
+                "values": [
+                  "begin_path", "clear_rect", "context2d", "fill_rect",
+                  "fill_text", "line_to", "move_to", "new", "set_fill_style",
+                  "set_line_width", "set_stroke_style", "stroke", "to_html",
+                  "to_string", "to_unsafe_js"
+                ],
+                "misc": []
+              },
+              "childs": []
+            }
+          ]
+        },
+        {
+          "name": "http",
+          "package": {
+            "path": "Yoorkin/rabbit-tea/http",
+            "traits": [],
+            "types": [
+              { "name": "Body", "impls": [], "methods": [] },
+              { "name": "Expecting", "impls": [], "methods": [] }
+            ],
+            "typealias": [ "Decoder" ],
+            "values": [ "delete", "get", "patch", "post" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "nav",
+          "package": {
+            "path": "Yoorkin/rabbit-tea/nav",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [
+              "back", "forward", "load", "push_url", "reload", "replace_url",
+              "scroll_by_pos", "scroll_to", "scroll_to_bottom",
+              "scroll_to_pos", "scroll_to_top"
+            ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "url",
+          "package": {
+            "path": "Yoorkin/rabbit-tea/url",
+            "traits": [],
+            "types": [
+              {
+                "name": "Protocol",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Protocol",
+                        "path": "Yoorkin/rabbit-tea/url"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Compare",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "compare" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Protocol",
+                        "path": "Yoorkin/rabbit-tea/url"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Protocol",
+                        "path": "Yoorkin/rabbit-tea/url"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "Url",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Url",
+                        "path": "Yoorkin/rabbit-tea/url"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Compare",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "compare" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Url",
+                        "path": "Yoorkin/rabbit-tea/url"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Url",
+                        "path": "Yoorkin/rabbit-tea/url"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "to_string" ]
+              },
+              {
+                "name": "UrlRequest",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "UrlRequest",
+                        "path": "Yoorkin/rabbit-tea/url"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Compare",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "compare" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "UrlRequest",
+                        "path": "Yoorkin/rabbit-tea/url"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "UrlRequest",
+                        "path": "Yoorkin/rabbit-tea/url"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": []
+              }
+            ],
+            "typealias": [],
+            "values": [ "parse", "to_string" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "variant",
+          "package": {
+            "path": "Yoorkin/rabbit-tea/variant",
+            "traits": [],
+            "types": [
+              {
+                "name": "Variant",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Variant",
+                        "path": "Yoorkin/rabbit-tea/variant"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Compare",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "compare" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Variant",
+                        "path": "Yoorkin/rabbit-tea/variant"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Variant",
+                        "path": "Yoorkin/rabbit-tea/variant"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Hash",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "hash_combine" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Variant",
+                        "path": "Yoorkin/rabbit-tea/variant"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": []
+              }
+            ],
+            "typealias": [],
+            "values": [],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

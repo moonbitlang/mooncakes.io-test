@@ -1,0 +1,343 @@
+{
+  "name": "moonbitlang/ulex/lib/automaton",
+  "traits": [],
+  "types": [
+    {
+      "name": "DFA",
+      "docstring": "",
+      "signature": "pub(all) struct DFA {\n  graph : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">@moonbitlang/ulex/lib/util/eof_char_set.EofCharSet</a>, (Int, <a href=\"moonbitlang/ulex/lib/automaton#TagAction\">TagAction</a>))]]\n  end_nodes : <a href=\"moonbitlang/core/builtin#Map\">Map</a>[Int, (Int, <a href=\"moonbitlang/core/array#Array\">Array</a>[((Int, Int), (Int, Int))])]\n  code_blocks : <a href=\"moonbitlang/core/array#Array\">Array</a>[String]\n  captures : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[(String, <a href=\"moonbitlang/ulex/lib/type#VarType\">@moonbitlang/ulex/lib/type.VarType</a>)]]\n  start_action : <a href=\"moonbitlang/ulex/lib/automaton#TagAction\">TagAction</a>\n  node_count : Int\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/automaton",
+        "file": "dfa.mbt",
+        "line": 68,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from_rule",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/automaton#DFA\">DFA</a>::from_rule(rule : <a href=\"moonbitlang/ulex/lib/type#Rule\">@moonbitlang/ulex/lib/type.Rule</a>) -> <a href=\"moonbitlang/ulex/lib/automaton#DFA\">DFA</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/automaton",
+            "file": "dfa.mbt",
+            "line": 287,
+            "column": 13
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "DFA",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/automaton#DFA\">DFA</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "dfa.mbt",
+                "line": 76,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Input",
+      "docstring": "",
+      "signature": "pub(all) enum Input {\n  Eps\n  EChar(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">@moonbitlang/ulex/lib/util/eof_char_set.EofCharSet</a>)\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/automaton",
+        "file": "nfa.mbt",
+        "line": 2,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Input",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"moonbitlang/ulex/lib/automaton#Input\">Input</a>, <a href=\"moonbitlang/ulex/lib/automaton#Input\">Input</a>) -> Bool",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "nfa.mbt",
+                "line": 5,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Input",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Hash", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "hash_combine",
+              "docstring": "automatically derived",
+              "signature": "fn hash_combine(<a href=\"moonbitlang/ulex/lib/automaton#Input\">Input</a>, <a href=\"moonbitlang/core/builtin#Hasher\">Hasher</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "nfa.mbt",
+                "line": 5,
+                "column": 14
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Input",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/automaton#Input\">Input</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "nfa.mbt",
+                "line": 5,
+                "column": 20
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NFA",
+      "docstring": "",
+      "signature": "pub(all) struct NFA {\n  graph : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/ulex/lib/automaton#NFANode\">NFANode</a>]\n  end_nodes : <a href=\"moonbitlang/core/builtin#Map\">Map</a>[Int, Int]\n  code_blocks : <a href=\"moonbitlang/core/array#Array\">Array</a>[String]\n  captures : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[((String, <a href=\"moonbitlang/ulex/lib/type#VarType\">@moonbitlang/ulex/lib/type.VarType</a>), (Int, Int))]]\n  node_count : Int\n  tag_count : Int\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/automaton",
+        "file": "nfa.mbt",
+        "line": 11,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from_rule",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/automaton#NFA\">NFA</a>::from_rule(rule : <a href=\"moonbitlang/ulex/lib/type#Rule\">@moonbitlang/ulex/lib/type.Rule</a>) -> <a href=\"moonbitlang/ulex/lib/automaton#NFA\">NFA</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/automaton",
+            "file": "nfa.mbt",
+            "line": 55,
+            "column": 13
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NFA",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/automaton#NFA\">NFA</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "nfa.mbt",
+                "line": 18,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NFANode",
+      "docstring": "",
+      "signature": "pub(all) struct NFANode {\n  num : Int\n  eps : <a href=\"moonbitlang/core/immut/sorted_set#T\">@moonbitlang/core/immut/sorted_set.T</a>[(<a href=\"moonbitlang/ulex/lib/automaton#NFANode\">NFANode</a>, Int?)]\n  trans : <a href=\"moonbitlang/core/array#Array\">Array</a>[(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">@moonbitlang/ulex/lib/util/eof_char_set.EofCharSet</a>, (<a href=\"moonbitlang/ulex/lib/automaton#NFANode\">NFANode</a>, Int?))]\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/automaton",
+        "file": "nfa.mbt",
+        "line": 21,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NFANode",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Compare", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "compare",
+              "docstring": "",
+              "signature": "fn compare(self : <a href=\"moonbitlang/ulex/lib/automaton#NFANode\">NFANode</a>, other : <a href=\"moonbitlang/ulex/lib/automaton#NFANode\">NFANode</a>) -> Int",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "nfa.mbt",
+                "line": 33,
+                "column": 35
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NFANode",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "",
+              "signature": "fn op_equal(self : <a href=\"moonbitlang/ulex/lib/automaton#NFANode\">NFANode</a>, other : <a href=\"moonbitlang/ulex/lib/automaton#NFANode\">NFANode</a>) -> Bool",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "nfa.mbt",
+                "line": 28,
+                "column": 30
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NFANode",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Hash", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "hash_combine",
+              "docstring": "",
+              "signature": "fn hash_combine(self : <a href=\"moonbitlang/ulex/lib/automaton#NFANode\">NFANode</a>, hasher : <a href=\"moonbitlang/core/builtin#Hasher\">Hasher</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "nfa.mbt",
+                "line": 38,
+                "column": 32
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NFANode",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/automaton#NFANode\">NFANode</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "nfa.mbt",
+                "line": 25,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TagAction",
+      "docstring": "",
+      "signature": "pub(all) type TagAction <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[Int]]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/automaton",
+        "file": "dfa.mbt",
+        "line": 5,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "TagAction",
+              "path": "moonbitlang/ulex/lib/automaton"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/automaton#TagAction\">TagAction</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "file": "dfa.mbt",
+                "line": 5,
+                "column": 50
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

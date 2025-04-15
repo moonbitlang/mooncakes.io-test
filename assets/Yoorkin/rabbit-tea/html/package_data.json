@@ -1,0 +1,953 @@
+{
+  "name": "Yoorkin/rabbit-tea/html",
+  "traits": [],
+  "types": [
+    {
+      "name": "Attribute",
+      "docstring": "",
+      "signature": "type Attribute[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "attributes.mbt",
+        "line": 2,
+        "column": 6
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "AutoComplete",
+      "docstring": "",
+      "signature": "pub(all) enum AutoComplete {\n  On\n  Off\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 517,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "InputType",
+      "docstring": "",
+      "signature": "pub(all) enum InputType {\n  Button\n  Checkbox\n  Color\n  Date\n  DateTimeLocal\n  Email\n  File\n  Hidden\n  Image\n  Month\n  Number\n  Password\n  Radio\n  Range\n  Reset\n  Search\n  Submit\n  Tel\n  Text\n  Time\n  Url\n  Week\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 491,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Mouse",
+      "docstring": "",
+      "signature": "type Mouse",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 2,
+        "column": 6
+      },
+      "methods": [
+        {
+          "name": "client_pos",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>::client_pos(self : <a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> <a href=\"Yoorkin/rabbit-tea/html#Pos\">Pos</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html",
+            "file": "event.mbt",
+            "line": 21,
+            "column": 15
+          }
+        },
+        {
+          "name": "offset_pos",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>::offset_pos(self : <a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> <a href=\"Yoorkin/rabbit-tea/html#Pos\">Pos</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html",
+            "file": "event.mbt",
+            "line": 16,
+            "column": 15
+          }
+        },
+        {
+          "name": "screen_pos",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>::screen_pos(self : <a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> <a href=\"Yoorkin/rabbit-tea/html#Pos\">Pos</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html",
+            "file": "event.mbt",
+            "line": 11,
+            "column": 15
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Pos",
+      "docstring": "",
+      "signature": "pub(all) struct Pos {\n  x : Int\n  y : Int\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 5,
+        "column": 17
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Scope",
+      "docstring": "",
+      "signature": "pub(all) enum Scope {\n  Row\n  Col\n  RowGroup\n  ColGroup\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 853,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 2,
+        "column": 6
+      },
+      "methods": [
+        {
+          "name": "map",
+          "docstring": " Convert msg type of Html.\n \n This is a expensive operation and should be used rarely.",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>::map[A, B](self : <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[A], f : (A) -> B) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[B]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html",
+            "file": "html.mbt",
+            "line": 10,
+            "column": 8
+          }
+        },
+        {
+          "name": "to_virtual_dom",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>::to_virtual_dom[Msg](self : <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[Msg]) -> <a href=\"Yoorkin/rabbit-tea/internal/vdom#Node\">@Yoorkin/rabbit-tea/internal/vdom.Node</a>[Msg]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/html",
+            "file": "html.mbt",
+            "line": 15,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Target",
+      "docstring": "",
+      "signature": "pub(all) enum Target {\n  Self\n  Blank\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "attributes.mbt",
+        "line": 27,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [
+    {
+      "name": "Html",
+      "docstring": "",
+      "signature": "type Html[Msg] = <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 5,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "a",
+      "docstring": " Create `a` element.\n \n The `escape` parameter is an optional boolean that determines whether the link \n should be escaped. By default, it is set to `false`. \n \n When `escape` is set to `true`, clicking the escaped link will cause the browser \n to immediately navigate to the `href` target, bypassing any interception logic. \n As a result, the `UrlRequest` message will not be triggered.",
+      "signature": "fn a[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, href~ : String, target~ : <a href=\"Yoorkin/rabbit-tea/html#Target\">Target</a> = .., childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]], escape~ : Bool = ..) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 218,
+        "column": 8
+      }
+    },
+    {
+      "name": "attribute",
+      "docstring": "",
+      "signature": "fn attribute[Msg](key : String, value : String) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "attributes.mbt",
+        "line": 10,
+        "column": 8
+      }
+    },
+    {
+      "name": "b",
+      "docstring": "",
+      "signature": "fn b[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 284,
+        "column": 8
+      }
+    },
+    {
+      "name": "blockquote",
+      "docstring": "",
+      "signature": "fn blockquote[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 179,
+        "column": 8
+      }
+    },
+    {
+      "name": "br",
+      "docstring": "",
+      "signature": "fn br[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 482,
+        "column": 8
+      }
+    },
+    {
+      "name": "button",
+      "docstring": "",
+      "signature": "fn button[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, click? : M, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 57,
+        "column": 8
+      }
+    },
+    {
+      "name": "caption",
+      "docstring": "",
+      "signature": "fn caption[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 760,
+        "column": 8
+      }
+    },
+    {
+      "name": "code",
+      "docstring": "",
+      "signature": "fn code[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 244,
+        "column": 8
+      }
+    },
+    {
+      "name": "col",
+      "docstring": "",
+      "signature": "fn col[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, span? : Int, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 790,
+        "column": 8
+      }
+    },
+    {
+      "name": "colgroup",
+      "docstring": "",
+      "signature": "fn colgroup[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, span? : Int, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 805,
+        "column": 8
+      }
+    },
+    {
+      "name": "dd",
+      "docstring": "",
+      "signature": "fn dd[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 407,
+        "column": 8
+      }
+    },
+    {
+      "name": "dialog",
+      "docstring": " Dialog element. \n \n Hint: You can use the `show` and `close` commands in the `@dialog` package\n to manipulate the dialog.\n\n # Attributes\n \n - `open`: indicates whether the dialog is open or closed by default.\n \n # Messages\n \n - `close`: triggered when the dialog is closed. \n   \n   The string payload of the `close` message is the return value of the dialog.\n \n - `cancel`: triggered when the user instructs the browser that they wish to \n   dismiss the current open dialog.\n \n   It can be triggered when the user presses `esc` or uses the `request_close` command.\n \n   If the `cancel` argument is provided, **the dialog will not close automatically** \n   after this message is triggered. You can use the `@dialog.close` command \n   to close it or `@cmd.none` to keep it open.\n \n # Example\n \n ```\n typealias Model = String\n \n enum Msg {\n   Open\n   Closed(String)\n   YesNo(Bool)\n }\n \n fn update(msg : Msg, model : Model) -> (Cmd[Msg], Model) {\n   match msg {\n     Open => (@dialog.show(\"confirm\"), model)\n     YesNo(answer) => (@dialog.close(\"confirm\", return_value=answer.to_string()), model) \n     Closed(value) => (none(), value)\n   }\n }\n \n fn view(model : Model) -> Html[Msg] {\n   div([\n     h1([text(model)]),\n     button(click=Msg::Open, [text(\"open\")]),\n     dialog(id=\"confirm\", close=Msg::Closed, [\n       p([text(\"Are you sure?\")]),\n       button(click=YesNo(true), [text(\"Yes\")]),\n       button(click=YesNo(false), [text(\"No\")]),\n     ]),\n   ])\n }\n ```\n ",
+      "signature": "fn dialog[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, open? : Bool, close? : (String) -> M, cancel? : M, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 967,
+        "column": 8
+      }
+    },
+    {
+      "name": "div",
+      "docstring": "",
+      "signature": "fn div[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, click? : M, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 134,
+        "column": 8
+      }
+    },
+    {
+      "name": "dl",
+      "docstring": "",
+      "signature": "fn dl[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 387,
+        "column": 8
+      }
+    },
+    {
+      "name": "dt",
+      "docstring": "",
+      "signature": "fn dt[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 397,
+        "column": 8
+      }
+    },
+    {
+      "name": "em",
+      "docstring": "",
+      "signature": "fn em[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 254,
+        "column": 8
+      }
+    },
+    {
+      "name": "external",
+      "docstring": "",
+      "signature": "fn external[Msg](node : <a href=\"Yoorkin/rabbit-tea/dom#Node\">@Yoorkin/rabbit-tea/dom.Node</a>, attrs : <a href=\"moonbitlang/core/ref#Ref\">Ref</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]]?], width~ : Int, height~ : Int) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 737,
+        "column": 8
+      }
+    },
+    {
+      "name": "form",
+      "docstring": "",
+      "signature": "fn form[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, action? : String, name? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 523,
+        "column": 8
+      }
+    },
+    {
+      "name": "h1",
+      "docstring": "",
+      "signature": "fn h1[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 72,
+        "column": 8
+      }
+    },
+    {
+      "name": "h2",
+      "docstring": "",
+      "signature": "fn h2[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 82,
+        "column": 8
+      }
+    },
+    {
+      "name": "h3",
+      "docstring": "",
+      "signature": "fn h3[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 92,
+        "column": 8
+      }
+    },
+    {
+      "name": "h4",
+      "docstring": "",
+      "signature": "fn h4[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 102,
+        "column": 8
+      }
+    },
+    {
+      "name": "h5",
+      "docstring": "",
+      "signature": "fn h5[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 112,
+        "column": 8
+      }
+    },
+    {
+      "name": "h6",
+      "docstring": "",
+      "signature": "fn h6[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 122,
+        "column": 8
+      }
+    },
+    {
+      "name": "hr",
+      "docstring": "",
+      "signature": "fn hr[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]] = ..) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 159,
+        "column": 8
+      }
+    },
+    {
+      "name": "href",
+      "docstring": "",
+      "signature": "fn href[Msg](value : String) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "attributes.mbt",
+        "line": 20,
+        "column": 8
+      }
+    },
+    {
+      "name": "i",
+      "docstring": "",
+      "signature": "fn i[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 274,
+        "column": 8
+      }
+    },
+    {
+      "name": "iframe",
+      "docstring": "",
+      "signature": "fn iframe[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, src? : String, title? : String, width? : Int, height? : Int) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 454,
+        "column": 8
+      }
+    },
+    {
+      "name": "img",
+      "docstring": "",
+      "signature": "fn img[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, src? : String, alt? : String, title? : String, width? : Int, height? : Int, border? : Int, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 419,
+        "column": 8
+      }
+    },
+    {
+      "name": "input",
+      "docstring": "",
+      "signature": "fn input[M](input_type~ : <a href=\"Yoorkin/rabbit-tea/html#InputType\">InputType</a> = .., name? : String, value? : String, checked? : Bool, read_only? : Bool, multiple? : Bool, accept? : String, placeholder? : String, auto_complete? : <a href=\"Yoorkin/rabbit-tea/html#AutoComplete\">AutoComplete</a>, style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., max? : Int, min? : Int, step? : Int, maxlength? : Int, minlength? : Int, pattern? : String, size? : Int, width? : Int, height? : Int, id? : String, class? : String, childrens~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]] = .., change? : (String) -> M, input? : (String) -> M) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 557,
+        "column": 8
+      }
+    },
+    {
+      "name": "label",
+      "docstring": "",
+      "signature": "fn label[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, for_? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 542,
+        "column": 8
+      }
+    },
+    {
+      "name": "li",
+      "docstring": "",
+      "signature": "fn li[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., value? : Int, id? : String, class? : String, click? : M, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 368,
+        "column": 8
+      }
+    },
+    {
+      "name": "map",
+      "docstring": " Convert msg type of Html.\n \n This is a expensive operation and should be used rarely.",
+      "signature": "fn map[A, B](self : <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[A], f : (A) -> B) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[B]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 10,
+        "column": 8
+      }
+    },
+    {
+      "name": "node",
+      "docstring": " ",
+      "signature": "fn node[Msg](tag : String, attributes : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]], childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[Msg]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 21,
+        "column": 8
+      }
+    },
+    {
+      "name": "nothing",
+      "docstring": " Represents an empty element",
+      "signature": "fn nothing[M]() -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 52,
+        "column": 8
+      }
+    },
+    {
+      "name": "ol",
+      "docstring": " Notice that the `type` attribute for `ol` is not important for the browser now.\n If you want to change the type of the list, you should use the `list-style-type` property in CSS.",
+      "signature": "fn ol[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., reversed? : Bool, start? : Int, id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 347,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_change",
+      "docstring": "",
+      "signature": "fn on_change[Msg](msg : (String) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 75,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_click",
+      "docstring": "",
+      "signature": "fn on_click[Msg](msg : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 44,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_double_click",
+      "docstring": "",
+      "signature": "fn on_double_click[Msg](msg : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 104,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_input",
+      "docstring": "",
+      "signature": "fn on_input[Msg](msg : (String) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 49,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_mouse_down",
+      "docstring": "",
+      "signature": "fn on_mouse_down[Msg](msg : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 109,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_mouse_enter",
+      "docstring": "",
+      "signature": "fn on_mouse_enter[Msg](msg : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 124,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_mouse_leave",
+      "docstring": "",
+      "signature": "fn on_mouse_leave[Msg](msg : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 134,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_mouse_move",
+      "docstring": "",
+      "signature": "fn on_mouse_move[Msg](msg : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 119,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_mouse_out",
+      "docstring": "",
+      "signature": "fn on_mouse_out[Msg](msg : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 139,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_mouse_over",
+      "docstring": "",
+      "signature": "fn on_mouse_over[Msg](msg : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 129,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_mouse_up",
+      "docstring": "",
+      "signature": "fn on_mouse_up[Msg](msg : (<a href=\"Yoorkin/rabbit-tea/html#Mouse\">Mouse</a>) -> Msg) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "event.mbt",
+        "line": 114,
+        "column": 8
+      }
+    },
+    {
+      "name": "option",
+      "docstring": "",
+      "signature": "fn option[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, disabled? : Bool, value? : String, selected~ : Bool = .., childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 705,
+        "column": 8
+      }
+    },
+    {
+      "name": "p",
+      "docstring": "",
+      "signature": "fn p[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 149,
+        "column": 8
+      }
+    },
+    {
+      "name": "pre",
+      "docstring": "",
+      "signature": "fn pre[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 169,
+        "column": 8
+      }
+    },
+    {
+      "name": "property",
+      "docstring": "",
+      "signature": "fn property[M](key : String, value : <a href=\"Yoorkin/rabbit-tea/variant#Variant\">@Yoorkin/rabbit-tea/variant.Variant</a>) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "attributes.mbt",
+        "line": 15,
+        "column": 8
+      }
+    },
+    {
+      "name": "section",
+      "docstring": "",
+      "signature": "fn section[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 189,
+        "column": 8
+      }
+    },
+    {
+      "name": "select",
+      "docstring": "",
+      "signature": "fn select[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, disabled? : Bool, name? : String, change? : (String) -> M, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 672,
+        "column": 8
+      }
+    },
+    {
+      "name": "span",
+      "docstring": "",
+      "signature": "fn span[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 201,
+        "column": 8
+      }
+    },
+    {
+      "name": "strong",
+      "docstring": "",
+      "signature": "fn strong[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 264,
+        "column": 8
+      }
+    },
+    {
+      "name": "style",
+      "docstring": " Specify an style",
+      "signature": "fn style[Msg](key : String, value : String) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "attributes.mbt",
+        "line": 5,
+        "column": 8
+      }
+    },
+    {
+      "name": "sub",
+      "docstring": "",
+      "signature": "fn sub[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 304,
+        "column": 8
+      }
+    },
+    {
+      "name": "sup",
+      "docstring": "",
+      "signature": "fn sup[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 314,
+        "column": 8
+      }
+    },
+    {
+      "name": "table",
+      "docstring": "",
+      "signature": "fn table[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 750,
+        "column": 8
+      }
+    },
+    {
+      "name": "target",
+      "docstring": "",
+      "signature": "fn target[Msg](value : <a href=\"Yoorkin/rabbit-tea/html#Target\">Target</a>) -> <a href=\"Yoorkin/rabbit-tea/html#Attribute\">Attribute</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "attributes.mbt",
+        "line": 41,
+        "column": 8
+      }
+    },
+    {
+      "name": "tbody",
+      "docstring": "",
+      "signature": "fn tbody[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 780,
+        "column": 8
+      }
+    },
+    {
+      "name": "td",
+      "docstring": "",
+      "signature": "fn td[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, colspan? : Int, rowspan? : Int, headers? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 830,
+        "column": 8
+      }
+    },
+    {
+      "name": "text",
+      "docstring": "",
+      "signature": "fn text[Msg](str : String) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 324,
+        "column": 8
+      }
+    },
+    {
+      "name": "tfoot",
+      "docstring": "",
+      "signature": "fn tfoot[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 902,
+        "column": 8
+      }
+    },
+    {
+      "name": "th",
+      "docstring": "",
+      "signature": "fn th[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, abbr? : String, colspan? : Int, rowspan? : Int, headers? : String, scope? : <a href=\"Yoorkin/rabbit-tea/html#Scope\">Scope</a>, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 861,
+        "column": 8
+      }
+    },
+    {
+      "name": "thead",
+      "docstring": "",
+      "signature": "fn thead[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 770,
+        "column": 8
+      }
+    },
+    {
+      "name": "to_virtual_dom",
+      "docstring": "",
+      "signature": "fn to_virtual_dom[Msg](self : <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[Msg]) -> <a href=\"Yoorkin/rabbit-tea/internal/vdom#Node\">@Yoorkin/rabbit-tea/internal/vdom.Node</a>[Msg]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 15,
+        "column": 8
+      }
+    },
+    {
+      "name": "tr",
+      "docstring": "",
+      "signature": "fn tr[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 820,
+        "column": 8
+      }
+    },
+    {
+      "name": "u",
+      "docstring": "",
+      "signature": "fn u[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 294,
+        "column": 8
+      }
+    },
+    {
+      "name": "ul",
+      "docstring": "",
+      "signature": "fn ul[M](style~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[String] = .., id? : String, class? : String, click? : M, childrens : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/html#T\">T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/html",
+        "file": "html.mbt",
+        "line": 331,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

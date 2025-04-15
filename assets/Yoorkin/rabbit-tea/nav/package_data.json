@@ -1,0 +1,130 @@
+{
+  "name": "Yoorkin/rabbit-tea/nav",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "back",
+      "docstring": " Create a command to go back in history. \n This will cause the page to reload.",
+      "signature": "fn back[M]() -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "navigation.mbt",
+        "line": 3,
+        "column": 8
+      }
+    },
+    {
+      "name": "forward",
+      "docstring": " Create a command to go forward in history. \n This will cause the page to reload.",
+      "signature": "fn forward[M]() -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "navigation.mbt",
+        "line": 9,
+        "column": 8
+      }
+    },
+    {
+      "name": "load",
+      "docstring": " Create a command to load a new URL. \n This will cause the page to reload.",
+      "signature": "fn load[M](url : String) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "navigation.mbt",
+        "line": 15,
+        "column": 8
+      }
+    },
+    {
+      "name": "push_url",
+      "docstring": " Create a command to push a new URL to history but not trigger a page load.\n \n This will trigger the `url_changed` message.",
+      "signature": "fn push_url[M](url : String) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "navigation.mbt",
+        "line": 27,
+        "column": 8
+      }
+    },
+    {
+      "name": "reload",
+      "docstring": " Create a command to reload the current url.",
+      "signature": "fn reload[M]() -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "navigation.mbt",
+        "line": 20,
+        "column": 8
+      }
+    },
+    {
+      "name": "replace_url",
+      "docstring": " Create a command to change the URL but not trigger a page load.\n \n This will trigger the `url_changed` message.",
+      "signature": "fn replace_url[M](url : String) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "navigation.mbt",
+        "line": 38,
+        "column": 8
+      }
+    },
+    {
+      "name": "scroll_by_pos",
+      "docstring": " Create a command to scroll the window by a specific amount.",
+      "signature": "fn scroll_by_pos[M](x : Int, y : Int) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "scroll.mbt",
+        "line": 7,
+        "column": 8
+      }
+    },
+    {
+      "name": "scroll_to",
+      "docstring": " Create a command to scroll the window to a specific element.\n The element is specified by its id.",
+      "signature": "fn scroll_to[M](element : String) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "scroll.mbt",
+        "line": 13,
+        "column": 8
+      }
+    },
+    {
+      "name": "scroll_to_bottom",
+      "docstring": " Create a command to scroll the window to the bottom.",
+      "signature": "fn scroll_to_bottom[M]() -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "scroll.mbt",
+        "line": 28,
+        "column": 8
+      }
+    },
+    {
+      "name": "scroll_to_pos",
+      "docstring": " Create a command to scroll the window to a specific position.",
+      "signature": "fn scroll_to_pos[M](x : Int, y : Int) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "scroll.mbt",
+        "line": 2,
+        "column": 8
+      }
+    },
+    {
+      "name": "scroll_to_top",
+      "docstring": " Create a command to scroll the window to the top.",
+      "signature": "fn scroll_to_top[M]() -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/nav",
+        "file": "scroll.mbt",
+        "line": 23,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,1948 @@
+{
+  "name": "gmlewis/image/color",
+  "traits": [
+    {
+      "name": "@gmlewis/image/color.Color",
+      "docstring": "\n Color can convert itself to alpha-premultiplied 16-bits per channel RGBA.\n The conversion may be lossy.",
+      "signature": "pub(open) trait @gmlewis/image/color.Color {\n  rgba(Self) -> (UInt, UInt, UInt, UInt)\n  model(Self) -> String\n  raw(Self) -> (UInt, UInt, UInt, UInt)\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 13,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@gmlewis/image/color.Model",
+      "docstring": "\n Model can convert any [&Color] to one from its own color model. The conversion\n may be lossy.",
+      "signature": "pub(open) trait @gmlewis/image/color.Model {\n  convert(Self, <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#Color\">Color</a>\n  name(Self) -> String\n  get_palette(Self) -> <a href=\"gmlewis/image/color#Palette\">Palette</a>?\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 335,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [
+    {
+      "name": "Alpha",
+      "docstring": "\n Alpha represents an 8-bit alpha color.",
+      "signature": "pub(all) struct Alpha {\n  a : Byte\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 209,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Alpha\">Alpha</a>::from(c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#Alpha\">Alpha</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 498,
+            "column": 15
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Alpha\">Alpha</a>::new(a : Byte) -> <a href=\"gmlewis/image/color#Alpha\">Alpha</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 218,
+            "column": 15
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Alpha", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#Alpha\">Alpha</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 223,
+                "column": 31
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#Alpha\">Alpha</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 228,
+                "column": 31
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#Alpha\">Alpha</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 234,
+                "column": 31
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Alpha", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#Alpha\">Alpha</a>, <a href=\"gmlewis/image/color#Alpha\">Alpha</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 211,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Alpha", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#Alpha\">Alpha</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 211,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alpha16",
+      "docstring": "\n Alpha16 represents a 16-bit alpha color.",
+      "signature": "pub(all) struct Alpha16 {\n  a : UInt\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 241,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>::from(c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 514,
+            "column": 17
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>::new(a : UInt) -> <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 250,
+            "column": 17
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Alpha16",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 255,
+                "column": 33
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 260,
+                "column": 33
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 265,
+                "column": 33
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Alpha16",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>, <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 243,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Alpha16",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 243,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CMYK",
+      "docstring": "\n CMYK represents a fully opaque CMYK color, having 8 bits for each of cyan,\n magenta, yellow and black.\n\n It is not associated with any particular color profile.",
+      "signature": "pub(all) struct CMYK {\n  c : Byte\n  m : Byte\n  y : Byte\n  k : Byte\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 430,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#CMYK\">CMYK</a>::from(c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#CMYK\">CMYK</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "ycbcr.mbt",
+            "line": 478,
+            "column": 14
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#CMYK\">CMYK</a>::new(c : Byte, m : Byte, y : Byte, k : Byte) -> <a href=\"gmlewis/image/color#CMYK\">CMYK</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "ycbcr.mbt",
+            "line": 442,
+            "column": 14
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "CMYK", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#CMYK\">CMYK</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 447,
+                "column": 30
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#CMYK\">CMYK</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 452,
+                "column": 30
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#CMYK\">CMYK</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 457,
+                "column": 30
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "CMYK", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#CMYK\">CMYK</a>, <a href=\"gmlewis/image/color#CMYK\">CMYK</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 435,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "CMYK", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#CMYK\">CMYK</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 435,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gray",
+      "docstring": "\n Gray represents an 8-bit grayscale color.",
+      "signature": "pub(all) struct Gray {\n  y : Byte\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 271,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Gray\">Gray</a>::from(c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#Gray\">Gray</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 529,
+            "column": 14
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Gray\">Gray</a>::new(y : Byte) -> <a href=\"gmlewis/image/color#Gray\">Gray</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 280,
+            "column": 14
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Gray", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#Gray\">Gray</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 285,
+                "column": 30
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#Gray\">Gray</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 290,
+                "column": 30
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#Gray\">Gray</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 296,
+                "column": 30
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Gray", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#Gray\">Gray</a>, <a href=\"gmlewis/image/color#Gray\">Gray</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 273,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Gray", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#Gray\">Gray</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 273,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gray16",
+      "docstring": "\n Gray16 represents a 16-bit grayscale color.",
+      "signature": "pub(all) struct Gray16 {\n  y : UInt\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 303,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Gray16\">Gray16</a>::from(c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#Gray16\">Gray16</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 555,
+            "column": 16
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Gray16\">Gray16</a>::new(y : UInt) -> <a href=\"gmlewis/image/color#Gray16\">Gray16</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 312,
+            "column": 16
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Gray16",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#Gray16\">Gray16</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 317,
+                "column": 32
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#Gray16\">Gray16</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 322,
+                "column": 32
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#Gray16\">Gray16</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 328,
+                "column": 32
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Gray16",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#Gray16\">Gray16</a>, <a href=\"gmlewis/image/color#Gray16\">Gray16</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 305,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Gray16",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#Gray16\">Gray16</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 305,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ModelFunc",
+      "docstring": "",
+      "signature": "type ModelFunc",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 358,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "ModelFunc",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Model", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "convert",
+              "docstring": "",
+              "signature": "fn convert(self : <a href=\"gmlewis/image/color#ModelFunc\">ModelFunc</a>, c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#Color\">Color</a>",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 365,
+                "column": 35
+              }
+            },
+            {
+              "name": "get_palette",
+              "docstring": "",
+              "signature": "fn get_palette(self : <a href=\"gmlewis/image/color#ModelFunc\">ModelFunc</a>) -> <a href=\"gmlewis/image/color#Palette\">Palette</a>?",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 375,
+                "column": 35
+              }
+            },
+            {
+              "name": "name",
+              "docstring": "",
+              "signature": "fn name(self : <a href=\"gmlewis/image/color#ModelFunc\">ModelFunc</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 370,
+                "column": 35
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NRGBA",
+      "docstring": "\n NRGBA represents a non-alpha-premultiplied 32-bit color.",
+      "signature": "pub(all) struct NRGBA {\n  r : Byte\n  g : Byte\n  b : Byte\n  a : Byte\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 128,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>::from(c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 444,
+            "column": 15
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>::new(r : Byte, g : Byte, b : Byte, a : Byte) -> <a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 140,
+            "column": 15
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "NRGBA", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 145,
+                "column": 31
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 150,
+                "column": 31
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 155,
+                "column": 31
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "NRGBA", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>, <a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 133,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "NRGBA", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#NRGBA\">NRGBA</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 133,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NRGBA64",
+      "docstring": "\n NRGBA64 represents a non-alpha-premultiplied 64-bit color,\n having 16 bits for each of red, green, blue and alpha.",
+      "signature": "pub(all) struct NRGBA64 {\n  r : UInt\n  g : UInt\n  b : UInt\n  a : UInt\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 173,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>::from(c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 473,
+            "column": 17
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>::new(r : UInt, g : UInt, b : UInt, a : UInt) -> <a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 185,
+            "column": 17
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NRGBA64",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 190,
+                "column": 33
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 195,
+                "column": 33
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 200,
+                "column": 33
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NRGBA64",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>, <a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 178,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NRGBA64",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#NRGBA64\">NRGBA64</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 178,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NYCbCrA",
+      "docstring": "\n NYCbCrA represents a non-alpha-premultiplied Y'CbCr-with-alpha color, having\n 8 bits each for one luma, two chroma and one alpha component.",
+      "signature": "pub(all) struct NYCbCrA {\n  y : Byte\n  cb : Byte\n  cr : Byte\n  a : Byte\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 277,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#NYCbCrA\">NYCbCrA</a>::new(y : Byte, cb : Byte, cr : Byte, a : Byte) -> <a href=\"gmlewis/image/color#NYCbCrA\">NYCbCrA</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "ycbcr.mbt",
+            "line": 289,
+            "column": 17
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NYCbCrA",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#NYCbCrA\">NYCbCrA</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 294,
+                "column": 33
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#NYCbCrA\">NYCbCrA</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 299,
+                "column": 33
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#NYCbCrA\">NYCbCrA</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 304,
+                "column": 33
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NYCbCrA",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#NYCbCrA\">NYCbCrA</a>, <a href=\"gmlewis/image/color#NYCbCrA\">NYCbCrA</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 282,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "NYCbCrA",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#NYCbCrA\">NYCbCrA</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 282,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Palette",
+      "docstring": "\n Palette is a palette of colors and satisfies the Model trait.",
+      "signature": "pub(all) type Palette <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[<a href=\"gmlewis/image/color#Color\">Color</a>]",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 576,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "\n Palette::from makes a new palette from the provided colors.",
+          "signature": "fn <a href=\"gmlewis/image/color#Palette\">Palette</a>::from(arr : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/image/color#Color\">Color</a>]) -> <a href=\"gmlewis/image/color#Palette\">Palette</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 603,
+            "column": 17
+          }
+        },
+        {
+          "name": "index",
+          "docstring": "\n index returns the index of the palette color closest to c in Euclidean\n R,G,B,A space.",
+          "signature": "fn <a href=\"gmlewis/image/color#Palette\">Palette</a>::index(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>, c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> Int",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 645,
+            "column": 8
+          }
+        },
+        {
+          "name": "length",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Palette\">Palette</a>::length(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>) -> Int",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 623,
+            "column": 8
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "\n Palette::new makes a new palette with `n` colors (initially all black).",
+          "signature": "fn <a href=\"gmlewis/image/color#Palette\">Palette</a>::new(n : Int) -> <a href=\"gmlewis/image/color#Palette\">Palette</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 583,
+            "column": 17
+          }
+        },
+        {
+          "name": "new_empty",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Palette\">Palette</a>::new_empty() -> <a href=\"gmlewis/image/color#Palette\">Palette</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 618,
+            "column": 17
+          }
+        },
+        {
+          "name": "op_as_view",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Palette\">Palette</a>::op_as_view(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>, start~ : Int = .., end~ : Int) -> <a href=\"gmlewis/image/color#Palette\">Palette</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 628,
+            "column": 8
+          }
+        },
+        {
+          "name": "op_get",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Palette\">Palette</a>::op_get(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>, idx : Int) -> <a href=\"gmlewis/image/color#Color\">Color</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 597,
+            "column": 8
+          }
+        },
+        {
+          "name": "op_set",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Palette\">Palette</a>::op_set(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>, idx : Int, c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 592,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Palette",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Model", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "convert",
+              "docstring": "\n convert returns the palette color closest to c in Euclidean R,G,B space.",
+              "signature": "fn convert(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>, c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#Color\">Color</a>",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 634,
+                "column": 33
+              }
+            },
+            {
+              "name": "get_palette",
+              "docstring": "",
+              "signature": "fn get_palette(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>) -> <a href=\"gmlewis/image/color#Palette\">Palette</a>?",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 613,
+                "column": 33
+              }
+            },
+            {
+              "name": "name",
+              "docstring": "",
+              "signature": "fn name(_self : <a href=\"gmlewis/image/color#Palette\">Palette</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 608,
+                "column": 33
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RGBA",
+      "docstring": "\n RGBA represents a traditional 32-bit alpha-premultiplied color, having 8\n bits for each of red, green, blue and alpha.\n\n An alpha-premultiplied color component C has been scaled by alpha (A), so\n has valid values 0 <= C <= A.",
+      "signature": "pub(all) struct RGBA {\n  r : Byte\n  g : Byte\n  b : Byte\n  a : Byte\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 54,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#RGBA\">RGBA</a>::from(c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#RGBA\">RGBA</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 410,
+            "column": 14
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#RGBA\">RGBA</a>::new(r : Byte, g : Byte, b : Byte, a : Byte) -> <a href=\"gmlewis/image/color#RGBA\">RGBA</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 66,
+            "column": 14
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "RGBA", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#RGBA\">RGBA</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 71,
+                "column": 30
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#RGBA\">RGBA</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 76,
+                "column": 30
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#RGBA\">RGBA</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 81,
+                "column": 30
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "RGBA", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#RGBA\">RGBA</a>, <a href=\"gmlewis/image/color#RGBA\">RGBA</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 59,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "RGBA", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#RGBA\">RGBA</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 59,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RGBA64",
+      "docstring": "\n RGBA64 represents a 64-bit alpha-premultiplied color, having 16 bits for\n each of red, green, blue and alpha.\n\n An alpha-premultiplied color component C has been scaled by alpha (A), so\n has valid values 0 <= C <= A.",
+      "signature": "pub(all) struct RGBA64 {\n  r : UInt\n  g : UInt\n  b : UInt\n  a : UInt\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 95,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>::from(c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 429,
+            "column": 16
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>::new(r : UInt, g : UInt, b : UInt, a : UInt) -> <a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 107,
+            "column": 16
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RGBA64",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 112,
+                "column": 32
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 117,
+                "column": 32
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 122,
+                "column": 32
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RGBA64",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>, <a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 100,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RGBA64",
+              "path": "gmlewis/image/color"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#RGBA64\">RGBA64</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 100,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "YCbCr",
+      "docstring": "\n YCbCr represents a fully opaque 24-bit Y'CbCr color, having 8 bits each for\n one luma and two chroma components.\n\n JPEG, VP8, the MPEG family and other codecs use this color model. Such\n codecs often use the terms YUV and Y'CbCr interchangeably, but strictly\n speaking, the term YUV applies only to analog video signals, and Y' (luma)\n is Y (luminance) after applying gamma correction.\n\n Conversion between RGB and Y'CbCr is lossy and there are multiple, slightly\n different formulae for converting between the two. This package follows\n the JFIF specification at https://www.w3.org/Graphics/JPEG/jfif3.pdf.",
+      "signature": "pub(all) struct YCbCr {\n  y : Byte\n  cb : Byte\n  cr : Byte\n}",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 173,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#YCbCr\">YCbCr</a>::new(y : Byte, cb : Byte, cr : Byte) -> <a href=\"gmlewis/image/color#YCbCr\">YCbCr</a>",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "ycbcr.mbt",
+            "line": 184,
+            "column": 15
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "YCbCr", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Color", "path": "gmlewis/image/color" },
+          "methods": [
+            {
+              "name": "model",
+              "docstring": "",
+              "signature": "fn model(_self : <a href=\"gmlewis/image/color#YCbCr\">YCbCr</a>) -> String",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 189,
+                "column": 31
+              }
+            },
+            {
+              "name": "raw",
+              "docstring": "",
+              "signature": "fn raw(self : <a href=\"gmlewis/image/color#YCbCr\">YCbCr</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 194,
+                "column": 31
+              }
+            },
+            {
+              "name": "rgba",
+              "docstring": "",
+              "signature": "fn rgba(self : <a href=\"gmlewis/image/color#YCbCr\">YCbCr</a>) -> (UInt, UInt, UInt, UInt)",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 199,
+                "column": 31
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "YCbCr", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/image/color#YCbCr\">YCbCr</a>, <a href=\"gmlewis/image/color#YCbCr\">YCbCr</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 177,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "YCbCr", "path": "gmlewis/image/color" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/image/color#YCbCr\">YCbCr</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "ycbcr.mbt",
+                "line": 177,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "alpha16_model",
+      "docstring": "",
+      "signature": "let alpha16_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 396,
+        "column": 9
+      }
+    },
+    {
+      "name": "alpha_model",
+      "docstring": "",
+      "signature": "let alpha_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 393,
+        "column": 9
+      }
+    },
+    {
+      "name": "black",
+      "docstring": "\n Standard colors.",
+      "signature": "let black : <a href=\"gmlewis/image/color#Gray16\">Gray16</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 702,
+        "column": 9
+      }
+    },
+    {
+      "name": "cmyk_model",
+      "docstring": "\n cmyk_model is the [Model] for CMYK colors.",
+      "signature": "let cmyk_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 470,
+        "column": 9
+      }
+    },
+    {
+      "name": "cmyk_to_rgb",
+      "docstring": "\n cmyk_to_rgb converts a [CMYK] quadruple to an RGB triple.",
+      "signature": "fn cmyk_to_rgb(c : Byte, m : Byte, y : Byte, k : Byte) -> (Byte, Byte, Byte)",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 409,
+        "column": 8
+      }
+    },
+    {
+      "name": "gray16_model",
+      "docstring": "",
+      "signature": "let gray16_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 402,
+        "column": 9
+      }
+    },
+    {
+      "name": "gray_model",
+      "docstring": "",
+      "signature": "let gray_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 399,
+        "column": 9
+      }
+    },
+    {
+      "name": "index",
+      "docstring": "\n index returns the index of the palette color closest to c in Euclidean\n R,G,B,A space.",
+      "signature": "fn index(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>, c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> Int",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 645,
+        "column": 8
+      }
+    },
+    {
+      "name": "length",
+      "docstring": "",
+      "signature": "fn length(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>) -> Int",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 623,
+        "column": 8
+      }
+    },
+    {
+      "name": "model_func",
+      "docstring": "\n model_func returns a [Model] that invokes f to implement the conversion.",
+      "signature": "fn model_func(f : (<a href=\"gmlewis/image/color#Color\">Color</a>) -> <a href=\"gmlewis/image/color#Color\">Color</a>, name : String, palette : <a href=\"gmlewis/image/color#Palette\">Palette</a>?) -> <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 343,
+        "column": 8
+      }
+    },
+    {
+      "name": "n_y_cb_cr_a_model",
+      "docstring": "\n n_y_cb_cr_a_model is the [Model] for non-alpha-premultiplied Y'CbCr-with-alpha\n colors.",
+      "signature": "let n_y_cb_cr_a_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 351,
+        "column": 9
+      }
+    },
+    {
+      "name": "nrgba64_model",
+      "docstring": "",
+      "signature": "let nrgba64_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 390,
+        "column": 9
+      }
+    },
+    {
+      "name": "nrgba_model",
+      "docstring": "",
+      "signature": "let nrgba_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 387,
+        "column": 9
+      }
+    },
+    {
+      "name": "op_as_view",
+      "docstring": "",
+      "signature": "fn op_as_view(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>, start~ : Int = .., end~ : Int) -> <a href=\"gmlewis/image/color#Palette\">Palette</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 628,
+        "column": 8
+      }
+    },
+    {
+      "name": "op_get",
+      "docstring": "",
+      "signature": "fn op_get(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>, idx : Int) -> <a href=\"gmlewis/image/color#Color\">Color</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 597,
+        "column": 8
+      }
+    },
+    {
+      "name": "op_set",
+      "docstring": "",
+      "signature": "fn op_set(self : <a href=\"gmlewis/image/color#Palette\">Palette</a>, idx : Int, c : <a href=\"gmlewis/image/color#Color\">Color</a>) -> Unit",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 592,
+        "column": 8
+      }
+    },
+    {
+      "name": "opaque",
+      "docstring": "",
+      "signature": "let opaque : <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 711,
+        "column": 9
+      }
+    },
+    {
+      "name": "rgb_to_cmyk",
+      "docstring": "\n rgb_to_cmyk converts an RGB triple to a CMYK quadruple.",
+      "signature": "fn rgb_to_cmyk(r : Byte, g : Byte, b : Byte) -> (Byte, Byte, Byte, Byte)",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 386,
+        "column": 8
+      }
+    },
+    {
+      "name": "rgb_to_y_cb_cr",
+      "docstring": "\n rgb_to_y_cb_cr converts an RGB triple to a Y'CbCr triple.",
+      "signature": "fn rgb_to_y_cb_cr(r : Byte, g : Byte, b : Byte) -> (Byte, Byte, Byte)",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 10,
+        "column": 8
+      }
+    },
+    {
+      "name": "rgba64_model",
+      "docstring": "",
+      "signature": "let rgba64_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 384,
+        "column": 9
+      }
+    },
+    {
+      "name": "rgba_model",
+      "docstring": "\n Models for the standard color types.",
+      "signature": "let rgba_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 381,
+        "column": 9
+      }
+    },
+    {
+      "name": "to_string",
+      "docstring": "",
+      "signature": "fn to_string(self : <a href=\"gmlewis/image/color#Color\">Color</a>) -> String",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 36,
+        "column": 8
+      }
+    },
+    {
+      "name": "transparent",
+      "docstring": "",
+      "signature": "let transparent : <a href=\"gmlewis/image/color#Alpha16\">Alpha16</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 708,
+        "column": 9
+      }
+    },
+    {
+      "name": "white",
+      "docstring": "",
+      "signature": "let white : <a href=\"gmlewis/image/color#Gray16\">Gray16</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "color.mbt",
+        "line": 705,
+        "column": 9
+      }
+    },
+    {
+      "name": "y_cb_cr_model",
+      "docstring": "\n y_cb_cr_model is the [Model] for Y'CbCr colors.",
+      "signature": "let y_cb_cr_model : <a href=\"gmlewis/image/color#Model\">Model</a>",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 258,
+        "column": 9
+      }
+    },
+    {
+      "name": "y_cb_cr_to_rgb",
+      "docstring": "\n y_cb_cr_to_rgb converts a Y'CbCr triple to an RGB triple.",
+      "signature": "fn y_cb_cr_to_rgb(y : Byte, cb : Byte, cr : Byte) -> (Byte, Byte, Byte)",
+      "loc": {
+        "path": "gmlewis/image/color",
+        "file": "ycbcr.mbt",
+        "line": 63,
+        "column": 8
+      }
+    }
+  ],
+  "misc": [
+    {
+      "name": "Color",
+      "impls": [
+        {
+          "self": { "name": "Color", "path": "gmlewis/image/color" },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "",
+              "signature": "fn op_equal(self : <a href=\"gmlewis/image/color#Color\">Color</a>, o : <a href=\"gmlewis/image/color#Color\">Color</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 42,
+                "column": 29
+              }
+            }
+          ]
+        },
+        {
+          "self": { "name": "Color", "path": "gmlewis/image/color" },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "",
+              "signature": "fn output(self : <a href=\"gmlewis/image/color#Color\">Color</a>, logger : <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/image/color",
+                "file": "color.mbt",
+                "line": 31,
+                "column": 31
+              }
+            }
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "to_string",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/image/color#Color\">Color</a>::to_string(self : <a href=\"gmlewis/image/color#Color\">Color</a>) -> String",
+          "loc": {
+            "path": "gmlewis/image/color",
+            "file": "color.mbt",
+            "line": 36,
+            "column": 8
+          }
+        }
+      ]
+    }
+  ]
+}

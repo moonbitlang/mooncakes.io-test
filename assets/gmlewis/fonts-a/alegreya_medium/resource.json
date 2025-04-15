@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "alegreya_medium",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/alegreya_medium/package_data.json",
+  "source_files": [ "alegreya_medium.mbt" ]
+}

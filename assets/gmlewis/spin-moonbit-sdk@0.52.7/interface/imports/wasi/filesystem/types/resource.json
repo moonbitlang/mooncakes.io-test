@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/filesystem/types",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "WASI filesystem is a filesystem API primarily intended to let users run WASI\nprograms that access their files on their existing filesystems, without\nsignificant overhead.\n\nIt is intended to be roughly portable between Unix-family platforms and\nWindows, though it does not hide many of the major differences.\n\nPaths are passed as interface-type `string`s, meaning they must consist of\na sequence of Unicode Scalar Values (USVs). Some filesystems may contain\npaths which are not accessible by this API.\n\nThe directory separator in WASI is always the forward-slash (`/`).\n\nAll paths in WASI are relative paths, and are interpreted relative to a\n`descriptor` referring to a base directory. If a `path` argument to any WASI\nfunction starts with `/`, or if any step of resolving a `path`, including\n`..` and symbolic link steps, reaches a directory outside of the base\ndirectory, or reaches a symlink to an absolute or rooted path in the\nunderlying filesystem, the function fails with `error-code::not-permitted`.\n\nFor more information about WASI path resolution and sandboxing, see\n[WASI filesystem path resolution].\n\n[WASI filesystem path resolution]: https://github.com/WebAssembly/wasi-filesystem/blob/main/path-resolution.md",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

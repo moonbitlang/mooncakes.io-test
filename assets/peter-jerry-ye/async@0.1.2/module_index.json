@@ -1,0 +1,154 @@
+{
+  "name": "peter-jerry-ye",
+  "package": null,
+  "childs": [
+    {
+      "name": "async",
+      "package": null,
+      "childs": [
+        {
+          "name": "channel",
+          "package": {
+            "path": "peter-jerry-ye/async/channel",
+            "traits": [],
+            "types": [
+              { "name": "T", "impls": [], "methods": [ "pop", "push" ] }
+            ],
+            "typealias": [],
+            "values": [ "make", "pop", "push" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "loop",
+          "package": {
+            "path": "peter-jerry-ye/async/loop",
+            "traits": [
+              { "name": "@peter-jerry-ye/async/loop.Sync", "impls": [] }
+            ],
+            "types": [
+              {
+                "name": "Handler",
+                "impls": [],
+                "methods": [ "is_stopped", "make", "start", "stop" ]
+              },
+              {
+                "name": "T",
+                "impls": [],
+                "methods": [ "on_ready", "run", "run_until", "sync" ]
+              }
+            ],
+            "typealias": [],
+            "values": [ "new", "on_ready", "run", "run_until", "sync" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "promise",
+          "package": {
+            "path": "peter-jerry-ye/async/promise",
+            "traits": [],
+            "types": [
+              { "name": "AggregateError", "impls": [], "methods": [] },
+              {
+                "name": "Resolver",
+                "impls": [],
+                "methods": [ "future", "reject", "resolve", "try_complete" ]
+              },
+              {
+                "name": "T",
+                "impls": [],
+                "methods": [
+                  "await", "bind", "finally", "get", "on_failure",
+                  "on_success", "zip", "zip_with"
+                ]
+              }
+            ],
+            "typealias": [],
+            "values": [
+              "all", "any", "await", "bind", "finally", "future", "get",
+              "make", "on_failure", "on_success", "reject", "resolve",
+              "spawn", "try_complete", "zip", "zip_with"
+            ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "stream",
+          "package": {
+            "path": "peter-jerry-ye/async/stream",
+            "traits": [
+              {
+                "name": "@peter-jerry-ye/async/stream.Closable",
+                "impls": []
+              },
+              {
+                "name": "@peter-jerry-ye/async/stream.Flushable",
+                "impls": []
+              },
+              {
+                "name": "@peter-jerry-ye/async/stream.InputStream",
+                "impls": []
+              },
+              {
+                "name": "@peter-jerry-ye/async/stream.OutputStream",
+                "impls": []
+              },
+              { "name": "@peter-jerry-ye/async/stream.Reader", "impls": [] },
+              { "name": "@peter-jerry-ye/async/stream.Writer", "impls": [] }
+            ],
+            "types": [
+              { "name": "AsyncIterable", "impls": [], "methods": [] },
+              {
+                "name": "BufferedReader",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "BufferedReader",
+                        "path": "peter-jerry-ye/async/stream"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Closable",
+                      "path": "peter-jerry-ye/async/stream"
+                    },
+                    "methods": [ "close", "closed" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "BufferedReader",
+                        "path": "peter-jerry-ye/async/stream"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Reader",
+                      "path": "peter-jerry-ye/async/stream"
+                    },
+                    "methods": [ "read", "readable" ]
+                  }
+                ],
+                "methods": [ "read_line" ]
+              }
+            ],
+            "typealias": [],
+            "values": [
+              "buffered_reader", "input_stream_reader",
+              "output_stream_writer"
+            ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

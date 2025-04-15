@@ -1,0 +1,163 @@
+{
+  "name": "moonbitlang/ulex-runtime/lexbuf",
+  "traits": [],
+  "types": [
+    {
+      "name": "BytesLexbuf",
+      "docstring": "",
+      "signature": "type BytesLexbuf",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexbuf",
+        "file": "bytes_lexbuf.mbt",
+        "line": 2,
+        "column": 8
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Lexbuf",
+      "docstring": "",
+      "signature": "pub(all) type Lexbuf[T, C, S, P] (<a href=\"moonbitlang/ulex-runtime/lexbuf#LexbufClass\">LexbufClass</a>[T, C, S, P], T)",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 17,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "curr_pos",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>::curr_pos[T, C, S, P](self : <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>[T, C, S, P]) -> P",
+          "loc": {
+            "path": "moonbitlang/ulex-runtime/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 62,
+            "column": 16
+          }
+        },
+        {
+          "name": "next",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>::next[T, C, S, P](self : <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>[T, C, S, P]) -> Char?",
+          "loc": {
+            "path": "moonbitlang/ulex-runtime/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 56,
+            "column": 16
+          }
+        },
+        {
+          "name": "reset",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>::reset[T, C, S, P](self : <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>[T, C, S, P], pos : P) -> Unit",
+          "loc": {
+            "path": "moonbitlang/ulex-runtime/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 68,
+            "column": 16
+          }
+        },
+        {
+          "name": "sub_lexeme",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>::sub_lexeme[T, C, S, P](self : <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>[T, C, S, P], start : P, end : P) -> S",
+          "loc": {
+            "path": "moonbitlang/ulex-runtime/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 80,
+            "column": 16
+          }
+        },
+        {
+          "name": "unsafe_get",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>::unsafe_get[T, C, S, P](self : <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>[T, C, S, P], pos : P) -> C",
+          "loc": {
+            "path": "moonbitlang/ulex-runtime/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 74,
+            "column": 16
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "LexbufClass",
+      "docstring": "",
+      "signature": "pub(all) struct LexbufClass[T, C, S, P] {\n  next : (T) -> Char?\n  curr_pos : (T) -> P\n  reset : (T, P) -> Unit\n  unsafe_get : (T, P) -> C\n  sub_lexeme : (T, P, P) -> S\n}",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 8,
+        "column": 17
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "StringLexbuf",
+      "docstring": "",
+      "signature": "type StringLexbuf",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexbuf",
+        "file": "string_lexbuf.mbt",
+        "line": 2,
+        "column": 8
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [
+    {
+      "name": "Class",
+      "docstring": "",
+      "signature": "type Class[T, C, S, P] = <a href=\"moonbitlang/ulex-runtime/lexbuf#LexbufClass\">LexbufClass</a>[T, C, S, P]",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 2,
+        "column": 1
+      }
+    },
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T[T, C, S, P] = <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>[T, C, S, P]",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 5,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "from_bytes",
+      "docstring": "",
+      "signature": "fn from_bytes(bytes : Bytes, start~ : Int = .., end~ : Int = ..) -> <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>[<a href=\"moonbitlang/ulex-runtime/lexbuf#BytesLexbuf\">BytesLexbuf</a>, Byte, <a href=\"moonbitlang/core/bytes#View\">@moonbitlang/core/bytes.View</a>, Int]",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 47,
+        "column": 8
+      }
+    },
+    {
+      "name": "from_string",
+      "docstring": "",
+      "signature": "fn from_string(str : String, start~ : Int = .., end~ : Int = ..) -> <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">Lexbuf</a>[<a href=\"moonbitlang/ulex-runtime/lexbuf#StringLexbuf\">StringLexbuf</a>, Char, String, Int]",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 38,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

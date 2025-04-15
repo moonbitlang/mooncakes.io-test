@@ -1,0 +1,53 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/log",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "debug",
+      "docstring": "\n `debug` prints a string prefixed with \"DEBUG: \" to wasi stderr with a newline.",
+      "signature": "fn debug(s : String, leading_blank_line~ : Bool = ..) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/log",
+        "file": "logger.mbt",
+        "line": 14,
+        "column": 8
+      }
+    },
+    {
+      "name": "error",
+      "docstring": "\n `error` prints a string prefixed with \"ERROR: \" to wasi stderr with a newline.",
+      "signature": "fn error(s : String, leading_blank_line~ : Bool = ..) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/log",
+        "file": "logger.mbt",
+        "line": 36,
+        "column": 8
+      }
+    },
+    {
+      "name": "info",
+      "docstring": "\n `info` prints a string prefixed with \"INFO: \" to wasi stderr with a newline.",
+      "signature": "fn info(s : String, leading_blank_line~ : Bool = ..) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/log",
+        "file": "logger.mbt",
+        "line": 3,
+        "column": 8
+      }
+    },
+    {
+      "name": "warn",
+      "docstring": "\n `warn` prints a string prefixed with \"WARNING: \" to wasi stderr with a newline.",
+      "signature": "fn warn(s : String, leading_blank_line~ : Bool = ..) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/log",
+        "file": "logger.mbt",
+        "line": 25,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

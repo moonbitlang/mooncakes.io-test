@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "examples/simple",
+  "module_path": "gmlewis/base64",
+  "readme_content": "",
+  "package_data": "gmlewis/base64/examples/simple/package_data.json",
+  "source_files": [ "main.mbt" ]
+}

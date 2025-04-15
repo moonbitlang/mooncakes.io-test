@@ -1,0 +1,17 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "gmlewis/md5",
+    "version": "0.19.5",
+    "deps": { "gmlewis/base64": "0.14.3" },
+    "readme": "README.md",
+    "repository": "https://github.com/gmlewis/moonbit-md5",
+    "license": "Apache-2.0",
+    "keywords": [ "md5", "hash", "algorithm", "moonbit" ],
+    "description": "MoonBit md5: provide simple md5 hash algorithm."
+  },
+  "readme_content": "# gmlewis/md5\n[![check](https://github.com/gmlewis/moonbit-md5/actions/workflows/check.yml/badge.svg)](https://github.com/gmlewis/moonbit-md5/actions/workflows/check.yml)\n\nThis is a simple md5 hash algorithm based on Go's implementation:\nhttps://cs.opensource.google/go/go/+/refs/tags/go1.23.0:src/crypto/md5/md5.go\nwhich has the copyright notice:\n\n```\n// Copyright 2009 The Go Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style\n// license that can be found in the LICENSE file.\n```\n\n## Status\n\nThe code has been updated to support compiler:\n\n```bash\n$ moon version --all\nmoon 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moon\nmoonc v0.1.20250410+15d580434 ~/.moon/bin/moonc\nmoonrun 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moonrun\n```\n",
+  "module_index": "gmlewis/md5/module_index.json",
+  "package_data": "gmlewis/md5/package_data.json",
+  "source_files": [ "md5.mbt", "hash-func.mbt" ]
+}

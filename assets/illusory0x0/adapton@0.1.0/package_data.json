@@ -1,0 +1,322 @@
+{
+  "name": "illusory0x0/adapton",
+  "traits": [
+    {
+      "name": "@illusory0x0/adapton.Source",
+      "docstring": "",
+      "signature": "trait @illusory0x0/adapton.Source",
+      "loc": {
+        "path": "illusory0x0/adapton",
+        "file": "adapton.mbt",
+        "line": 46,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [
+    {
+      "name": "Cell",
+      "docstring": "",
+      "signature": "type Cell[A]",
+      "loc": {
+        "path": "illusory0x0/adapton",
+        "file": "adapton.mbt",
+        "line": 13,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "get",
+          "docstring": "",
+          "signature": "fn <a href=\"illusory0x0/adapton#Cell\">Cell</a>::get[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A]) -> A",
+          "loc": {
+            "path": "illusory0x0/adapton",
+            "file": "adapton.mbt",
+            "line": 212,
+            "column": 14
+          }
+        },
+        {
+          "name": "modify",
+          "docstring": "",
+          "signature": "fn <a href=\"illusory0x0/adapton#Cell\">Cell</a>::modify[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A], f : (A) -> A) -> Unit",
+          "loc": {
+            "path": "illusory0x0/adapton",
+            "file": "adapton.mbt",
+            "line": 188,
+            "column": 14
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"illusory0x0/adapton#Cell\">Cell</a>::new[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](value : A) -> <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A]",
+          "loc": {
+            "path": "illusory0x0/adapton",
+            "file": "adapton.mbt",
+            "line": 173,
+            "column": 14
+          }
+        },
+        {
+          "name": "set",
+          "docstring": "",
+          "signature": "fn <a href=\"illusory0x0/adapton#Cell\">Cell</a>::set[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A], value : A) -> Unit",
+          "loc": {
+            "path": "illusory0x0/adapton",
+            "file": "adapton.mbt",
+            "line": 178,
+            "column": 14
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Cell", "path": "illusory0x0/adapton" },
+            "arguments": [ { "kind": "param", "name": "A" } ]
+          },
+          "trait": { "name": "Source", "path": "illusory0x0/adapton" },
+          "methods": [
+            {
+              "name": "id",
+              "docstring": "",
+              "signature": "fn id[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A]) -> Int",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 127,
+                "column": 42
+              }
+            },
+            {
+              "name": "incoming_edges",
+              "docstring": "",
+              "signature": "fn incoming_edges[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A]) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"illusory0x0/adapton#Target\">Target</a>]",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 309,
+                "column": 42
+              }
+            },
+            {
+              "name": "to_node",
+              "docstring": "",
+              "signature": "fn to_node[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A]) -> <a href=\"illusory0x0/adapton#Target\">Target</a>?",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 299,
+                "column": 42
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Cell", "path": "illusory0x0/adapton" },
+            "arguments": [ { "kind": "param", "name": "A" } ]
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "",
+              "signature": "fn op_equal[A](self : <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A], other : <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A]) -> Bool",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 137,
+                "column": 33
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Cell", "path": "illusory0x0/adapton" },
+            "arguments": [ { "kind": "param", "name": "A" } ]
+          },
+          "trait": { "name": "Hash", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "hash_combine",
+              "docstring": "",
+              "signature": "fn hash_combine[A](self : <a href=\"illusory0x0/adapton#Cell\">Cell</a>[A], hasher : <a href=\"moonbitlang/core/builtin#Hasher\">Hasher</a>) -> Unit",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 147,
+                "column": 35
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thunk",
+      "docstring": "",
+      "signature": "type Thunk[A]",
+      "loc": {
+        "path": "illusory0x0/adapton",
+        "file": "adapton.mbt",
+        "line": 20,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "get",
+          "docstring": "",
+          "signature": "fn <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>::get[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[A]) -> A",
+          "loc": {
+            "path": "illusory0x0/adapton",
+            "file": "adapton.mbt",
+            "line": 196,
+            "column": 15
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>::new[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](thunk : () -> A) -> <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[A]",
+          "loc": {
+            "path": "illusory0x0/adapton",
+            "file": "adapton.mbt",
+            "line": 161,
+            "column": 15
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Thunk", "path": "illusory0x0/adapton" },
+            "arguments": [ { "kind": "param", "name": "A" } ]
+          },
+          "trait": { "name": "Source", "path": "illusory0x0/adapton" },
+          "methods": [
+            {
+              "name": "id",
+              "docstring": "",
+              "signature": "fn id[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[A]) -> Int",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 122,
+                "column": 43
+              }
+            },
+            {
+              "name": "incoming_edges",
+              "docstring": "",
+              "signature": "fn incoming_edges[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[A]) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"illusory0x0/adapton#Target\">Target</a>]",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 314,
+                "column": 43
+              }
+            },
+            {
+              "name": "to_node",
+              "docstring": "",
+              "signature": "fn to_node[A : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[A]) -> <a href=\"illusory0x0/adapton#Target\">Target</a>?",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 304,
+                "column": 43
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Thunk", "path": "illusory0x0/adapton" },
+            "arguments": [ { "kind": "param", "name": "A" } ]
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "",
+              "signature": "fn op_equal[A](self : <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[A], other : <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[A]) -> Bool",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 132,
+                "column": 34
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Thunk", "path": "illusory0x0/adapton" },
+            "arguments": [ { "kind": "param", "name": "A" } ]
+          },
+          "trait": { "name": "Hash", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "hash_combine",
+              "docstring": "",
+              "signature": "fn hash_combine[A](self : <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[A], hasher : <a href=\"moonbitlang/core/builtin#Hasher\">Hasher</a>) -> Unit",
+              "loc": {
+                "path": "illusory0x0/adapton",
+                "file": "adapton.mbt",
+                "line": 142,
+                "column": 36
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "clear_memo",
+      "docstring": "",
+      "signature": "fn clear_memo() -> Unit",
+      "loc": {
+        "path": "illusory0x0/adapton",
+        "file": "adapton.mbt",
+        "line": 230,
+        "column": 8
+      }
+    },
+    {
+      "name": "memo",
+      "docstring": "",
+      "signature": "fn memo[A : <a href=\"moonbitlang/core/builtin#Hash\">Hash</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>, B : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](f : (A) -> B) -> ((A) -> <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[B])",
+      "loc": {
+        "path": "illusory0x0/adapton",
+        "file": "adapton.mbt",
+        "line": 238,
+        "column": 8
+      }
+    },
+    {
+      "name": "memo_rec",
+      "docstring": "",
+      "signature": "fn memo_rec[A : <a href=\"moonbitlang/core/builtin#Hash\">Hash</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>, B : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](f : ((A) -> <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[B], A) -> B) -> ((A) -> <a href=\"illusory0x0/adapton#Thunk\">Thunk</a>[B])",
+      "loc": {
+        "path": "illusory0x0/adapton",
+        "file": "adapton.mbt",
+        "line": 254,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

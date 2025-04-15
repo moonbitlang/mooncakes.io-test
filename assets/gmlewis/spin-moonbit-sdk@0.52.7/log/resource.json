@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "log",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "",
+  "package_data": "gmlewis/spin-moonbit-sdk/log/package_data.json",
+  "source_files": [ "logger.mbt" ]
+}

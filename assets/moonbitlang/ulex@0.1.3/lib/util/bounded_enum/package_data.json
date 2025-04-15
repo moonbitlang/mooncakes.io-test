@@ -1,0 +1,87 @@
+{
+  "name": "moonbitlang/ulex/lib/util/bounded_enum",
+  "traits": [
+    {
+      "name": "@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum",
+      "docstring": "",
+      "signature": "pub(open) trait @moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum : <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> {\n  pred(Self) -> Self\n  succ(Self) -> Self\n  lower_bound() -> Self\n  upper_bound() -> Self\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/bounded_enum",
+        "file": "bounded_enum.mbt",
+        "line": 2,
+        "column": 1
+      },
+      "impls": [
+        {
+          "self": { "name": "Char", "path": "moonbitlang/core/char" },
+          "trait": {
+            "name": "BoundedEnum",
+            "path": "moonbitlang/ulex/lib/util/bounded_enum"
+          },
+          "methods": [
+            {
+              "name": "lower_bound",
+              "docstring": "",
+              "signature": "fn lower_bound() -> Char",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/bounded_enum",
+                "file": "impl_for_char.mbt",
+                "line": 12,
+                "column": 36
+              }
+            },
+            {
+              "name": "pred",
+              "docstring": "",
+              "signature": "fn pred(self : Char) -> Char",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/bounded_enum",
+                "file": "impl_for_char.mbt",
+                "line": 2,
+                "column": 36
+              }
+            },
+            {
+              "name": "succ",
+              "docstring": "",
+              "signature": "fn succ(self : Char) -> Char",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/bounded_enum",
+                "file": "impl_for_char.mbt",
+                "line": 7,
+                "column": 36
+              }
+            },
+            {
+              "name": "upper_bound",
+              "docstring": "",
+              "signature": "fn upper_bound() -> Char",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/bounded_enum",
+                "file": "impl_for_char.mbt",
+                "line": 17,
+                "column": 36
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "types": [],
+  "typealias": [
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T = <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">BoundedEnum</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/bounded_enum",
+        "file": "bounded_enum.mbt",
+        "line": 10,
+        "column": 1
+      }
+    }
+  ],
+  "values": [],
+  "misc": []
+}

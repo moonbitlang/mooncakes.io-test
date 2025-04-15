@@ -1,0 +1,60 @@
+{
+  "name": "Yoorkin/rabbit-tea/example/todoMVC",
+  "traits": [],
+  "types": [
+    {
+      "name": "Message",
+      "docstring": "",
+      "signature": "type Message",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC",
+        "file": "main.mbt",
+        "line": 2,
+        "column": 6
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Message",
+              "path": "Yoorkin/rabbit-tea/example/todoMVC"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"Yoorkin/rabbit-tea/example/todoMVC#Message\">Message</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/example/todoMVC",
+                "file": "main.mbt",
+                "line": 7,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Model",
+      "docstring": "",
+      "signature": "type Model",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC",
+        "file": "main.mbt",
+        "line": 10,
+        "column": 6
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

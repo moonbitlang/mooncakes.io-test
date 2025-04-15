@@ -1,0 +1,20 @@
+{
+  "name": "gmlewis/fonts-a/aguafinascript_regular",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "font",
+      "docstring": "",
+      "signature": "let font : <a href=\"gmlewis/fonts#Font\">@gmlewis/fonts.Font</a>",
+      "loc": {
+        "path": "gmlewis/fonts-a/aguafinascript_regular",
+        "file": "aguafinascript_regular.mbt",
+        "line": 2309,
+        "column": 9
+      }
+    }
+  ],
+  "misc": []
+}

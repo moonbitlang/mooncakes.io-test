@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "aileron_semibolditalic",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/aileron_semibolditalic/package_data.json",
+  "source_files": [ "aileron_semibolditalic.mbt" ]
+}

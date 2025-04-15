@@ -1,0 +1,362 @@
+{
+  "name": "peter-jerry-ye",
+  "package": null,
+  "childs": [
+    {
+      "name": "mcp-server",
+      "package": {
+        "path": "peter-jerry-ye/mcp-server",
+        "traits": [],
+        "types": [
+          { "name": "Content", "impls": [], "methods": [] },
+          {
+            "name": "LogLevel",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "LogLevel",
+                    "path": "peter-jerry-ye/mcp-server"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "LogLevel",
+                    "path": "peter-jerry-ye/mcp-server"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          },
+          { "name": "PromptArgument", "impls": [], "methods": [] },
+          { "name": "PromptMessage", "impls": [], "methods": [] },
+          { "name": "Response", "impls": [], "methods": [] },
+          { "name": "Role", "impls": [], "methods": [] },
+          {
+            "name": "Root",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Root",
+                    "path": "peter-jerry-ye/mcp-server"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Root",
+                    "path": "peter-jerry-ye/mcp-server"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "Server",
+            "impls": [],
+            "methods": [
+              "add_prompt", "add_tool", "list_roots", "log", "remove_prompt",
+              "remove_tool", "serve"
+            ]
+          }
+        ],
+        "typealias": [],
+        "values": [
+          "add_prompt", "add_tool", "list_roots", "log", "new",
+          "prompt_argument", "remove_prompt", "remove_tool", "serve"
+        ],
+        "misc": []
+      },
+      "childs": [
+        {
+          "name": "rpc",
+          "package": {
+            "path": "peter-jerry-ye/mcp-server/rpc",
+            "traits": [],
+            "types": [
+              {
+                "name": "Id",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Id",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Id",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Hash",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "hash_combine" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Id",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Id",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Id",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "Message",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Message",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Message",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Message",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Message",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "RPCError",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RPCError",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RPCError",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RPCError",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RPCError",
+                        "path": "peter-jerry-ye/mcp-server/rpc"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": []
+              }
+            ],
+            "typealias": [],
+            "values": [],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "schema",
+          "package": {
+            "path": "peter-jerry-ye/mcp-server/schema",
+            "traits": [],
+            "types": [
+              {
+                "name": "T",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "T",
+                        "path": "peter-jerry-ye/mcp-server/schema"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  }
+                ],
+                "methods": [ "to_json", "verify" ]
+              }
+            ],
+            "typealias": [],
+            "values": [ "array", "enums", "integer", "object", "string" ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

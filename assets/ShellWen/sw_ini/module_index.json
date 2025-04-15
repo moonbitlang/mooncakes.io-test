@@ -1,0 +1,30 @@
+{
+  "name": "ShellWen",
+  "package": null,
+  "childs": [
+    {
+      "name": "sw_ini",
+      "package": {
+        "path": "ShellWen/sw_ini",
+        "traits": [],
+        "types": [
+          {
+            "name": "IniFile",
+            "impls": [],
+            "methods": [ "get", "get_bool", "get_string", "new", "set" ]
+          },
+          { "name": "IniParseError", "impls": [], "methods": [] },
+          {
+            "name": "IniParseState",
+            "impls": [],
+            "methods": [ "finish", "new", "parse" ]
+          }
+        ],
+        "typealias": [],
+        "values": [ "parse" ],
+        "misc": []
+      },
+      "childs": []
+    }
+  ]
+}

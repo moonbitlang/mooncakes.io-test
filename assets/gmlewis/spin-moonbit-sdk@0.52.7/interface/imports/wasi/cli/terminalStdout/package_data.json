@@ -1,0 +1,20 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalStdout",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "get_terminal_stdout",
+      "docstring": "\n If stdout is connected to a terminal, return a `terminal-output` handle\n allowing further interaction with it.",
+      "signature": "fn get_terminal_stdout() -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput#TerminalOutput\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput.TerminalOutput</a>?",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalStdout",
+        "file": "top.mbt",
+        "line": 6,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

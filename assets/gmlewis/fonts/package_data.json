@@ -1,0 +1,1558 @@
+{
+  "name": "gmlewis/fonts",
+  "traits": [],
+  "types": [
+    {
+      "name": "AbsoluteCmd",
+      "docstring": "\n `AbsoluteCmd` represents a supported absolute SVG command.",
+      "signature": "pub(all) enum AbsoluteCmd {\n  M\n  L\n  C\n  Q\n  Z\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "path.mbt",
+        "line": 25,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "AbsoluteCmd", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#AbsoluteCmd\">AbsoluteCmd</a>, <a href=\"gmlewis/fonts#AbsoluteCmd\">AbsoluteCmd</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "path.mbt",
+                "line": 36,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "AbsoluteCmd", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#AbsoluteCmd\">AbsoluteCmd</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "path.mbt",
+                "line": 36,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Anchor",
+      "docstring": "\n Anchor represents where to place the origin (0,0) of the glyph relative\n to its minimum bounding box.",
+      "signature": "pub(all) enum Anchor {\n  Unchanged\n  TopLeft\n  TopCenter\n  TopRight\n  CenterLeft\n  Center\n  CenterRight\n  BaselineLeft\n  BaselineCenter\n  BaselineRight\n  BottomLeft\n  BottomCenter\n  BottomRight\n  RatioXY(Double, Double)\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "anchor.mbt",
+        "line": 4,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Anchor", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#Anchor\">Anchor</a>, <a href=\"gmlewis/fonts#Anchor\">Anchor</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "anchor.mbt",
+                "line": 26,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Anchor", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#Anchor\">Anchor</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "anchor.mbt",
+                "line": 26,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cmd",
+      "docstring": "\n `Cmd` represents an SVG command along with its parameters.",
+      "signature": "type Cmd",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "split-path.mbt",
+        "line": 3,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Cmd", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#Cmd\">Cmd</a>, <a href=\"gmlewis/fonts#Cmd\">Cmd</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "split-path.mbt",
+                "line": 6,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Cmd", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#Cmd\">Cmd</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "split-path.mbt",
+                "line": 6,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Font",
+      "docstring": "\n `Font` represents an entire font.",
+      "signature": "pub(all) struct Font {\n  id : String\n  horiz_adv_x : Double\n  units_per_em : Double\n  ascent : Double\n  descent : Double\n  glyphs : <a href=\"moonbitlang/core/builtin#Map\">Map</a>[String, <a href=\"gmlewis/fonts#Glyph\">Glyph</a>]\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "fonts.mbt",
+        "line": 3,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "gen_path",
+          "docstring": "\n `gen_path` \"renders\" the provided text string into an SVG path\n using the provided font information. It performs the necessary\n path translations in order to combine the individual glyphs into\n a \"super glyph\" that can be rendered as a whole.\n\n Note that `gen_path` operates on the string as a left-justified whole\n and anchors the entire path relative to `anchor` accordingly.\n\n If you want multiple lines centered horizontally, use `gen_paths` instead.\n\n Note that the SVG standard states that positive-Y is \"down\" with origin\n coordinates in the upper-left, however, all SVG fonts appear to have their\n origin in the lower left with positive-Y moving \"up\". This package\n attempts to convert the SVG paths such that the font is equally readable\n in both the \"y_up=false\" SVG canvas environment or in a 3D \"y_up=true\"\n rendering environment.",
+          "signature": "fn <a href=\"gmlewis/fonts#Font\">Font</a>::gen_path(self : <a href=\"gmlewis/fonts#Font\">Font</a>, text : String, anchor~ : <a href=\"gmlewis/fonts#Anchor\">Anchor</a> = .., y_up~ : Bool = ..) -> <a href=\"gmlewis/fonts#Glyph\">Glyph</a>!<a href=\"gmlewis/fonts#FontError\">FontError</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "gen-path.mbt",
+            "line": 18,
+            "column": 8
+          }
+        },
+        {
+          "name": "gen_paths",
+          "docstring": "\n `gen_paths` handles multiple strings independently so that they\n can be aligned and distributed more flexibly.",
+          "signature": "fn <a href=\"gmlewis/fonts#Font\">Font</a>::gen_paths(self : <a href=\"gmlewis/fonts#Font\">Font</a>, lines : <a href=\"moonbitlang/core/array#Array\">Array</a>[String], anchor~ : <a href=\"gmlewis/fonts#Anchor\">Anchor</a> = .., y_up~ : Bool = ..) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/fonts#Glyph\">Glyph</a>]!<a href=\"gmlewis/fonts#FontError\">FontError</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "gen-paths.mbt",
+            "line": 4,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Font", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#Font\">Font</a>, <a href=\"gmlewis/fonts#Font\">Font</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "fonts.mbt",
+                "line": 10,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Font", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#Font\">Font</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "fonts.mbt",
+                "line": 10,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Font", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "automatically derived",
+              "signature": "fn to_json(<a href=\"gmlewis/fonts#Font\">Font</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "fonts.mbt",
+                "line": 10,
+                "column": 30
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Font", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "automatically derived",
+              "signature": "fn from_json(<a href=\"moonbitlang/core/json#Json\">Json</a>, <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"gmlewis/fonts#Font\">Font</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "fonts.mbt",
+                "line": 10,
+                "column": 20
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FontError",
+      "docstring": "",
+      "signature": "pub(all) type! FontError String\n",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "fonts.mbt",
+        "line": 13,
+        "column": 16
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "FontError", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#FontError\">FontError</a>, <a href=\"gmlewis/fonts#FontError\">FontError</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "fonts.mbt",
+                "line": 13,
+                "column": 46
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "FontError", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#FontError\">FontError</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "fonts.mbt",
+                "line": 13,
+                "column": 40
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GerberLP",
+      "docstring": "\n `GerberLP` represents whether a subpath is `Dark` or `Clear`.",
+      "signature": "pub(all) enum GerberLP {\n  Dark\n  Clear\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "path.mbt",
+        "line": 40,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "GerberLP", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#GerberLP\">GerberLP</a>, <a href=\"gmlewis/fonts#GerberLP\">GerberLP</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "path.mbt",
+                "line": 43,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "GerberLP", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#GerberLP\">GerberLP</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "path.mbt",
+                "line": 43,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Glyph",
+      "docstring": "\n `Glyph` represents a single glyph within each `Font` and also represents\n multiple glyphs combined together (for example after using `Font.gen_path`\n and switching back and forth between `Glyphs` which are optimized for storage,\n and `Paths` which are optimized for processing).",
+      "signature": "pub(all) struct Glyph {\n  char : String\n  horiz_adv_x : Double\n  gerber_lp : String\n  d : String\n  xmin : Double\n  ymin : Double\n  xmax : Double\n  ymax : Double\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "glyph.mbt",
+        "line": 6,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Glyph", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#Glyph\">Glyph</a>, <a href=\"gmlewis/fonts#Glyph\">Glyph</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "glyph.mbt",
+                "line": 26,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Glyph", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#Glyph\">Glyph</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "glyph.mbt",
+                "line": 26,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Glyph", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "automatically derived",
+              "signature": "fn to_json(<a href=\"gmlewis/fonts#Glyph\">Glyph</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "glyph.mbt",
+                "line": 26,
+                "column": 30
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Glyph", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "automatically derived",
+              "signature": "fn from_json(<a href=\"moonbitlang/core/json#Json\">Json</a>, <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"gmlewis/fonts#Glyph\">Glyph</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "glyph.mbt",
+                "line": 26,
+                "column": 20
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ParamPair",
+      "docstring": "\n `ParamPair` represents an X,Y absolute coordinate pair of parameters.",
+      "signature": "pub(all) struct ParamPair {\n  x : Double\n  y : Double\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "path-cmd.mbt",
+        "line": 3,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "to_string",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/fonts#ParamPair\">ParamPair</a>::to_string(self : <a href=\"gmlewis/fonts#ParamPair\">ParamPair</a>) -> String",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "path-cmd.mbt",
+            "line": 9,
+            "column": 19
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "ParamPair", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#ParamPair\">ParamPair</a>, <a href=\"gmlewis/fonts#ParamPair\">ParamPair</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "path-cmd.mbt",
+                "line": 6,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Params",
+      "docstring": "\n `Params` represents the parameters to an SVG command.",
+      "signature": "type Params",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "parse-params.mbt",
+        "line": 3,
+        "column": 6
+      },
+      "methods": [
+        {
+          "name": "length",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/fonts#Params\">Params</a>::length(self : <a href=\"gmlewis/fonts#Params\">Params</a>) -> Int",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "parse-params.mbt",
+            "line": 6,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Params", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#Params\">Params</a>, <a href=\"gmlewis/fonts#Params\">Params</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "parse-params.mbt",
+                "line": 3,
+                "column": 40
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Params", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#Params\">Params</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "parse-params.mbt",
+                "line": 3,
+                "column": 34
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Path",
+      "docstring": "\n A `Path` is identical to a `Glyph` but has been optimized internally\n for further manipulation, whereas a `Glyph` is optimized for compact\n storage of font data within all the font packages.\n A `Path` can be converted to a `Glpyh` and vice versa.",
+      "signature": "pub(all) struct Path {\n  char : String\n  cmds : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>]\n  xmin : Double\n  ymin : Double\n  xmax : Double\n  ymax : Double\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "path.mbt",
+        "line": 6,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "clone",
+          "docstring": "\n `clone` makes a deep copy of a Path.",
+          "signature": "fn <a href=\"gmlewis/fonts#Path\">Path</a>::clone(self : <a href=\"gmlewis/fonts#Path\">Path</a>) -> <a href=\"gmlewis/fonts#Path\">Path</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "path.mbt",
+            "line": 137,
+            "column": 14
+          }
+        },
+        {
+          "name": "from_glyph",
+          "docstring": "\n `from_glyph` returns a `Path` from a `Glyph`, optionally processing\n every `Cmd` with a processing function.\n Note that apart from `path_cmd_fn`, `from_glyph` makes no attempt to process the\n invidual glyphs and simply transforms the representation.",
+          "signature": "fn <a href=\"gmlewis/fonts#Path\">Path</a>::from_glyph(g : <a href=\"gmlewis/fonts#Glyph\">Glyph</a>, path_cmd_fn? : <a href=\"gmlewis/fonts#PathCmdFn\">PathCmdFn</a>) -> <a href=\"gmlewis/fonts#Path\">Path</a>!<a href=\"gmlewis/fonts#FontError\">FontError</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "path.mbt",
+            "line": 50,
+            "column": 14
+          }
+        },
+        {
+          "name": "to_glyph",
+          "docstring": "\n `to_glyph` returns a \"super\" `Glyph` from a `Path`, optionally processing\n every `PathCmd` with a processing function.\n Note that apart from `path_cmd_fn`, `to_glyph` makes no attempt to process the\n invidual glyphs and simply transforms the representation.",
+          "signature": "fn <a href=\"gmlewis/fonts#Path\">Path</a>::to_glyph(self : <a href=\"gmlewis/fonts#Path\">Path</a>, path_cmd_fn? : <a href=\"gmlewis/fonts#PathCmdFn\">PathCmdFn</a>) -> <a href=\"gmlewis/fonts#Glyph\">Glyph</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "path.mbt",
+            "line": 94,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Path", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#Path\">Path</a>, <a href=\"gmlewis/fonts#Path\">Path</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "path.mbt",
+                "line": 21,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Path", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#Path\">Path</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "path.mbt",
+                "line": 21,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PathCmd",
+      "docstring": "\n `Cmd` represents an individual absolute SVG command.",
+      "signature": "pub(all) struct PathCmd {\n  cmd : <a href=\"gmlewis/fonts#AbsoluteCmd\">AbsoluteCmd</a>\n  gerber_lp : <a href=\"gmlewis/fonts#GerberLP\">GerberLP</a>\n  params : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/fonts#ParamPair\">ParamPair</a>]\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "path-cmd.mbt",
+        "line": 20,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "bbox",
+          "docstring": "\n `bbox` returns the minimum bounding box of a PathCmd.",
+          "signature": "fn <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>::bbox(self : <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "path-cmd.mbt",
+            "line": 83,
+            "column": 8
+          }
+        },
+        {
+          "name": "clone",
+          "docstring": "\n `clone` makes a deep copy of a PatchCmd.",
+          "signature": "fn <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>::clone(self : <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>) -> <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "path-cmd.mbt",
+            "line": 105,
+            "column": 17
+          }
+        },
+        {
+          "name": "from_svg_cmd",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>::from_svg_cmd(svg_cmd : <a href=\"gmlewis/fonts#Cmd\">Cmd</a>, gerber_lp : <a href=\"gmlewis/fonts#GerberLP\">GerberLP</a>) -> <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>!<a href=\"gmlewis/fonts#FontError\">FontError</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "path-cmd.mbt",
+            "line": 27,
+            "column": 17
+          }
+        },
+        {
+          "name": "to_svg_cmd",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>::to_svg_cmd(self : <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>) -> (<a href=\"gmlewis/fonts#Cmd\">Cmd</a>, String)",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "path-cmd.mbt",
+            "line": 62,
+            "column": 17
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "PathCmd", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>, <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "path-cmd.mbt",
+                "line": 24,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "PathCmd", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "path-cmd.mbt",
+                "line": 24,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PathCmdFn",
+      "docstring": "\n `PathCmdFn` represents a function that processes or transforms individual commands.\n The first argument is the index within the command.",
+      "signature": "pub(all) type PathCmdFn (Int, <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>) -> <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "path-cmd.mbt",
+        "line": 101,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Point",
+      "docstring": "",
+      "signature": "pub(all) struct Point {\n  x : Double\n  y : Double\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 10,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "div",
+          "docstring": "\n div returns the vector p/k.",
+          "signature": "fn <a href=\"gmlewis/fonts#Point\">Point</a>::div(self : <a href=\"gmlewis/fonts#Point\">Point</a>, k : Double) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 41,
+            "column": 8
+          }
+        },
+        {
+          "name": "is_in",
+          "docstring": "\n is_in reports whether p is in r.",
+          "signature": "fn <a href=\"gmlewis/fonts#Point\">Point</a>::is_in(self : <a href=\"gmlewis/fonts#Point\">Point</a>, r : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Bool",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 47,
+            "column": 8
+          }
+        },
+        {
+          "name": "mul",
+          "docstring": "\n mul returns the vector p*k.",
+          "signature": "fn <a href=\"gmlewis/fonts#Point\">Point</a>::mul(self : <a href=\"gmlewis/fonts#Point\">Point</a>, k : Double) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 35,
+            "column": 8
+          }
+        },
+        {
+          "name": "op_add",
+          "docstring": "\n op_add (+) returns the vector p+q.",
+          "signature": "fn <a href=\"gmlewis/fonts#Point\">Point</a>::op_add(self : <a href=\"gmlewis/fonts#Point\">Point</a>, q : <a href=\"gmlewis/fonts#Point\">Point</a>) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 23,
+            "column": 8
+          }
+        },
+        {
+          "name": "op_equal",
+          "docstring": "\n op_equal reports whether p and q are equal.",
+          "signature": "fn <a href=\"gmlewis/fonts#Point\">Point</a>::op_equal(self : <a href=\"gmlewis/fonts#Point\">Point</a>, q : <a href=\"gmlewis/fonts#Point\">Point</a>) -> Bool",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 69,
+            "column": 8
+          }
+        },
+        {
+          "name": "op_sub",
+          "docstring": "\n op_sub (-) returns the vector p-q.",
+          "signature": "fn <a href=\"gmlewis/fonts#Point\">Point</a>::op_sub(self : <a href=\"gmlewis/fonts#Point\">Point</a>, q : <a href=\"gmlewis/fonts#Point\">Point</a>) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 29,
+            "column": 8
+          }
+        },
+        {
+          "name": "to_string",
+          "docstring": "\n to_string returns a string representation of p like \"(3,4)\".",
+          "signature": "fn <a href=\"gmlewis/fonts#Point\">Point</a>::to_string(self : <a href=\"gmlewis/fonts#Point\">Point</a>) -> String",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 17,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Point", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#Point\">Point</a>, <a href=\"gmlewis/fonts#Point\">Point</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "geom.mbt",
+                "line": 13,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Point", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#Point\">Point</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "geom.mbt",
+                "line": 13,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rectangle",
+      "docstring": "\n A Rectangle contains the points with Min.X <= X < Max.X, Min.Y <= Y < Max.Y.\n It is well-formed if Min.X <= Max.X and likewise for Y. Points are always\n well-formed. A rectangle's methods always return well-formed outputs for\n well-formed inputs.\n\n A Rectangle is also an [Image] whose bounds are the rectangle itself. At\n returns color.Opaque for points in the rectangle and color.Transparent\n otherwise.",
+      "signature": "pub(all) struct Rectangle {\n  min : <a href=\"gmlewis/fonts#Point\">Point</a>\n  max : <a href=\"gmlewis/fonts#Point\">Point</a>\n}",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 88,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "add",
+          "docstring": "\n add returns the rectangle r translated by p.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::add(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, p : <a href=\"gmlewis/fonts#Point\">Point</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 137,
+            "column": 8
+          }
+        },
+        {
+          "name": "bounds",
+          "docstring": "\n `bounds` returns the tuple `(xmin, ymin, xmax, ymax)`.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::bounds(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> (Double, Double, Double, Double)",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 101,
+            "column": 8
+          }
+        },
+        {
+          "name": "canon",
+          "docstring": "\n canon returns the canonical version of r. The returned rectangle has minimum\n and maximum coordinates swapped if necessary so that it is well-formed.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::canon(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 286,
+            "column": 8
+          }
+        },
+        {
+          "name": "clone",
+          "docstring": "\n `clone` makes a copy of the provided rectangle without changing it.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::clone(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 107,
+            "column": 8
+          }
+        },
+        {
+          "name": "dx",
+          "docstring": "\n dx returns r's width.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::dx(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Double",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 119,
+            "column": 8
+          }
+        },
+        {
+          "name": "dy",
+          "docstring": "\n dy returns r's height.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::dy(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Double",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 125,
+            "column": 8
+          }
+        },
+        {
+          "name": "empty",
+          "docstring": "\n empty reports whether the rectangle contains no points.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::empty(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Bool",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 247,
+            "column": 8
+          }
+        },
+        {
+          "name": "extend",
+          "docstring": "\n `extend` extends the current rectangle to include the provided point.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::extend(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, pt : <a href=\"gmlewis/fonts#Point\">Point</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 205,
+            "column": 8
+          }
+        },
+        {
+          "name": "inset",
+          "docstring": "\n inset returns the rectangle r inset by n, which may be negative. If either\n of r's dimensions is less than 2*n then an empty rectangle near the center\n of r will be returned.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::inset(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, n : Double) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 157,
+            "column": 8
+          }
+        },
+        {
+          "name": "intersect",
+          "docstring": "\n intersect returns the largest rectangle contained by both r and s. If the\n two rectangles do not overlap then the zero rectangle will be returned.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::intersect(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, s : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 179,
+            "column": 8
+          }
+        },
+        {
+          "name": "is_in",
+          "docstring": "\n is_in reports whether every point in r is in s.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::is_in(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, s : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Bool",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 271,
+            "column": 19
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "\n Rectangle::new returns an empty (all zeros) rectangle.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::new() -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 95,
+            "column": 19
+          }
+        },
+        {
+          "name": "op_equal",
+          "docstring": "\n op_equal reports whether r and s contain the same set of points. All empty\n rectangles are considered equal.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::op_equal(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, s : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Bool",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 254,
+            "column": 19
+          }
+        },
+        {
+          "name": "overlaps",
+          "docstring": "\n overlaps reports whether r and s have a non-empty intersection.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::overlaps(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, s : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Bool",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 260,
+            "column": 8
+          }
+        },
+        {
+          "name": "size",
+          "docstring": "\n size returns r's width and height.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::size(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 131,
+            "column": 8
+          }
+        },
+        {
+          "name": "sub",
+          "docstring": "\n sub returns the rectangle r translated by -p.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::sub(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, p : <a href=\"gmlewis/fonts#Point\">Point</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 146,
+            "column": 8
+          }
+        },
+        {
+          "name": "to_string",
+          "docstring": "\n to_string returns a string representation of r like \"(3,4)-(6,5)\".",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::to_string(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> String",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 113,
+            "column": 19
+          }
+        },
+        {
+          "name": "union",
+          "docstring": "\n union returns the smallest rectangle that contains both r and s.",
+          "signature": "fn <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>::union(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, s : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+          "loc": {
+            "path": "gmlewis/fonts",
+            "file": "geom.mbt",
+            "line": 222,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Rectangle", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "geom.mbt",
+                "line": 91,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Rectangle", "path": "gmlewis/fonts" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/fonts",
+                "file": "geom.mbt",
+                "line": 91,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "add",
+      "docstring": "\n add returns the rectangle r translated by p.",
+      "signature": "fn add(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, p : <a href=\"gmlewis/fonts#Point\">Point</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 137,
+        "column": 8
+      }
+    },
+    {
+      "name": "all_fonts",
+      "docstring": "",
+      "signature": "let all_fonts : <a href=\"moonbitlang/core/array#Array\">Array</a>[String]",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "all-fonts.mbt",
+        "line": 2,
+        "column": 9
+      }
+    },
+    {
+      "name": "bbox",
+      "docstring": "\n `bbox` returns the minimum bounding box of a PathCmd.",
+      "signature": "fn bbox(self : <a href=\"gmlewis/fonts#PathCmd\">PathCmd</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "path-cmd.mbt",
+        "line": 83,
+        "column": 8
+      }
+    },
+    {
+      "name": "bounds",
+      "docstring": "\n `bounds` returns the tuple `(xmin, ymin, xmax, ymax)`.",
+      "signature": "fn bounds(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> (Double, Double, Double, Double)",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 101,
+        "column": 8
+      }
+    },
+    {
+      "name": "canon",
+      "docstring": "\n canon returns the canonical version of r. The returned rectangle has minimum\n and maximum coordinates swapped if necessary so that it is well-formed.",
+      "signature": "fn canon(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 286,
+        "column": 8
+      }
+    },
+    {
+      "name": "clone",
+      "docstring": "\n `clone` makes a copy of the provided rectangle without changing it.",
+      "signature": "fn clone(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 107,
+        "column": 8
+      }
+    },
+    {
+      "name": "div",
+      "docstring": "\n div returns the vector p/k.",
+      "signature": "fn div(self : <a href=\"gmlewis/fonts#Point\">Point</a>, k : Double) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 41,
+        "column": 8
+      }
+    },
+    {
+      "name": "dx",
+      "docstring": "\n dx returns r's width.",
+      "signature": "fn dx(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Double",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 119,
+        "column": 8
+      }
+    },
+    {
+      "name": "dy",
+      "docstring": "\n dy returns r's height.",
+      "signature": "fn dy(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Double",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 125,
+        "column": 8
+      }
+    },
+    {
+      "name": "empty",
+      "docstring": "\n empty reports whether the rectangle contains no points.",
+      "signature": "fn empty(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Bool",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 247,
+        "column": 8
+      }
+    },
+    {
+      "name": "extend",
+      "docstring": "\n `extend` extends the current rectangle to include the provided point.",
+      "signature": "fn extend(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, pt : <a href=\"gmlewis/fonts#Point\">Point</a>) -> Unit",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 205,
+        "column": 8
+      }
+    },
+    {
+      "name": "gen_path",
+      "docstring": "\n `gen_path` \"renders\" the provided text string into an SVG path\n using the provided font information. It performs the necessary\n path translations in order to combine the individual glyphs into\n a \"super glyph\" that can be rendered as a whole.\n\n Note that `gen_path` operates on the string as a left-justified whole\n and anchors the entire path relative to `anchor` accordingly.\n\n If you want multiple lines centered horizontally, use `gen_paths` instead.\n\n Note that the SVG standard states that positive-Y is \"down\" with origin\n coordinates in the upper-left, however, all SVG fonts appear to have their\n origin in the lower left with positive-Y moving \"up\". This package\n attempts to convert the SVG paths such that the font is equally readable\n in both the \"y_up=false\" SVG canvas environment or in a 3D \"y_up=true\"\n rendering environment.",
+      "signature": "fn gen_path(self : <a href=\"gmlewis/fonts#Font\">Font</a>, text : String, anchor~ : <a href=\"gmlewis/fonts#Anchor\">Anchor</a> = .., y_up~ : Bool = ..) -> <a href=\"gmlewis/fonts#Glyph\">Glyph</a>!<a href=\"gmlewis/fonts#FontError\">FontError</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "gen-path.mbt",
+        "line": 18,
+        "column": 8
+      }
+    },
+    {
+      "name": "gen_paths",
+      "docstring": "\n `gen_paths` handles multiple strings independently so that they\n can be aligned and distributed more flexibly.",
+      "signature": "fn gen_paths(self : <a href=\"gmlewis/fonts#Font\">Font</a>, lines : <a href=\"moonbitlang/core/array#Array\">Array</a>[String], anchor~ : <a href=\"gmlewis/fonts#Anchor\">Anchor</a> = .., y_up~ : Bool = ..) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/fonts#Glyph\">Glyph</a>]!<a href=\"gmlewis/fonts#FontError\">FontError</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "gen-paths.mbt",
+        "line": 4,
+        "column": 8
+      }
+    },
+    {
+      "name": "glyph_bbox",
+      "docstring": "\n `glyph_bbox` returns the conservative bounding box of a Glyph path.\n It only supports the absolute SVG commands: M, L, C, Q, Z.\n\n Note that this function does _NOT_ fully analyze the Cubic or Quadratic\n Bézier curves to determine their exact bounding boxes, but instead\n takes a naive and concervative approach by encapsulating the bounds\n of all control points in addition to curve anchor points which may result\n in returning a much larger bounding box than is actually needed to fully\n contain the glyph.",
+      "signature": "fn glyph_bbox(d : String) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>!<a href=\"gmlewis/fonts#FontError\">FontError</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "bbox.mbt",
+        "line": 11,
+        "column": 8
+      }
+    },
+    {
+      "name": "inset",
+      "docstring": "\n inset returns the rectangle r inset by n, which may be negative. If either\n of r's dimensions is less than 2*n then an empty rectangle near the center\n of r will be returned.",
+      "signature": "fn inset(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, n : Double) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 157,
+        "column": 8
+      }
+    },
+    {
+      "name": "intersect",
+      "docstring": "\n intersect returns the largest rectangle contained by both r and s. If the\n two rectangles do not overlap then the zero rectangle will be returned.",
+      "signature": "fn intersect(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, s : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 179,
+        "column": 8
+      }
+    },
+    {
+      "name": "is_in",
+      "docstring": "\n is_in reports whether p is in r.",
+      "signature": "fn is_in(self : <a href=\"gmlewis/fonts#Point\">Point</a>, r : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Bool",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 47,
+        "column": 8
+      }
+    },
+    {
+      "name": "length",
+      "docstring": "",
+      "signature": "fn length(self : <a href=\"gmlewis/fonts#Params\">Params</a>) -> Int",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "parse-params.mbt",
+        "line": 6,
+        "column": 8
+      }
+    },
+    {
+      "name": "mul",
+      "docstring": "\n mul returns the vector p*k.",
+      "signature": "fn mul(self : <a href=\"gmlewis/fonts#Point\">Point</a>, k : Double) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 35,
+        "column": 8
+      }
+    },
+    {
+      "name": "op_add",
+      "docstring": "\n op_add (+) returns the vector p+q.",
+      "signature": "fn op_add(self : <a href=\"gmlewis/fonts#Point\">Point</a>, q : <a href=\"gmlewis/fonts#Point\">Point</a>) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 23,
+        "column": 8
+      }
+    },
+    {
+      "name": "op_equal",
+      "docstring": "\n op_equal reports whether p and q are equal.",
+      "signature": "fn op_equal(self : <a href=\"gmlewis/fonts#Point\">Point</a>, q : <a href=\"gmlewis/fonts#Point\">Point</a>) -> Bool",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 69,
+        "column": 8
+      }
+    },
+    {
+      "name": "op_sub",
+      "docstring": "\n op_sub (-) returns the vector p-q.",
+      "signature": "fn op_sub(self : <a href=\"gmlewis/fonts#Point\">Point</a>, q : <a href=\"gmlewis/fonts#Point\">Point</a>) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 29,
+        "column": 8
+      }
+    },
+    {
+      "name": "overlaps",
+      "docstring": "\n overlaps reports whether r and s have a non-empty intersection.",
+      "signature": "fn overlaps(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, s : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> Bool",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 260,
+        "column": 8
+      }
+    },
+    {
+      "name": "pt",
+      "docstring": "\n pt is shorthand for [Point]{X, Y}.",
+      "signature": "fn pt(x : Double, y : Double) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 75,
+        "column": 8
+      }
+    },
+    {
+      "name": "rect",
+      "docstring": "\n rect is shorthand for Rectangle::{min: pt(x0, y0), max: pt(x1, y1)}. The returned\n rectangle has minimum and maximum coordinates swapped if necessary so that\n it is well-formed.",
+      "signature": "fn rect(x0 : Double, y0 : Double, x1 : Double, y1 : Double) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 305,
+        "column": 8
+      }
+    },
+    {
+      "name": "size",
+      "docstring": "\n size returns r's width and height.",
+      "signature": "fn size(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Point\">Point</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 131,
+        "column": 8
+      }
+    },
+    {
+      "name": "sub",
+      "docstring": "\n sub returns the rectangle r translated by -p.",
+      "signature": "fn sub(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, p : <a href=\"gmlewis/fonts#Point\">Point</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 146,
+        "column": 8
+      }
+    },
+    {
+      "name": "to_glyph",
+      "docstring": "\n `to_glyph` returns a \"super\" `Glyph` from a `Path`, optionally processing\n every `PathCmd` with a processing function.\n Note that apart from `path_cmd_fn`, `to_glyph` makes no attempt to process the\n invidual glyphs and simply transforms the representation.",
+      "signature": "fn to_glyph(self : <a href=\"gmlewis/fonts#Path\">Path</a>, path_cmd_fn? : <a href=\"gmlewis/fonts#PathCmdFn\">PathCmdFn</a>) -> <a href=\"gmlewis/fonts#Glyph\">Glyph</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "path.mbt",
+        "line": 94,
+        "column": 8
+      }
+    },
+    {
+      "name": "to_string",
+      "docstring": "\n to_string returns a string representation of p like \"(3,4)\".",
+      "signature": "fn to_string(self : <a href=\"gmlewis/fonts#Point\">Point</a>) -> String",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 17,
+        "column": 8
+      }
+    },
+    {
+      "name": "translate_path",
+      "docstring": "\n `translate_path` translates (moves) an SVG path by the provided offsets.\n If `invert_y` is true, all `y` values are scaled by -1.",
+      "signature": "fn translate_path(d : String, x : Double, y : Double, invert_y~ : Bool = ..) -> String!<a href=\"gmlewis/fonts#FontError\">FontError</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "translate-path.mbt",
+        "line": 4,
+        "column": 8
+      }
+    },
+    {
+      "name": "union",
+      "docstring": "\n union returns the smallest rectangle that contains both r and s.",
+      "signature": "fn union(self : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>, s : <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>) -> <a href=\"gmlewis/fonts#Rectangle\">Rectangle</a>",
+      "loc": {
+        "path": "gmlewis/fonts",
+        "file": "geom.mbt",
+        "line": 222,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

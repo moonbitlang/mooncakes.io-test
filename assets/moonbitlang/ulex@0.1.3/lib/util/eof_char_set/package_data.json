@@ -1,0 +1,796 @@
+{
+  "name": "moonbitlang/ulex/lib/util/eof_char_set",
+  "traits": [],
+  "types": [
+    {
+      "name": "EofChar",
+      "docstring": "",
+      "signature": "type EofChar",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char.mbt",
+        "line": 2,
+        "column": 6
+      },
+      "methods": [
+        {
+          "name": "char",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>::char(x : Char) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char.mbt",
+            "line": 38,
+            "column": 17
+          }
+        },
+        {
+          "name": "eof",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>::eof() -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char.mbt",
+            "line": 33,
+            "column": 17
+          }
+        },
+        {
+          "name": "repr",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>::repr(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharRepr\">EofCharRepr</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char.mbt",
+            "line": 43,
+            "column": 17
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofChar",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Compare", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "compare",
+              "docstring": "automatically derived",
+              "signature": "fn compare(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>, <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>) -> Int",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char.mbt",
+                "line": 2,
+                "column": 29
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofChar",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>, <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>) -> Bool",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char.mbt",
+                "line": 2,
+                "column": 25
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofChar",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Hash", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "hash_combine",
+              "docstring": "automatically derived",
+              "signature": "fn hash_combine(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>, <a href=\"moonbitlang/core/builtin#Hasher\">Hasher</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char.mbt",
+                "line": 2,
+                "column": 38
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofChar",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char.mbt",
+                "line": 2,
+                "column": 44
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofChar",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "automatically derived",
+              "signature": "fn to_json(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char.mbt",
+                "line": 2,
+                "column": 50
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofChar",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": {
+            "name": "BoundedEnum",
+            "path": "moonbitlang/ulex/lib/util/bounded_enum"
+          },
+          "methods": [
+            {
+              "name": "lower_bound",
+              "docstring": "",
+              "signature": "fn lower_bound() -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char.mbt",
+                "line": 11,
+                "column": 43
+              }
+            },
+            {
+              "name": "pred",
+              "docstring": "",
+              "signature": "fn pred(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char.mbt",
+                "line": 21,
+                "column": 43
+              }
+            },
+            {
+              "name": "succ",
+              "docstring": "",
+              "signature": "fn succ(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char.mbt",
+                "line": 27,
+                "column": 43
+              }
+            },
+            {
+              "name": "upper_bound",
+              "docstring": "",
+              "signature": "fn upper_bound() -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char.mbt",
+                "line": 16,
+                "column": 43
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EofCharRepr",
+      "docstring": "",
+      "signature": "pub enum EofCharRepr {\n  Eof\n  Char(Char)\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char.mbt",
+        "line": 5,
+        "column": 10
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "EofCharSet",
+      "docstring": "",
+      "signature": "type EofCharSet",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 5,
+        "column": 6
+      },
+      "methods": [
+        {
+          "name": "complement",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::complement(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 72,
+            "column": 8
+          }
+        },
+        {
+          "name": "contains",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::contains(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, x : Char) -> Bool",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 43,
+            "column": 8
+          }
+        },
+        {
+          "name": "difference",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::difference(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 77,
+            "column": 8
+          }
+        },
+        {
+          "name": "disjoint",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::disjoint(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> Bool",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 87,
+            "column": 8
+          }
+        },
+        {
+          "name": "intersection",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::intersection(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 67,
+            "column": 8
+          }
+        },
+        {
+          "name": "is_empty",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::is_empty(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> Bool",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 38,
+            "column": 8
+          }
+        },
+        {
+          "name": "iter",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::iter(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>]",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 117,
+            "column": 8
+          }
+        },
+        {
+          "name": "iter_ranges",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::iter_ranges(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>, <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>)]",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 112,
+            "column": 8
+          }
+        },
+        {
+          "name": "land",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::land(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 107,
+            "column": 20
+          }
+        },
+        {
+          "name": "negated",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::negated(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 33,
+            "column": 8
+          }
+        },
+        {
+          "name": "op_add",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::op_add(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 97,
+            "column": 20
+          }
+        },
+        {
+          "name": "op_neg",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::op_neg(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 92,
+            "column": 20
+          }
+        },
+        {
+          "name": "op_sub",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::op_sub(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 102,
+            "column": 20
+          }
+        },
+        {
+          "name": "slice",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::slice(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, min? : Char, max? : Char) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 48,
+            "column": 8
+          }
+        },
+        {
+          "name": "subset",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::subset(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> Bool",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 82,
+            "column": 8
+          }
+        },
+        {
+          "name": "union",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>::union(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/eof_char_set",
+            "file": "eof_char_set.mbt",
+            "line": 62,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofCharSet",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Compare", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "compare",
+              "docstring": "automatically derived",
+              "signature": "fn compare(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> Int",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char_set.mbt",
+                "line": 5,
+                "column": 54
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofCharSet",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Default", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "default",
+              "docstring": "automatically derived",
+              "signature": "fn default() -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char_set.mbt",
+                "line": 5,
+                "column": 41
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofCharSet",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> Bool",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char_set.mbt",
+                "line": 5,
+                "column": 50
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofCharSet",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Hash", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "hash_combine",
+              "docstring": "automatically derived",
+              "signature": "fn hash_combine(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, <a href=\"moonbitlang/core/builtin#Hasher\">Hasher</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char_set.mbt",
+                "line": 5,
+                "column": 63
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofCharSet",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "",
+              "signature": "fn output(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, logger : <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char_set.mbt",
+                "line": 122,
+                "column": 35
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "EofCharSet",
+              "path": "moonbitlang/ulex/lib/util/eof_char_set"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "",
+              "signature": "fn to_json(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                "file": "eof_char_set.mbt",
+                "line": 134,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T = <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 2,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "any",
+      "docstring": " The set of all characters.\n Does not include the EOF character.",
+      "signature": "let any : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 25,
+        "column": 9
+      }
+    },
+    {
+      "name": "complement",
+      "docstring": "",
+      "signature": "fn complement(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 72,
+        "column": 8
+      }
+    },
+    {
+      "name": "contains",
+      "docstring": "",
+      "signature": "fn contains(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, x : Char) -> Bool",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 43,
+        "column": 8
+      }
+    },
+    {
+      "name": "difference",
+      "docstring": "",
+      "signature": "fn difference(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 77,
+        "column": 8
+      }
+    },
+    {
+      "name": "disjoint",
+      "docstring": "",
+      "signature": "fn disjoint(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> Bool",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 87,
+        "column": 8
+      }
+    },
+    {
+      "name": "empty",
+      "docstring": "",
+      "signature": "let empty : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 8,
+        "column": 9
+      }
+    },
+    {
+      "name": "eof",
+      "docstring": " The pseudo-character indicating the end of the input.",
+      "signature": "let eof : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 16,
+        "column": 9
+      }
+    },
+    {
+      "name": "intersection",
+      "docstring": "",
+      "signature": "fn intersection(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 67,
+        "column": 8
+      }
+    },
+    {
+      "name": "is_empty",
+      "docstring": "",
+      "signature": "fn is_empty(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> Bool",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 38,
+        "column": 8
+      }
+    },
+    {
+      "name": "iter",
+      "docstring": "",
+      "signature": "fn iter(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 117,
+        "column": 8
+      }
+    },
+    {
+      "name": "iter_ranges",
+      "docstring": "",
+      "signature": "fn iter_ranges(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>, <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofChar\">EofChar</a>)]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 112,
+        "column": 8
+      }
+    },
+    {
+      "name": "negated",
+      "docstring": "",
+      "signature": "fn negated(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 33,
+        "column": 8
+      }
+    },
+    {
+      "name": "of_array",
+      "docstring": "",
+      "signature": "fn of_array(arr : <a href=\"moonbitlang/core/array#Array\">Array</a>[Char]) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 28,
+        "column": 8
+      }
+    },
+    {
+      "name": "range",
+      "docstring": "",
+      "signature": "fn range(min : Char, max : Char) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 19,
+        "column": 8
+      }
+    },
+    {
+      "name": "singleton",
+      "docstring": "",
+      "signature": "fn singleton(x : Char) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 11,
+        "column": 8
+      }
+    },
+    {
+      "name": "slice",
+      "docstring": "",
+      "signature": "fn slice(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, min? : Char, max? : Char) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 48,
+        "column": 8
+      }
+    },
+    {
+      "name": "subset",
+      "docstring": "",
+      "signature": "fn subset(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> Bool",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 82,
+        "column": 8
+      }
+    },
+    {
+      "name": "union",
+      "docstring": "",
+      "signature": "fn union(self : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>, other : <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>) -> <a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">EofCharSet</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/eof_char_set",
+        "file": "eof_char_set.mbt",
+        "line": 62,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,1088 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "image",
+      "package": {
+        "path": "gmlewis/image",
+        "traits": [
+          { "name": "@gmlewis/image.Image", "impls": [] },
+          { "name": "@gmlewis/image.RGBA64Image", "impls": [] }
+        ],
+        "types": [
+          {
+            "name": "Alpha",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Alpha", "path": "gmlewis/image" },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "alpha_at", "new", "new_empty", "op_get", "op_set",
+              "rgba64_at", "set_alpha", "set_rgba64"
+            ]
+          },
+          {
+            "name": "Alpha16",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Alpha16",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "alpha16_at", "new", "new_empty", "op_get", "op_set",
+              "rgba64_at", "set_alpha16", "set_rgba64"
+            ]
+          },
+          {
+            "name": "CMYK",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "CMYK", "path": "gmlewis/image" },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "cmyk_at", "new", "new_empty", "op_get", "rgba64_at",
+              "set_cmyk", "set_rgba64"
+            ]
+          },
+          { "name": "Config", "impls": [], "methods": [ "new_empty" ] },
+          {
+            "name": "Gray",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Gray", "path": "gmlewis/image" },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "gray_at", "new", "new_empty", "op_get", "op_set", "rgba64_at",
+              "set_gray", "set_rgba64"
+            ]
+          },
+          {
+            "name": "Gray16",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Gray16",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "gray16_at", "new", "new_empty", "op_get", "op_set",
+              "rgba64_at", "set_gray16", "set_rgba64"
+            ]
+          },
+          {
+            "name": "NRGBA",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "NRGBA", "path": "gmlewis/image" },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "new", "new_empty", "nrgba_at", "op_get", "op_set",
+              "rgba64_at", "set_nrgba", "set_rgba64"
+            ]
+          },
+          {
+            "name": "NRGBA64",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "NRGBA64",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "new", "new_empty", "nrgba64_at", "op_get", "op_set",
+              "rgba64_at", "set_nrgba64", "set_rgba64"
+            ]
+          },
+          {
+            "name": "Paletted",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Paletted",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "new", "new_empty", "op_get", "op_set", "rgba64_at",
+              "set_color_index", "set_rgba64"
+            ]
+          },
+          {
+            "name": "Point",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Point", "path": "gmlewis/image" },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Point", "path": "gmlewis/image" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": [
+              "div", "is_in", "mod", "mul", "op_add", "op_equal", "op_sub",
+              "to_string"
+            ]
+          },
+          {
+            "name": "RGBA",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "RGBA", "path": "gmlewis/image" },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "new", "new_empty", "op_get", "op_set", "rgba64_at", "rgba_at",
+              "set_rgba", "set_rgba64"
+            ]
+          },
+          {
+            "name": "RGBA64",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "RGBA64",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              }
+            ],
+            "methods": [
+              "new", "new_empty", "op_get", "op_set", "rgba64_at",
+              "set_rgba64"
+            ]
+          },
+          {
+            "name": "Rectangle",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Rectangle",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Image", "path": "gmlewis/image" },
+                "methods": [
+                  "at", "bounds", "color_index_at", "color_model",
+                  "get_bytes_per_pixel", "get_stride", "opaque",
+                  "pix_offset", "raw_data", "set", "sub_image"
+                ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Rectangle",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Rectangle",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": [
+              "add", "canon", "copy", "dx", "dy", "empty", "inset",
+              "intersect", "is_in", "new", "op_equal", "overlaps",
+              "rgba64_at", "size", "sub", "to_string", "union"
+            ]
+          },
+          {
+            "name": "SizeError",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "SizeError",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "SizeError",
+                    "path": "gmlewis/image"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          }
+        ],
+        "typealias": [],
+        "values": [
+          "add", "add2_non_neg", "alpha16_at", "alpha_at", "canon",
+          "cmyk_at", "copy", "div", "dx", "dy", "empty", "gray16_at",
+          "gray_at", "inset", "intersect", "is_in", "mod", "mul",
+          "mul3_non_neg", "nrgba64_at", "nrgba_at", "op_add", "op_equal",
+          "op_sub", "overlaps", "pt", "rect", "rgba64_at", "rgba_at",
+          "set_alpha", "set_alpha16", "set_cmyk", "set_color_index",
+          "set_gray", "set_gray16", "set_nrgba", "set_nrgba64", "set_rgba",
+          "size", "sub", "to_string", "union"
+        ],
+        "misc": [
+          {
+            "name": "Image",
+            "impls": [],
+            "methods": [ "empty", "new_empty" ]
+          }
+        ]
+      },
+      "childs": [
+        {
+          "name": "color",
+          "package": {
+            "path": "gmlewis/image/color",
+            "traits": [
+              { "name": "@gmlewis/image/color.Color", "impls": [] },
+              { "name": "@gmlewis/image/color.Model", "impls": [] }
+            ],
+            "types": [
+              {
+                "name": "Alpha",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Alpha",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Alpha",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Alpha",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "from", "new" ]
+              },
+              {
+                "name": "Alpha16",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Alpha16",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Alpha16",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Alpha16",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "from", "new" ]
+              },
+              {
+                "name": "CMYK",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "CMYK",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "CMYK",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "CMYK",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "from", "new" ]
+              },
+              {
+                "name": "Gray",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Gray",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Gray",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Gray",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "from", "new" ]
+              },
+              {
+                "name": "Gray16",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Gray16",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Gray16",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Gray16",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "from", "new" ]
+              },
+              {
+                "name": "ModelFunc",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "ModelFunc",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Model",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "convert", "get_palette", "name" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "NRGBA",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "NRGBA",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "NRGBA",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "NRGBA",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "from", "new" ]
+              },
+              {
+                "name": "NRGBA64",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "NRGBA64",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "NRGBA64",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "NRGBA64",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "from", "new" ]
+              },
+              {
+                "name": "NYCbCrA",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "NYCbCrA",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "NYCbCrA",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "NYCbCrA",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "new" ]
+              },
+              {
+                "name": "Palette",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Palette",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Model",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "convert", "get_palette", "name" ]
+                  }
+                ],
+                "methods": [
+                  "from", "index", "length", "new", "new_empty",
+                  "op_as_view", "op_get", "op_set"
+                ]
+              },
+              {
+                "name": "RGBA",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RGBA",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RGBA",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RGBA",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "from", "new" ]
+              },
+              {
+                "name": "RGBA64",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RGBA64",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RGBA64",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "RGBA64",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "from", "new" ]
+              },
+              {
+                "name": "YCbCr",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "YCbCr",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "methods": [ "model", "raw", "rgba" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "YCbCr",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "YCbCr",
+                        "path": "gmlewis/image/color"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "new" ]
+              }
+            ],
+            "typealias": [],
+            "values": [
+              "alpha16_model", "alpha_model", "black", "cmyk_model",
+              "cmyk_to_rgb", "gray16_model", "gray_model", "index", "length",
+              "model_func", "n_y_cb_cr_a_model", "nrgba64_model",
+              "nrgba_model", "op_as_view", "op_get", "op_set", "opaque",
+              "rgb_to_cmyk", "rgb_to_y_cb_cr", "rgba64_model", "rgba_model",
+              "to_string", "transparent", "white", "y_cb_cr_model",
+              "y_cb_cr_to_rgb"
+            ],
+            "misc": [
+              {
+                "name": "Color",
+                "impls": [
+                  {
+                    "self": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "name": "Color",
+                      "path": "gmlewis/image/color"
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "to_string" ]
+              }
+            ]
+          },
+          "childs": []
+        },
+        {
+          "name": "png",
+          "package": {
+            "path": "gmlewis/image/png",
+            "traits": [],
+            "types": [
+              {
+                "name": "Decoder",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Decoder",
+                        "path": "gmlewis/image/png"
+                      },
+                      "arguments": []
+                    },
+                    "trait": { "name": "Reader", "path": "gmlewis/io" },
+                    "methods": [ "read" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "Encoder",
+                "impls": [],
+                "methods": [ "enc", "write" ]
+              }
+            ],
+            "typealias": [],
+            "values": [
+              "chunk_order_error", "decode", "decode_config", "enc",
+              "encode", "err_negative_read", "write"
+            ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

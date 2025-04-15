@@ -1,0 +1,20 @@
+{
+  "name": "gmlewis/fonts/examples/checkerboard",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "checkerboard",
+      "docstring": "",
+      "signature": "fn checkerboard() -> <a href=\"gmlewis/fonts/draw#Graphic\">@gmlewis/fonts/draw.Graphic</a>",
+      "loc": {
+        "path": "gmlewis/fonts/examples/checkerboard",
+        "file": "checkerboard.mbt",
+        "line": 26,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

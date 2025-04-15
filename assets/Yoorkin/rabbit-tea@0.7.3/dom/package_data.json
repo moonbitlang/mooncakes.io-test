@@ -1,0 +1,3277 @@
+{
+  "name": "Yoorkin/rabbit-tea/dom",
+  "traits": [],
+  "types": [
+    {
+      "name": "CanvasGradient",
+      "docstring": "",
+      "signature": "type CanvasGradient",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 564,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "add_color_stop",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>::add_color_stop(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>, offset : Double, color : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 567,
+            "column": 36
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "CanvasGradient",
+              "path": "Yoorkin/rabbit-tea/dom"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Cast", "path": "rami3l/js-ffi/js" },
+          "methods": [
+            {
+              "name": "from",
+              "docstring": "",
+              "signature": "fn from(value : <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>) -> <a href=\"rami3l/js-ffi/js#Value\">@rami3l/js-ffi/js.Value</a>",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/dom",
+                "file": "canvas.mbt",
+                "line": 159,
+                "column": 43
+              }
+            },
+            {
+              "name": "into",
+              "docstring": "",
+              "signature": "fn into(value : <a href=\"rami3l/js-ffi/js#Value\">@rami3l/js-ffi/js.Value</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>?",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/dom",
+                "file": "canvas.mbt",
+                "line": 154,
+                "column": 43
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CanvasLineCap",
+      "docstring": "",
+      "signature": "type CanvasLineCap",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 440,
+        "column": 13
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "CanvasLineJoin",
+      "docstring": "",
+      "signature": "type CanvasLineJoin",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 443,
+        "column": 13
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "CanvasPattern",
+      "docstring": "",
+      "signature": "type CanvasPattern",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 574,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "set_transform",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasPattern\">CanvasPattern</a>::set_transform(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasPattern\">CanvasPattern</a>, transform : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[<a href=\"Yoorkin/rabbit-tea/dom#DOMMatrix2DInit\">DOMMatrix2DInit</a>]) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 577,
+            "column": 35
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "CanvasPattern",
+              "path": "Yoorkin/rabbit-tea/dom"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Cast", "path": "rami3l/js-ffi/js" },
+          "methods": [
+            {
+              "name": "from",
+              "docstring": "",
+              "signature": "fn from(value : <a href=\"Yoorkin/rabbit-tea/dom#CanvasPattern\">CanvasPattern</a>) -> <a href=\"rami3l/js-ffi/js#Value\">@rami3l/js-ffi/js.Value</a>",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/dom",
+                "file": "canvas.mbt",
+                "line": 175,
+                "column": 42
+              }
+            },
+            {
+              "name": "into",
+              "docstring": "",
+              "signature": "fn into(value : <a href=\"rami3l/js-ffi/js#Value\">@rami3l/js-ffi/js.Value</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#CanvasPattern\">CanvasPattern</a>?",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/dom",
+                "file": "canvas.mbt",
+                "line": 170,
+                "column": 42
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CanvasRenderingContext2D",
+      "docstring": "",
+      "signature": "type CanvasRenderingContext2D",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 33,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "arc",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::arc(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double, radius : Double, start_angle : Double, end_angle : Double, anticlockwise~ : Bool = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 540,
+            "column": 46
+          }
+        },
+        {
+          "name": "arc_to",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::arc_to(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x1 : Double, y1 : Double, x2 : Double, y2 : Double, radius : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 510,
+            "column": 46
+          }
+        },
+        {
+          "name": "begin_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::begin_path(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 258,
+            "column": 46
+          }
+        },
+        {
+          "name": "bezier_curve_to",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::bezier_curve_to(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, cp1x : Double, cp1y : Double, cp2x : Double, cp2y : Double, x : Double, y : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 499,
+            "column": 46
+          }
+        },
+        {
+          "name": "clear_rect",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::clear_rect(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double, w : Double, h : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 229,
+            "column": 46
+          }
+        },
+        {
+          "name": "clip",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::clip(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, fill_rule~ : String = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 287,
+            "column": 46
+          }
+        },
+        {
+          "name": "clip_with_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::clip_with_path(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, path : <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>, fill_rule~ : String = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 293,
+            "column": 46
+          }
+        },
+        {
+          "name": "close_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::close_path(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 471,
+            "column": 46
+          }
+        },
+        {
+          "name": "create_image_data",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::create_image_data(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, sw : Double, sh : Double, settings~ : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[<a href=\"Yoorkin/rabbit-tea/dom#ImageDataSettings\">ImageDataSettings</a>] = ..) -> <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 383,
+            "column": 46
+          }
+        },
+        {
+          "name": "create_image_data_with_data",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::create_image_data_with_data(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, data : <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 391,
+            "column": 46
+          }
+        },
+        {
+          "name": "create_linear_gradient",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::create_linear_gradient(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x0 : Double, y0 : Double, x1 : Double, y1 : Double) -> <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 206,
+            "column": 46
+          }
+        },
+        {
+          "name": "create_radial_gradient",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::create_radial_gradient(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x0 : Double, y0 : Double, r0 : Double, x1 : Double, y1 : Double, r1 : Double) -> <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 215,
+            "column": 46
+          }
+        },
+        {
+          "name": "draw_image",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::draw_image(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, dx : Double, dy : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 354,
+            "column": 46
+          }
+        },
+        {
+          "name": "draw_image_with_size",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::draw_image_with_size(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, dx : Double, dy : Double, dw : Double, dh : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 361,
+            "column": 46
+          }
+        },
+        {
+          "name": "draw_image_with_src_and_dst_size",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::draw_image_with_src_and_dst_size(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, sx : Double, sy : Double, sw : Double, sh : Double, dx : Double, dy : Double, dw : Double, dh : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 370,
+            "column": 46
+          }
+        },
+        {
+          "name": "ellipse",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::ellipse(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double, radius_x : Double, radius_y : Double, rotation : Double, start_angle : Double, end_angle : Double, anticlockwise~ : Bool = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 551,
+            "column": 46
+          }
+        },
+        {
+          "name": "fill",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::fill(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, fill_rule~ : String = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 263,
+            "column": 46
+          }
+        },
+        {
+          "name": "fill_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::fill_path(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, path : <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>, fill_rule~ : String = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 269,
+            "column": 46
+          }
+        },
+        {
+          "name": "fill_rect",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::fill_rect(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double, w : Double, h : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 238,
+            "column": 46
+          }
+        },
+        {
+          "name": "fill_text",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::fill_text(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, text : String, x : Double, y : Double, max_width~ : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[Double] = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 334,
+            "column": 46
+          }
+        },
+        {
+          "name": "get_fill_style",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::get_fill_style(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> <a href=\"rami3l/js-ffi/js#Union3\">@rami3l/js-ffi/js.Union3</a>[String, <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>, <a href=\"Yoorkin/rabbit-tea/dom#CanvasPattern\">CanvasPattern</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 193,
+            "column": 46
+          }
+        },
+        {
+          "name": "get_image_data",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::get_image_data(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, sx : Double, sy : Double, sw : Double, sh : Double, settings~ : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[<a href=\"Yoorkin/rabbit-tea/dom#ImageDataSettings\">ImageDataSettings</a>] = ..) -> <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 397,
+            "column": 46
+          }
+        },
+        {
+          "name": "get_image_smoothing_quality",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::get_image_smoothing_quality(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 137,
+            "column": 46
+          }
+        },
+        {
+          "name": "get_line_cap",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::get_line_cap(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#CanvasLineCap\">CanvasLineCap</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 446,
+            "column": 46
+          }
+        },
+        {
+          "name": "get_line_join",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::get_line_join(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#CanvasLineJoin\">CanvasLineJoin</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 457,
+            "column": 46
+          }
+        },
+        {
+          "name": "get_line_with",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::get_line_with(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Double",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 429,
+            "column": 46
+          }
+        },
+        {
+          "name": "get_stroke_style",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::get_stroke_style(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> <a href=\"rami3l/js-ffi/js#Union3\">@rami3l/js-ffi/js.Union3</a>[String, <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>, <a href=\"Yoorkin/rabbit-tea/dom#CanvasPattern\">CanvasPattern</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 180,
+            "column": 46
+          }
+        },
+        {
+          "name": "image_smoothing_enabled",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::image_smoothing_enabled(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 132,
+            "column": 46
+          }
+        },
+        {
+          "name": "is_context_lost",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::is_context_lost(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 79,
+            "column": 46
+          }
+        },
+        {
+          "name": "is_point_in_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::is_point_in_path(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double, fill_rule~ : String = ..) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 300,
+            "column": 46
+          }
+        },
+        {
+          "name": "is_point_in_path_with_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::is_point_in_path_with_path(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, path : <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>, x : Double, y : Double, fill_rule~ : String = ..) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 308,
+            "column": 46
+          }
+        },
+        {
+          "name": "is_point_in_stroke",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::is_point_in_stroke(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 317,
+            "column": 46
+          }
+        },
+        {
+          "name": "is_point_in_stroke_with_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::is_point_in_stroke_with_path(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, path : <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>, x : Double, y : Double) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 324,
+            "column": 46
+          }
+        },
+        {
+          "name": "line_to",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::line_to(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 483,
+            "column": 46
+          }
+        },
+        {
+          "name": "move_to",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::move_to(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 476,
+            "column": 46
+          }
+        },
+        {
+          "name": "put_image_data",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::put_image_data(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, image_data : <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>, dx : Int, dy : Int) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 407,
+            "column": 46
+          }
+        },
+        {
+          "name": "put_image_data_with_dirty",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::put_image_data_with_dirty(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, image_data : <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>, dx : Int, dy : Int, dirty_x : Int, dirty_y : Int, dirty_width : Int, dirty_height : Int) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 415,
+            "column": 46
+          }
+        },
+        {
+          "name": "quardratic_curve_to",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::quardratic_curve_to(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, cpx : Double, cpy : Double, x : Double, y : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 490,
+            "column": 46
+          }
+        },
+        {
+          "name": "rect",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::rect(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double, w : Double, h : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 520,
+            "column": 46
+          }
+        },
+        {
+          "name": "reset",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::reset(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 74,
+            "column": 46
+          }
+        },
+        {
+          "name": "reset_transform",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::reset_transform(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 126,
+            "column": 46
+          }
+        },
+        {
+          "name": "restore",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::restore(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 69,
+            "column": 46
+          }
+        },
+        {
+          "name": "rotate",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::rotate(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, angle : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 91,
+            "column": 46
+          }
+        },
+        {
+          "name": "round_rect",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::round_rect(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double, w : Double, h : Double, radius : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 529,
+            "column": 46
+          }
+        },
+        {
+          "name": "save",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::save(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 64,
+            "column": 46
+          }
+        },
+        {
+          "name": "scale",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::scale(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 84,
+            "column": 46
+          }
+        },
+        {
+          "name": "set_fill_style",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::set_fill_style(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, value : <a href=\"rami3l/js-ffi/js#Union3\">@rami3l/js-ffi/js.Union3</a>[String, <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>, <a href=\"Yoorkin/rabbit-tea/dom#CanvasPattern\">CanvasPattern</a>]) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 199,
+            "column": 46
+          }
+        },
+        {
+          "name": "set_image_smoothing_quality",
+          "docstring": " Possible values are \"low\", \"medium\", and \"high\".",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::set_image_smoothing_quality(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, value : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 142,
+            "column": 46
+          }
+        },
+        {
+          "name": "set_line_cap",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::set_line_cap(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, value : <a href=\"Yoorkin/rabbit-tea/dom#CanvasLineCap\">CanvasLineCap</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 451,
+            "column": 46
+          }
+        },
+        {
+          "name": "set_line_join",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::set_line_join(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, value : <a href=\"Yoorkin/rabbit-tea/dom#CanvasLineJoin\">CanvasLineJoin</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 462,
+            "column": 46
+          }
+        },
+        {
+          "name": "set_line_width",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::set_line_width(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, value : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 434,
+            "column": 46
+          }
+        },
+        {
+          "name": "set_stroke_style",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::set_stroke_style(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, value : <a href=\"rami3l/js-ffi/js#Union3\">@rami3l/js-ffi/js.Union3</a>[String, <a href=\"Yoorkin/rabbit-tea/dom#CanvasGradient\">CanvasGradient</a>, <a href=\"Yoorkin/rabbit-tea/dom#CanvasPattern\">CanvasPattern</a>]) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 186,
+            "column": 46
+          }
+        },
+        {
+          "name": "set_transform",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::set_transform(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, a : Double, b : Double, c : Double, d : Double, e : Double, f : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 115,
+            "column": 46
+          }
+        },
+        {
+          "name": "stroke",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::stroke(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 276,
+            "column": 46
+          }
+        },
+        {
+          "name": "stroke_rect",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::stroke_rect(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double, w : Double, h : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 247,
+            "column": 46
+          }
+        },
+        {
+          "name": "stroke_text",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::stroke_text(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, text : String, x : Double, y : Double, max_width~ : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[Double] = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 343,
+            "column": 46
+          }
+        },
+        {
+          "name": "stroke_with_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::stroke_with_path(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, path : <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 281,
+            "column": 46
+          }
+        },
+        {
+          "name": "transform",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::transform(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, a : Double, b : Double, c : Double, d : Double, e : Double, f : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 104,
+            "column": 46
+          }
+        },
+        {
+          "name": "translate",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>::translate(self : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, x : Double, y : Double) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 97,
+            "column": 46
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "CanvasRenderingContext2D",
+              "path": "Yoorkin/rabbit-tea/dom"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Cast", "path": "rami3l/js-ffi/js" },
+          "methods": [
+            {
+              "name": "from",
+              "docstring": "",
+              "signature": "fn from(value : <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>) -> <a href=\"rami3l/js-ffi/js#Value\">@rami3l/js-ffi/js.Value</a>",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/dom",
+                "file": "canvas.mbt",
+                "line": 47,
+                "column": 53
+              }
+            },
+            {
+              "name": "into",
+              "docstring": "",
+              "signature": "fn into(value : <a href=\"rami3l/js-ffi/js#Value\">@rami3l/js-ffi/js.Value</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>?",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/dom",
+                "file": "canvas.mbt",
+                "line": 42,
+                "column": 53
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ClipboardEvent",
+      "docstring": "",
+      "signature": "type ClipboardEvent",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 145,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "clipboard_data",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#ClipboardEvent\">ClipboardEvent</a>::clipboard_data(self : <a href=\"Yoorkin/rabbit-tea/dom#ClipboardEvent\">ClipboardEvent</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#DataTransfer\">DataTransfer</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 148,
+            "column": 36
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "DOMMatrix2DInit",
+      "docstring": "",
+      "signature": "type DOMMatrix2DInit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 583,
+        "column": 13
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "DOMRect",
+      "docstring": "",
+      "signature": "type DOMRect",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_rect.mbt",
+        "line": 2,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "get_bottom",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>::get_bottom(self : <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>) -> Double",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_rect.mbt",
+            "line": 23,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_height",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>::get_height(self : <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>) -> Double",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_rect.mbt",
+            "line": 14,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_left",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>::get_left(self : <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>) -> Double",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_rect.mbt",
+            "line": 26,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_right",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>::get_right(self : <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>) -> Double",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_rect.mbt",
+            "line": 20,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_top",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>::get_top(self : <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>) -> Double",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_rect.mbt",
+            "line": 17,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_width",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>::get_width(self : <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>) -> Double",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_rect.mbt",
+            "line": 11,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_x",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>::get_x(self : <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>) -> Double",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_rect.mbt",
+            "line": 5,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_y",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>::get_y(self : <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>) -> Double",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_rect.mbt",
+            "line": 8,
+            "column": 29
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "DataTransfer",
+      "docstring": "",
+      "signature": "type DataTransfer",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "data_transfer.mbt",
+        "line": 2,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "drop_effect",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DataTransfer\">DataTransfer</a>::drop_effect(self : <a href=\"Yoorkin/rabbit-tea/dom#DataTransfer\">DataTransfer</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "data_transfer.mbt",
+            "line": 5,
+            "column": 34
+          }
+        },
+        {
+          "name": "effect_allowed",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DataTransfer\">DataTransfer</a>::effect_allowed(self : <a href=\"Yoorkin/rabbit-tea/dom#DataTransfer\">DataTransfer</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "data_transfer.mbt",
+            "line": 8,
+            "column": 34
+          }
+        },
+        {
+          "name": "items",
+          "docstring": " ",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DataTransfer\">DataTransfer</a>::items(self : <a href=\"Yoorkin/rabbit-tea/dom#DataTransfer\">DataTransfer</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "data_transfer.mbt",
+            "line": 11,
+            "column": 34
+          }
+        },
+        {
+          "name": "set_drog_image",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DataTransfer\">DataTransfer</a>::set_drog_image(self : <a href=\"Yoorkin/rabbit-tea/dom#DataTransfer\">DataTransfer</a>, image : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, x : Int, y : Int) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "data_transfer.mbt",
+            "line": 16,
+            "column": 34
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "DataTransferItemList",
+      "docstring": "",
+      "signature": "type DataTransferItemList",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "data_transfer.mbt",
+        "line": 24,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "add",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>::add(self : <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>, data : String, type_ : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "data_transfer.mbt",
+            "line": 38,
+            "column": 42
+          }
+        },
+        {
+          "name": "clear",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>::clear(self : <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "data_transfer.mbt",
+            "line": 51,
+            "column": 42
+          }
+        },
+        {
+          "name": "length",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>::length(self : <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "data_transfer.mbt",
+            "line": 27,
+            "column": 42
+          }
+        },
+        {
+          "name": "op_get",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>::op_get(self : <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>, index : Int) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "data_transfer.mbt",
+            "line": 32,
+            "column": 42
+          }
+        },
+        {
+          "name": "remove",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>::remove(self : <a href=\"Yoorkin/rabbit-tea/dom#DataTransferItemList\">DataTransferItemList</a>, index : Int) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "data_transfer.mbt",
+            "line": 45,
+            "column": 42
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Document",
+      "docstring": "",
+      "signature": "type Document",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_document.mbt",
+        "line": 2,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "create_document_fragment",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>::create_document_fragment(self : <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#DocumentFragment\">DocumentFragment</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_document.mbt",
+            "line": 20,
+            "column": 20
+          }
+        },
+        {
+          "name": "create_element",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>::create_element(self : <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>, tag : String) -> <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_document.mbt",
+            "line": 14,
+            "column": 20
+          }
+        },
+        {
+          "name": "create_text_node",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>::create_text_node(self : <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>, str : String) -> <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_document.mbt",
+            "line": 17,
+            "column": 20
+          }
+        },
+        {
+          "name": "get_element_by_id",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>::get_element_by_id(self : <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>, id : String) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_document.mbt",
+            "line": 8,
+            "column": 20
+          }
+        },
+        {
+          "name": "to_node",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>::to_node(self : <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_cast.mbt",
+            "line": 25,
+            "column": 30
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "DocumentFragment",
+      "docstring": "",
+      "signature": "type DocumentFragment",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_fragment.mbt",
+        "line": 2,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "to_node",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#DocumentFragment\">DocumentFragment</a>::to_node(self : <a href=\"Yoorkin/rabbit-tea/dom#DocumentFragment\">DocumentFragment</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_cast.mbt",
+            "line": 28,
+            "column": 38
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Element",
+      "docstring": "",
+      "signature": "type Element",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_element.mbt",
+        "line": 2,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "append_children",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::append_children(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, child : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 15,
+            "column": 29
+          }
+        },
+        {
+          "name": "children",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::children(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 11,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_attribute",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::get_attribute(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, attr : String) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 38,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_bounding_client_rect",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::get_bounding_client_rect(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#DOMRect\">DOMRect</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 79,
+            "column": 29
+          }
+        },
+        {
+          "name": "get_property",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::get_property(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, prop : String) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 63,
+            "column": 29
+          }
+        },
+        {
+          "name": "remove_attribute",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::remove_attribute(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, attr : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 44,
+            "column": 29
+          }
+        },
+        {
+          "name": "remove_children",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::remove_children(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, child : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 21,
+            "column": 29
+          }
+        },
+        {
+          "name": "remove_property",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::remove_property(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, prop : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 57,
+            "column": 29
+          }
+        },
+        {
+          "name": "scroll_into_view",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::scroll_into_view(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 69,
+            "column": 29
+          }
+        },
+        {
+          "name": "set_attribute",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::set_attribute(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, attr : String, value : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 31,
+            "column": 29
+          }
+        },
+        {
+          "name": "set_inner_html",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::set_inner_html(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, html : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 73,
+            "column": 29
+          }
+        },
+        {
+          "name": "set_property",
+          "docstring": " ",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::set_property(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>, prop : String, value : <a href=\"rami3l/js-ffi/js#Value\">@rami3l/js-ffi/js.Value</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 50,
+            "column": 29
+          }
+        },
+        {
+          "name": "to_html_element",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::to_html_element(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 5,
+            "column": 29
+          }
+        },
+        {
+          "name": "to_node",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>::to_node(self : <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_cast.mbt",
+            "line": 31,
+            "column": 29
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Event",
+      "docstring": "\n \n # Hierarchy of DOM Events\n \n ```\n Event <-+-- ClipboardEvent\n         +-- UIEvent <--+-- MouseEvent\n                        +-- InputEvent\n                        +-- FocusEvent\n                        +-- KeyboardEvent\n ```",
+      "signature": "type Event",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 12,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "prevent_default",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>::prevent_default(self : <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 28,
+            "column": 27
+          }
+        },
+        {
+          "name": "stop_propagation",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>::stop_propagation(self : <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 31,
+            "column": 27
+          }
+        },
+        {
+          "name": "target",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>::target(self : <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 15,
+            "column": 27
+          }
+        },
+        {
+          "name": "to_clipboard_event",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>::to_clipboard_event(self : <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 22,
+            "column": 27
+          }
+        },
+        {
+          "name": "to_ui_event",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>::to_ui_event(self : <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 18,
+            "column": 27
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "EventTarget",
+      "docstring": "\n # Hireharchy related to the DOM EventTarget\n \n ```\n EventTarget <-- Node <--+-- Document\n                         +-- DocumentFragment\n                         +-- Element <-- HTMLElement <--+-- HTMLCanvasElement\n                                                        +-- HTMLInputElement\n ```",
+      "signature": "type EventTarget",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event_target.mbt",
+        "line": 10,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "add_event_listener",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>::add_event_listener(self : <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>, type_ : String, callback : (<a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> Unit) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event_target.mbt",
+            "line": 17,
+            "column": 20
+          }
+        },
+        {
+          "name": "dispatch_event",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>::dispatch_event(self : <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>, event : <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event_target.mbt",
+            "line": 33,
+            "column": 20
+          }
+        },
+        {
+          "name": "remove_event_listener",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>::remove_event_listener(self : <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>, type_ : String, callback : (<a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> Unit) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event_target.mbt",
+            "line": 25,
+            "column": 20
+          }
+        },
+        {
+          "name": "to_node",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>::to_node(self : <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event_target.mbt",
+            "line": 13,
+            "column": 20
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "FocusEvent",
+      "docstring": "",
+      "signature": "type FocusEvent",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 97,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "related_target",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#FocusEvent\">FocusEvent</a>::related_target(self : <a href=\"Yoorkin/rabbit-tea/dom#FocusEvent\">FocusEvent</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 100,
+            "column": 32
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "GPUCanvasContext",
+      "docstring": "",
+      "signature": "type GPUCanvasContext",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 61,
+        "column": 13
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "HTMLCanvasElement",
+      "docstring": "",
+      "signature": "type HTMLCanvasElement",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 2,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "get_context",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLCanvasElement\">HTMLCanvasElement</a>::get_context(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLCanvasElement\">HTMLCanvasElement</a>, context_id : String) -> <a href=\"rami3l/js-ffi/js#Union5\">@rami3l/js-ffi/js.Union5</a>[<a href=\"Yoorkin/rabbit-tea/dom#CanvasRenderingContext2D\">CanvasRenderingContext2D</a>, <a href=\"Yoorkin/rabbit-tea/dom#ImageBitmapRenderingContext\">ImageBitmapRenderingContext</a>, <a href=\"Yoorkin/rabbit-tea/dom#WebGLRenderingContext\">WebGLRenderingContext</a>, <a href=\"Yoorkin/rabbit-tea/dom#WebGL2RenderingContext\">WebGL2RenderingContext</a>, <a href=\"Yoorkin/rabbit-tea/dom#GPUCanvasContext\">GPUCanvasContext</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 20,
+            "column": 39
+          }
+        },
+        {
+          "name": "get_height",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLCanvasElement\">HTMLCanvasElement</a>::get_height(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLCanvasElement\">HTMLCanvasElement</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 15,
+            "column": 39
+          }
+        },
+        {
+          "name": "get_width",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLCanvasElement\">HTMLCanvasElement</a>::get_width(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLCanvasElement\">HTMLCanvasElement</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 10,
+            "column": 39
+          }
+        },
+        {
+          "name": "to_html_element",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLCanvasElement\">HTMLCanvasElement</a>::to_html_element(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLCanvasElement\">HTMLCanvasElement</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 5,
+            "column": 39
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "HTMLDialogElement",
+      "docstring": "",
+      "signature": "type HTMLDialogElement",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_element.mbt",
+        "line": 137,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "close",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>::close(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>, return_value~ : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[String] = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 148,
+            "column": 39
+          }
+        },
+        {
+          "name": "open",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>::open(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 140,
+            "column": 39
+          }
+        },
+        {
+          "name": "request_close",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>::request_close(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>, return_value~ : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[String] = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 154,
+            "column": 39
+          }
+        },
+        {
+          "name": "return_value",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>::return_value(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 143,
+            "column": 39
+          }
+        },
+        {
+          "name": "show",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>::show(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 160,
+            "column": 39
+          }
+        },
+        {
+          "name": "show_modal",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>::show_modal(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 163,
+            "column": 39
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "HTMLElement",
+      "docstring": "",
+      "signature": "type HTMLElement",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_element.mbt",
+        "line": 83,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "remove_style",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>::remove_style(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>, key : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 121,
+            "column": 33
+          }
+        },
+        {
+          "name": "set_style",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>::set_style(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>, key : String, value : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 113,
+            "column": 33
+          }
+        },
+        {
+          "name": "to_element",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>::to_element(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 86,
+            "column": 33
+          }
+        },
+        {
+          "name": "to_html_canvas_element",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>::to_html_canvas_element(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#HTMLCanvasElement\">HTMLCanvasElement</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 89,
+            "column": 33
+          }
+        },
+        {
+          "name": "to_html_dialog_element",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>::to_html_dialog_element(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#HTMLDialogElement\">HTMLDialogElement</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 107,
+            "column": 33
+          }
+        },
+        {
+          "name": "to_html_input_element",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>::to_html_input_element(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#HTMLInputElement\">HTMLInputElement</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 95,
+            "column": 33
+          }
+        },
+        {
+          "name": "to_html_select_element",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>::to_html_select_element(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLElement\">HTMLElement</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#HTMLSelectElement\">HTMLSelectElement</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 101,
+            "column": 33
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "HTMLInputElement",
+      "docstring": "",
+      "signature": "type HTMLInputElement",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_element.mbt",
+        "line": 125,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "value",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLInputElement\">HTMLInputElement</a>::value(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLInputElement\">HTMLInputElement</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 128,
+            "column": 38
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "HTMLSelectElement",
+      "docstring": "",
+      "signature": "type HTMLSelectElement",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_element.mbt",
+        "line": 131,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "value",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#HTMLSelectElement\">HTMLSelectElement</a>::value(self : <a href=\"Yoorkin/rabbit-tea/dom#HTMLSelectElement\">HTMLSelectElement</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_element.mbt",
+            "line": 134,
+            "column": 39
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "ImageBitmapRenderingContext",
+      "docstring": "",
+      "signature": "type ImageBitmapRenderingContext",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 52,
+        "column": 13
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "ImageData",
+      "docstring": "",
+      "signature": "type ImageData",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 599,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "get_color_space",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>::get_color_space(self : <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 628,
+            "column": 31
+          }
+        },
+        {
+          "name": "get_data",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>::get_data(self : <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Uint8ClampedArray\">Uint8ClampedArray</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 623,
+            "column": 31
+          }
+        },
+        {
+          "name": "get_height",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>::get_height(self : <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 620,
+            "column": 31
+          }
+        },
+        {
+          "name": "get_width",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>::get_width(self : <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 617,
+            "column": 31
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>::new(sw : Int, sh : Int, settings : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[<a href=\"Yoorkin/rabbit-tea/dom#ImageDataSettings\">ImageDataSettings</a>]) -> <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 602,
+            "column": 31
+          }
+        },
+        {
+          "name": "new_with_data",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>::new_with_data(data : <a href=\"Yoorkin/rabbit-tea/dom#Uint8ClampedArray\">Uint8ClampedArray</a>, sw : Int, sh : Int, settings~ : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[<a href=\"Yoorkin/rabbit-tea/dom#ImageDataSettings\">ImageDataSettings</a>] = ..) -> <a href=\"Yoorkin/rabbit-tea/dom#ImageData\">ImageData</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 609,
+            "column": 31
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "ImageDataSettings",
+      "docstring": "",
+      "signature": "type ImageDataSettings",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 588,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#ImageDataSettings\">ImageDataSettings</a>::new(color_space : String) -> <a href=\"Yoorkin/rabbit-tea/dom#ImageDataSettings\">ImageDataSettings</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 594,
+            "column": 39
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "InputEvent",
+      "docstring": "",
+      "signature": "type InputEvent",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 85,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "data",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#InputEvent\">InputEvent</a>::data(self : <a href=\"Yoorkin/rabbit-tea/dom#InputEvent\">InputEvent</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 88,
+            "column": 32
+          }
+        },
+        {
+          "name": "input_type",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#InputEvent\">InputEvent</a>::input_type(self : <a href=\"Yoorkin/rabbit-tea/dom#InputEvent\">InputEvent</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 94,
+            "column": 32
+          }
+        },
+        {
+          "name": "is_composing",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#InputEvent\">InputEvent</a>::is_composing(self : <a href=\"Yoorkin/rabbit-tea/dom#InputEvent\">InputEvent</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 91,
+            "column": 32
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "KeyboardEvent",
+      "docstring": "",
+      "signature": "type KeyboardEvent",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 103,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "alt_key",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>::alt_key(self : <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 112,
+            "column": 35
+          }
+        },
+        {
+          "name": "code",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>::code(self : <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 109,
+            "column": 35
+          }
+        },
+        {
+          "name": "ctrl_key",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>::ctrl_key(self : <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 115,
+            "column": 35
+          }
+        },
+        {
+          "name": "is_composing",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>::is_composing(self : <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 124,
+            "column": 35
+          }
+        },
+        {
+          "name": "key",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>::key(self : <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 106,
+            "column": 35
+          }
+        },
+        {
+          "name": "location",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>::location(self : <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 130,
+            "column": 35
+          }
+        },
+        {
+          "name": "meta_key",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>::meta_key(self : <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 121,
+            "column": 35
+          }
+        },
+        {
+          "name": "repeat",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>::repeat(self : <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 127,
+            "column": 35
+          }
+        },
+        {
+          "name": "shift_key",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>::shift_key(self : <a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 118,
+            "column": 35
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "MouseEvent",
+      "docstring": "",
+      "signature": "type MouseEvent",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 64,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "client_x",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>::client_x(self : <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 73,
+            "column": 32
+          }
+        },
+        {
+          "name": "client_y",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>::client_y(self : <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 76,
+            "column": 32
+          }
+        },
+        {
+          "name": "offset_x",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>::offset_x(self : <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 79,
+            "column": 32
+          }
+        },
+        {
+          "name": "offset_y",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>::offset_y(self : <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 82,
+            "column": 32
+          }
+        },
+        {
+          "name": "screen_x",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>::screen_x(self : <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 67,
+            "column": 32
+          }
+        },
+        {
+          "name": "screen_y",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>::screen_y(self : <a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 70,
+            "column": 32
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Node",
+      "docstring": "",
+      "signature": "type Node",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 2,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "append_child",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::append_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, child : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 30,
+            "column": 20
+          }
+        },
+        {
+          "name": "count_child",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::count_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 52,
+            "column": 20
+          }
+        },
+        {
+          "name": "first_child",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::first_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 15,
+            "column": 20
+          }
+        },
+        {
+          "name": "insert_before",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::insert_before(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, value : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, before : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 39,
+            "column": 20
+          }
+        },
+        {
+          "name": "last_child",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::last_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 18,
+            "column": 20
+          }
+        },
+        {
+          "name": "next_sibling",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::next_sibling(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 21,
+            "column": 20
+          }
+        },
+        {
+          "name": "node_name",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::node_name(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 9,
+            "column": 20
+          }
+        },
+        {
+          "name": "node_type",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::node_type(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Int",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 6,
+            "column": 20
+          }
+        },
+        {
+          "name": "node_value",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::node_value(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 12,
+            "column": 20
+          }
+        },
+        {
+          "name": "nth_child",
+          "docstring": "  ",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::nth_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, index : Int) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 44,
+            "column": 20
+          }
+        },
+        {
+          "name": "parent_node",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::parent_node(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 27,
+            "column": 20
+          }
+        },
+        {
+          "name": "previous_sibling",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::previous_sibling(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 24,
+            "column": 20
+          }
+        },
+        {
+          "name": "remove_child",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::remove_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, child : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 33,
+            "column": 20
+          }
+        },
+        {
+          "name": "replace_child",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::replace_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, new : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, old : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_node.mbt",
+            "line": 36,
+            "column": 20
+          }
+        },
+        {
+          "name": "to_document",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::to_document(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_cast.mbt",
+            "line": 3,
+            "column": 20
+          }
+        },
+        {
+          "name": "to_document_fragment",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::to_document_fragment(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#DocumentFragment\">DocumentFragment</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_cast.mbt",
+            "line": 7,
+            "column": 20
+          }
+        },
+        {
+          "name": "to_element",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::to_element(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_cast.mbt",
+            "line": 13,
+            "column": 20
+          }
+        },
+        {
+          "name": "to_event_target",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::to_event_target(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_cast.mbt",
+            "line": 21,
+            "column": 20
+          }
+        },
+        {
+          "name": "to_text",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>::to_text(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Text\">Text</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_cast.mbt",
+            "line": 17,
+            "column": 20
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Path2D",
+      "docstring": "",
+      "signature": "type Path2D",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 633,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "add_path",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>::add_path(self : <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>, path : <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>, transform~ : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[<a href=\"Yoorkin/rabbit-tea/dom#DOMMatrix2DInit\">DOMMatrix2DInit</a>] = ..) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 641,
+            "column": 28
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>::new(path~ : <a href=\"rami3l/js-ffi/js#Optional\">@rami3l/js-ffi/js.Optional</a>[<a href=\"rami3l/js-ffi/js#Union2\">@rami3l/js-ffi/js.Union2</a>[<a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>, String]] = ..) -> <a href=\"Yoorkin/rabbit-tea/dom#Path2D\">Path2D</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "canvas.mbt",
+            "line": 636,
+            "column": 28
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Text",
+      "docstring": "",
+      "signature": "type Text",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_text.mbt",
+        "line": 2,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "to_node",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Text\">Text</a>::to_node(self : <a href=\"Yoorkin/rabbit-tea/dom#Text\">Text</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_cast.mbt",
+            "line": 34,
+            "column": 26
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "UIEvent",
+      "docstring": "",
+      "signature": "type UIEvent",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 34,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "to_event",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>::to_event(self : <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 37,
+            "column": 29
+          }
+        },
+        {
+          "name": "to_focus_event",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>::to_focus_event(self : <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 52,
+            "column": 29
+          }
+        },
+        {
+          "name": "to_input_event",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>::to_input_event(self : <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 46,
+            "column": 29
+          }
+        },
+        {
+          "name": "to_keyboard_event",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>::to_keyboard_event(self : <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#KeyboardEvent\">KeyboardEvent</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 58,
+            "column": 29
+          }
+        },
+        {
+          "name": "to_mouse_event",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>::to_mouse_event(self : <a href=\"Yoorkin/rabbit-tea/dom#UIEvent\">UIEvent</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#MouseEvent\">MouseEvent</a>]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_event.mbt",
+            "line": 40,
+            "column": 29
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Uint8ClampedArray",
+      "docstring": "",
+      "signature": "type Uint8ClampedArray",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 648,
+        "column": 13
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "WebGL2RenderingContext",
+      "docstring": "",
+      "signature": "type WebGL2RenderingContext",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 58,
+        "column": 13
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "WebGLRenderingContext",
+      "docstring": "",
+      "signature": "type WebGLRenderingContext",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 55,
+        "column": 13
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Window",
+      "docstring": "",
+      "signature": "type Window",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 2,
+        "column": 13
+      },
+      "methods": [
+        {
+          "name": "alert",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::alert(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, msg : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 58,
+            "column": 28
+          }
+        },
+        {
+          "name": "confirm",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::confirm(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, msg : String) -> Bool",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 61,
+            "column": 28
+          }
+        },
+        {
+          "name": "current_url",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::current_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> String",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 41,
+            "column": 20
+          }
+        },
+        {
+          "name": "history_go_back",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::history_go_back(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 21,
+            "column": 20
+          }
+        },
+        {
+          "name": "history_go_forward",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::history_go_forward(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 25,
+            "column": 20
+          }
+        },
+        {
+          "name": "load_url",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::load_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, url : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 29,
+            "column": 20
+          }
+        },
+        {
+          "name": "push_url",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::push_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, url : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 37,
+            "column": 20
+          }
+        },
+        {
+          "name": "reload_url",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::reload_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 33,
+            "column": 20
+          }
+        },
+        {
+          "name": "replace_url",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::replace_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, url : String) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 45,
+            "column": 20
+          }
+        },
+        {
+          "name": "request_animination_frame",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::request_animination_frame(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, f : () -> Unit) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 49,
+            "column": 20
+          }
+        },
+        {
+          "name": "scroll_by",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::scroll_by(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, x : Int, y : Int) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 9,
+            "column": 20
+          }
+        },
+        {
+          "name": "scroll_to",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::scroll_to(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, x : Int, y : Int) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 5,
+            "column": 20
+          }
+        },
+        {
+          "name": "scroll_to_bottom",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::scroll_to_bottom(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 17,
+            "column": 20
+          }
+        },
+        {
+          "name": "scroll_to_top",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::scroll_to_top(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 13,
+            "column": 20
+          }
+        },
+        {
+          "name": "to_event_target",
+          "docstring": "",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>::to_event_target(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/dom",
+            "file": "dom_window.mbt",
+            "line": 55,
+            "column": 28
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [
+    {
+      "name": "Listener",
+      "docstring": "",
+      "signature": "type Listener = (<a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event_target.mbt",
+        "line": 37,
+        "column": 1
+      }
+    },
+    {
+      "name": "PredefinedColorSpace",
+      "docstring": " Possible values are \"srgb\" and \"display-p3\".",
+      "signature": "type PredefinedColorSpace = String",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "canvas.mbt",
+        "line": 591,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "DOM_KEY_LOCATION_LEFT",
+      "docstring": "",
+      "signature": "let DOM_KEY_LOCATION_LEFT : Int",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 136,
+        "column": 11
+      }
+    },
+    {
+      "name": "DOM_KEY_LOCATION_NUMPAD",
+      "docstring": "",
+      "signature": "let DOM_KEY_LOCATION_NUMPAD : Int",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 142,
+        "column": 11
+      }
+    },
+    {
+      "name": "DOM_KEY_LOCATION_RIGHT",
+      "docstring": "",
+      "signature": "let DOM_KEY_LOCATION_RIGHT : Int",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 139,
+        "column": 11
+      }
+    },
+    {
+      "name": "DOM_KEY_LOCATION_STANDARD",
+      "docstring": "",
+      "signature": "let DOM_KEY_LOCATION_STANDARD : Int",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event.mbt",
+        "line": 133,
+        "column": 11
+      }
+    },
+    {
+      "name": "add_event_listener",
+      "docstring": "",
+      "signature": "fn add_event_listener(self : <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>, type_ : String, callback : (<a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> Unit) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event_target.mbt",
+        "line": 17,
+        "column": 20
+      }
+    },
+    {
+      "name": "append_child",
+      "docstring": "",
+      "signature": "fn append_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, child : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 30,
+        "column": 20
+      }
+    },
+    {
+      "name": "count_child",
+      "docstring": "",
+      "signature": "fn count_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Int",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 52,
+        "column": 20
+      }
+    },
+    {
+      "name": "create_document_fragment",
+      "docstring": "",
+      "signature": "fn create_document_fragment(self : <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#DocumentFragment\">DocumentFragment</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_document.mbt",
+        "line": 20,
+        "column": 20
+      }
+    },
+    {
+      "name": "create_element",
+      "docstring": "",
+      "signature": "fn create_element(self : <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>, tag : String) -> <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_document.mbt",
+        "line": 14,
+        "column": 20
+      }
+    },
+    {
+      "name": "create_text_node",
+      "docstring": "",
+      "signature": "fn create_text_node(self : <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>, str : String) -> <a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_document.mbt",
+        "line": 17,
+        "column": 20
+      }
+    },
+    {
+      "name": "current_url",
+      "docstring": "",
+      "signature": "fn current_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> String",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 41,
+        "column": 20
+      }
+    },
+    {
+      "name": "dispatch_event",
+      "docstring": "",
+      "signature": "fn dispatch_event(self : <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>, event : <a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event_target.mbt",
+        "line": 33,
+        "column": 20
+      }
+    },
+    {
+      "name": "document",
+      "docstring": "",
+      "signature": "fn document() -> <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_document.mbt",
+        "line": 5,
+        "column": 20
+      }
+    },
+    {
+      "name": "first_child",
+      "docstring": "",
+      "signature": "fn first_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 15,
+        "column": 20
+      }
+    },
+    {
+      "name": "get_element_by_id",
+      "docstring": "",
+      "signature": "fn get_element_by_id(self : <a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>, id : String) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_document.mbt",
+        "line": 8,
+        "column": 20
+      }
+    },
+    {
+      "name": "history_go_back",
+      "docstring": "",
+      "signature": "fn history_go_back(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 21,
+        "column": 20
+      }
+    },
+    {
+      "name": "history_go_forward",
+      "docstring": "",
+      "signature": "fn history_go_forward(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 25,
+        "column": 20
+      }
+    },
+    {
+      "name": "insert_before",
+      "docstring": "",
+      "signature": "fn insert_before(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, value : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, before : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 39,
+        "column": 20
+      }
+    },
+    {
+      "name": "last_child",
+      "docstring": "",
+      "signature": "fn last_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 18,
+        "column": 20
+      }
+    },
+    {
+      "name": "load_url",
+      "docstring": "",
+      "signature": "fn load_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, url : String) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 29,
+        "column": 20
+      }
+    },
+    {
+      "name": "next_sibling",
+      "docstring": "",
+      "signature": "fn next_sibling(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 21,
+        "column": 20
+      }
+    },
+    {
+      "name": "node_name",
+      "docstring": "",
+      "signature": "fn node_name(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> String",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 9,
+        "column": 20
+      }
+    },
+    {
+      "name": "node_type",
+      "docstring": "",
+      "signature": "fn node_type(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Int",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 6,
+        "column": 20
+      }
+    },
+    {
+      "name": "node_value",
+      "docstring": "",
+      "signature": "fn node_value(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> String",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 12,
+        "column": 20
+      }
+    },
+    {
+      "name": "nth_child",
+      "docstring": "  ",
+      "signature": "fn nth_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, index : Int) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 44,
+        "column": 20
+      }
+    },
+    {
+      "name": "parent_node",
+      "docstring": "",
+      "signature": "fn parent_node(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 27,
+        "column": 20
+      }
+    },
+    {
+      "name": "previous_sibling",
+      "docstring": "",
+      "signature": "fn previous_sibling(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 24,
+        "column": 20
+      }
+    },
+    {
+      "name": "push_url",
+      "docstring": "",
+      "signature": "fn push_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, url : String) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 37,
+        "column": 20
+      }
+    },
+    {
+      "name": "reload_url",
+      "docstring": "",
+      "signature": "fn reload_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 33,
+        "column": 20
+      }
+    },
+    {
+      "name": "remove_child",
+      "docstring": "",
+      "signature": "fn remove_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, child : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 33,
+        "column": 20
+      }
+    },
+    {
+      "name": "remove_event_listener",
+      "docstring": "",
+      "signature": "fn remove_event_listener(self : <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>, type_ : String, callback : (<a href=\"Yoorkin/rabbit-tea/dom#Event\">Event</a>) -> Unit) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event_target.mbt",
+        "line": 25,
+        "column": 20
+      }
+    },
+    {
+      "name": "replace_child",
+      "docstring": "",
+      "signature": "fn replace_child(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, new : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>, old : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_node.mbt",
+        "line": 36,
+        "column": 20
+      }
+    },
+    {
+      "name": "replace_url",
+      "docstring": "",
+      "signature": "fn replace_url(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, url : String) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 45,
+        "column": 20
+      }
+    },
+    {
+      "name": "request_animination_frame",
+      "docstring": "",
+      "signature": "fn request_animination_frame(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, f : () -> Unit) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 49,
+        "column": 20
+      }
+    },
+    {
+      "name": "scroll_by",
+      "docstring": "",
+      "signature": "fn scroll_by(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, x : Int, y : Int) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 9,
+        "column": 20
+      }
+    },
+    {
+      "name": "scroll_to",
+      "docstring": "",
+      "signature": "fn scroll_to(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>, x : Int, y : Int) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 5,
+        "column": 20
+      }
+    },
+    {
+      "name": "scroll_to_bottom",
+      "docstring": "",
+      "signature": "fn scroll_to_bottom(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 17,
+        "column": 20
+      }
+    },
+    {
+      "name": "scroll_to_top",
+      "docstring": "",
+      "signature": "fn scroll_to_top(self : <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 13,
+        "column": 20
+      }
+    },
+    {
+      "name": "to_document",
+      "docstring": "",
+      "signature": "fn to_document(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Document\">Document</a>]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_cast.mbt",
+        "line": 3,
+        "column": 20
+      }
+    },
+    {
+      "name": "to_document_fragment",
+      "docstring": "",
+      "signature": "fn to_document_fragment(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#DocumentFragment\">DocumentFragment</a>]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_cast.mbt",
+        "line": 7,
+        "column": 20
+      }
+    },
+    {
+      "name": "to_element",
+      "docstring": "",
+      "signature": "fn to_element(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Element\">Element</a>]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_cast.mbt",
+        "line": 13,
+        "column": 20
+      }
+    },
+    {
+      "name": "to_event_target",
+      "docstring": "",
+      "signature": "fn to_event_target(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_cast.mbt",
+        "line": 21,
+        "column": 20
+      }
+    },
+    {
+      "name": "to_node",
+      "docstring": "",
+      "signature": "fn to_node(self : <a href=\"Yoorkin/rabbit-tea/dom#EventTarget\">EventTarget</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_event_target.mbt",
+        "line": 13,
+        "column": 20
+      }
+    },
+    {
+      "name": "to_text",
+      "docstring": "",
+      "signature": "fn to_text(self : <a href=\"Yoorkin/rabbit-tea/dom#Node\">Node</a>) -> <a href=\"rami3l/js-ffi/js#Nullable\">@rami3l/js-ffi/js.Nullable</a>[<a href=\"Yoorkin/rabbit-tea/dom#Text\">Text</a>]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_cast.mbt",
+        "line": 17,
+        "column": 20
+      }
+    },
+    {
+      "name": "window",
+      "docstring": "",
+      "signature": "fn window() -> <a href=\"Yoorkin/rabbit-tea/dom#Window\">Window</a>",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dom",
+        "file": "dom_window.mbt",
+        "line": 52,
+        "column": 20
+      }
+    }
+  ],
+  "misc": []
+}

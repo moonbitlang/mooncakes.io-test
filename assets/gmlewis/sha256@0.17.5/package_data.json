@@ -1,0 +1,125 @@
+{
+  "name": "gmlewis/sha256",
+  "traits": [
+    {
+      "name": "@gmlewis/sha256.HashFunc",
+      "docstring": "\n `HashFunc` represents a hash algorithm like `@crc32`, `@md5`, or `@sha256`.",
+      "signature": "pub(open) trait @gmlewis/sha256.HashFunc {\n  name(Self) -> String\n  write(Self, Byte) -> Unit\n  check_sum(Self) -> String\n}",
+      "loc": {
+        "path": "gmlewis/sha256",
+        "file": "hash-func.mbt",
+        "line": 3,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [
+    {
+      "name": "Digest",
+      "docstring": "\n `Digest` represents the partial evaluation of a checksum.",
+      "signature": "type Digest",
+      "loc": {
+        "path": "gmlewis/sha256",
+        "file": "sha256.mbt",
+        "line": 45,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "new",
+          "docstring": "\n `Digest::new` returns a new, reset Digest, ready to sum.",
+          "signature": "fn <a href=\"gmlewis/sha256#Digest\">Digest</a>::new() -> <a href=\"gmlewis/sha256#Digest\">Digest</a>",
+          "loc": {
+            "path": "gmlewis/sha256",
+            "file": "sha256.mbt",
+            "line": 57,
+            "column": 16
+          }
+        },
+        {
+          "name": "reset",
+          "docstring": "\n `reset` resets a digest for re-use.",
+          "signature": "fn <a href=\"gmlewis/sha256#Digest\">Digest</a>::reset(self : <a href=\"gmlewis/sha256#Digest\">Digest</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/sha256",
+            "file": "sha256.mbt",
+            "line": 130,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Digest", "path": "gmlewis/sha256" },
+            "arguments": []
+          },
+          "trait": { "name": "HashFunc", "path": "gmlewis/sha256" },
+          "methods": [
+            {
+              "name": "check_sum",
+              "docstring": "\n `check_sum` returns the final sha256sum as a hex string.",
+              "signature": "fn check_sum(self : <a href=\"gmlewis/sha256#Digest\">Digest</a>) -> String",
+              "loc": {
+                "path": "gmlewis/sha256",
+                "file": "sha256.mbt",
+                "line": 80,
+                "column": 35
+              }
+            },
+            {
+              "name": "name",
+              "docstring": "",
+              "signature": "fn name(self : <a href=\"gmlewis/sha256#Digest\">Digest</a>) -> String",
+              "loc": {
+                "path": "gmlewis/sha256",
+                "file": "sha256.mbt",
+                "line": 74,
+                "column": 35
+              }
+            },
+            {
+              "name": "write",
+              "docstring": "\n `write` writes a byte to the digest.",
+              "signature": "fn write(self : <a href=\"gmlewis/sha256#Digest\">Digest</a>, b : Byte) -> Unit",
+              "loc": {
+                "path": "gmlewis/sha256",
+                "file": "sha256.mbt",
+                "line": 145,
+                "column": 35
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "gen_hmac",
+      "docstring": "\n `gen_hmac` generates a base64-encoded String representing\n the SHA256 signature of the provided `body` using the provided\n `client_secret` key.",
+      "signature": "fn gen_hmac(body : Bytes, client_secret : Bytes) -> String",
+      "loc": {
+        "path": "gmlewis/sha256",
+        "file": "hmac.mbt",
+        "line": 12,
+        "column": 8
+      }
+    },
+    {
+      "name": "reset",
+      "docstring": "\n `reset` resets a digest for re-use.",
+      "signature": "fn reset(self : <a href=\"gmlewis/sha256#Digest\">Digest</a>) -> Unit",
+      "loc": {
+        "path": "gmlewis/sha256",
+        "file": "sha256.mbt",
+        "line": 130,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

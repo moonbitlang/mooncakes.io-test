@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+pub const GPIO_MODE_DEF_DISABLE = 0
+
+///|
+pub const GPIO_MODE_DEF_INPUT = 0x00000001
+
+///|
+pub const GPIO_MODE_DEF_OUTPUT = 0x00000002
+
+///|
+pub const GPIO_MODE_DEF_OD = 0x00000004
+
+///|
+pub(all) enum GPIOMode {
+  GPIO_MODE_DISABLE
+  GPIO_MODE_INPUT
+  GPIO_MODE_OUTPUT
+  GPIO_MODE_OUTPUT_OD
+  GPIO_MODE_INPUT_OUTPUT_OD
+  GPIO_MODE_INPUT_OUTPUT
+}
+
+///|
+pub fn GPIOMode::to_int(self : GPIOMode) -> Int {
+  match self {
+    GPIO_MODE_DISABLE => GPIO_MODE_DEF_DISABLE
+    GPIO_MODE_INPUT => GPIO_MODE_DEF_INPUT
+    GPIO_MODE_OUTPUT => GPIO_MODE_DEF_OUTPUT
+    GPIO_MODE_OUTPUT_OD => GPIO_MODE_DEF_OUTPUT | GPIO_MODE_DEF_OD
+    GPIO_MODE_INPUT_OUTPUT_OD =>
+      GPIO_MODE_DEF_INPUT | GPIO_MODE_DEF_OUTPUT | GPIO_MODE_DEF_OD
+    GPIO_MODE_INPUT_OUTPUT => GPIO_MODE_DEF_INPUT | GPIO_MODE_DEF_OUTPUT
+  }
+}
+
+///|
+pub(all) enum GPIOPullup {
+  GPIO_PULLUP_DISABLE = 0
+  GPIO_PULLUP_ENABLE = 1
+}
+
+///|
+pub fn GPIOPullup::to_int(self : GPIOPullup) -> Int = "%identity"
+
+///|
+pub(all) enum GPIOPulldown {
+  GPIO_PULLDOWN_DISABLE = 0
+  GPIO_PULLDOWN_ENABLE = 1
+}
+
+///|
+pub fn GPIOPulldown::to_int(self : GPIOPulldown) -> Int = "%identity"
+
+///|
+pub(all) enum GPIOIntType {
+  GPIO_INTR_DISABLE = 0
+  GPIO_INTR_POSEDGE = 1
+  GPIO_INTR_NEGEDGE = 2
+  GPIO_INTR_ANYEDGE = 3
+  GPIO_INTR_LOW_LEVEL = 4
+  GPIO_INTR_HIGH_LEVEL = 5
+  GPIO_INTR_MAX = 6
+}
+
+///|
+pub fn GPIOIntType::to_int(self : GPIOIntType) -> Int = "%identity"
+
+///|
+pub(all) struct GPIOConfig {
+  pin_bit_mask : UInt64
+  mode : GPIOMode
+  pull_up_en : GPIOPullup
+  pull_down_en : GPIOPulldown
+  intr_type : GPIOIntType
+}
+
+///|
+extern "C" fn _gpio_config(
+  pin_bit_mask~ : UInt64,
+  mode~ : Int,
+  pull_up_en~ : Int,
+  pull_down_en~ : Int,
+  intr_type~ : Int
+) -> Int = "__wrap_gpio_config"
+
+///|
+pub fn gpio_config(
+  pin_bit_mask~ : UInt64,
+  mode~ : GPIOMode,
+  pull_up_en~ : GPIOPullup,
+  pull_down_en~ : GPIOPulldown,
+  intr_type~ : GPIOIntType
+) -> Unit!@error.ESPError {
+  @error.esp_err_wrapper!(fn() {
+    _gpio_config(
+      pin_bit_mask~,
+      mode=mode.to_int(),
+      pull_up_en=pull_up_en.to_int(),
+      pull_down_en=pull_down_en.to_int(),
+      intr_type=intr_type.to_int(),
+    )
+  })
+}
+
+///|
+extern "C" fn _gpio_set_level(pin : Int, level : Int) -> Int = "__wrap_gpio_set_level"
+
+///|
+pub fn gpio_set_level(pin : Int, level : Int) -> Unit!@error.ESPError {
+  @error.esp_err_wrapper!(fn() { _gpio_set_level(pin, level) })
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

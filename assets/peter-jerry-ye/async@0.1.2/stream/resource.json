@@ -1,0 +1,11 @@
+{
+  "kind": "package",
+  "relative_path": "stream",
+  "module_path": "peter-jerry-ye/async",
+  "readme_content": "# Stream\n\nThis package provides abstraction for Streams, including readable streams and writable streams.\n\nThe goal is to provide an abstraction for stream in Node.js, stream in wasi-io, and other IO-related library, such as libuv.\n\nWith the foundation, there will be higher level operations, such as buffered streams, text streams, etc.",
+  "package_data": "peter-jerry-ye/async/stream/package_data.json",
+  "source_files": [
+    "buffered_reader.mbt", "types.mbt", "input_stream_reader.mbt",
+    "ouptut_stream_writer.mbt"
+  ]
+}

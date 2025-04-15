@@ -1,0 +1,30 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "peter-jerry-ye/mcp-server",
+    "version": "0.3.1",
+    "deps": {
+      "peter-jerry-ye/async": "0.1.2",
+      "moonbitlang/x": "0.4.25"
+    },
+    "description": "A library for implementing mcp servers in MoonBit.",
+    "repository": "https://github.com/peter-jerry-ye/mcp-server",
+    "license": "Apache-2.0",
+    "source": "src",
+    "exclude": [
+      "example",
+      "example-c"
+    ]
+  },
+  "readme_content": "# MCP Server SDK\n\nA WIP MoonBit implementation to support [Model Context Protocol](https://modelcontextprotocol.io/).\n\nSupported backends:\n\n- Wasm's Component Model\n- Native backend\n\nand more (as long as an implementation exists for `peter-jerry-ye/async/stream`).\n\nThe user can use this to develop a running MCP server, providing more functionality to their AI models.\n\n## Currently Supported Features\n\nVersion:\n- 2024-11-05\n\nTransport:\n- Stdio\n\nProvide server capabilities:\n- Tools\n- Prompts\n\nCall client capabilities (if provided):\n- List roots\n\n## Example\n\nSee `./example` for a simple weather MCP server in Wasm, and `./example-c` for a simple MCP server in native backend.\n\n## TODO\n\n- Add documentation\n- Add tests\n- Support more features\n- Better error handling and better UX\n",
+  "module_index": "peter-jerry-ye/mcp-server/module_index.json",
+  "package_data": "peter-jerry-ye/mcp-server/package_data.json",
+  "source_files": [
+    "server.mbt",
+    "types.mbt"
+  ],
+  "publish_list": [
+    "0.3.1",
+    "0.3.0"
+  ]
+}

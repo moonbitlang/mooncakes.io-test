@@ -1,0 +1,148 @@
+{
+  "name": "peter-jerry-ye",
+  "package": null,
+  "childs": [
+    {
+      "name": "io",
+      "package": null,
+      "childs": [
+        {
+          "name": "channel",
+          "package": {
+            "path": "peter-jerry-ye/io/channel",
+            "traits": [],
+            "types": [
+              { "name": "T", "impls": [], "methods": [ "pop", "push" ] }
+            ],
+            "typealias": [],
+            "values": [ "make", "pop", "push" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "http",
+          "package": {
+            "path": "peter-jerry-ye/io/http",
+            "traits": [],
+            "types": [
+              { "name": "IllegalArgument", "impls": [], "methods": [] }
+            ],
+            "typealias": [],
+            "values": [
+              "bytes", "bytes_sync", "fetch", "fetch_sync", "headers",
+              "json", "json_sync", "request", "response", "text", "text_sync"
+            ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "io",
+          "package": {
+            "path": "peter-jerry-ye/io/io",
+            "traits": [],
+            "types": [
+              {
+                "name": "Pollable",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Pollable",
+                        "path": "peter-jerry-ye/io/io"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Sync",
+                      "path": "peter-jerry-ye/async/loop"
+                    },
+                    "methods": [ "sync" ]
+                  }
+                ],
+                "methods": []
+              }
+            ],
+            "typealias": [],
+            "values": [
+              "event_loop", "flush", "pipe", "print", "println",
+              "println_sync", "read_all", "read_all_sync", "read_line",
+              "read_line_sync", "stderr", "stdin", "stdout", "write",
+              "write_sync"
+            ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "stream",
+          "package": {
+            "path": "peter-jerry-ye/io/stream",
+            "traits": [
+              { "name": "@peter-jerry-ye/io/stream.Closable", "impls": [] },
+              { "name": "@peter-jerry-ye/io/stream.Flushable", "impls": [] },
+              {
+                "name": "@peter-jerry-ye/io/stream.InputStream",
+                "impls": []
+              },
+              {
+                "name": "@peter-jerry-ye/io/stream.OutputStream",
+                "impls": []
+              },
+              { "name": "@peter-jerry-ye/io/stream.Reader", "impls": [] },
+              { "name": "@peter-jerry-ye/io/stream.Writer", "impls": [] }
+            ],
+            "types": [
+              { "name": "AsyncIterable", "impls": [], "methods": [] },
+              {
+                "name": "BufferedReader",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "BufferedReader",
+                        "path": "peter-jerry-ye/io/stream"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Closable",
+                      "path": "peter-jerry-ye/io/stream"
+                    },
+                    "methods": [ "close", "closed" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "BufferedReader",
+                        "path": "peter-jerry-ye/io/stream"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Reader",
+                      "path": "peter-jerry-ye/io/stream"
+                    },
+                    "methods": [ "read", "readable" ]
+                  }
+                ],
+                "methods": [ "read_line" ]
+              }
+            ],
+            "typealias": [],
+            "values": [
+              "buffered_reader", "input_stream_reader",
+              "output_stream_writer"
+            ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

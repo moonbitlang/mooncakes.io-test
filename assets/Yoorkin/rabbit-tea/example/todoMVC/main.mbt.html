@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+enum Message {
+  GotHomeMsg(@home.Msg)
+  GotEditorMsg(@editor.Msg)
+  LinkClicked(@url.UrlRequest)
+  UrlChanged(@url.Url)
+} derive(Show)
+
+///|
+enum Model {
+  NotFound
+  Home(@home.Model)
+  Editor(@editor.Model)
+}
+
+///|
+fn view(model : Model) -> @html.Html[Message] {
+  match model {
+    Home(model) => @home.view(model).map(Message::GotHomeMsg)
+    Editor(model) => @editor.view(model).map(Message::GotEditorMsg)
+    NotFound => @html.div([@html.text("Not Found")])
+  }
+}
+
+///|
+fn update_with[SubModel, SubMsg](
+  pair : (@tea.Cmd[SubMsg], SubModel),
+  to_model : (SubModel) -> Model,
+  to_msg : (SubMsg) -> Message
+) -> (@tea.Cmd[Message], Model) {
+  let (cmd, model) = pair
+  (cmd.map(to_msg), to_model(model))
+}
+
+///|
+fn update(msg : Message, model : Model) -> (@tea.Cmd[Message], Model) {
+  match (msg, model) {
+    (GotHomeMsg(msg), Home(model)) =>
+      @home.update(msg, model) |> update_with(Model::Home, Message::GotHomeMsg)
+    (GotEditorMsg(msg), Editor(model)) =>
+      @editor.update(msg, model)
+      |> update_with(Model::Editor, Message::GotEditorMsg)
+    (LinkClicked(request), _) =>
+      match request {
+        Internal(url) => (@nav.push_url(url.to_string()), model)
+        External(url) => (@nav.load(url), model)
+      }
+    (UrlChanged(url), _) => route(url)
+    _ => (@tea.none(), model)
+  }
+}
+
+///|
+fn route(url : @url.Url) -> (@tea.Cmd[Message], Model) {
+  let paths = url.path.split("/").collect()
+  println("routing to \{url.to_string()}, path \{paths}")
+  match paths {
+    ["home" | "/"] | [] =>
+      @home.load() |> update_with(Model::Home, Message::GotHomeMsg)
+    ["new"] =>
+      @editor.load(None) |> update_with(Model::Editor, Message::GotEditorMsg)
+    ["cards", id] =>
+      match @strconv.parse_int?(id) {
+        Ok(id) =>
+          @editor.load(Some(id))
+          |> update_with(Model::Editor, Message::GotEditorMsg)
+        Err(err) => {
+          println("error parsing id \{err}")
+          (@tea.none(), NotFound)
+        }
+      }
+    _ => (@cmd.none(), NotFound)
+  }
+}
+
+///|
+fn main {
+  @tea.application(
+    initialize=route,
+    update~,
+    view~,
+    url_request=Message::LinkClicked,
+    url_changed=Message::UrlChanged,
+  )
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

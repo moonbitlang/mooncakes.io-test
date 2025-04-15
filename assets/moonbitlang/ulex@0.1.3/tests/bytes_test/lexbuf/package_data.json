@@ -1,0 +1,102 @@
+{
+  "name": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+  "traits": [],
+  "types": [
+    {
+      "name": "BytesLexbuf",
+      "docstring": "",
+      "signature": "type BytesLexbuf",
+      "loc": {
+        "path": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 2,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "curr_pos",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>::curr_pos(self : <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>) -> Int",
+          "loc": {
+            "path": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 33,
+            "column": 21
+          }
+        },
+        {
+          "name": "next",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>::next(self : <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>) -> Byte?",
+          "loc": {
+            "path": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 21,
+            "column": 21
+          }
+        },
+        {
+          "name": "reset",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>::reset(self : <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>, pos : Int) -> Unit",
+          "loc": {
+            "path": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 38,
+            "column": 21
+          }
+        },
+        {
+          "name": "sub_lexeme",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>::sub_lexeme(self : <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>, start : Int, end : Int) -> <a href=\"moonbitlang/core/bytes#View\">@moonbitlang/core/bytes.View</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 48,
+            "column": 21
+          }
+        },
+        {
+          "name": "unsafe_get",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>::unsafe_get(self : <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>, pos : Int) -> Byte",
+          "loc": {
+            "path": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+            "file": "lexbuf.mbt",
+            "line": 43,
+            "column": 21
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T = <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 9,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "from_bytes",
+      "docstring": "",
+      "signature": "fn from_bytes(bytes : Bytes, start~ : Int = .., end~ : Int = ..) -> <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">BytesLexbuf</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 12,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

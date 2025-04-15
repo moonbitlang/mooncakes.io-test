@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/http/types",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "This interface defines all of the types and methods for implementing\nHTTP Requests and Responses, both incoming and outgoing, as well as\ntheir headers, trailers, and bodies.",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

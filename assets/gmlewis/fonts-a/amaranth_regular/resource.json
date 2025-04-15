@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "amaranth_regular",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/amaranth_regular/package_data.json",
+  "source_files": [ "amaranth_regular.mbt" ]
+}

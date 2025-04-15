@@ -1,0 +1,13 @@
+{
+  "kind": "package",
+  "relative_path": "draw",
+  "module_path": "gmlewis/fonts",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts/draw/package_data.json",
+  "source_files": [
+    "draw.mbt", "path.mbt", "graphic.mbt", "unit-square.mbt",
+    "transform.mbt", "vec2.mbt", "stroke.mbt", "group.mbt",
+    "compound-path.mbt", "text.mbt", "affine-matrix.mbt", "unit-circle.mbt",
+    "anchor.mbt", "color.mbt", "bounding-box.mbt", "fill.mbt"
+  ]
+}

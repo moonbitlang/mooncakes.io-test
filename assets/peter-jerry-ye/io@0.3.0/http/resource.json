@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "http",
+  "module_path": "peter-jerry-ye/io",
+  "readme_content": "",
+  "package_data": "peter-jerry-ye/io/http/package_data.json",
+  "source_files": [ "utils.mbt" ]
+}

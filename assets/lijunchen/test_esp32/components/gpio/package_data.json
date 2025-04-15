@@ -1,0 +1,189 @@
+{
+  "name": "lijunchen/test_esp32/components/gpio",
+  "traits": [],
+  "types": [
+    {
+      "name": "GPIOConfig",
+      "docstring": "",
+      "signature": "pub(all) struct GPIOConfig {\n  pin_bit_mask : UInt64\n  mode : <a href=\"lijunchen/test_esp32/components/gpio#GPIOMode\">GPIOMode</a>\n  pull_up_en : <a href=\"lijunchen/test_esp32/components/gpio#GPIOPullup\">GPIOPullup</a>\n  pull_down_en : <a href=\"lijunchen/test_esp32/components/gpio#GPIOPulldown\">GPIOPulldown</a>\n  intr_type : <a href=\"lijunchen/test_esp32/components/gpio#GPIOIntType\">GPIOIntType</a>\n}",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 69,
+        "column": 17
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "GPIOIntType",
+      "docstring": "",
+      "signature": "pub(all) enum GPIOIntType {\n  GPIO_INTR_DISABLE\n  GPIO_INTR_POSEDGE\n  GPIO_INTR_NEGEDGE\n  GPIO_INTR_ANYEDGE\n  GPIO_INTR_LOW_LEVEL\n  GPIO_INTR_HIGH_LEVEL\n  GPIO_INTR_MAX\n}",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 55,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "to_int",
+          "docstring": "",
+          "signature": "fn <a href=\"lijunchen/test_esp32/components/gpio#GPIOIntType\">GPIOIntType</a>::to_int(self : <a href=\"lijunchen/test_esp32/components/gpio#GPIOIntType\">GPIOIntType</a>) -> Int",
+          "loc": {
+            "path": "lijunchen/test_esp32/components/gpio",
+            "file": "gpio.mbt",
+            "line": 66,
+            "column": 21
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "GPIOMode",
+      "docstring": "",
+      "signature": "pub(all) enum GPIOMode {\n  GPIO_MODE_DISABLE\n  GPIO_MODE_INPUT\n  GPIO_MODE_OUTPUT\n  GPIO_MODE_OUTPUT_OD\n  GPIO_MODE_INPUT_OUTPUT_OD\n  GPIO_MODE_INPUT_OUTPUT\n}",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 14,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "to_int",
+          "docstring": "",
+          "signature": "fn <a href=\"lijunchen/test_esp32/components/gpio#GPIOMode\">GPIOMode</a>::to_int(self : <a href=\"lijunchen/test_esp32/components/gpio#GPIOMode\">GPIOMode</a>) -> Int",
+          "loc": {
+            "path": "lijunchen/test_esp32/components/gpio",
+            "file": "gpio.mbt",
+            "line": 24,
+            "column": 18
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "GPIOPulldown",
+      "docstring": "",
+      "signature": "pub(all) enum GPIOPulldown {\n  GPIO_PULLDOWN_DISABLE\n  GPIO_PULLDOWN_ENABLE\n}",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 46,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "to_int",
+          "docstring": "",
+          "signature": "fn <a href=\"lijunchen/test_esp32/components/gpio#GPIOPulldown\">GPIOPulldown</a>::to_int(self : <a href=\"lijunchen/test_esp32/components/gpio#GPIOPulldown\">GPIOPulldown</a>) -> Int",
+          "loc": {
+            "path": "lijunchen/test_esp32/components/gpio",
+            "file": "gpio.mbt",
+            "line": 52,
+            "column": 22
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "GPIOPullup",
+      "docstring": "",
+      "signature": "pub(all) enum GPIOPullup {\n  GPIO_PULLUP_DISABLE\n  GPIO_PULLUP_ENABLE\n}",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 37,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "to_int",
+          "docstring": "",
+          "signature": "fn <a href=\"lijunchen/test_esp32/components/gpio#GPIOPullup\">GPIOPullup</a>::to_int(self : <a href=\"lijunchen/test_esp32/components/gpio#GPIOPullup\">GPIOPullup</a>) -> Int",
+          "loc": {
+            "path": "lijunchen/test_esp32/components/gpio",
+            "file": "gpio.mbt",
+            "line": 43,
+            "column": 20
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "GPIO_MODE_DEF_DISABLE",
+      "docstring": "",
+      "signature": "let GPIO_MODE_DEF_DISABLE : Int",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 2,
+        "column": 11
+      }
+    },
+    {
+      "name": "GPIO_MODE_DEF_INPUT",
+      "docstring": "",
+      "signature": "let GPIO_MODE_DEF_INPUT : Int",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 5,
+        "column": 11
+      }
+    },
+    {
+      "name": "GPIO_MODE_DEF_OD",
+      "docstring": "",
+      "signature": "let GPIO_MODE_DEF_OD : Int",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 11,
+        "column": 11
+      }
+    },
+    {
+      "name": "GPIO_MODE_DEF_OUTPUT",
+      "docstring": "",
+      "signature": "let GPIO_MODE_DEF_OUTPUT : Int",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 8,
+        "column": 11
+      }
+    },
+    {
+      "name": "gpio_config",
+      "docstring": "",
+      "signature": "fn gpio_config(pin_bit_mask~ : UInt64, mode~ : <a href=\"lijunchen/test_esp32/components/gpio#GPIOMode\">GPIOMode</a>, pull_up_en~ : <a href=\"lijunchen/test_esp32/components/gpio#GPIOPullup\">GPIOPullup</a>, pull_down_en~ : <a href=\"lijunchen/test_esp32/components/gpio#GPIOPulldown\">GPIOPulldown</a>, intr_type~ : <a href=\"lijunchen/test_esp32/components/gpio#GPIOIntType\">GPIOIntType</a>) -> Unit!<a href=\"lijunchen/test_esp32/error#ESPError\">@lijunchen/test_esp32/error.ESPError</a>",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 87,
+        "column": 8
+      }
+    },
+    {
+      "name": "gpio_set_level",
+      "docstring": "",
+      "signature": "fn gpio_set_level(pin : Int, level : Int) -> Unit!<a href=\"lijunchen/test_esp32/error#ESPError\">@lijunchen/test_esp32/error.ESPError</a>",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/gpio",
+        "file": "gpio.mbt",
+        "line": 109,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

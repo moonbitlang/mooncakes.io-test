@@ -1,0 +1,20 @@
+{
+  "name": "gmlewis/fonts-a/alegreya_extrabold",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "font",
+      "docstring": "",
+      "signature": "let font : <a href=\"gmlewis/fonts#Font\">@gmlewis/fonts.Font</a>",
+      "loc": {
+        "path": "gmlewis/fonts-a/alegreya_extrabold",
+        "file": "alegreya_extrabold.mbt",
+        "line": 12519,
+        "column": 9
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+pub(all) enum Input {
+  Eps
+  EChar(@eof_char_set.T)
+} derive(Eq, Hash, Show)
+
+///|
+typealias Tag = Int
+
+///|
+pub(all) struct NFA {
+  graph : Array[NFANode]
+  end_nodes : Map[Int, Int] // from node_id to pattern_id
+  code_blocks : Array[CodeBlock] // indexed by pattern_id
+  captures : Array[Array[((String, @type.VarType), (Tag, Tag))]] // indexed_by pattern_id
+  mut node_count : Int
+  mut tag_count : Int
+} derive(Show)
+
+///|
+pub(all) struct NFANode {
+  num : Int
+  mut eps : @immut/sorted_set.T[(NFANode, Tag?)]
+  mut trans : Array[(@eof_char_set.T, (NFANode, Tag?))]
+} derive(Show)
+
+///|
+pub impl Eq for NFANode with op_equal(self, other) {
+  self.num == other.num
+}
+
+///|
+pub impl Compare for NFANode with compare(self, other) {
+  self.num.compare(other.num)
+}
+
+///|
+pub impl Hash for NFANode with hash_combine(self, hasher) {
+  hasher.combine_int(self.num)
+}
+
+///|
+fn NFA::new_nfa() -> NFA {
+  {
+    graph: [],
+    code_blocks: [],
+    end_nodes: Map::new(),
+    captures: [],
+    node_count: 0,
+    tag_count: 0,
+  }
+}
+
+///|
+pub fn NFA::from_rule(rule : Rule) -> NFA {
+  let nfa = NFA::new_nfa()
+  let node = nfa.new_node() // match starting from 1
+  for pattern in rule.patterns {
+    let (re, code_block) = pattern
+    let capture_names = re
+      .get_capture_names()
+      .map(fn(var) {
+        let begin_tag = nfa.tag_count
+        let end_tag = nfa.tag_count + 1
+        nfa.tag_count += 2
+        (var, (begin_tag, end_tag))
+      })
+    let map = Map::from_iter(
+      capture_names
+      .iter()
+      .map(fn {
+        ((name, _var_type), (begin_tag, end_tag)) =>
+          (name, (begin_tag, end_tag))
+      }),
+    )
+    nfa.register_regex(node, re, code_block, fn(x) { map.get(x).unwrap() })
+    nfa.captures.push(capture_names)
+  }
+  nfa
+}
+
+///|
+fn new_node(self : NFA) -> NFANode {
+  let new_id = self.node_count
+  self.node_count += 1
+  let node = NFANode::{ num: new_id, eps: @immut/sorted_set.new(), trans: [] }
+  self.graph.push(node)
+  guard new_id + 1 == self.graph.length()
+  node
+}
+
+///|
+fn add_edge(
+  self : NFA,
+  from : NFANode,
+  s : Input,
+  tag~ : Tag? = None,
+  to : NFANode
+) -> Unit {
+  ignore(self)
+  match s {
+    Eps => from.eps = from.eps.add((to, tag))
+    EChar(c) => from.trans.push((c, (to, tag)))
+  }
+}
+
+///|
+fn register_regex(
+  self : NFA,
+  node : NFANode,
+  re : Regex,
+  code_block : CodeBlock,
+  name2tag : (String) -> (Tag, Tag)
+) -> Unit {
+  let final_ = self.register_regex_rec(node, re, name2tag)
+  let id = self.code_blocks.length()
+  self.code_blocks.push(code_block)
+  self.end_nodes.set(final_.num, id)
+}
+
+///|
+fn register_regex_rec(
+  self : NFA,
+  node : NFANode,
+  re : Regex,
+  name2tag : (String) -> (Tag, Tag)
+) -> NFANode {
+  let new_node = self.new_node()
+  self.add_edge(node, Eps, new_node)
+  // return the final_ point of re for convience in building
+  let final_ = match re {
+    EOF => {
+      let next_node = self.new_node()
+      self.add_edge(new_node, EChar(@eof_char_set.eof), next_node)
+      next_node
+    }
+    Character(cset) => {
+      let next_node = self.new_node()
+      self.add_edge(new_node, EChar(cset), next_node)
+      next_node
+    }
+    Epsilon => {
+      let next_node = self.new_node()
+      self.add_edge(new_node, Eps, next_node)
+      next_node
+    }
+    Repetition(re) => {
+      let final_ = self.register_regex_rec(new_node, re, name2tag)
+      self.add_edge(final_, Eps, new_node)
+      final_
+    }
+    Concat(re1, re2) => {
+      let mid = self.register_regex_rec(new_node, re1, name2tag)
+      self.register_regex_rec(mid, re2, name2tag)
+    }
+    Alter(re1, re2) => {
+      let final_1 = self.register_regex_rec(new_node, re1, name2tag)
+      let final_2 = self.register_regex_rec(new_node, re2, name2tag)
+      let final_ = self.new_node()
+      self.add_edge(final_1, Eps, final_)
+      self.add_edge(final_2, Eps, final_)
+      final_
+    }
+    Capture(re, name) => {
+      let start = self.new_node()
+      let final_ = self.new_node()
+      let tail = self.register_regex_rec(start, re, name2tag)
+      let (begin_tag, end_tag) = name2tag(name)
+      self.add_edge(new_node, Eps, start, tag=Some(begin_tag))
+      self.add_edge(tail, Eps, final_, tag=Some(end_tag))
+      final_
+    }
+  }
+  let new_final = self.new_node()
+  self.add_edge(final_, Eps, new_final)
+  new_final
+}
+
+///|
+fn get_eps_closure(self : NFA) -> Array[@immut/hashmap.T[NFANode, @bitset.T]] {
+  Array::map(self.graph, fn(x) {
+    let empty_bits = @bitset.new(self.tag_count)
+    let result = Map::from_array([(x, empty_bits)])
+    fn get_bits(n : NFANode) -> @bitset.T {
+      result.get_or_default(n, empty_bits)
+    }
+
+    let queue = @queue.from_array([x])
+    while not(queue.is_empty()) {
+      let o = queue.unsafe_pop()
+      let o_bits = get_bits(o)
+      for e in o.eps {
+        let (u, tag) = e
+        let mut new_u_bits = get_bits(u).union(o_bits)
+        if not(tag.is_empty()) {
+          new_u_bits = new_u_bits.copy()
+          new_u_bits.set(tag.unwrap(), true)
+        }
+        if Some(new_u_bits) != result.get(u) {
+          result.set(u, new_u_bits)
+          queue.push(u)
+        }
+      }
+    }
+    @immut/hashmap.from_iter(result.iter())
+  })
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

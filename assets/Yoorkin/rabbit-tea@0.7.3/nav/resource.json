@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "nav",
+  "module_path": "Yoorkin/rabbit-tea",
+  "readme_content": "# Navigation\n\nThis package provides a collection of functions to navigate, scroll the viewport, \nand manage the URL history in a web application. Each function returns a `Cmd[Msg]` \ntype, representing an action that has yet to be executed.\n\nFor more details on how commands work, see the documentation in the \n`rabbit-tea/cmd` package.\n\n\n\n",
+  "package_data": "Yoorkin/rabbit-tea/nav/package_data.json",
+  "source_files": [ "navigation.mbt", "scroll.mbt", "aliases.mbt" ]
+}

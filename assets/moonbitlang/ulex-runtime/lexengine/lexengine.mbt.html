@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+pub typealias T = LexEngine
+
+///|
+pub(all) struct LexEngine {
+  // TODO: document these fields
+  graph : Array[(Int) -> (Int, Array[Array[Int]])]
+  end_nodes : Array[(Int, Array[((Int, Int), (Int, Int))])?]
+  start_tags : Array[Int]
+  code_blocks_n : Int
+}
+
+///|
+pub fn run[T, C, S, P](
+  self : LexEngine,
+  lexbuf : @lexbuf.T[T, C, S, P]
+) -> (Int, Array[(P, P)]) {
+  let mut state = 0
+  let mut tagState : Array[Array[P]] = []
+  let backtrace = Array::make(self.code_blocks_n, None)
+  for tag in self.start_tags {
+    while tagState.length() <= tag {
+      tagState.push([])
+    }
+    tagState[tag].push(lexbuf.curr_pos())
+  }
+  while state != -1 {
+    match self.end_nodes[state] {
+      Some(t) => backtrace[t.0] = Some((lexbuf.curr_pos(), state, tagState))
+      _ => ()
+    }
+    let b = match lexbuf.next() {
+      Some(b) => b.to_int()
+      None => -1
+    }
+    let next = self.graph[state](b)
+    state = next.0
+    let new_tagState : Array[Array[P]] = []
+    for i = 0; i < next.1.length(); i = i + 1 {
+      new_tagState.push([])
+      for j = 0; j < next.1[i].length(); j = j + 1 {
+        let t = next.1[i][j]
+        if t == -1 {
+          new_tagState[i].push(lexbuf.curr_pos())
+        } else {
+          new_tagState[i].push(tagState[i][t])
+        }
+      }
+    }
+    tagState = new_tagState
+  }
+  for index, b in backtrace {
+    match b {
+      Some((p, state, tagState)) => {
+        lexbuf.reset(p)
+        let captures = self.end_nodes[state].unwrap().1.map(fn {
+          ((b_t, b_r), (e_t, e_r)) => (tagState[b_t][b_r], tagState[e_t][e_r])
+        })
+        break (index, captures)
+      }
+      None => ()
+    }
+  } else {
+    (self.code_blocks_n, [])
+  }
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

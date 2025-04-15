@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "alfaslabone_regular",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/alfaslabone_regular/package_data.json",
+  "source_files": [ "alfaslabone_regular.mbt" ]
+}

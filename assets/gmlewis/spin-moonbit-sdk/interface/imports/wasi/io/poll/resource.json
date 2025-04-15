@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/io/poll",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "A poll API intended to let users wait for I/O events on multiple handles\nat once.",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/poll/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Yoorkin/rabbit-tea/example/todoMVC/views",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "button",
+      "docstring": "",
+      "signature": "fn button[M](text : String, href? : String, click? : M) -> <a href=\"Yoorkin/rabbit-tea/html#T\">@Yoorkin/rabbit-tea/html.T</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/views",
+        "file": "button.mbt",
+        "line": 2,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

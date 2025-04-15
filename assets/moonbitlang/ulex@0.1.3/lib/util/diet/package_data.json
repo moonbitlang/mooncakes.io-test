@@ -1,0 +1,342 @@
+{
+  "name": "moonbitlang/ulex/lib/util/diet",
+  "traits": [],
+  "types": [
+    {
+      "name": "Tree",
+      "docstring": "",
+      "signature": "type Tree[T]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "types.mbt",
+        "line": 5,
+        "column": 6
+      },
+      "methods": [
+        {
+          "name": "complement",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>::complement[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/diet",
+            "file": "ops.mbt",
+            "line": 105,
+            "column": 8
+          }
+        },
+        {
+          "name": "contains",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>::contains[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], x : N) -> Bool",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/diet",
+            "file": "ops.mbt",
+            "line": 10,
+            "column": 8
+          }
+        },
+        {
+          "name": "is_empty",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>::is_empty[N](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> Bool",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/diet",
+            "file": "ops.mbt",
+            "line": 2,
+            "column": 8
+          }
+        },
+        {
+          "name": "iter",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>::iter[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[N]",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/diet",
+            "file": "iter.mbt",
+            "line": 21,
+            "column": 8
+          }
+        },
+        {
+          "name": "iter_intervals",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>::iter_intervals[N](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[(N, N)]",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/diet",
+            "file": "iter.mbt",
+            "line": 2,
+            "column": 8
+          }
+        },
+        {
+          "name": "slice",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>::slice[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], min? : N, max? : N) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/util/diet",
+            "file": "slice.mbt",
+            "line": 50,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Tree",
+              "path": "moonbitlang/ulex/lib/util/diet"
+            },
+            "arguments": [ { "kind": "param", "name": "N" } ]
+          },
+          "trait": { "name": "Compare", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "compare",
+              "docstring": "",
+              "signature": "fn compare[N : <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], other : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> Int",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/diet",
+                "file": "traits_impl.mbt",
+                "line": 21,
+                "column": 48
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Tree",
+              "path": "moonbitlang/ulex/lib/util/diet"
+            },
+            "arguments": [ { "kind": "param", "name": "N" } ]
+          },
+          "trait": { "name": "Default", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "default",
+              "docstring": "",
+              "signature": "fn default[N]() -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/diet",
+                "file": "traits_impl.mbt",
+                "line": 2,
+                "column": 38
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Tree",
+              "path": "moonbitlang/ulex/lib/util/diet"
+            },
+            "arguments": [ { "kind": "param", "name": "N" } ]
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "",
+              "signature": "fn op_equal[N : <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], other : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> Bool",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/diet",
+                "file": "traits_impl.mbt",
+                "line": 7,
+                "column": 38
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Tree",
+              "path": "moonbitlang/ulex/lib/util/diet"
+            },
+            "arguments": [ { "kind": "param", "name": "N" } ]
+          },
+          "trait": { "name": "Hash", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "hash_combine",
+              "docstring": "",
+              "signature": "fn hash_combine[N : <a href=\"moonbitlang/core/builtin#Hash\">Hash</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], hasher : <a href=\"moonbitlang/core/builtin#Hasher\">Hasher</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/util/diet",
+                "file": "traits_impl.mbt",
+                "line": 40,
+                "column": 42
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T[T] = <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[T]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "types.mbt",
+        "line": 2,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "complement",
+      "docstring": "",
+      "signature": "fn complement[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "ops.mbt",
+        "line": 105,
+        "column": 8
+      }
+    },
+    {
+      "name": "contains",
+      "docstring": "",
+      "signature": "fn contains[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], x : N) -> Bool",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "ops.mbt",
+        "line": 10,
+        "column": 8
+      }
+    },
+    {
+      "name": "difference",
+      "docstring": "",
+      "signature": "fn difference[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](t1 : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], t2 : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "ops.mbt",
+        "line": 134,
+        "column": 8
+      }
+    },
+    {
+      "name": "empty",
+      "docstring": "",
+      "signature": "fn empty[N]() -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "builders.mbt",
+        "line": 2,
+        "column": 8
+      }
+    },
+    {
+      "name": "intersection",
+      "docstring": "",
+      "signature": "fn intersection[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](t1 : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], t2 : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "ops.mbt",
+        "line": 80,
+        "column": 8
+      }
+    },
+    {
+      "name": "interval",
+      "docstring": "",
+      "signature": "fn interval[N](min : N, max : N) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "builders.mbt",
+        "line": 12,
+        "column": 8
+      }
+    },
+    {
+      "name": "is_empty",
+      "docstring": "",
+      "signature": "fn is_empty[N](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> Bool",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "ops.mbt",
+        "line": 2,
+        "column": 8
+      }
+    },
+    {
+      "name": "iter",
+      "docstring": "",
+      "signature": "fn iter[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "iter.mbt",
+        "line": 21,
+        "column": 8
+      }
+    },
+    {
+      "name": "iter_intervals",
+      "docstring": "",
+      "signature": "fn iter_intervals[N](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[(N, N)]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "iter.mbt",
+        "line": 2,
+        "column": 8
+      }
+    },
+    {
+      "name": "of",
+      "docstring": "",
+      "signature": "fn of[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](array : <a href=\"moonbitlang/core/array#Array\">Array</a>[N]) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "builders.mbt",
+        "line": 17,
+        "column": 8
+      }
+    },
+    {
+      "name": "singleton",
+      "docstring": "",
+      "signature": "fn singleton[N](x : N) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "builders.mbt",
+        "line": 7,
+        "column": 8
+      }
+    },
+    {
+      "name": "slice",
+      "docstring": "",
+      "signature": "fn slice[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](self : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], min? : N, max? : N) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "slice.mbt",
+        "line": 50,
+        "column": 8
+      }
+    },
+    {
+      "name": "union",
+      "docstring": "",
+      "signature": "fn union[N : <a href=\"moonbitlang/ulex/lib/util/bounded_enum#BoundedEnum\">@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum</a> + <a href=\"moonbitlang/core/builtin#Compare\">Compare</a> + <a href=\"moonbitlang/core/builtin#Eq\">Eq</a>](t1 : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N], t2 : <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]) -> <a href=\"moonbitlang/ulex/lib/util/diet#Tree\">Tree</a>[N]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/util/diet",
+        "file": "ops.mbt",
+        "line": 25,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

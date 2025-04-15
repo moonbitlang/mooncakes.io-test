@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "example/async",
+  "module_path": "Yoorkin/rabbit-tea",
+  "readme_content": "# Async Example\n\nThis example demonstrates how to manually wrap an async JS FFI in Moonbit. \n\nIt's particularly useful when the functionality is not \nyet available in the rabbit-tea library. Ideally, the Core library should \nprovide basic async utilities, but in this early stage, we need to implement \nthe wrapping ourselves. \n\nIf you are looking for HTTP request functionality, you can use the `rabbit-tea/http` package.\n\nRun the example with the following command:\n\n```bash\ncd src/example/async\nbash ./launch.sh\n```\n\nThis command will build the project with js backend, and launch the server with node.\n",
+  "package_data": "Yoorkin/rabbit-tea/example/async/package_data.json",
+  "source_files": [ "main.mbt" ]
+}

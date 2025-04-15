@@ -1,0 +1,58 @@
+{
+  "name": "moonbitlang/ulex-runtime/lexengine",
+  "traits": [],
+  "types": [
+    {
+      "name": "LexEngine",
+      "docstring": "",
+      "signature": "pub(all) struct LexEngine {\n  graph : <a href=\"moonbitlang/core/array#Array\">Array</a>[(Int) -> (Int, <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[Int]])]\n  end_nodes : <a href=\"moonbitlang/core/array#Array\">Array</a>[(Int, <a href=\"moonbitlang/core/array#Array\">Array</a>[((Int, Int), (Int, Int))])?]\n  start_tags : <a href=\"moonbitlang/core/array#Array\">Array</a>[Int]\n  code_blocks_n : Int\n}",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexengine",
+        "file": "lexengine.mbt",
+        "line": 5,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "run",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex-runtime/lexengine#LexEngine\">LexEngine</a>::run[T, C, S, P](self : <a href=\"moonbitlang/ulex-runtime/lexengine#LexEngine\">LexEngine</a>, lexbuf : <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">@moonbitlang/ulex-runtime/lexbuf.Lexbuf</a>[T, C, S, P]) -> (Int, <a href=\"moonbitlang/core/array#Array\">Array</a>[(P, P)])",
+          "loc": {
+            "path": "moonbitlang/ulex-runtime/lexengine",
+            "file": "lexengine.mbt",
+            "line": 14,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T = <a href=\"moonbitlang/ulex-runtime/lexengine#LexEngine\">LexEngine</a>",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexengine",
+        "file": "lexengine.mbt",
+        "line": 2,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "run",
+      "docstring": "",
+      "signature": "fn run[T, C, S, P](self : <a href=\"moonbitlang/ulex-runtime/lexengine#LexEngine\">LexEngine</a>, lexbuf : <a href=\"moonbitlang/ulex-runtime/lexbuf#Lexbuf\">@moonbitlang/ulex-runtime/lexbuf.Lexbuf</a>[T, C, S, P]) -> (Int, <a href=\"moonbitlang/core/array#Array\">Array</a>[(P, P)])",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/lexengine",
+        "file": "lexengine.mbt",
+        "line": 14,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

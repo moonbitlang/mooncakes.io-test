@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "prelude",
+  "module_path": "moonbitlang/core",
+  "readme_content": "",
+  "package_data": "moonbitlang/core/prelude/package_data.json",
+  "source_files": [ "prelude.mbt" ]
+}

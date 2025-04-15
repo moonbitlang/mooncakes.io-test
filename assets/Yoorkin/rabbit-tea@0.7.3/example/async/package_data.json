@@ -1,0 +1,47 @@
+{
+  "name": "Yoorkin/rabbit-tea/example/async",
+  "traits": [],
+  "types": [
+    {
+      "name": "Message",
+      "docstring": "",
+      "signature": "type Message",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/async",
+        "file": "main.mbt",
+        "line": 5,
+        "column": 6
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Model",
+      "docstring": "",
+      "signature": "type Model",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/async",
+        "file": "main.mbt",
+        "line": 12,
+        "column": 8
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "suspend",
+      "docstring": "",
+      "signature": "fn suspend[T](f : ((T) -> Unit) -> Unit) -> T",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/async",
+        "file": "main.mbt",
+        "line": 17,
+        "column": 14
+      }
+    }
+  ],
+  "misc": []
+}

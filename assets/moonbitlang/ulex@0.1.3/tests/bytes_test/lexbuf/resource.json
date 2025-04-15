@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "tests/bytes_test/lexbuf",
+  "module_path": "moonbitlang/ulex",
+  "readme_content": "",
+  "package_data": "moonbitlang/ulex/tests/bytes_test/lexbuf/package_data.json",
+  "source_files": [ "lexbuf.mbt" ]
+}

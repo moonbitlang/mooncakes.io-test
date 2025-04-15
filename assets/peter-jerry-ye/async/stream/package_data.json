@@ -1,0 +1,231 @@
+{
+  "name": "peter-jerry-ye/async/stream",
+  "traits": [
+    {
+      "name": "@peter-jerry-ye/async/stream.Closable",
+      "docstring": "",
+      "signature": "pub(open) trait @peter-jerry-ye/async/stream.Closable {\n  closed(Self) -> Bool\n  close(Self) -> Unit\n}",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "types.mbt",
+        "line": 16,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@peter-jerry-ye/async/stream.Flushable",
+      "docstring": "",
+      "signature": "pub(open) trait @peter-jerry-ye/async/stream.Flushable {\n  flush(Self) -> <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[Unit]\n}",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "types.mbt",
+        "line": 22,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@peter-jerry-ye/async/stream.InputStream",
+      "docstring": " \n This trait represents an interface that provides the ability for low level async read operations.\n \n The `Self` here may represent a stream / file descriptor, or a stream / file descriptor + event loop.",
+      "signature": "pub(open) trait @peter-jerry-ye/async/stream.InputStream : <a href=\"peter-jerry-ye/async/stream#Closable\">Closable</a> {\n  readable(Self) -> Bool\n  read(Self, UInt64) -> <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[Bytes]\n}",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "types.mbt",
+        "line": 30,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@peter-jerry-ye/async/stream.OutputStream",
+      "docstring": " \n This trait represents an interface that provides the ability for low level async write operations.\n \n The `Self` here may represent a stream / file descriptor, or a stream / file descriptor + event loop.",
+      "signature": "pub(open) trait @peter-jerry-ye/async/stream.OutputStream : <a href=\"peter-jerry-ye/async/stream#Closable\">Closable</a> + <a href=\"peter-jerry-ye/async/stream#Flushable\">Flushable</a> {\n  writable(Self) -> Bool\n  write(Self, Bytes) -> <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[Unit]\n}",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "types.mbt",
+        "line": 39,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@peter-jerry-ye/async/stream.Reader",
+      "docstring": " \n This trait represents an interface that provides the ability for async read operations based on Chars.\n \n The `Self` here may represent a stream / file descriptor, or a stream / file descriptor + event loop.",
+      "signature": "pub(open) trait @peter-jerry-ye/async/stream.Reader : <a href=\"peter-jerry-ye/async/stream#Closable\">Closable</a> {\n  readable(Self) -> Bool\n  read(Self, UInt64) -> <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[String]\n}",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "types.mbt",
+        "line": 48,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@peter-jerry-ye/async/stream.Writer",
+      "docstring": " \n This trait represents an interface that provides the ability for async write operations based on Chars.\n \n The `Self` here may represent a stream / file descriptor, or a stream / file descriptor + event loop.",
+      "signature": "pub(open) trait @peter-jerry-ye/async/stream.Writer : <a href=\"peter-jerry-ye/async/stream#Closable\">Closable</a> + <a href=\"peter-jerry-ye/async/stream#Flushable\">Flushable</a> {\n  writable(Self) -> Bool\n  write(Self, String) -> <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[Unit]\n}",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "types.mbt",
+        "line": 57,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [
+    {
+      "name": "AsyncIterable",
+      "docstring": "",
+      "signature": "pub(all) type AsyncIterable[T] () -> T!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "types.mbt",
+        "line": 63,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "BufferedReader",
+      "docstring": " A reader that buffers the input stream and provides line reading capabilities.",
+      "signature": "pub struct BufferedReader {\n  stream : <a href=\"peter-jerry-ye/async/stream#Reader\">Reader</a>\n  buffer : String\n  offset : UInt\n  len : UInt\n}",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "buffered_reader.mbt",
+        "line": 16,
+        "column": 12
+      },
+      "methods": [
+        {
+          "name": "read_line",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/stream#BufferedReader\">BufferedReader</a>::read_line(self : <a href=\"peter-jerry-ye/async/stream#BufferedReader\">BufferedReader</a>) -> <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[String]",
+          "loc": {
+            "path": "peter-jerry-ye/async/stream",
+            "file": "buffered_reader.mbt",
+            "line": 80,
+            "column": 24
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "BufferedReader",
+              "path": "peter-jerry-ye/async/stream"
+            },
+            "arguments": []
+          },
+          "trait": {
+            "name": "Closable",
+            "path": "peter-jerry-ye/async/stream"
+          },
+          "methods": [
+            {
+              "name": "close",
+              "docstring": "",
+              "signature": "fn close(self : <a href=\"peter-jerry-ye/async/stream#BufferedReader\">BufferedReader</a>) -> Unit",
+              "loc": {
+                "path": "peter-jerry-ye/async/stream",
+                "file": "buffered_reader.mbt",
+                "line": 34,
+                "column": 43
+              }
+            },
+            {
+              "name": "closed",
+              "docstring": "",
+              "signature": "fn closed(self : <a href=\"peter-jerry-ye/async/stream#BufferedReader\">BufferedReader</a>) -> Bool",
+              "loc": {
+                "path": "peter-jerry-ye/async/stream",
+                "file": "buffered_reader.mbt",
+                "line": 29,
+                "column": 43
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "BufferedReader",
+              "path": "peter-jerry-ye/async/stream"
+            },
+            "arguments": []
+          },
+          "trait": {
+            "name": "Reader",
+            "path": "peter-jerry-ye/async/stream"
+          },
+          "methods": [
+            {
+              "name": "read",
+              "docstring": "",
+              "signature": "fn read(self : <a href=\"peter-jerry-ye/async/stream#BufferedReader\">BufferedReader</a>, size : UInt64) -> <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[String]",
+              "loc": {
+                "path": "peter-jerry-ye/async/stream",
+                "file": "buffered_reader.mbt",
+                "line": 47,
+                "column": 41
+              }
+            },
+            {
+              "name": "readable",
+              "docstring": "",
+              "signature": "fn readable(self : <a href=\"peter-jerry-ye/async/stream#BufferedReader\">BufferedReader</a>) -> Bool",
+              "loc": {
+                "path": "peter-jerry-ye/async/stream",
+                "file": "buffered_reader.mbt",
+                "line": 42,
+                "column": 41
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "buffered_reader",
+      "docstring": " Create a buffered reader from a reader",
+      "signature": "fn buffered_reader(stream : <a href=\"peter-jerry-ye/async/stream#Reader\">Reader</a>) -> <a href=\"peter-jerry-ye/async/stream#BufferedReader\">BufferedReader</a>",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "buffered_reader.mbt",
+        "line": 24,
+        "column": 8
+      }
+    },
+    {
+      "name": "input_stream_reader",
+      "docstring": " Create a reader from an input stream through the given encoding.",
+      "signature": "fn input_stream_reader[T : <a href=\"peter-jerry-ye/async/stream#InputStream\">InputStream</a> + <a href=\"peter-jerry-ye/async/stream#Closable\">Closable</a>](stream : T, encoding~ : <a href=\"tonyfettes/encoding#Encoding\">@tonyfettes/encoding.Encoding</a> = ..) -> <a href=\"peter-jerry-ye/async/stream#Reader\">Reader</a>",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "input_stream_reader.mbt",
+        "line": 45,
+        "column": 8
+      }
+    },
+    {
+      "name": "output_stream_writer",
+      "docstring": " Create a writer from an output stream through the given encoding.",
+      "signature": "fn output_stream_writer[T : <a href=\"peter-jerry-ye/async/stream#OutputStream\">OutputStream</a> + <a href=\"peter-jerry-ye/async/stream#Closable\">Closable</a> + <a href=\"peter-jerry-ye/async/stream#Flushable\">Flushable</a>](stream : T, encoding~ : <a href=\"tonyfettes/encoding#Encoding\">@tonyfettes/encoding.Encoding</a> = ..) -> <a href=\"peter-jerry-ye/async/stream#Writer\">Writer</a>",
+      "loc": {
+        "path": "peter-jerry-ye/async/stream",
+        "file": "ouptut_stream_writer.mbt",
+        "line": 47,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

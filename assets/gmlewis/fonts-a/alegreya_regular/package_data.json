@@ -1,0 +1,20 @@
+{
+  "name": "gmlewis/fonts-a/alegreya_regular",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "font",
+      "docstring": "",
+      "signature": "let font : <a href=\"gmlewis/fonts#Font\">@gmlewis/fonts.Font</a>",
+      "loc": {
+        "path": "gmlewis/fonts-a/alegreya_regular",
+        "file": "alegreya_regular.mbt",
+        "line": 12519,
+        "column": 9
+      }
+    }
+  ],
+  "misc": []
+}

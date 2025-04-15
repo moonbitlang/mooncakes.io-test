@@ -1,0 +1,22 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "tonyfettes/uv",
+    "version": "0.1.13",
+    "deps": { "tonyfettes/c": "0.1.13", "tonyfettes/encoding": "0.1.0" },
+    "readme": "README.md",
+    "repository": "https://github.com/tonyfettes/uv.mbt",
+    "license": "Apache-2.0",
+    "keywords": [],
+    "description": "MoonBit binding to libuv",
+    "source": "src"
+  },
+  "readme_content": "# tonyfettes/uv\n\nThis is a MoonBit binding to the [libuv](https://libuv.org) library.\n\n## Quickstart\n\n1. Add this module as a dependency to your MoonBit project.\n\n   ```bash\n   moon update\n   moon add tonyfettes/uv\n   ```\n\n2. Import `tonyfettes/uv` package where you need it.\n\n   ```json\n   {\n     \"import\": [\n       \"tonyfettes/uv\"\n     ]\n   }\n   ```\n\n3. Use the `tonyfettes/uv` package in your MoonBit project.\n\n   ```moonbit\n   fn main {\n     try {\n       let uv = @uv.Loop::new!()\n       let options = @uv.ProcessOptions::new(\n         \"mkdir\",\n         [\"mkdir\", \"test-dir\"],\n         fn(process, exit_status, term_signal) {\n           println(\n             \"Process exited with status \\{exit_status} and signal \\{term_signal}\",\n           )\n           process.close(fn(_) {  })\n         },\n       )\n       let process = uv.spawn!(options)\n       println(\"Launched process with ID \\{(process).pid()}\")\n       uv.run!(Default)\n       uv.stop()\n       uv.close!()\n     } catch {\n       error => println(\"Error: \\{error}\")\n     }\n   }\n   ```\n\n",
+  "module_index": "tonyfettes/uv/module_index.json",
+  "package_data": "tonyfettes/uv/package_data.json",
+  "source_files": [
+    "fs.mbt", "stream.mbt", "handle.mbt", "signal.mbt", "idle.mbt",
+    "time.mbt", "work.mbt", "args.mbt", "process.mbt", "req.mbt", "loop.mbt",
+    "thread.mbt", "pipe.mbt", "tty.mbt", "error.mbt", "tcp.mbt", "timer.mbt"
+  ]
+}

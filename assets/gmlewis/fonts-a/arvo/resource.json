@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "arvo",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/arvo/package_data.json",
+  "source_files": [ "arvo.mbt" ]
+}

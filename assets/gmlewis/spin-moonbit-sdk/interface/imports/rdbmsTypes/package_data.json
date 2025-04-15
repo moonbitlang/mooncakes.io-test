@@ -1,0 +1,416 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+  "traits": [],
+  "types": [
+    {
+      "name": "Column",
+      "docstring": "\n A database column",
+      "signature": "pub(all) struct Column {\n  name : String\n  data_type : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbDataType\">DbDataType</a>\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+        "file": "top.mbt",
+        "line": 114,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Column",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#Column\">Column</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#Column\">Column</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 117,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Column",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#Column\">Column</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 117,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DbDataType",
+      "docstring": "\n Data types for a database column",
+      "signature": "pub(all) enum DbDataType {\n  BOOLEAN\n  INT8\n  INT16\n  INT32\n  INT64\n  UINT8\n  UINT16\n  UINT32\n  UINT64\n  FLOATING32\n  FLOATING64\n  STR\n  BINARY\n  OTHER\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+        "file": "top.mbt",
+        "line": 15,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbDataType\">DbDataType</a>::from(self : Int) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbDataType\">DbDataType</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+            "file": "top.mbt",
+            "line": 53,
+            "column": 20
+          }
+        },
+        {
+          "name": "ordinal",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbDataType\">DbDataType</a>::ordinal(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbDataType\">DbDataType</a>) -> Int",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+            "file": "top.mbt",
+            "line": 33,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "DbDataType",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbDataType\">DbDataType</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbDataType\">DbDataType</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 30,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "DbDataType",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbDataType\">DbDataType</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 30,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DbValue",
+      "docstring": "\n Database values",
+      "signature": "pub(all) enum DbValue {\n  Boolean(Bool)\n  Int8(Int)\n  Int16(Int)\n  Int32(Int)\n  Int64(Int64)\n  Uint8(Byte)\n  Uint16(UInt)\n  Uint32(UInt)\n  Uint64(UInt64)\n  Floating32(Double)\n  Floating64(Double)\n  Str(String)\n  Binary(Bytes)\n  DbNull\n  Unsupported\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+        "file": "top.mbt",
+        "line": 75,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "DbValue",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbValue\">DbValue</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbValue\">DbValue</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 91,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "DbValue",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbValue\">DbValue</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 91,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Error_",
+      "docstring": "\n Errors related to interacting with a database.",
+      "signature": "pub(all) enum Error_ {\n  ConnectionFailed(String)\n  BadParameter(String)\n  QueryFailed(String)\n  ValueConversionFailed(String)\n  Other(String)\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+        "file": "top.mbt",
+        "line": 5,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Error_",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#Error_\">Error_</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#Error_\">Error_</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 11,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Error_",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#Error_\">Error_</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 11,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ParameterValue",
+      "docstring": "\n Values used in parameterized queries",
+      "signature": "pub(all) enum ParameterValue {\n  Boolean(Bool)\n  Int8(Int)\n  Int16(Int)\n  Int32(Int)\n  Int64(Int64)\n  Uint8(Byte)\n  Uint16(UInt)\n  Uint32(UInt)\n  Uint64(UInt64)\n  Floating32(Double)\n  Floating64(Double)\n  Str(String)\n  Binary(Bytes)\n  DbNull\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+        "file": "top.mbt",
+        "line": 95,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "ParameterValue",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#ParameterValue\">ParameterValue</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#ParameterValue\">ParameterValue</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 110,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "ParameterValue",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#ParameterValue\">ParameterValue</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 110,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RowSet",
+      "docstring": "\n A set of database rows",
+      "signature": "pub(all) struct RowSet {\n  columns : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#Column\">Column</a>]\n  rows : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbValue\">DbValue</a>]]\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+        "file": "top.mbt",
+        "line": 121,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RowSet",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#RowSet\">RowSet</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#RowSet\">RowSet</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 124,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RowSet",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#RowSet\">RowSet</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                "file": "top.mbt",
+                "line": 124,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "ordinal",
+      "docstring": "",
+      "signature": "fn ordinal(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes#DbDataType\">DbDataType</a>) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+        "file": "top.mbt",
+        "line": 33,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

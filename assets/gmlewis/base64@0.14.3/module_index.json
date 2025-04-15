@@ -1,0 +1,88 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "base64",
+      "package": {
+        "path": "gmlewis/base64",
+        "traits": [],
+        "types": [
+          {
+            "name": "CorruptInputError",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "CorruptInputError",
+                    "path": "gmlewis/base64"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          }
+        ],
+        "typealias": [],
+        "values": [
+          "array2str", "bytes2str", "std_decode2bytes", "std_decode2str",
+          "std_encode2bytes", "std_encode2str", "str2array", "str2bytes",
+          "url_decode2bytes", "url_decode2str", "url_encode2bytes",
+          "url_encode2str"
+        ],
+        "misc": []
+      },
+      "childs": [
+        {
+          "name": "decoder",
+          "package": {
+            "path": "gmlewis/base64/decoder",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "utf8" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "encoder",
+          "package": {
+            "path": "gmlewis/base64/encoder",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "utf8" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "examples",
+          "package": null,
+          "childs": [
+            {
+              "name": "simple",
+              "package": {
+                "path": "gmlewis/base64/examples/simple",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

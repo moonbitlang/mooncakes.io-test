@@ -1,0 +1,12 @@
+{
+  "kind": "package",
+  "relative_path": "util",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "",
+  "package_data": "gmlewis/spin-moonbit-sdk/util/package_data.json",
+  "source_files": [
+    "split-path.mbt", "stream.mbt", "dump-headers.mbt", "make-response.mbt",
+    "consume.mbt", "get-body-bytes.mbt", "new-request.mbt", "random-int.mbt",
+    "send-request.mbt", "println.mbt"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "moonbitlang/ulex/tests/bytes_test",
+  "traits": [],
+  "types": [
+    {
+      "name": "MalformedUtf8Error",
+      "docstring": "",
+      "signature": "pub type! MalformedUtf8Error\n",
+      "loc": {
+        "path": "moonbitlang/ulex/tests/bytes_test",
+        "file": "bytes.mbt",
+        "line": 2,
+        "column": 11
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

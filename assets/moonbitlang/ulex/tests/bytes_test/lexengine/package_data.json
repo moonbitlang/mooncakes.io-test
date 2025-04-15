@@ -1,0 +1,58 @@
+{
+  "name": "moonbitlang/ulex/tests/bytes_test/lexengine",
+  "traits": [],
+  "types": [
+    {
+      "name": "LexEngine",
+      "docstring": "",
+      "signature": "pub(all) struct LexEngine {\n  graph : <a href=\"moonbitlang/core/array#Array\">Array</a>[(Int) -> (Int, <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[Int]])]\n  end_nodes : <a href=\"moonbitlang/core/array#Array\">Array</a>[(Int, <a href=\"moonbitlang/core/array#Array\">Array</a>[((Int, Int), (Int, Int))])?]\n  start_tags : <a href=\"moonbitlang/core/array#Array\">Array</a>[Int]\n  code_blocks_n : Int\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/tests/bytes_test/lexengine",
+        "file": "lexengine.mbt",
+        "line": 5,
+        "column": 17
+      },
+      "methods": [
+        {
+          "name": "run",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/tests/bytes_test/lexengine#LexEngine\">LexEngine</a>::run(self : <a href=\"moonbitlang/ulex/tests/bytes_test/lexengine#LexEngine\">LexEngine</a>, lexbuf : <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">@moonbitlang/ulex/tests/bytes_test/lexbuf.BytesLexbuf</a>) -> (Int, <a href=\"moonbitlang/core/array#Array\">Array</a>[(Int, Int)])",
+          "loc": {
+            "path": "moonbitlang/ulex/tests/bytes_test/lexengine",
+            "file": "lexengine.mbt",
+            "line": 14,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T = <a href=\"moonbitlang/ulex/tests/bytes_test/lexengine#LexEngine\">LexEngine</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/tests/bytes_test/lexengine",
+        "file": "lexengine.mbt",
+        "line": 2,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "run",
+      "docstring": "",
+      "signature": "fn run(self : <a href=\"moonbitlang/ulex/tests/bytes_test/lexengine#LexEngine\">LexEngine</a>, lexbuf : <a href=\"moonbitlang/ulex/tests/bytes_test/lexbuf#BytesLexbuf\">@moonbitlang/ulex/tests/bytes_test/lexbuf.BytesLexbuf</a>) -> (Int, <a href=\"moonbitlang/core/array#Array\">Array</a>[(Int, Int)])",
+      "loc": {
+        "path": "moonbitlang/ulex/tests/bytes_test/lexengine",
+        "file": "lexengine.mbt",
+        "line": 14,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

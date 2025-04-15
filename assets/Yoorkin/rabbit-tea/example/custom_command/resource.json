@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "example/custom_command",
+  "module_path": "Yoorkin/rabbit-tea",
+  "readme_content": "",
+  "package_data": "Yoorkin/rabbit-tea/example/custom_command/package_data.json",
+  "source_files": [ "main.mbt" ]
+}

@@ -1,0 +1,157 @@
+{
+  "name": "Yoorkin/rabbit-tea/example/todoMVC/home",
+  "traits": [],
+  "types": [
+    {
+      "name": "CardModel",
+      "docstring": "",
+      "signature": "type CardModel",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+        "file": "card.mbt",
+        "line": 2,
+        "column": 6
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "CardModel",
+              "path": "Yoorkin/rabbit-tea/example/todoMVC/home"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#CardModel\">CardModel</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+                "file": "card.mbt",
+                "line": 5,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Model",
+      "docstring": "",
+      "signature": "pub struct Model {\n  cards : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#CardModel\">CardModel</a>]\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+        "file": "home.mbt",
+        "line": 9,
+        "column": 12
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Model",
+              "path": "Yoorkin/rabbit-tea/example/todoMVC/home"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Model\">Model</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+                "file": "home.mbt",
+                "line": 11,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Msg",
+      "docstring": "",
+      "signature": "pub enum Msg {\n  DeleteAll\n  GotCardsData(<a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#CardModel\">CardModel</a>], String])\n  ReqResult(<a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"moonbitlang/core/json#Json\">Json</a>, String])\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+        "file": "home.mbt",
+        "line": 2,
+        "column": 10
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Msg",
+              "path": "Yoorkin/rabbit-tea/example/todoMVC/home"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Msg\">Msg</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+                "file": "home.mbt",
+                "line": 6,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "load",
+      "docstring": "",
+      "signature": "fn load() -> (<a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[<a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Msg\">Msg</a>], <a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Model\">Model</a>)",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+        "file": "home.mbt",
+        "line": 14,
+        "column": 8
+      }
+    },
+    {
+      "name": "update",
+      "docstring": "",
+      "signature": "fn update(msg : <a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Msg\">Msg</a>, model : <a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Model\">Model</a>) -> (<a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[<a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Msg\">Msg</a>], <a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Model\">Model</a>)",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+        "file": "home.mbt",
+        "line": 35,
+        "column": 8
+      }
+    },
+    {
+      "name": "view",
+      "docstring": "",
+      "signature": "fn view(model : <a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Model\">Model</a>) -> <a href=\"Yoorkin/rabbit-tea/html#T\">@Yoorkin/rabbit-tea/html.T</a>[<a href=\"Yoorkin/rabbit-tea/example/todoMVC/home#Msg\">Msg</a>]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/home",
+        "file": "home.mbt",
+        "line": 22,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

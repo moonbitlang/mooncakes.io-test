@@ -1,0 +1,44 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "gmlewis/fonts",
+    "version": "0.15.8",
+    "deps": {
+      "moonbitlang/x": "0.4.25",
+      "yj-qin/regexp": "0.3.4"
+    },
+    "readme": "README.md",
+    "repository": "https://github.com/gmlewis/moonbit-fonts",
+    "license": "Apache-2.0",
+    "keywords": [
+      "html5 canvas",
+      "pdf",
+      "svg",
+      "open source",
+      "fonts"
+    ],
+    "description": "Experimental package to manipulate open source font data."
+  },
+  "readme_content": "# gmlewis/moonbit-fonts\n[![check](https://github.com/gmlewis/moonbit-fonts/actions/workflows/check.yml/badge.svg)](https://github.com/gmlewis/moonbit-fonts/actions/workflows/check.yml)\n\nThis is an experimental package to manipulate open source fonts with [MoonBit].\n\nAll fonts are open source and their licenses can all be found in their corresponding\nrepos which are organized by the first letter of the name of the font:\n\n* font: https://github.com/gmlewis/mbt-fonts-a/tree/master/aaarghnormal\n* license: https://github.com/gmlewis/go-fonts-a/tree/master/fonts/aaarghnormal\n* ...\n* font: https://github.com/gmlewis/mbt-fonts-b/tree/master/baloo\n* license: https://github.com/gmlewis/go-fonts-b/tree/master/fonts/baloo\n* ...\n* font: https://github.com/gmlewis/mbt-fonts-z/tree/master/znikomitno24\n* license: https://github.com/gmlewis/go-fonts-z/tree/master/fonts/znikomitno24\n\n[MoonBit]: https://www.moonbitlang.com/\n\n## Examples\n\n### checkerboard\n\n`checkerboard` is a simple example to create a `draw.Graphic` using the `@draw` API.\n\n### canvas-checkerboard\n\n`canvas-checkerboard` renders the `checkerboard` Graphic to an HTML5 canvas.\nType `./run-canvas-checkerboard.sh` in a terminal then open your browser to\nhttp://localhost:8080/examples/canvas-checkerboard to view it.\n\n### svg-checkerboard\n\n`svg-checkerboard` \"renders\" the `checkerboard` Graphic to an SVG file.\nType `moon run examples/svg-checkerboard > examples/svg-checkerboard/checkerboard.svg`\nin a terminal then open this file in your browser to view it.\nFor example, `google-chrome examples/svg-checkerboard/checkerboard.svg`.\n\n## Status\n\nThe code has been updated to support compiler:\n\n```bash\n$ moon version --all\nmoon 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moon\nmoonc v0.1.20250410+15d580434 ~/.moon/bin/moonc\nmoonrun 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moonrun\n```\n\n----------------------------------------------------------------------\n\nEnjoy!\n\n----------------------------------------------------------------------\n\n# License\n\nPlease note that all fonts have their own licenses which are included\nin their respective original directories (see above).\n\nCopyright 2019-2024 Glenn M. Lewis. All Rights Reserved.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\n----------------------------------------------------------------------\n",
+  "module_index": "gmlewis/fonts/module_index.json",
+  "package_data": "gmlewis/fonts/package_data.json",
+  "source_files": [
+    "split-path.mbt",
+    "path-fit.mbt",
+    "path.mbt",
+    "gen-paths.mbt",
+    "gen-path.mbt",
+    "parse-params.mbt",
+    "translate-path.mbt",
+    "geom.mbt",
+    "anchor.mbt",
+    "path-cmd.mbt",
+    "all-fonts.mbt",
+    "glyph.mbt",
+    "fonts.mbt",
+    "bbox.mbt"
+  ],
+  "publish_list": [
+    "0.15.8"
+  ]
+}

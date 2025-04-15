@@ -1,0 +1,744 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "fonts-a",
+      "package": null,
+      "childs": [
+        {
+          "name": "aaarghnormal",
+          "package": {
+            "path": "gmlewis/fonts-a/aaarghnormal",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "abeezee_italic",
+          "package": {
+            "path": "gmlewis/fonts-a/abeezee_italic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "abeezee_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/abeezee_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "abrilfatface_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/abrilfatface_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "acme_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/acme_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "actionjackson",
+          "package": {
+            "path": "gmlewis/fonts-a/actionjackson",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "actor_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/actor_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aguafinascript_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/aguafinascript_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_black",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_black",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_blackitalic",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_blackitalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_bold",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_bold",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_bolditalic",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_bolditalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_heavy",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_heavy",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_heavyitalic",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_heavyitalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_italic",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_italic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_light",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_light",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_lightitalic",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_lightitalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_semibold",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_semibold",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_semibolditalic",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_semibolditalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_thin",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_thin",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_thinitalic",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_thinitalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_ultralight",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_ultralight",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aileron_ultralightitalic",
+          "package": {
+            "path": "gmlewis/fonts-a/aileron_ultralightitalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "airstream",
+          "package": {
+            "path": "gmlewis/fonts-a/airstream",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_black",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_black",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_blackitalic",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_blackitalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_bold",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_bold",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_bolditalic",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_bolditalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_extrabold",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_extrabold",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_extrabolditalic",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_extrabolditalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_italic",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_italic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_medium",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_medium",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_mediumitalic",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_mediumitalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_semibold",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_semibold",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alegreya_semibolditalic",
+          "package": {
+            "path": "gmlewis/fonts-a/alegreya_semibolditalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alexbrush_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/alexbrush_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "alfaslabone_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/alfaslabone_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "allura_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/allura_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "amaranth_bold",
+          "package": {
+            "path": "gmlewis/fonts-a/amaranth_bold",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "amaranth_bolditalic",
+          "package": {
+            "path": "gmlewis/fonts-a/amaranth_bolditalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "amaranth_italic",
+          "package": {
+            "path": "gmlewis/fonts-a/amaranth_italic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "amaranth_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/amaranth_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "amerika",
+          "package": {
+            "path": "gmlewis/fonts-a/amerika",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "amerikasans",
+          "package": {
+            "path": "gmlewis/fonts-a/amerikasans",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "amita_bold",
+          "package": {
+            "path": "gmlewis/fonts-a/amita_bold",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "amita_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/amita_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "anagram",
+          "package": {
+            "path": "gmlewis/fonts-a/anagram",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "angstrom",
+          "package": {
+            "path": "gmlewis/fonts-a/angstrom",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "antelopeh",
+          "package": {
+            "path": "gmlewis/fonts-a/antelopeh",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "antimonyblue",
+          "package": {
+            "path": "gmlewis/fonts-a/antimonyblue",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "aquilinetwo",
+          "package": {
+            "path": "gmlewis/fonts-a/aquilinetwo",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "arizonia_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/arizonia_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "arvo",
+          "package": {
+            "path": "gmlewis/fonts-a/arvo",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "arvo_bold",
+          "package": {
+            "path": "gmlewis/fonts-a/arvo_bold",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "arvo_bolditalic",
+          "package": {
+            "path": "gmlewis/fonts-a/arvo_bolditalic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "arvo_italic",
+          "package": {
+            "path": "gmlewis/fonts-a/arvo_italic",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "asset_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/asset_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "atomicage_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/atomicage_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "averagesans_regular",
+          "package": {
+            "path": "gmlewis/fonts-a/averagesans_regular",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "font" ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

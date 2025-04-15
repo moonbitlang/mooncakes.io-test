@@ -1,0 +1,144 @@
+{
+  "name": "peter-jerry-ye/io/http",
+  "traits": [],
+  "types": [
+    {
+      "name": "IllegalArgument",
+      "docstring": "",
+      "signature": "pub type! IllegalArgument String\n",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 226,
+        "column": 11
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "bytes",
+      "docstring": "\n Consume the body and return the bytes\n \n The body is finished after this function is called.  \n This function fails if the body stream is already consumed\n \n @return a tuple of the bytes and the trailers",
+      "signature": "fn bytes(body : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#IncomingBody\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.IncomingBody</a>, event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">@peter-jerry-ye/io/io.Pollable</a>] = ..) -> (<a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[Bytes], <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[<a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Fields\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Fields</a>?])",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 63,
+        "column": 8
+      }
+    },
+    {
+      "name": "bytes_sync",
+      "docstring": "",
+      "signature": "fn bytes_sync(body : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#IncomingBody\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.IncomingBody</a>) -> (Bytes, <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Fields\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Fields</a>?)!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 92,
+        "column": 8
+      }
+    },
+    {
+      "name": "fetch",
+      "docstring": "",
+      "signature": "fn fetch(request : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#OutgoingRequest\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.OutgoingRequest</a>, options? : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#RequestOptions\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.RequestOptions</a>, event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">@peter-jerry-ye/io/io.Pollable</a>] = ..) -> <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#IncomingResponse\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.IncomingResponse</a>!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 16,
+        "column": 14
+      }
+    },
+    {
+      "name": "fetch_sync",
+      "docstring": "",
+      "signature": "fn fetch_sync(request : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#OutgoingRequest\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.OutgoingRequest</a>, options? : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#RequestOptions\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.RequestOptions</a>) -> <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#IncomingResponse\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.IncomingResponse</a>!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 36,
+        "column": 8
+      }
+    },
+    {
+      "name": "headers",
+      "docstring": "",
+      "signature": "fn headers(headers : <a href=\"moonbitlang/core/builtin#Map\">Map</a>[String, <a href=\"moonbitlang/core/array#Array\">Array</a>[Bytes]]) -> <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Fields\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Fields</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 177,
+        "column": 8
+      }
+    },
+    {
+      "name": "json",
+      "docstring": "\n Consume the body and return the content as json\n \n The body is finished after this function is called.  \n This function fails if the body stream is already consumed\n \n TODO: stream parsing\n \n @return a tuple of the json and the trailers",
+      "signature": "fn json(body : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#IncomingBody\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.IncomingBody</a>, event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">@peter-jerry-ye/io/io.Pollable</a>] = ..) -> (<a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[<a href=\"moonbitlang/core/json#Json\">Json</a>], <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[<a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Fields\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Fields</a>?])",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 153,
+        "column": 8
+      }
+    },
+    {
+      "name": "json_sync",
+      "docstring": "",
+      "signature": "fn json_sync(body : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#IncomingBody\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.IncomingBody</a>) -> (<a href=\"moonbitlang/core/json#Json\">Json</a>, <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Fields\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Fields</a>?)!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 171,
+        "column": 8
+      }
+    },
+    {
+      "name": "request",
+      "docstring": "",
+      "signature": "fn request(authority : String, path~ : String = .., headers~ : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Fields\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Fields</a> = .., method_~ : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Method\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Method</a> = .., scheme? : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Scheme\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Scheme</a>) -> <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#OutgoingRequest\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.OutgoingRequest</a>!<a href=\"peter-jerry-ye/io/http#IllegalArgument\">IllegalArgument</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 186,
+        "column": 8
+      }
+    },
+    {
+      "name": "response",
+      "docstring": "",
+      "signature": "fn response(status : UInt, headers~ : <a href=\"moonbitlang/core/builtin#Map\">Map</a>[String, <a href=\"moonbitlang/core/array#Array\">Array</a>[Bytes]] = ..) -> <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#OutgoingResponse\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.OutgoingResponse</a>!<a href=\"peter-jerry-ye/io/http#IllegalArgument\">IllegalArgument</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 210,
+        "column": 8
+      }
+    },
+    {
+      "name": "text",
+      "docstring": "\n Consume the body and return the content as text\n \n The body is finished after this function is called.  \n This function fails if the body stream is already consumed\n \n TODO: stream encoding\n \n @return a tuple of the text and the trailers",
+      "signature": "fn text(body : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#IncomingBody\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.IncomingBody</a>, event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">@peter-jerry-ye/io/io.Pollable</a>] = ..) -> (<a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[String], <a href=\"peter-jerry-ye/async/promise#T\">@peter-jerry-ye/async/promise.T</a>[<a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Fields\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Fields</a>?])",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 120,
+        "column": 8
+      }
+    },
+    {
+      "name": "text_sync",
+      "docstring": "",
+      "signature": "fn text_sync(body : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#IncomingBody\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.IncomingBody</a>) -> (String, <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/http/types#Fields\">@peter-jerry-ye/wasi-imports/interface/wasi/http/types.Fields</a>?)!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/http",
+        "file": "utils.mbt",
+        "line": 139,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}
