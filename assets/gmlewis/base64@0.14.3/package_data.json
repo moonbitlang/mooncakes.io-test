@@ -1,0 +1,180 @@
+{
+  "name": "gmlewis/base64",
+  "traits": [],
+  "types": [
+    {
+      "name": "CorruptInputError",
+      "docstring": "\n This package is based on the Go implementation found here:\n https://cs.opensource.google/go/go/+/master:src/encoding/base64/base64.go\n which has the copyright notice:\n Copyright 2009 The Go Authors. All rights reserved.\n Use of this source code is governed by a BSD-style\n license that can be found in the LICENSE file.",
+      "signature": "pub(all) type! CorruptInputError String\n",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "base64-decode.mbt",
+        "line": 8,
+        "column": 16
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "CorruptInputError",
+              "path": "gmlewis/base64"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/base64#CorruptInputError\">CorruptInputError</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/base64",
+                "file": "base64-decode.mbt",
+                "line": 8,
+                "column": 48
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "array2str",
+      "docstring": "\n `array2str` decodes a UTF-8 `ArrayView[Byte]` to a UTF-16 `String`.\n This is a more convenient version of `bytes2str` for when you have an `ArrayView[Byte]`.\n If you have an `Array[Byte]`, you can use `array2str(arr[:])`.\n\n Examples:\n ```\n let arr = b\"+/ Hello, 世界! 🌍\".to_array()\n inspect!(array2str(arr[:]), content=\"+/ Hello, 世界! 🌍\")\n ```",
+      "signature": "fn array2str(b : <a href=\"moonbitlang/core/array#ArrayView\">ArrayView</a>[Byte]) -> String",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "bytes-2-str.mbt",
+        "line": 37,
+        "column": 8
+      }
+    },
+    {
+      "name": "bytes2str",
+      "docstring": "\n `bytes2str` decodes a UTF-8 `Bytes` to a UTF-16 `String`.\n\n Examples:\n ```\n inspect!(bytes2str(\"+/ Hello, 世界! 🌍\"), content=\"+/ Hello, 世界! 🌍\")\n ```",
+      "signature": "fn bytes2str(b : Bytes) -> String",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "bytes-2-str.mbt",
+        "line": 8,
+        "column": 8
+      }
+    },
+    {
+      "name": "std_decode2bytes",
+      "docstring": "\n `std_decode2bytes` base64-decodes the provided bytes using Standard encoding.\n Setting `no_padding=true` is used for raw decoding.\n\n Note that standard encoding uses `+` and `/` characters whereas URL encoding uses `-` and `_`.\n\n Examples:\n ```\n let b = \"+/ Hello, 世界! 🌍\"\n inspect!(std_decode2bytes!(\"Ky8gSGVsbG8sIOS4lueVjCEg8J+MjQ==\") |> bytes2str(), content=b)\n inspect!(std_decode2bytes!(\"Ky8gSGVsbG8sIOS4lueVjCEg8J+MjQ\", no_padding=true) |> bytes2str(), content=b)\n ```",
+      "signature": "fn std_decode2bytes(src : String, no_padding~ : Bool = ..) -> Bytes!<a href=\"gmlewis/base64#CorruptInputError\">CorruptInputError</a>",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "base64-decode.mbt",
+        "line": 22,
+        "column": 8
+      }
+    },
+    {
+      "name": "std_decode2str",
+      "docstring": "\n `std_decode2str` base64-decodes the provided bytes using Standard encoding and returns a String.\n Setting `no_padding=true` is used for raw decoding.\n\n Note that standard encoding uses `+` and `/` characters whereas URL encoding uses `-` and `_`.\n\n Examples:\n ```\n let b = \"+/ Hello, 世界! 🌍\"\n inspect!(std_decode2str!(\"Ky8gSGVsbG8sIOS4lueVjCEg8J+MjQ==\"), content=b)\n inspect!(std_decode2str!(\"Ky8gSGVsbG8sIOS4lueVjCEg8J+MjQ\", no_padding=true), content=b)\n ```",
+      "signature": "fn std_decode2str(src : String, no_padding~ : Bool = ..) -> String!<a href=\"gmlewis/base64#CorruptInputError\">CorruptInputError</a>",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "base64-decode.mbt",
+        "line": 47,
+        "column": 8
+      }
+    },
+    {
+      "name": "std_encode2bytes",
+      "docstring": "\n `std_encode2bytes` base64-encodes the provided bytes using Standard encoding.\n Setting `no_padding=true` is used for raw encoding.\n\n Note that standard encoding uses `+` and `/` characters whereas URL encoding uses `-` and `_`.\n\n Examples:\n ```\n let b : Bytes = \"+/ Hello, 世界! 🌍\"\n inspect!(std_encode2bytes(b.to_fixedarray()) |> bytes2str(), content=\"Ky8gSGVsbG8sIOS4lueVjCEg8J+MjQ==\")\n inspect!(std_encode2bytes(b.to_fixedarray(), no_padding=true) |> bytes2str(), content=\"Ky8gSGVsbG8sIOS4lueVjCEg8J+MjQ\")\n ```",
+      "signature": "fn std_encode2bytes(src : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Byte], no_padding~ : Bool = ..) -> Bytes",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "base64-encode.mbt",
+        "line": 20,
+        "column": 8
+      }
+    },
+    {
+      "name": "std_encode2str",
+      "docstring": "\n `std_encode2str` base64-encodes the provided bytes using Standard encoding and returns a String.\n Setting `no_padding=true` is used for raw encoding.\n\n Note that standard encoding uses `+` and `/` characters whereas URL encoding uses `-` and `_`.\n\n Examples:\n ```\n let b : Bytes = \"+/ Hello, 世界! 🌍\"\n inspect!(std_encode2str(b.to_fixedarray()), content=\"Ky8gSGVsbG8sIOS4lueVjCEg8J+MjQ==\")\n inspect!(std_encode2str(b.to_fixedarray(), no_padding=true), content=\"Ky8gSGVsbG8sIOS4lueVjCEg8J+MjQ\")\n ```",
+      "signature": "fn std_encode2str(src : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Byte], no_padding~ : Bool = ..) -> String",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "base64-encode.mbt",
+        "line": 44,
+        "column": 8
+      }
+    },
+    {
+      "name": "str2array",
+      "docstring": "\n `str2array` encodes a UTF-16 `String` as a UTF-8 `Array[Byte]`.\n This is a more convenient version of `str2bytes` for when you want an `Array[Byte]`.\n\n Examples:\n ```\n inspect!(str2array(\"🌍\"), content=\"[b'\\\\xF0', b'\\\\x9F', b'\\\\x8C', b'\\\\x8D']\")\n ```",
+      "signature": "fn str2array(s : String) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[Byte]",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "str-2-bytes.mbt",
+        "line": 39,
+        "column": 8
+      }
+    },
+    {
+      "name": "str2bytes",
+      "docstring": "\n `str2bytes` encodes a UTF-16 `String` as a UTF-8 `Bytes`.\n\n Examples:\n ```\n inspect!(str2bytes(\"+/ Hello, 世界! 🌍\"), content=\n   #|b\"\\x2b\\x2f\\x20\\x48\\x65\\x6c\\x6c\\x6f\\x2c\\x20\\xe4\\xb8\\x96\\xe7\\x95\\x8c\\x21\\x20\\xf0\\x9f\\x8c\\x8d\"\n )\n ```",
+      "signature": "fn str2bytes(s : String) -> Bytes",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "str-2-bytes.mbt",
+        "line": 10,
+        "column": 8
+      }
+    },
+    {
+      "name": "url_decode2bytes",
+      "docstring": "\n `url_decode2bytes` base64-decodes the provided bytes using URL encoding.\n Setting `no_padding=true` is used for raw decoding.\n\n Note that standard encoding uses `+` and `/` characters whereas URL encoding uses `-` and `_`.\n\n Examples:\n ```\n let b = \"+/ Hello, 世界! 🌍\"\n inspect!(url_decode2bytes!(\"Ky8gSGVsbG8sIOS4lueVjCEg8J-MjQ==\") |> bytes2str(), content=b)\n inspect!(url_decode2bytes!(\"Ky8gSGVsbG8sIOS4lueVjCEg8J-MjQ\", no_padding=true) |> bytes2str(), content=b)\n ```",
+      "signature": "fn url_decode2bytes(src : String, no_padding~ : Bool = ..) -> Bytes!<a href=\"gmlewis/base64#CorruptInputError\">CorruptInputError</a>",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "base64-decode.mbt",
+        "line": 66,
+        "column": 8
+      }
+    },
+    {
+      "name": "url_decode2str",
+      "docstring": "\n `url_decode2str` base64-decodes the provided bytes using URL encoding and returns a String.\n Setting `no_padding=true` is used for raw decoding.\n\n Note that standard encoding uses `+` and `/` characters whereas URL encoding uses `-` and `_`.\n\n Examples:\n ```\n let b = \"+/ Hello, 世界! 🌍\"\n inspect!(url_decode2str!(\"Ky8gSGVsbG8sIOS4lueVjCEg8J-MjQ==\"), content=b)\n inspect!(url_decode2str!(\"Ky8gSGVsbG8sIOS4lueVjCEg8J-MjQ\", no_padding=true), content=b)\n ```",
+      "signature": "fn url_decode2str(src : String, no_padding~ : Bool = ..) -> String!<a href=\"gmlewis/base64#CorruptInputError\">CorruptInputError</a>",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "base64-decode.mbt",
+        "line": 91,
+        "column": 8
+      }
+    },
+    {
+      "name": "url_encode2bytes",
+      "docstring": "\n `url_encode2bytes` base64-encodes the provided bytes using URL encoding.\n Setting `no_padding=true` is used for raw encoding.\n\n Note that standard encoding uses `+` and `/` characters whereas URL encoding uses `-` and `_`.\n\n Examples:\n ```\n let b : Bytes = \"+/ Hello, 世界! 🌍\"\n inspect!(url_encode2bytes(b.to_fixedarray()) |> bytes2str(), content=\"Ky8gSGVsbG8sIOS4lueVjCEg8J-MjQ==\")\n inspect!(url_encode2bytes(b.to_fixedarray(), no_padding=true) |> bytes2str(), content=\"Ky8gSGVsbG8sIOS4lueVjCEg8J-MjQ\")\n ```",
+      "signature": "fn url_encode2bytes(src : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Byte], no_padding~ : Bool = ..) -> Bytes",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "base64-encode.mbt",
+        "line": 63,
+        "column": 8
+      }
+    },
+    {
+      "name": "url_encode2str",
+      "docstring": "\n `url_encode2str` base64-encodes the provided bytes using URL encoding and returns a String.\n Setting `no_padding=true` is used for raw encoding.\n\n Note that standard encoding uses `+` and `/` characters whereas URL encoding uses `-` and `_`.\n\n Examples:\n ```\n let b : Bytes = \"+/ Hello, 世界! 🌍\"\n inspect!(url_encode2str(b.to_fixedarray()), content=\"Ky8gSGVsbG8sIOS4lueVjCEg8J-MjQ==\")\n inspect!(url_encode2str(b.to_fixedarray(), no_padding=true), content=\"Ky8gSGVsbG8sIOS4lueVjCEg8J-MjQ\")\n ```",
+      "signature": "fn url_encode2str(src : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Byte], no_padding~ : Bool = ..) -> String",
+      "loc": {
+        "path": "gmlewis/base64",
+        "file": "base64-encode.mbt",
+        "line": 87,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

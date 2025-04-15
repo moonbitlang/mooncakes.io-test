@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "alegreya_mediumitalic",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/alegreya_mediumitalic/package_data.json",
+  "source_files": [ "alegreya_mediumitalic.mbt" ]
+}

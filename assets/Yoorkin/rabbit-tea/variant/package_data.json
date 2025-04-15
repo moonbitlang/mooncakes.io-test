@@ -1,0 +1,119 @@
+{
+  "name": "Yoorkin/rabbit-tea/variant",
+  "traits": [],
+  "types": [
+    {
+      "name": "Variant",
+      "docstring": "",
+      "signature": "pub(all) enum Variant {\n  Boolean(Bool)\n  Integer(Int)\n  Floating(Double)\n  String(String)\n}",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/variant",
+        "file": "variant.mbt",
+        "line": 2,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Variant",
+              "path": "Yoorkin/rabbit-tea/variant"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Compare", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "compare",
+              "docstring": "automatically derived",
+              "signature": "fn compare(<a href=\"Yoorkin/rabbit-tea/variant#Variant\">Variant</a>, <a href=\"Yoorkin/rabbit-tea/variant#Variant\">Variant</a>) -> Int",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/variant",
+                "file": "variant.mbt",
+                "line": 7,
+                "column": 20
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Variant",
+              "path": "Yoorkin/rabbit-tea/variant"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"Yoorkin/rabbit-tea/variant#Variant\">Variant</a>, <a href=\"Yoorkin/rabbit-tea/variant#Variant\">Variant</a>) -> Bool",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/variant",
+                "file": "variant.mbt",
+                "line": 7,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Variant",
+              "path": "Yoorkin/rabbit-tea/variant"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Hash", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "hash_combine",
+              "docstring": "automatically derived",
+              "signature": "fn hash_combine(<a href=\"Yoorkin/rabbit-tea/variant#Variant\">Variant</a>, <a href=\"moonbitlang/core/builtin#Hasher\">Hasher</a>) -> Unit",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/variant",
+                "file": "variant.mbt",
+                "line": 7,
+                "column": 29
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Variant",
+              "path": "Yoorkin/rabbit-tea/variant"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"Yoorkin/rabbit-tea/variant#Variant\">Variant</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/variant",
+                "file": "variant.mbt",
+                "line": 7,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

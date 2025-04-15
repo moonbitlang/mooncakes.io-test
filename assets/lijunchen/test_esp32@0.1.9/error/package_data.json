@@ -1,0 +1,59 @@
+{
+  "name": "lijunchen/test_esp32/error",
+  "traits": [],
+  "types": [
+    {
+      "name": "ESPError",
+      "docstring": "",
+      "signature": "pub enum ESPError {\n  Fail\n  Other(Int)\n}",
+      "loc": {
+        "path": "lijunchen/test_esp32/error",
+        "file": "lib.mbt",
+        "line": 2,
+        "column": 11
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "ESPError",
+              "path": "lijunchen/test_esp32/error"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"lijunchen/test_esp32/error#ESPError\">ESPError</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "lijunchen/test_esp32/error",
+                "file": "lib.mbt",
+                "line": 5,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "esp_err_wrapper",
+      "docstring": "",
+      "signature": "fn esp_err_wrapper(f : () -> Int) -> Unit!<a href=\"lijunchen/test_esp32/error#ESPError\">ESPError</a>",
+      "loc": {
+        "path": "lijunchen/test_esp32/error",
+        "file": "lib.mbt",
+        "line": 8,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

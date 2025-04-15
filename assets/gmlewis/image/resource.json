@@ -1,0 +1,32 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "gmlewis/image",
+    "version": "0.16.8",
+    "deps": {
+      "gmlewis/flate": "0.35.8",
+      "gmlewis/hash": "0.19.9",
+      "gmlewis/io": "0.22.1",
+      "gmlewis/zlib": "0.20.8"
+    },
+    "readme": "README.md",
+    "repository": "https://github.com/gmlewis/moonbit-image",
+    "license": "Apache-2.0",
+    "keywords": [
+      "image",
+      "color",
+      "moonbit"
+    ],
+    "description": "MoonBit image: simple image representation."
+  },
+  "readme_content": "# gmlewis/image\n[![check](https://github.com/gmlewis/moonbit-image/actions/workflows/check.yml/badge.svg)](https://github.com/gmlewis/moonbit-image/actions/workflows/check.yml)\n\nThis is a simple image representation based on Go's implementation:\nhttps://cs.opensource.google/go/go/+/refs/tags/go1.23.3:src/image/image.go\nwhich has the copyright notice:\n\n```\n// Copyright 2009 The Go Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style\n// license that can be found in the LICENSE file.\n```\n\n## Status\n\nThe code has been updated to support compiler:\n\n```bash\n$ moon version --all\nmoon 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moon\nmoonc v0.1.20250410+15d580434 ~/.moon/bin/moonc\nmoonrun 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moonrun\n```\n",
+  "module_index": "gmlewis/image/module_index.json",
+  "package_data": "gmlewis/image/package_data.json",
+  "source_files": [
+    "geom.mbt",
+    "image.mbt"
+  ],
+  "publish_list": [
+    "0.16.8"
+  ]
+}

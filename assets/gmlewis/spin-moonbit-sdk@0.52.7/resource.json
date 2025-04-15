@@ -1,0 +1,19 @@
+{
+  "kind": "module",
+  "meta_info": {
+    "name": "gmlewis/spin-moonbit-sdk",
+    "version": "0.52.7",
+    "deps": {
+      "gmlewis/base64": "0.14.3",
+      "gmlewis/md5": "0.19.5",
+      "gmlewis/sha256": "0.17.5"
+    },
+    "readme": "README.md",
+    "repository": "https://github.com/gmlewis/spin-moonbit-sdk",
+    "license": "Apache-2.0",
+    "keywords": [ "spin", "moonbit", "sdk" ],
+    "description": "Experimental Spin SDK for the MoonBit programming language."
+  },
+  "readme_content": "# gmlewis/spin-moonbit-sdk\n[![check](https://github.com/gmlewis/spin-moonbit-sdk/actions/workflows/check.yml/badge.svg)](https://github.com/gmlewis/spin-moonbit-sdk/actions/workflows/check.yml)\n\nThis is an experimental [Spin SDK] for the [MoonBit] programming language.\n\nThis is based on this blog post: https://www.moonbitlang.com/blog/component-model\nand this GitHub example: https://github.com/moonbitlang/moonbit-docs/tree/464356567270284446244cccecd101c04e9806f8/examples/wasi-http\n\n[Spin SDK]: https://www.fermyon.com/spin\n[MoonBit]: https://www.moonbitlang.com/\n\n## Build\n\nBefore building, you must have already installed the MoonBit programming language\nand the [Spin CLI tool]. You also need version `v1.222.0` or later of [wasm-tools].\n\nTo install MoonBit, follow the instructions here (it is super-easy with VSCode):\nhttps://www.moonbitlang.com/download/\n\nThen, to build this SDK, clone the repo, and type:\n\n```bash\nmoon update && moon install\nmoon build\n```\n\n[Spin CLI tool]: https://developer.fermyon.com/spin\n[wasm-tools]: https://github.com/bytecodealliance/wasm-tools\n\n## Run\n\nExamples can be found at: https://github.com/gmlewis/spin-moonbit-sdk-examples\n\nTo run an example, type:\n\n```bash\n$ cd hello-world\n$ spin up --build\n```\n\nthen from another terminal, hit the endpoint with `curl`:\n\n```bash\n$ curl -i localhost:3000/hello\nHTTP/1.1 200 OK\ncontent-type: text/plain\ntransfer-encoding: chunked\ndate: Sat, 17 Aug 2024 00:15:14 GMT\n\nHello, World!\n```\n\nEach example contains a README. Please refer to the README for additional commands and setup instructions. It might also be required to issue an update command: `moon update` to retrieve the latest dependencies. \n\n## Status\n\nThe code has been updated to support compiler:\n\n```bash\n$ moon version --all\nmoon 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moon\nmoonc v0.1.20250410+15d580434 ~/.moon/bin/moonc\nmoonrun 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moonrun\n```\n",
+  "module_index": "gmlewis/spin-moonbit-sdk/module_index.json"
+}

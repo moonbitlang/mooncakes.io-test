@@ -1,0 +1,194 @@
+{
+  "name": "peter-jerry-ye/async/loop",
+  "traits": [
+    {
+      "name": "@peter-jerry-ye/async/loop.Sync",
+      "docstring": "\n Types that can be synced.\n \n It should be able to sync an array of itself \n and return the indices of finished items.",
+      "signature": "pub(open) trait @peter-jerry-ye/async/loop.Sync {\n  sync(<a href=\"moonbitlang/core/array#Array\">Array</a>[Self]) -> <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[UInt]\n}",
+      "loc": {
+        "path": "peter-jerry-ye/async/loop",
+        "file": "types.mbt",
+        "line": 20,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [
+    {
+      "name": "Handler",
+      "docstring": "",
+      "signature": "type Handler",
+      "loc": {
+        "path": "peter-jerry-ye/async/loop",
+        "file": "types.mbt",
+        "line": 30,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "is_stopped",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>::is_stopped(self : <a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>) -> Bool",
+          "loc": {
+            "path": "peter-jerry-ye/async/loop",
+            "file": "handler.mbt",
+            "line": 35,
+            "column": 17
+          }
+        },
+        {
+          "name": "make",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>::make(action~ : (<a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>) -> Unit, stop_action~ : () -> Unit = ..) -> <a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>",
+          "loc": {
+            "path": "peter-jerry-ye/async/loop",
+            "file": "handler.mbt",
+            "line": 16,
+            "column": 17
+          }
+        },
+        {
+          "name": "start",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>::start(self : <a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/loop",
+            "file": "handler.mbt",
+            "line": 24,
+            "column": 17
+          }
+        },
+        {
+          "name": "stop",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>::stop(self : <a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/loop",
+            "file": "handler.mbt",
+            "line": 29,
+            "column": 17
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/loop",
+        "file": "types.mbt",
+        "line": 25,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "on_ready",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/loop#T\">T</a>::on_ready[A : <a href=\"peter-jerry-ye/async/loop#Sync\">Sync</a>](self : <a href=\"peter-jerry-ye/async/loop#T\">T</a>[A], subscribe : A, action : (<a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>) -> Unit, stop_action~ : () -> Unit = ..) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/loop",
+            "file": "core.mbt",
+            "line": 60,
+            "column": 8
+          }
+        },
+        {
+          "name": "run",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/loop#T\">T</a>::run[A : <a href=\"peter-jerry-ye/async/loop#Sync\">Sync</a>](self : <a href=\"peter-jerry-ye/async/loop#T\">T</a>[A]) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/loop",
+            "file": "core.mbt",
+            "line": 99,
+            "column": 8
+          }
+        },
+        {
+          "name": "run_until",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/loop#T\">T</a>::run_until[A : <a href=\"peter-jerry-ye/async/loop#Sync\">Sync</a>](self : <a href=\"peter-jerry-ye/async/loop#T\">T</a>[A], done : () -> Bool) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/loop",
+            "file": "core.mbt",
+            "line": 92,
+            "column": 8
+          }
+        },
+        {
+          "name": "sync",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/loop#T\">T</a>::sync[A : <a href=\"peter-jerry-ye/async/loop#Sync\">Sync</a>](self : <a href=\"peter-jerry-ye/async/loop#T\">T</a>[A], subscribe : A) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/loop",
+            "file": "core.mbt",
+            "line": 82,
+            "column": 14
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "new",
+      "docstring": "",
+      "signature": "fn new[A : <a href=\"peter-jerry-ye/async/loop#Sync\">Sync</a>]() -> <a href=\"peter-jerry-ye/async/loop#T\">T</a>[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/loop",
+        "file": "core.mbt",
+        "line": 16,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_ready",
+      "docstring": "",
+      "signature": "fn on_ready[A : <a href=\"peter-jerry-ye/async/loop#Sync\">Sync</a>](self : <a href=\"peter-jerry-ye/async/loop#T\">T</a>[A], subscribe : A, action : (<a href=\"peter-jerry-ye/async/loop#Handler\">Handler</a>) -> Unit, stop_action~ : () -> Unit = ..) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/async/loop",
+        "file": "core.mbt",
+        "line": 60,
+        "column": 8
+      }
+    },
+    {
+      "name": "run",
+      "docstring": "",
+      "signature": "fn run[A : <a href=\"peter-jerry-ye/async/loop#Sync\">Sync</a>](self : <a href=\"peter-jerry-ye/async/loop#T\">T</a>[A]) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/async/loop",
+        "file": "core.mbt",
+        "line": 99,
+        "column": 8
+      }
+    },
+    {
+      "name": "run_until",
+      "docstring": "",
+      "signature": "fn run_until[A : <a href=\"peter-jerry-ye/async/loop#Sync\">Sync</a>](self : <a href=\"peter-jerry-ye/async/loop#T\">T</a>[A], done : () -> Bool) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/async/loop",
+        "file": "core.mbt",
+        "line": 92,
+        "column": 8
+      }
+    },
+    {
+      "name": "sync",
+      "docstring": "",
+      "signature": "fn sync[A : <a href=\"peter-jerry-ye/async/loop#Sync\">Sync</a>](self : <a href=\"peter-jerry-ye/async/loop#T\">T</a>[A], subscribe : A) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/async/loop",
+        "file": "core.mbt",
+        "line": 82,
+        "column": 14
+      }
+    }
+  ],
+  "misc": []
+}

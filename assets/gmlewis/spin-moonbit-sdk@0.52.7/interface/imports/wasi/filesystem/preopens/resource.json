@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/filesystem/preopens",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/preopens/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

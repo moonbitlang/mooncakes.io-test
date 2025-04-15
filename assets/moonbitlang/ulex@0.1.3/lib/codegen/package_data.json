@@ -1,0 +1,20 @@
+{
+  "name": "moonbitlang/ulex/lib/codegen",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "codegen_lex",
+      "docstring": "",
+      "signature": "fn codegen_lex(lex : <a href=\"moonbitlang/ulex/lib/type#Lex\">@moonbitlang/ulex/lib/type.Lex</a>) -> String",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/codegen",
+        "file": "codegen.mbt",
+        "line": 2,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

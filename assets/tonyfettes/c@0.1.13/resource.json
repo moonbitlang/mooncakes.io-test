@@ -1,0 +1,20 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "tonyfettes/c",
+    "version": "0.1.13",
+    "readme": "README.md",
+    "repository": "https://github.com/tonyfettes/c.mbt",
+    "license": "Apache-2.0",
+    "keywords": [],
+    "description": "FFI Binding to C",
+    "source": "src",
+    "exclude": []
+  },
+  "readme_content": "# tonyfettes/c\n\nFFI Binding to C.\n\n## Usage\n\n1. Add this library using `moon add`:\n\n   ```bash\n   moon add tonyfettes/c\n   ```\n\n2. Import the library in your `moon.pkg.json`:\n\n   ```json\n   {\n     \"import\": [\n       \"tonyfettes/c\"\n     ]\n   }\n   ```\n\n3. Insert the following code somewhere in your MoonBit code:\n\n   ```moonbit\n   fn init {\n     ignore(@c.moonbit_ffi_make_closure)\n   }\n   ```\n\n   This prevents the closure help function from being eliminated by the MoonBit\n   compiler.\n\n4. Use the library in your code.\n\n",
+  "module_index": "tonyfettes/c/module_index.json",
+  "package_data": "tonyfettes/c/package_data.json",
+  "source_files": [
+    "pointer.mbt", "nullable.mbt", "closure.mbt", "memory.mbt"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "loop",
+  "module_path": "peter-jerry-ye/async",
+  "readme_content": "",
+  "package_data": "peter-jerry-ye/async/loop/package_data.json",
+  "source_files": [ "async.mbt", "handler.mbt", "core.mbt", "types.mbt" ]
+}

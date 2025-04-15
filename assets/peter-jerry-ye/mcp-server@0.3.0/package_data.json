@@ -1,0 +1,389 @@
+{
+  "name": "peter-jerry-ye/mcp-server",
+  "traits": [],
+  "types": [
+    {
+      "name": "Content",
+      "docstring": "",
+      "signature": "pub(all) enum Content {\n  Text(String)\n  Image(String, String)\n  Resource(String, String, String)\n}",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "types.mbt",
+        "line": 83,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "LogLevel",
+      "docstring": "\n RFC 5424",
+      "signature": "pub(all) enum LogLevel {\n  Debug\n  Info\n  Notice\n  Warning\n  Error\n  Critical\n  Alert\n  Emergency\n}",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "types.mbt",
+        "line": 29,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "LogLevel",
+              "path": "peter-jerry-ye/mcp-server"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"peter-jerry-ye/mcp-server#LogLevel\">LogLevel</a>, <a href=\"peter-jerry-ye/mcp-server#LogLevel\">LogLevel</a>) -> Bool",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server",
+                "file": "types.mbt",
+                "line": 38,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "LogLevel",
+              "path": "peter-jerry-ye/mcp-server"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"peter-jerry-ye/mcp-server#LogLevel\">LogLevel</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server",
+                "file": "types.mbt",
+                "line": 38,
+                "column": 14
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PromptArgument",
+      "docstring": "",
+      "signature": "type PromptArgument",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "types.mbt",
+        "line": 67,
+        "column": 8
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "PromptMessage",
+      "docstring": "",
+      "signature": "pub(all) struct PromptMessage {\n  role : <a href=\"peter-jerry-ye/mcp-server#Role\">Role</a>\n  message : <a href=\"peter-jerry-ye/mcp-server#Content\">Content</a>\n}",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "types.mbt",
+        "line": 61,
+        "column": 17
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Response",
+      "docstring": "",
+      "signature": "pub(all) struct Response {\n  isError : Bool\n  payload : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/mcp-server#Content\">Content</a>]\n}",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "types.mbt",
+        "line": 90,
+        "column": 17
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Role",
+      "docstring": "",
+      "signature": "pub(all) enum Role {\n  User\n  Assistant\n}",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "types.mbt",
+        "line": 55,
+        "column": 15
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Root",
+      "docstring": "",
+      "signature": "pub struct Root {\n  uri : String\n  name : String?\n}",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "types.mbt",
+        "line": 96,
+        "column": 12
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Root",
+              "path": "peter-jerry-ye/mcp-server"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"peter-jerry-ye/mcp-server#Root\">Root</a>, <a href=\"peter-jerry-ye/mcp-server#Root\">Root</a>) -> Bool",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server",
+                "file": "types.mbt",
+                "line": 99,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Root",
+              "path": "peter-jerry-ye/mcp-server"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"peter-jerry-ye/mcp-server#Root\">Root</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server",
+                "file": "types.mbt",
+                "line": 99,
+                "column": 14
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Server",
+      "docstring": "",
+      "signature": "type Server",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "server.mbt",
+        "line": 16,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "add_prompt",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>::add_prompt(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, name~ : String, description~ : String, arguments~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/mcp-server#PromptArgument\">PromptArgument</a>] = .., cb~ : (<a href=\"moonbitlang/core/builtin#Map\">Map</a>[String, <a href=\"moonbitlang/core/json#Json\">Json</a>]) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/mcp-server#PromptMessage\">PromptMessage</a>]) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/mcp-server",
+            "file": "server.mbt",
+            "line": 399,
+            "column": 8
+          }
+        },
+        {
+          "name": "add_tool",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>::add_tool(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, name~ : String, description~ : String, inputSchema~ : <a href=\"peter-jerry-ye/mcp-server/schema#T\">@peter-jerry-ye/mcp-server/schema.T</a>, cb~ : (<a href=\"moonbitlang/core/json#Json\">Json</a>, <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>) -> <a href=\"peter-jerry-ye/mcp-server#Response\">Response</a>) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/mcp-server",
+            "file": "server.mbt",
+            "line": 367,
+            "column": 8
+          }
+        },
+        {
+          "name": "list_roots",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>::list_roots(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/mcp-server#Root\">Root</a>]!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+          "loc": {
+            "path": "peter-jerry-ye/mcp-server",
+            "file": "server.mbt",
+            "line": 431,
+            "column": 14
+          }
+        },
+        {
+          "name": "log",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>::log(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, message : <a href=\"moonbitlang/core/json#Json\">Json</a>, level~ : <a href=\"peter-jerry-ye/mcp-server#LogLevel\">LogLevel</a> = ..) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/mcp-server",
+            "file": "server.mbt",
+            "line": 354,
+            "column": 14
+          }
+        },
+        {
+          "name": "remove_prompt",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>::remove_prompt(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, name : String) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/mcp-server",
+            "file": "server.mbt",
+            "line": 418,
+            "column": 8
+          }
+        },
+        {
+          "name": "remove_tool",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>::remove_tool(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, name : String) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/mcp-server",
+            "file": "server.mbt",
+            "line": 386,
+            "column": 8
+          }
+        },
+        {
+          "name": "serve",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>::serve(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, stdin~ : <a href=\"peter-jerry-ye/async/stream#Reader\">@peter-jerry-ye/async/stream.Reader</a>, stdout~ : <a href=\"peter-jerry-ye/async/stream#Writer\">@peter-jerry-ye/async/stream.Writer</a>, stderr~ : <a href=\"peter-jerry-ye/async/stream#Writer\">@peter-jerry-ye/async/stream.Writer</a>) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/mcp-server",
+            "file": "server.mbt",
+            "line": 44,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "add_prompt",
+      "docstring": "",
+      "signature": "fn add_prompt(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, name~ : String, description~ : String, arguments~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/mcp-server#PromptArgument\">PromptArgument</a>] = .., cb~ : (<a href=\"moonbitlang/core/builtin#Map\">Map</a>[String, <a href=\"moonbitlang/core/json#Json\">Json</a>]) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/mcp-server#PromptMessage\">PromptMessage</a>]) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "server.mbt",
+        "line": 399,
+        "column": 8
+      }
+    },
+    {
+      "name": "add_tool",
+      "docstring": "",
+      "signature": "fn add_tool(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, name~ : String, description~ : String, inputSchema~ : <a href=\"peter-jerry-ye/mcp-server/schema#T\">@peter-jerry-ye/mcp-server/schema.T</a>, cb~ : (<a href=\"moonbitlang/core/json#Json\">Json</a>, <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>) -> <a href=\"peter-jerry-ye/mcp-server#Response\">Response</a>) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "server.mbt",
+        "line": 367,
+        "column": 8
+      }
+    },
+    {
+      "name": "list_roots",
+      "docstring": "",
+      "signature": "fn list_roots(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/mcp-server#Root\">Root</a>]!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "server.mbt",
+        "line": 431,
+        "column": 14
+      }
+    },
+    {
+      "name": "log",
+      "docstring": "",
+      "signature": "fn log(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, message : <a href=\"moonbitlang/core/json#Json\">Json</a>, level~ : <a href=\"peter-jerry-ye/mcp-server#LogLevel\">LogLevel</a> = ..) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "server.mbt",
+        "line": 354,
+        "column": 14
+      }
+    },
+    {
+      "name": "new",
+      "docstring": "",
+      "signature": "fn new(seed : Bytes) -> <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "server.mbt",
+        "line": 29,
+        "column": 8
+      }
+    },
+    {
+      "name": "prompt_argument",
+      "docstring": "",
+      "signature": "fn prompt_argument(name : String, description? : String, required? : Bool) -> <a href=\"peter-jerry-ye/mcp-server#PromptArgument\">PromptArgument</a>",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "types.mbt",
+        "line": 74,
+        "column": 8
+      }
+    },
+    {
+      "name": "remove_prompt",
+      "docstring": "",
+      "signature": "fn remove_prompt(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, name : String) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "server.mbt",
+        "line": 418,
+        "column": 8
+      }
+    },
+    {
+      "name": "remove_tool",
+      "docstring": "",
+      "signature": "fn remove_tool(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, name : String) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "server.mbt",
+        "line": 386,
+        "column": 8
+      }
+    },
+    {
+      "name": "serve",
+      "docstring": "",
+      "signature": "fn serve(self : <a href=\"peter-jerry-ye/mcp-server#Server\">Server</a>, stdin~ : <a href=\"peter-jerry-ye/async/stream#Reader\">@peter-jerry-ye/async/stream.Reader</a>, stdout~ : <a href=\"peter-jerry-ye/async/stream#Writer\">@peter-jerry-ye/async/stream.Writer</a>, stderr~ : <a href=\"peter-jerry-ye/async/stream#Writer\">@peter-jerry-ye/async/stream.Writer</a>) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server",
+        "file": "server.mbt",
+        "line": 44,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "gmlewis/b2",
+    "version": "0.34.7",
+    "deps": {
+      "gmlewis/base64": "0.14.3",
+      "gmlewis/spin-moonbit-sdk": "0.52.7"
+    },
+    "readme": "README.md",
+    "repository": "https://github.com/gmlewis/moonbit-b2",
+    "license": "Apache-2.0",
+    "keywords": [
+      "b2",
+      "backclaze",
+      "client",
+      "moonbit"
+    ],
+    "description": "MoonBit b2 client: This library can be used to communicate with Backblaze B2."
+  },
+  "readme_content": "# gmlewis/b2\n[![check](https://github.com/gmlewis/moonbit-b2/actions/workflows/check.yml/badge.svg)](https://github.com/gmlewis/moonbit-b2/actions/workflows/check.yml)\n\nThis is a simple b2 client used to retrieve objects from Backblaze B2\nvia its Native API.\n\n## Status\n\nThe code has been updated to support compiler:\n\n```bash\n$ moon version --all\nmoon 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moon\nmoonc v0.1.20250410+15d580434 ~/.moon/bin/moonc\nmoonrun 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moonrun\n```\n",
+  "module_index": "gmlewis/b2/module_index.json",
+  "package_data": "gmlewis/b2/package_data.json",
+  "source_files": [
+    "get-download-authorization-url.mbt",
+    "stream-object.mbt",
+    "client.mbt",
+    "b2.mbt",
+    "api-info.mbt",
+    "consume-object.mbt"
+  ],
+  "publish_list": [
+    "0.34.7"
+  ]
+}

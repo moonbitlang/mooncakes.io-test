@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+/// This file is based on: https://cs.opensource.google/go/x/exp/+/master:jsonrpc2/frame.go;bpv=0
+/// which has copyright:
+/// Copyright 2018 The Go Authors. All rights reserved.
+/// Use of this source code is governed by a BSD-style
+/// license that can be found in the LICENSE file.
+
+///|
+/// Reader abstracts the transport mechanics from the JSON RPC protocol.
+/// A Conn reads messages from the reader it was provided on construction,
+/// and assumes that each call to Read fully transfers a single message,
+/// or returns an error.
+/// A reader is not safe for concurrent use, it is expected it will be used by
+/// a single Conn in a safe manner.
+pub trait Reader {
+  // Read gets the next message from the stream.
+  read(Self) -> (Message?, Int64, @io.IOError?)
+}
+
+///|
+/// Writer abstracts the transport mechanics from the JSON RPC protocol.
+/// A Conn writes messages using the writer it was provided on construction,
+/// and assumes that each call to Write fully transfers a single message,
+/// or returns an error.
+/// A writer is not safe for concurrent use, it is expected it will be used by
+/// a single Conn in a safe manner.
+pub trait Writer {
+  // Write sends a message to the stream.
+  write(Self, Message) -> (Int64, @io.IOError?)
+}
+
+///|
+/// Framer wraps low level byte readers and writers into jsonrpc2 message
+/// readers and writers.
+/// It is responsible for the framing and encoding of messages into wire form.
+pub trait Framer {
+  // Reader wraps a byte reader into a message reader.
+  reader(Self, &@io.ByteReader) -> &Reader
+  // Writer wraps a writer into a message writer.
+  writer(Self, &@io.Writer) -> &Writer
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

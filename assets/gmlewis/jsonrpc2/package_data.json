@@ -1,0 +1,1168 @@
+{
+  "name": "gmlewis/jsonrpc2",
+  "traits": [
+    {
+      "name": "@gmlewis/jsonrpc2.Framer",
+      "docstring": "\n Framer wraps low level byte readers and writers into jsonrpc2 message\n readers and writers.\n It is responsible for the framing and encoding of messages into wire form.",
+      "signature": "pub trait @gmlewis/jsonrpc2.Framer {\n  reader(Self, <a href=\"gmlewis/io#ByteReader\">@gmlewis/io.ByteReader</a>) -> <a href=\"gmlewis/jsonrpc2#Reader\">Reader</a>\n  writer(Self, <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>) -> <a href=\"gmlewis/jsonrpc2#Writer\">Writer</a>\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "framer.mbt",
+        "line": 36,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@gmlewis/jsonrpc2.Reader",
+      "docstring": "\n Reader abstracts the transport mechanics from the JSON RPC protocol.\n A Conn reads messages from the reader it was provided on construction,\n and assumes that each call to Read fully transfers a single message,\n or returns an error.\n A reader is not safe for concurrent use, it is expected it will be used by\n a single Conn in a safe manner.",
+      "signature": "pub trait @gmlewis/jsonrpc2.Reader {\n  read(Self) -> (<a href=\"gmlewis/jsonrpc2#Message\">Message</a>?, Int64, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "framer.mbt",
+        "line": 15,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@gmlewis/jsonrpc2.Writer",
+      "docstring": "\n Writer abstracts the transport mechanics from the JSON RPC protocol.\n A Conn writes messages using the writer it was provided on construction,\n and assumes that each call to Write fully transfers a single message,\n or returns an error.\n A writer is not safe for concurrent use, it is expected it will be used by\n a single Conn in a safe manner.",
+      "signature": "pub trait @gmlewis/jsonrpc2.Writer {\n  write(Self, <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> (Int64, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "framer.mbt",
+        "line": 27,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [
+    {
+      "name": "HeaderFramer",
+      "docstring": "",
+      "signature": "pub struct HeaderFramer {\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "header-framer.mbt",
+        "line": 10,
+        "column": 12
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "HeaderFramer",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Framer", "path": "gmlewis/jsonrpc2" },
+          "methods": [
+            {
+              "name": "reader",
+              "docstring": "",
+              "signature": "fn reader(_self : <a href=\"gmlewis/jsonrpc2#HeaderFramer\">HeaderFramer</a>, in_ : <a href=\"gmlewis/io#ByteReader\">@gmlewis/io.ByteReader</a>) -> <a href=\"gmlewis/jsonrpc2#Reader\">Reader</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "header-framer.mbt",
+                "line": 23,
+                "column": 39
+              }
+            },
+            {
+              "name": "writer",
+              "docstring": "",
+              "signature": "fn writer(_self : <a href=\"gmlewis/jsonrpc2#HeaderFramer\">HeaderFramer</a>, out : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>) -> <a href=\"gmlewis/jsonrpc2#Writer\">Writer</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "header-framer.mbt",
+                "line": 28,
+                "column": 39
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HeaderReader",
+      "docstring": "",
+      "signature": "pub struct HeaderReader {\n  in_ : <a href=\"gmlewis/io#ByteReader\">@gmlewis/io.ByteReader</a>\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "header-framer.mbt",
+        "line": 13,
+        "column": 12
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "HeaderReader",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Reader", "path": "gmlewis/jsonrpc2" },
+          "methods": [
+            {
+              "name": "read",
+              "docstring": "",
+              "signature": "fn read(self : <a href=\"gmlewis/jsonrpc2#HeaderReader\">HeaderReader</a>) -> (<a href=\"gmlewis/jsonrpc2#Message\">Message</a>?, Int64, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "header-framer.mbt",
+                "line": 33,
+                "column": 39
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HeaderWriter",
+      "docstring": "",
+      "signature": "pub struct HeaderWriter {\n  out : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "header-framer.mbt",
+        "line": 18,
+        "column": 12
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "HeaderWriter",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Writer", "path": "gmlewis/jsonrpc2" },
+          "methods": [
+            {
+              "name": "write",
+              "docstring": "",
+              "signature": "fn write(self : <a href=\"gmlewis/jsonrpc2#HeaderWriter\">HeaderWriter</a>, msg : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> (Int64, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "header-framer.mbt",
+                "line": 102,
+                "column": 39
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ID",
+      "docstring": "\n ID is used to identify the request and tie it to the response.",
+      "signature": "pub enum ID {\n  Number(Int64)\n  String(String)\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "id.mbt",
+        "line": 3,
+        "column": 10
+      },
+      "methods": [
+        {
+          "name": "number",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/jsonrpc2#ID\">ID</a>::number(n : Int64) -> <a href=\"gmlewis/jsonrpc2#ID\">ID</a>",
+          "loc": {
+            "path": "gmlewis/jsonrpc2",
+            "file": "id.mbt",
+            "line": 11,
+            "column": 12
+          }
+        },
+        {
+          "name": "string",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/jsonrpc2#ID\">ID</a>::string(s : String) -> <a href=\"gmlewis/jsonrpc2#ID\">ID</a>",
+          "loc": {
+            "path": "gmlewis/jsonrpc2",
+            "file": "id.mbt",
+            "line": 16,
+            "column": 12
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "ID", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/jsonrpc2#ID\">ID</a>, <a href=\"gmlewis/jsonrpc2#ID\">ID</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "id.mbt",
+                "line": 8,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "ID", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/jsonrpc2#ID\">ID</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "id.mbt",
+                "line": 8,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "ID", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "",
+              "signature": "fn to_json(self : <a href=\"gmlewis/jsonrpc2#ID\">ID</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "id.mbt",
+                "line": 21,
+                "column": 29
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "ID", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "",
+              "signature": "fn from_json(json : <a href=\"moonbitlang/core/json#Json\">Json</a>, path : <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"gmlewis/jsonrpc2#ID\">ID</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "id.mbt",
+                "line": 29,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LineFramer",
+      "docstring": "",
+      "signature": "pub struct LineFramer {\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "line-framer.mbt",
+        "line": 10,
+        "column": 12
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "LineFramer",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Framer", "path": "gmlewis/jsonrpc2" },
+          "methods": [
+            {
+              "name": "reader",
+              "docstring": "",
+              "signature": "fn reader(_self : <a href=\"gmlewis/jsonrpc2#LineFramer\">LineFramer</a>, in_ : <a href=\"gmlewis/io#ByteReader\">@gmlewis/io.ByteReader</a>) -> <a href=\"gmlewis/jsonrpc2#Reader\">Reader</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "line-framer.mbt",
+                "line": 23,
+                "column": 37
+              }
+            },
+            {
+              "name": "writer",
+              "docstring": "",
+              "signature": "fn writer(_self : <a href=\"gmlewis/jsonrpc2#LineFramer\">LineFramer</a>, out : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>) -> <a href=\"gmlewis/jsonrpc2#Writer\">Writer</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "line-framer.mbt",
+                "line": 28,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LineReader",
+      "docstring": "",
+      "signature": "pub struct LineReader {\n  in_ : <a href=\"gmlewis/io#ByteReader\">@gmlewis/io.ByteReader</a>\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "line-framer.mbt",
+        "line": 13,
+        "column": 12
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "LineReader",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Reader", "path": "gmlewis/jsonrpc2" },
+          "methods": [
+            {
+              "name": "read",
+              "docstring": "",
+              "signature": "fn read(self : <a href=\"gmlewis/jsonrpc2#LineReader\">LineReader</a>) -> (<a href=\"gmlewis/jsonrpc2#Message\">Message</a>?, Int64, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "line-framer.mbt",
+                "line": 33,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LineWriter",
+      "docstring": "",
+      "signature": "pub struct LineWriter {\n  out : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "line-framer.mbt",
+        "line": 18,
+        "column": 12
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "LineWriter",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Writer", "path": "gmlewis/jsonrpc2" },
+          "methods": [
+            {
+              "name": "write",
+              "docstring": "",
+              "signature": "fn write(self : <a href=\"gmlewis/jsonrpc2#LineWriter\">LineWriter</a>, msg : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> (Int64, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "line-framer.mbt",
+                "line": 50,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Message",
+      "docstring": "\n Message covers all jsonrpc2 message types.\n They share no common functionality, but are a closed set of concrete types\n that are allowed to implement this interface. The message types are Request\n and Response.",
+      "signature": "pub enum Message {\n  Request(<a href=\"gmlewis/jsonrpc2#Request\">Request</a>)\n  Response(<a href=\"gmlewis/jsonrpc2#Response\">Response</a>)\n  BatchRequest(<a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/jsonrpc2#Request\">Request</a>])\n  BatchResponse(<a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/jsonrpc2#Response\">Response</a>])\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 6,
+        "column": 10
+      },
+      "methods": [
+        {
+          "name": "as_batch_request",
+          "docstring": "\n as_batch_request returns the message as a batch request if it is one.",
+          "signature": "fn <a href=\"gmlewis/jsonrpc2#Message\">Message</a>::as_batch_request(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/jsonrpc2#Request\">Request</a>]?",
+          "loc": {
+            "path": "gmlewis/jsonrpc2",
+            "file": "message.mbt",
+            "line": 122,
+            "column": 8
+          }
+        },
+        {
+          "name": "as_batch_response",
+          "docstring": "\n as_batch_response returns the message as a batch response if it is one.",
+          "signature": "fn <a href=\"gmlewis/jsonrpc2#Message\">Message</a>::as_batch_response(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/jsonrpc2#Response\">Response</a>]?",
+          "loc": {
+            "path": "gmlewis/jsonrpc2",
+            "file": "message.mbt",
+            "line": 132,
+            "column": 8
+          }
+        },
+        {
+          "name": "as_call",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/jsonrpc2#Message\">Message</a>::as_call(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"gmlewis/jsonrpc2#Request\">Request</a>?",
+          "loc": {
+            "path": "gmlewis/jsonrpc2",
+            "file": "message.mbt",
+            "line": 89,
+            "column": 8
+          }
+        },
+        {
+          "name": "as_notification",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/jsonrpc2#Message\">Message</a>::as_notification(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"gmlewis/jsonrpc2#Request\">Request</a>?",
+          "loc": {
+            "path": "gmlewis/jsonrpc2",
+            "file": "message.mbt",
+            "line": 96,
+            "column": 8
+          }
+        },
+        {
+          "name": "as_request",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/jsonrpc2#Message\">Message</a>::as_request(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"gmlewis/jsonrpc2#Request\">Request</a>?",
+          "loc": {
+            "path": "gmlewis/jsonrpc2",
+            "file": "message.mbt",
+            "line": 103,
+            "column": 8
+          }
+        },
+        {
+          "name": "as_response",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/jsonrpc2#Message\">Message</a>::as_response(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"gmlewis/jsonrpc2#Response\">Response</a>?",
+          "loc": {
+            "path": "gmlewis/jsonrpc2",
+            "file": "message.mbt",
+            "line": 112,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Message", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/jsonrpc2#Message\">Message</a>, <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "message.mbt",
+                "line": 15,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Message", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/jsonrpc2#Message\">Message</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "message.mbt",
+                "line": 15,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Message", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "",
+              "signature": "fn to_json(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "message.mbt",
+                "line": 18,
+                "column": 34
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Message", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "",
+              "signature": "fn from_json(json : <a href=\"moonbitlang/core/json#Json\">Json</a>, path : <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"gmlewis/jsonrpc2#Message\">Message</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "message.mbt",
+                "line": 28,
+                "column": 42
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RawFramer",
+      "docstring": "",
+      "signature": "pub struct RawFramer {\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "raw-framer.mbt",
+        "line": 10,
+        "column": 12
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RawFramer",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Framer", "path": "gmlewis/jsonrpc2" },
+          "methods": [
+            {
+              "name": "reader",
+              "docstring": "",
+              "signature": "fn reader(_self : <a href=\"gmlewis/jsonrpc2#RawFramer\">RawFramer</a>, in_ : <a href=\"gmlewis/io#ByteReader\">@gmlewis/io.ByteReader</a>) -> <a href=\"gmlewis/jsonrpc2#Reader\">Reader</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "raw-framer.mbt",
+                "line": 23,
+                "column": 36
+              }
+            },
+            {
+              "name": "writer",
+              "docstring": "",
+              "signature": "fn writer(_self : <a href=\"gmlewis/jsonrpc2#RawFramer\">RawFramer</a>, out : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>) -> <a href=\"gmlewis/jsonrpc2#Writer\">Writer</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "raw-framer.mbt",
+                "line": 28,
+                "column": 36
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RawReader",
+      "docstring": "",
+      "signature": "type RawReader",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "raw-framer.mbt",
+        "line": 13,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RawReader",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Reader", "path": "gmlewis/jsonrpc2" },
+          "methods": [
+            {
+              "name": "read",
+              "docstring": "",
+              "signature": "fn read(self : <a href=\"gmlewis/jsonrpc2#RawReader\">RawReader</a>) -> (<a href=\"gmlewis/jsonrpc2#Message\">Message</a>?, Int64, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "raw-framer.mbt",
+                "line": 33,
+                "column": 36
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RawWriter",
+      "docstring": "",
+      "signature": "type RawWriter",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "raw-framer.mbt",
+        "line": 18,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RawWriter",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Writer", "path": "gmlewis/jsonrpc2" },
+          "methods": [
+            {
+              "name": "write",
+              "docstring": "",
+              "signature": "fn write(self : <a href=\"gmlewis/jsonrpc2#RawWriter\">RawWriter</a>, msg : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> (Int64, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "raw-framer.mbt",
+                "line": 47,
+                "column": 36
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Request",
+      "docstring": "\n A Request is a message sent to a peer to request behavior.\n If it has an ID then it is a call and therefore requests a response,\n otherwise it is a notification which receives no response.",
+      "signature": "pub(all) struct Request {\n  id : <a href=\"gmlewis/jsonrpc2#ID\">ID</a>?\n  method_ : String\n  params : <a href=\"moonbitlang/core/json#Json\">Json</a>\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "request.mbt",
+        "line": 5,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Request", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/jsonrpc2#Request\">Request</a>, <a href=\"gmlewis/jsonrpc2#Request\">Request</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "request.mbt",
+                "line": 13,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Request", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/jsonrpc2#Request\">Request</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "request.mbt",
+                "line": 13,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Request", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "",
+              "signature": "fn to_json(self : <a href=\"gmlewis/jsonrpc2#Request\">Request</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "request.mbt",
+                "line": 16,
+                "column": 34
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Request", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "",
+              "signature": "fn from_json(json : <a href=\"moonbitlang/core/json#Json\">Json</a>, path : <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"gmlewis/jsonrpc2#Request\">Request</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "request.mbt",
+                "line": 31,
+                "column": 42
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Response",
+      "docstring": "\n Response is a Message used as a reply to a call Request.\n It will have the same ID as the call it is a response to.",
+      "signature": "pub(all) struct Response {\n  id : <a href=\"gmlewis/jsonrpc2#ID\">ID</a>\n  result : <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"moonbitlang/core/json#Json\">Json</a>, <a href=\"gmlewis/jsonrpc2#WireError\">WireError</a>]\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "response.mbt",
+        "line": 4,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Response", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/jsonrpc2#Response\">Response</a>, <a href=\"gmlewis/jsonrpc2#Response\">Response</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "response.mbt",
+                "line": 9,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Response", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/jsonrpc2#Response\">Response</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "response.mbt",
+                "line": 9,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Response", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "",
+              "signature": "fn to_json(self : <a href=\"gmlewis/jsonrpc2#Response\">Response</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "response.mbt",
+                "line": 20,
+                "column": 35
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Response", "path": "gmlewis/jsonrpc2" },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "",
+              "signature": "fn from_json(json : <a href=\"moonbitlang/core/json#Json\">Json</a>, path : <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"gmlewis/jsonrpc2#Response\">Response</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "response.mbt",
+                "line": 34,
+                "column": 43
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "WireError",
+      "docstring": "\n WireError is a jsonrpc2 error message.",
+      "signature": "pub(all) struct WireError {\n  code : Int\n  message : String\n  data : <a href=\"moonbitlang/core/json#Json\">Json</a>?\n}",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "response.mbt",
+        "line": 13,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "WireError",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/jsonrpc2#WireError\">WireError</a>, <a href=\"gmlewis/jsonrpc2#WireError\">WireError</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "response.mbt",
+                "line": 17,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "WireError",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/jsonrpc2#WireError\">WireError</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "response.mbt",
+                "line": 17,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "WireError",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "automatically derived",
+              "signature": "fn to_json(<a href=\"gmlewis/jsonrpc2#WireError\">WireError</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "response.mbt",
+                "line": 17,
+                "column": 30
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "WireError",
+              "path": "gmlewis/jsonrpc2"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "FromJson", "path": "moonbitlang/core/json" },
+          "methods": [
+            {
+              "name": "from_json",
+              "docstring": "automatically derived",
+              "signature": "fn from_json(<a href=\"moonbitlang/core/json#Json\">Json</a>, <a href=\"moonbitlang/core/json#JsonPath\">@moonbitlang/core/json.JsonPath</a>) -> <a href=\"gmlewis/jsonrpc2#WireError\">WireError</a>!<a href=\"moonbitlang/core/json#JsonDecodeError\">@moonbitlang/core/json.JsonDecodeError</a>",
+              "loc": {
+                "path": "gmlewis/jsonrpc2",
+                "file": "response.mbt",
+                "line": 17,
+                "column": 20
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "as_batch_request",
+      "docstring": "\n as_batch_request returns the message as a batch request if it is one.",
+      "signature": "fn as_batch_request(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/jsonrpc2#Request\">Request</a>]?",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 122,
+        "column": 8
+      }
+    },
+    {
+      "name": "as_batch_response",
+      "docstring": "\n as_batch_response returns the message as a batch response if it is one.",
+      "signature": "fn as_batch_response(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/jsonrpc2#Response\">Response</a>]?",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 132,
+        "column": 8
+      }
+    },
+    {
+      "name": "as_call",
+      "docstring": "",
+      "signature": "fn as_call(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"gmlewis/jsonrpc2#Request\">Request</a>?",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 89,
+        "column": 8
+      }
+    },
+    {
+      "name": "as_notification",
+      "docstring": "",
+      "signature": "fn as_notification(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"gmlewis/jsonrpc2#Request\">Request</a>?",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 96,
+        "column": 8
+      }
+    },
+    {
+      "name": "as_request",
+      "docstring": "",
+      "signature": "fn as_request(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"gmlewis/jsonrpc2#Request\">Request</a>?",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 103,
+        "column": 8
+      }
+    },
+    {
+      "name": "as_response",
+      "docstring": "",
+      "signature": "fn as_response(self : <a href=\"gmlewis/jsonrpc2#Message\">Message</a>) -> <a href=\"gmlewis/jsonrpc2#Response\">Response</a>?",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 112,
+        "column": 8
+      }
+    },
+    {
+      "name": "header_framer",
+      "docstring": "\n header_framer returns a new Framer.\n The messages are sent with HTTP content length and MIME type headers.\n This is the format used by LSP and others.",
+      "signature": "fn header_framer() -> <a href=\"gmlewis/jsonrpc2#Framer\">Framer</a>",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "header-framer.mbt",
+        "line": 5,
+        "column": 8
+      }
+    },
+    {
+      "name": "line_framer",
+      "docstring": "\n line_framer returns a new Framer.\n The messages are sent with a terminating cr+newline, and rely on json decode consistency\n to determine message boundaries.",
+      "signature": "fn line_framer() -> <a href=\"gmlewis/jsonrpc2#Framer\">Framer</a>",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "line-framer.mbt",
+        "line": 5,
+        "column": 8
+      }
+    },
+    {
+      "name": "new_batch_request",
+      "docstring": "\n new_batch_request constructs a new batch request message for the supplied\n requests.",
+      "signature": "fn new_batch_request(messages : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/jsonrpc2#Message\">Message</a>]) -> <a href=\"gmlewis/jsonrpc2#Message\">Message</a>",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 75,
+        "column": 8
+      }
+    },
+    {
+      "name": "new_batch_response",
+      "docstring": "\n new_batch_response constructs a new batch response message for the supplied\n responses.",
+      "signature": "fn new_batch_response(messages : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"gmlewis/jsonrpc2#Message\">Message</a>]) -> <a href=\"gmlewis/jsonrpc2#Message\">Message</a>",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 83,
+        "column": 8
+      }
+    },
+    {
+      "name": "new_call",
+      "docstring": "\n new_call constructs a new call message for the supplied ID, method and\n parameters.",
+      "signature": "fn new_call(id : <a href=\"gmlewis/jsonrpc2#ID\">ID</a>, method_ : String, params : <a href=\"moonbitlang/core/json#Json\">Json</a>) -> <a href=\"gmlewis/jsonrpc2#Message\">Message</a>",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 62,
+        "column": 8
+      }
+    },
+    {
+      "name": "new_notification",
+      "docstring": "\n new_notification constructs a new notification message for the supplied\n method and parameters.",
+      "signature": "fn new_notification(method_ : String, params : <a href=\"moonbitlang/core/json#Json\">Json</a>) -> <a href=\"gmlewis/jsonrpc2#Message\">Message</a>",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 55,
+        "column": 8
+      }
+    },
+    {
+      "name": "new_response",
+      "docstring": "\n new_response constructs a new Response message.",
+      "signature": "fn new_response(id : <a href=\"gmlewis/jsonrpc2#ID\">ID</a>, result : <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"moonbitlang/core/json#Json\">Json</a>, <a href=\"gmlewis/jsonrpc2#WireError\">WireError</a>]) -> <a href=\"gmlewis/jsonrpc2#Message\">Message</a>",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "message.mbt",
+        "line": 68,
+        "column": 8
+      }
+    },
+    {
+      "name": "raw_framer",
+      "docstring": "\n raw_framer returns a new Framer.\n The messages are sent with no wrapping, and rely on json decode consistency\n to determine message boundaries.",
+      "signature": "fn raw_framer() -> <a href=\"gmlewis/jsonrpc2#Framer\">Framer</a>",
+      "loc": {
+        "path": "gmlewis/jsonrpc2",
+        "file": "raw-framer.mbt",
+        "line": 5,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

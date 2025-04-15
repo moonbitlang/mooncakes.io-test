@@ -1,0 +1,20 @@
+{
+  "name": "gmlewis/flate/decoder",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "utf8",
+      "docstring": "",
+      "signature": "fn utf8(bytes : <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[Byte]) -> <a href=\"moonbitlang/core/builtin#Iter\">Iter</a>[Char]",
+      "loc": {
+        "path": "gmlewis/flate/decoder",
+        "file": "lib.mbt",
+        "line": 5,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

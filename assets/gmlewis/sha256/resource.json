@@ -1,0 +1,31 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "gmlewis/sha256",
+    "version": "0.17.5",
+    "deps": {
+      "gmlewis/base64": "0.14.3"
+    },
+    "readme": "README.md",
+    "repository": "https://github.com/gmlewis/moonbit-sha256",
+    "license": "Apache-2.0",
+    "keywords": [
+      "sha256",
+      "hash",
+      "algorithm",
+      "moonbit"
+    ],
+    "description": "MoonBit sha256: provide simple sha256 hash algorithm."
+  },
+  "readme_content": "# gmlewis/sha256\n[![check](https://github.com/gmlewis/moonbit-sha256/actions/workflows/check.yml/badge.svg)](https://github.com/gmlewis/moonbit-sha256/actions/workflows/check.yml)\n\nThis is a simple sha256 hash algorithm based on Go's implementation:\nhttps://cs.opensource.google/go/go/+/refs/tags/go1.23.0:src/crypto/sha256/sha256.go\nwhich has the copyright notice:\n\n```\n// Copyright 2009 The Go Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style\n// license that can be found in the LICENSE file.\n```\n\n## Status\n\nThe code has been updated to support compiler:\n\n```bash\n$ moon version --all\nmoon 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moon\nmoonc v0.1.20250410+15d580434 ~/.moon/bin/moonc\nmoonrun 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moonrun\n```\n",
+  "module_index": "gmlewis/sha256/module_index.json",
+  "package_data": "gmlewis/sha256/package_data.json",
+  "source_files": [
+    "sha256.mbt",
+    "hmac.mbt",
+    "hash-func.mbt"
+  ],
+  "publish_list": [
+    "0.17.5"
+  ]
+}

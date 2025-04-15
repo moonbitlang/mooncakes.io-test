@@ -1,0 +1,1067 @@
+{
+  "name": "moonbitlang",
+  "package": null,
+  "childs": [
+    {
+      "name": "ulex",
+      "package": null,
+      "childs": [
+        {
+          "name": "lib",
+          "package": {
+            "path": "moonbitlang/ulex/lib",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [],
+            "misc": []
+          },
+          "childs": [
+            {
+              "name": "automaton",
+              "package": {
+                "path": "moonbitlang/ulex/lib/automaton",
+                "traits": [],
+                "types": [
+                  {
+                    "name": "DFA",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "DFA",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": [ "from_rule" ]
+                  },
+                  {
+                    "name": "Input",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Input",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Eq",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "op_equal" ]
+                      },
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Input",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Hash",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "hash_combine" ]
+                      },
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Input",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": []
+                  },
+                  {
+                    "name": "NFA",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "NFA",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": [ "from_rule" ]
+                  },
+                  {
+                    "name": "NFANode",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "NFANode",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Compare",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "compare" ]
+                      },
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "NFANode",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Eq",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "op_equal" ]
+                      },
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "NFANode",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Hash",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "hash_combine" ]
+                      },
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "NFANode",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": []
+                  },
+                  {
+                    "name": "TagAction",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "TagAction",
+                            "path": "moonbitlang/ulex/lib/automaton"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": []
+                  }
+                ],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "codegen",
+              "package": {
+                "path": "moonbitlang/ulex/lib/codegen",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [ "codegen_lex" ],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "parser",
+              "package": {
+                "path": "moonbitlang/ulex/lib/parser",
+                "traits": [],
+                "types": [
+                  {
+                    "name": "ParseError",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "ParseError",
+                            "path": "moonbitlang/ulex/lib/parser"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": []
+                  },
+                  {
+                    "name": "Token",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Token",
+                            "path": "moonbitlang/ulex/lib/parser"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": [ "kind" ]
+                  },
+                  {
+                    "name": "TokenKind",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "TokenKind",
+                            "path": "moonbitlang/ulex/lib/parser"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": []
+                  }
+                ],
+                "typealias": [ "Position" ],
+                "values": [
+                  "lex_eoi", "parse_lex_from_string",
+                  "parse_regex_from_string", "regex_eoi"
+                ],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "tests",
+              "package": {
+                "path": "moonbitlang/ulex/lib/tests",
+                "traits": [],
+                "types": [
+                  {
+                    "name": "DotGraph",
+                    "impls": [],
+                    "methods": [ "add_edge", "new" ]
+                  },
+                  { "name": "Edge", "impls": [], "methods": [] },
+                  { "name": "NodeType", "impls": [], "methods": [] }
+                ],
+                "typealias": [],
+                "values": [ "add_edge" ],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "type",
+              "package": {
+                "path": "moonbitlang/ulex/lib/type",
+                "traits": [],
+                "types": [
+                  {
+                    "name": "Lex",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Lex",
+                            "path": "moonbitlang/ulex/lib/type"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      },
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Lex",
+                            "path": "moonbitlang/ulex/lib/type"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "ToJson",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "to_json" ]
+                      }
+                    ],
+                    "methods": []
+                  },
+                  {
+                    "name": "Regex",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Regex",
+                            "path": "moonbitlang/ulex/lib/type"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Eq",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "op_equal" ]
+                      },
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Regex",
+                            "path": "moonbitlang/ulex/lib/type"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      },
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Regex",
+                            "path": "moonbitlang/ulex/lib/type"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "ToJson",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "to_json" ]
+                      }
+                    ],
+                    "methods": [ "check_legal", "get_capture_names" ]
+                  },
+                  {
+                    "name": "Rule",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Rule",
+                            "path": "moonbitlang/ulex/lib/type"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      },
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "Rule",
+                            "path": "moonbitlang/ulex/lib/type"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "ToJson",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "to_json" ]
+                      }
+                    ],
+                    "methods": []
+                  },
+                  {
+                    "name": "VarType",
+                    "impls": [
+                      {
+                        "self": {
+                          "kind": "constr",
+                          "constructor": {
+                            "name": "VarType",
+                            "path": "moonbitlang/ulex/lib/type"
+                          },
+                          "arguments": []
+                        },
+                        "trait": {
+                          "name": "Show",
+                          "path": "moonbitlang/core/builtin"
+                        },
+                        "methods": [ "output" ]
+                      }
+                    ],
+                    "methods": []
+                  }
+                ],
+                "typealias": [ "CodeBlock" ],
+                "values": [
+                  "check_legal", "get_capture_names", "get_char_vars"
+                ],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "util",
+              "package": null,
+              "childs": [
+                {
+                  "name": "bitset",
+                  "package": {
+                    "path": "moonbitlang/ulex/lib/util/bitset",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Bitset",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Bitset",
+                                "path": "moonbitlang/ulex/lib/util/bitset"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Bitset",
+                                "path": "moonbitlang/ulex/lib/util/bitset"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Hash",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "hash_combine" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Bitset",
+                                "path": "moonbitlang/ulex/lib/util/bitset"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": [
+                          "copy", "get", "length", "set", "union"
+                        ]
+                      }
+                    ],
+                    "typealias": [ "T" ],
+                    "values": [
+                      "copy", "get", "length", "new", "set", "union"
+                    ],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "bounded_enum",
+                  "package": {
+                    "path": "moonbitlang/ulex/lib/util/bounded_enum",
+                    "traits": [
+                      {
+                        "name": "@moonbitlang/ulex/lib/util/bounded_enum.BoundedEnum",
+                        "impls": [
+                          {
+                            "self": {
+                              "name": "Char",
+                              "path": "moonbitlang/core/char"
+                            },
+                            "trait": {
+                              "name": "BoundedEnum",
+                              "path": "moonbitlang/ulex/lib/util/bounded_enum"
+                            },
+                            "methods": [
+                              "lower_bound", "pred", "succ", "upper_bound"
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "types": [],
+                    "typealias": [ "T" ],
+                    "values": [],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "diet",
+                  "package": {
+                    "path": "moonbitlang/ulex/lib/util/diet",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Tree",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Tree",
+                                "path": "moonbitlang/ulex/lib/util/diet"
+                              },
+                              "arguments": [
+                                { "kind": "param", "name": "N" }
+                              ]
+                            },
+                            "trait": {
+                              "name": "Compare",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "compare" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Tree",
+                                "path": "moonbitlang/ulex/lib/util/diet"
+                              },
+                              "arguments": [
+                                { "kind": "param", "name": "N" }
+                              ]
+                            },
+                            "trait": {
+                              "name": "Default",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "default" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Tree",
+                                "path": "moonbitlang/ulex/lib/util/diet"
+                              },
+                              "arguments": [
+                                { "kind": "param", "name": "N" }
+                              ]
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Tree",
+                                "path": "moonbitlang/ulex/lib/util/diet"
+                              },
+                              "arguments": [
+                                { "kind": "param", "name": "N" }
+                              ]
+                            },
+                            "trait": {
+                              "name": "Hash",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "hash_combine" ]
+                          }
+                        ],
+                        "methods": [
+                          "complement", "contains", "is_empty", "iter",
+                          "iter_intervals", "slice"
+                        ]
+                      }
+                    ],
+                    "typealias": [ "T" ],
+                    "values": [
+                      "complement", "contains", "difference", "empty",
+                      "intersection", "interval", "is_empty", "iter",
+                      "iter_intervals", "of", "singleton", "slice", "union"
+                    ],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "eof_char_set",
+                  "package": {
+                    "path": "moonbitlang/ulex/lib/util/eof_char_set",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "EofChar",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofChar",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Compare",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "compare" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofChar",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofChar",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Hash",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "hash_combine" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofChar",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofChar",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "ToJson",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "to_json" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofChar",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "BoundedEnum",
+                              "path": "moonbitlang/ulex/lib/util/bounded_enum"
+                            },
+                            "methods": [
+                              "lower_bound", "pred", "succ", "upper_bound"
+                            ]
+                          }
+                        ],
+                        "methods": [ "char", "eof", "repr" ]
+                      },
+                      { "name": "EofCharRepr", "impls": [], "methods": [] },
+                      {
+                        "name": "EofCharSet",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofCharSet",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Compare",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "compare" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofCharSet",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Default",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "default" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofCharSet",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofCharSet",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Hash",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "hash_combine" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofCharSet",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EofCharSet",
+                                "path": "moonbitlang/ulex/lib/util/eof_char_set"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "ToJson",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "to_json" ]
+                          }
+                        ],
+                        "methods": [
+                          "complement", "contains", "difference", "disjoint",
+                          "intersection", "is_empty", "iter", "iter_ranges",
+                          "land", "negated", "op_add", "op_neg", "op_sub",
+                          "slice", "subset", "union"
+                        ]
+                      }
+                    ],
+                    "typealias": [ "T" ],
+                    "values": [
+                      "any", "complement", "contains", "difference",
+                      "disjoint", "empty", "eof", "intersection", "is_empty",
+                      "iter", "iter_ranges", "negated", "of_array", "range",
+                      "singleton", "slice", "subset", "union"
+                    ],
+                    "misc": []
+                  },
+                  "childs": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "main",
+          "package": {
+            "path": "moonbitlang/ulex/main",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "tests",
+          "package": null,
+          "childs": [
+            {
+              "name": "bytes_test",
+              "package": {
+                "path": "moonbitlang/ulex/tests/bytes_test",
+                "traits": [],
+                "types": [
+                  {
+                    "name": "MalformedUtf8Error",
+                    "impls": [],
+                    "methods": []
+                  }
+                ],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": [
+                {
+                  "name": "lexbuf",
+                  "package": {
+                    "path": "moonbitlang/ulex/tests/bytes_test/lexbuf",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "BytesLexbuf",
+                        "impls": [],
+                        "methods": [
+                          "curr_pos", "next", "reset", "sub_lexeme",
+                          "unsafe_get"
+                        ]
+                      }
+                    ],
+                    "typealias": [ "T" ],
+                    "values": [ "from_bytes" ],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "lexengine",
+                  "package": {
+                    "path": "moonbitlang/ulex/tests/bytes_test/lexengine",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "LexEngine",
+                        "impls": [],
+                        "methods": [ "run" ]
+                      }
+                    ],
+                    "typealias": [ "T" ],
+                    "values": [ "run" ],
+                    "misc": []
+                  },
+                  "childs": []
+                }
+              ]
+            },
+            {
+              "name": "eof_test",
+              "package": {
+                "path": "moonbitlang/ulex/tests/eof_test",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "fortytwolexer",
+              "package": {
+                "path": "moonbitlang/ulex/tests/fortytwolexer",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "issue12",
+              "package": {
+                "path": "moonbitlang/ulex/tests/issue12",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "jsonlexer",
+              "package": {
+                "path": "moonbitlang/ulex/tests/jsonlexer",
+                "traits": [],
+                "types": [
+                  { "name": "LexError", "impls": [], "methods": [] }
+                ],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "named_regexes",
+              "package": {
+                "path": "moonbitlang/ulex/tests/named_regexes",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [ "is_number" ],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "unicode_test",
+              "package": {
+                "path": "moonbitlang/ulex/tests/unicode_test",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "wordcountlexer",
+              "package": {
+                "path": "moonbitlang/ulex/tests/wordcountlexer",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

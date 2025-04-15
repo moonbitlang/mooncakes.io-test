@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "lib/util/eof_char_set",
+  "module_path": "moonbitlang/ulex",
+  "readme_content": "",
+  "package_data": "moonbitlang/ulex/lib/util/eof_char_set/package_data.json",
+  "source_files": [ "eof_char_set.mbt", "eof_char.mbt" ]
+}

@@ -1,0 +1,79 @@
+{
+  "name": "peter-jerry-ye/async/channel",
+  "traits": [],
+  "types": [
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/channel",
+        "file": "top.mbt",
+        "line": 16,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "pop",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/channel#T\">T</a>::pop[A](self : <a href=\"peter-jerry-ye/async/channel#T\">T</a>[A]) -> A",
+          "loc": {
+            "path": "peter-jerry-ye/async/channel",
+            "file": "top.mbt",
+            "line": 46,
+            "column": 14
+          }
+        },
+        {
+          "name": "push",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/channel#T\">T</a>::push[A](self : <a href=\"peter-jerry-ye/async/channel#T\">T</a>[A], value : A) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/channel",
+            "file": "top.mbt",
+            "line": 34,
+            "column": 14
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "make",
+      "docstring": "",
+      "signature": "fn make[A](size~ : UInt = ..) -> <a href=\"peter-jerry-ye/async/channel#T\">T</a>[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/channel",
+        "file": "top.mbt",
+        "line": 24,
+        "column": 8
+      }
+    },
+    {
+      "name": "pop",
+      "docstring": "",
+      "signature": "fn pop[A](self : <a href=\"peter-jerry-ye/async/channel#T\">T</a>[A]) -> A",
+      "loc": {
+        "path": "peter-jerry-ye/async/channel",
+        "file": "top.mbt",
+        "line": 46,
+        "column": 14
+      }
+    },
+    {
+      "name": "push",
+      "docstring": "",
+      "signature": "fn push[A](self : <a href=\"peter-jerry-ye/async/channel#T\">T</a>[A], value : A) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/async/channel",
+        "file": "top.mbt",
+        "line": 34,
+        "column": 14
+      }
+    }
+  ],
+  "misc": []
+}

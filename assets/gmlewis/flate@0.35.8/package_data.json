@@ -1,0 +1,318 @@
+{
+  "name": "gmlewis/flate",
+  "traits": [
+    {
+      "name": "@gmlewis/flate.Reader",
+      "docstring": "\n The actual read interface needed by [Decompressor::new].",
+      "signature": "pub(open) trait @gmlewis/flate.Reader {\n  read(Self, <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)\n  read_byte(Self) -> (Byte, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)\n}",
+      "loc": {
+        "path": "gmlewis/flate",
+        "file": "inflate.mbt",
+        "line": 224,
+        "column": 1
+      },
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Buffer", "path": "gmlewis/io" },
+            "arguments": []
+          },
+          "trait": { "name": "Reader", "path": "gmlewis/flate" },
+          "methods": [
+            {
+              "name": "read",
+              "docstring": "",
+              "signature": "fn read(self : <a href=\"gmlewis/io#Buffer\">@gmlewis/io.Buffer</a>, b : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/flate",
+                "file": "inflate.mbt",
+                "line": 242,
+                "column": 37
+              }
+            },
+            {
+              "name": "read_byte",
+              "docstring": "",
+              "signature": "fn read_byte(self : <a href=\"gmlewis/io#Buffer\">@gmlewis/io.Buffer</a>) -> (Byte, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/flate",
+                "file": "inflate.mbt",
+                "line": 247,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "Decompressor",
+      "docstring": "",
+      "signature": "type Decompressor",
+      "loc": {
+        "path": "gmlewis/flate",
+        "file": "inflate.mbt",
+        "line": 253,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Decompressor",
+              "path": "gmlewis/flate"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Closer", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "close",
+              "docstring": "",
+              "signature": "fn close(self : <a href=\"gmlewis/flate#Decompressor\">Decompressor</a>) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+              "loc": {
+                "path": "gmlewis/flate",
+                "file": "inflate.mbt",
+                "line": 407,
+                "column": 43
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Decompressor",
+              "path": "gmlewis/flate"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Reader", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "read",
+              "docstring": "",
+              "signature": "fn read(self : <a href=\"gmlewis/flate#Decompressor\">Decompressor</a>, b : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/flate",
+                "file": "inflate.mbt",
+                "line": 379,
+                "column": 43
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DictWriter",
+      "docstring": "",
+      "signature": "type DictWriter",
+      "loc": {
+        "path": "gmlewis/flate",
+        "file": "writer.mbt",
+        "line": 33,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "DictWriter", "path": "gmlewis/flate" },
+            "arguments": []
+          },
+          "trait": { "name": "Writer", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "write",
+              "docstring": "",
+              "signature": "fn write(self : <a href=\"gmlewis/flate#DictWriter\">DictWriter</a>, b : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/flate",
+                "file": "writer.mbt",
+                "line": 38,
+                "column": 41
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Writer",
+      "docstring": "",
+      "signature": "type Writer",
+      "loc": {
+        "path": "gmlewis/flate",
+        "file": "writer.mbt",
+        "line": 2,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "new",
+          "docstring": "\n `Writer::new` returns a new [@io.WriteCloser] compressing data at the \"BestSpeed\" level.\n It writes its (compressed) data to the provided `buf`.",
+          "signature": "fn <a href=\"gmlewis/flate#Writer\">Writer</a>::new(buf : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>) -> <a href=\"gmlewis/flate#Writer\">Writer</a>",
+          "loc": {
+            "path": "gmlewis/flate",
+            "file": "writer.mbt",
+            "line": 10,
+            "column": 16
+          }
+        },
+        {
+          "name": "new_dict",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/flate#Writer\">Writer</a>::new_dict(w : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>, dict : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> <a href=\"gmlewis/flate#Writer\">Writer</a>",
+          "loc": {
+            "path": "gmlewis/flate",
+            "file": "writer.mbt",
+            "line": 24,
+            "column": 16
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Writer", "path": "gmlewis/flate" },
+            "arguments": []
+          },
+          "trait": { "name": "Closer", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "close",
+              "docstring": "\n `close` closes the input to the flate Writer.\n After closing the Writer, the compressed data can be read\n from the `@io.Writer` provided to `new`.",
+              "signature": "fn close(self : <a href=\"gmlewis/flate#Writer\">Writer</a>) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+              "loc": {
+                "path": "gmlewis/flate",
+                "file": "writer.mbt",
+                "line": 53,
+                "column": 37
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Writer", "path": "gmlewis/flate" },
+            "arguments": []
+          },
+          "trait": { "name": "Writer", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "write",
+              "docstring": "\n `write` writes the provided data to the flate Writer.",
+              "signature": "fn write(self : <a href=\"gmlewis/flate#Writer\">Writer</a>, data : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/flate",
+                "file": "writer.mbt",
+                "line": 44,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "ioeof",
+      "docstring": "",
+      "signature": "let ioeof : <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>",
+      "loc": {
+        "path": "gmlewis/flate",
+        "file": "inflate.mbt",
+        "line": 19,
+        "column": 9
+      }
+    },
+    {
+      "name": "writer_closed_error",
+      "docstring": "",
+      "signature": "let writer_closed_error : <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>",
+      "loc": {
+        "path": "gmlewis/flate",
+        "file": "deflate.mbt",
+        "line": 151,
+        "column": 9
+      }
+    }
+  ],
+  "misc": [
+    {
+      "name": "Reader",
+      "impls": [
+        {
+          "self": { "name": "Reader", "path": "gmlewis/flate" },
+          "trait": { "name": "ByteReader", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "read_byte",
+              "docstring": "",
+              "signature": "fn read_byte(self : <a href=\"gmlewis/flate#Reader\">Reader</a>) -> (Byte, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/flate",
+                "file": "inflate.mbt",
+                "line": 237,
+                "column": 42
+              }
+            }
+          ]
+        },
+        {
+          "self": { "name": "Reader", "path": "gmlewis/flate" },
+          "trait": { "name": "Reader", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "read",
+              "docstring": "",
+              "signature": "fn read(self : <a href=\"gmlewis/flate#Reader\">Reader</a>, b : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/flate",
+                "file": "inflate.mbt",
+                "line": 232,
+                "column": 38
+              }
+            }
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "name": "new",
+          "docstring": "\n `Reader::new` returns a new [@io.ReadCloser] that can be used\n to read the uncompressed version of r.",
+          "signature": "fn <a href=\"gmlewis/flate#Reader\">Reader</a>::new(r : <a href=\"gmlewis/flate#Reader\">Reader</a>) -> <a href=\"gmlewis/flate#Decompressor\">Decompressor</a>",
+          "loc": {
+            "path": "gmlewis/flate",
+            "file": "inflate.mbt",
+            "line": 301,
+            "column": 17
+          }
+        },
+        {
+          "name": "new_dict",
+          "docstring": "\n `Reader::new_dict` is like [NewReader] but initializes the reader\n with a preset dictionary. The returned [Reader] behaves as if\n the uncompressed data stream started with the given dictionary,\n which has already been read. NewReaderDict is typically used\n to read data compressed by NewWriterDict.",
+          "signature": "fn <a href=\"gmlewis/flate#Reader\">Reader</a>::new_dict(r : <a href=\"gmlewis/flate#Reader\">Reader</a>, dict : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> <a href=\"gmlewis/flate#Decompressor\">Decompressor</a>",
+          "loc": {
+            "path": "gmlewis/flate",
+            "file": "inflate.mbt",
+            "line": 311,
+            "column": 17
+          }
+        }
+      ]
+    }
+  ]
+}

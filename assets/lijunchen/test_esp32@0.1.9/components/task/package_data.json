@@ -1,0 +1,42 @@
+{
+  "name": "lijunchen/test_esp32/components/task",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "pdMS_TO_TICKS",
+      "docstring": "",
+      "signature": "fn pdMS_TO_TICKS(ms : Int) -> Int",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/task",
+        "file": "task.mbt",
+        "line": 28,
+        "column": 19
+      }
+    },
+    {
+      "name": "vTaskDelay",
+      "docstring": "",
+      "signature": "fn vTaskDelay(ticks : Int) -> Unit",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/task",
+        "file": "task.mbt",
+        "line": 23,
+        "column": 8
+      }
+    },
+    {
+      "name": "xTaskCreate",
+      "docstring": "",
+      "signature": "fn xTaskCreate(pxTaskCode : <a href=\"moonbitlang/core/builtin#FuncRef\">FuncRef</a>[(<a href=\"lijunchen/test_esp32/ctypes#Ptr\">@lijunchen/test_esp32/ctypes.Ptr</a>[<a href=\"lijunchen/test_esp32/ctypes#Void\">@lijunchen/test_esp32/ctypes.Void</a>]) -> Unit], pcName : <a href=\"lijunchen/test_esp32/ctypes#CString\">@lijunchen/test_esp32/ctypes.CString</a>, usStackDepth : UInt, uxPriority : UInt) -> Int",
+      "loc": {
+        "path": "lijunchen/test_esp32/components/task",
+        "file": "task.mbt",
+        "line": 10,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "Yoorkin/rabbit-tea",
+    "version": "0.7.3",
+    "deps": { "rami3l/js-ffi": "0.1.7" },
+    "readme": "README.md",
+    "repository": "https://github.com/Yoorkin/rabbit-tea",
+    "license": "Apache-2.0",
+    "keywords": [ "TEA", "html", "UI", "web" ],
+    "description": "TEA web UI framework for MoonBit",
+    "source": "src"
+  },
+  "readme_content": "# Rabbit-TEA\n\nA declarative and functional web UI framework inspired by The Elm Architecture.\n\n## Features\n\n- Refactor Safety\n\n    By leveraging *pattern matching* and *tagged union*, exhaustive checks provide \n    a better refactoring experience. MoonBit helps prevent common runtime errors \n    ensuring more robust and reliable code.\n\n- Maintainable State\n\n    The state is globally managed, making it easier to maintain the entire application.\n    By utilizing persistent data structures from `moonbitlang/core/immut`, \n    you can implement advanced features such as undo/redo functionality with ease.\n\n- Lightweight Runtime\n\n    The generated JavaScript file is 33KB after minified for a project like \n    `src/example/counter`, including the virtual DOM.\n\n## Basic Example\n\n```moonbit\ntypealias Model = Int\nlet model = 0\n\nenum Msg {\n  Increment\n  Decrement\n}\n\nfn update(msg : Msg, model : Model) -> (Command[Msg], Model) {\n  match msg {\n    Increment => (none(), model + 1)\n    Decrement => (none(), model - 1)\n  }\n}\n\nfn view(model : Model) -> Html[Msg] {\n  div([\n    h1([text(model.to_string())]),\n    button(click=Msg::Increment, [text(\"+\")]),\n    button(click=Msg::Decrement, [text(\"-\")]),\n  ])\n}\n\nfn main {\n  @tea.startup(model~, update~, view~)\n}\n```\n\nFor more examples, see the `src/example` directory.\n\n# Getting started \n\nTo get started, you can use the [Rabbit-TEA template](https://github.com/Yoorkin/rabbit-tea-tailwind).\n\nIt also includes instructions for debugging your code with Rabbit-TEA.\n\n",
+  "module_index": "Yoorkin/rabbit-tea/module_index.json",
+  "package_data": "Yoorkin/rabbit-tea/package_data.json",
+  "source_files": [ "top.mbt" ]
+}

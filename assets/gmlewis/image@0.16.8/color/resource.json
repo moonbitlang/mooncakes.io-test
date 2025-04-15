@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "color",
+  "module_path": "gmlewis/image",
+  "readme_content": "",
+  "package_data": "gmlewis/image/color/package_data.json",
+  "source_files": [ "ycbcr.mbt", "color.mbt" ]
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+/// Message covers all jsonrpc2 message types.
+/// They share no common functionality, but are a closed set of concrete types
+/// that are allowed to implement this interface. The message types are Request
+/// and Response.
+pub enum Message {
+  // Request is a jsonrpc2 request message.
+  Request(Request)
+  // Response is a jsonrpc2 response message.
+  Response(Response)
+  // BatchRequest is an array of requests.
+  BatchRequest(Array[Request])
+  // BatchResponse is an array of responses.
+  BatchResponse(Array[Response])
+} derive(Show, Eq)
+
+///|
+pub impl ToJson for Message with to_json(self) {
+  match self {
+    Request(req) => req.to_json()
+    Response(res) => res.to_json()
+    BatchRequest(arr_req) => arr_req.to_json()
+    BatchResponse(arr_res) => arr_res.to_json()
+  }
+}
+
+///|
+pub impl @json.FromJson for Message with from_json(json, path) {
+  let req : Result[Request, @json.JsonDecodeError] = @json.from_json?(json)
+  if req is Ok(req) {
+    return Request(req)
+  }
+  let res : Result[Response, @json.JsonDecodeError] = @json.from_json?(json)
+  if res is Ok(res) {
+    return Response(res)
+  }
+  let arr_req : Result[Array[Request], @json.JsonDecodeError] = @json.from_json?(
+    json,
+  )
+  if arr_req is Ok(arr_req) {
+    return BatchRequest(arr_req)
+  }
+  let arr_res : Result[Array[Response], @json.JsonDecodeError] = @json.from_json?(
+    json,
+  )
+  if arr_res is Ok(arr_res) {
+    return BatchResponse(arr_res)
+  }
+  raise @json.JsonDecodeError((path, "expected request(s) or response(s)"))
+}
+
+///|
+/// new_notification constructs a new notification message for the supplied
+/// method and parameters.
+pub fn new_notification(method_ : String, params : Json) -> Message {
+  Request({ id: None, method_, params })
+}
+
+///|
+/// new_call constructs a new call message for the supplied ID, method and
+/// parameters.
+pub fn new_call(id : ID, method_ : String, params : Json) -> Message {
+  Request({ id: Some(id), method_, params })
+}
+
+///|
+/// new_response constructs a new Response message.
+pub fn new_response(id : ID, result : Result[Json, WireError]) -> Message {
+  Response({ id, result })
+}
+
+///|
+/// new_batch_request constructs a new batch request message for the supplied
+/// requests.
+pub fn new_batch_request(messages : Array[Message]) -> Message {
+  let requests = messages.filter_map(as_request)
+  BatchRequest(requests)
+}
+
+///|
+/// new_batch_response constructs a new batch response message for the supplied
+/// responses.
+pub fn new_batch_response(messages : Array[Message]) -> Message {
+  let responses = messages.filter_map(as_response)
+  BatchResponse(responses)
+}
+
+///|
+pub fn as_call(self : Message) -> Request? {
+  guard self is Request(req) else { return None }
+  guard req.id is Some(_) else { return None }
+  Some(req)
+}
+
+///|
+pub fn as_notification(self : Message) -> Request? {
+  guard self is Request(req) else { return None }
+  guard req.id is None else { return None }
+  Some(req)
+}
+
+///|
+pub fn as_request(self : Message) -> Request? {
+  if self is Request(req) {
+    Some(req)
+  } else {
+    None
+  }
+}
+
+///|
+pub fn as_response(self : Message) -> Response? {
+  if self is Response(res) {
+    Some(res)
+  } else {
+    None
+  }
+}
+
+///|
+/// as_batch_request returns the message as a batch request if it is one.
+pub fn as_batch_request(self : Message) -> Array[Request]? {
+  if self is BatchRequest(arr_req) {
+    Some(arr_req)
+  } else {
+    None
+  }
+}
+
+///|
+/// as_batch_response returns the message as a batch response if it is one.
+pub fn as_batch_response(self : Message) -> Array[Response]? {
+  if self is BatchResponse(arr_res) {
+    Some(arr_res)
+  } else {
+    None
+  }
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/ffi",
+  "traits": [
+    {
+      "name": "@gmlewis/spin-moonbit-sdk/ffi.Any",
+      "docstring": "",
+      "signature": "pub(open) trait @gmlewis/spin-moonbit-sdk/ffi.Any {\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 172,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [
+    {
+      "name": "Cleanup",
+      "docstring": "",
+      "signature": "pub(all) struct Cleanup {\n  address : Int\n  size : Int\n  align : Int\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 175,
+        "column": 17
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "bytes2ptr",
+      "docstring": "",
+      "signature": "fn bytes2ptr(_bytes : Bytes) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 117,
+        "column": 8
+      }
+    },
+    {
+      "name": "copy",
+      "docstring": "",
+      "signature": "fn copy(_dest : Int, _src : Int) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 102,
+        "column": 8
+      }
+    },
+    {
+      "name": "double_array2ptr",
+      "docstring": "",
+      "signature": "fn double_array2ptr(_array : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Double]) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 152,
+        "column": 8
+      }
+    },
+    {
+      "name": "extend16",
+      "docstring": "",
+      "signature": "fn extend16(_value : Int) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 2,
+        "column": 8
+      }
+    },
+    {
+      "name": "extend8",
+      "docstring": "",
+      "signature": "fn extend8(_value : Int) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 7,
+        "column": 8
+      }
+    },
+    {
+      "name": "f32_to_i32",
+      "docstring": "",
+      "signature": "fn f32_to_i32(_value : Float) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 82,
+        "column": 8
+      }
+    },
+    {
+      "name": "f32_to_i64",
+      "docstring": "",
+      "signature": "fn f32_to_i64(_value : Float) -> Int64",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 87,
+        "column": 8
+      }
+    },
+    {
+      "name": "float_array2ptr",
+      "docstring": "",
+      "signature": "fn float_array2ptr(_array : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Float]) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 147,
+        "column": 8
+      }
+    },
+    {
+      "name": "free",
+      "docstring": "",
+      "signature": "fn free(_position : Int) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 97,
+        "column": 8
+      }
+    },
+    {
+      "name": "int64_array2ptr",
+      "docstring": "",
+      "signature": "fn int64_array2ptr(_array : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Int64]) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 142,
+        "column": 8
+      }
+    },
+    {
+      "name": "int_array2ptr",
+      "docstring": "",
+      "signature": "fn int_array2ptr(_array : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Int]) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 137,
+        "column": 8
+      }
+    },
+    {
+      "name": "load16",
+      "docstring": "",
+      "signature": "fn load16(_offset : Int) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 32,
+        "column": 8
+      }
+    },
+    {
+      "name": "load16_u",
+      "docstring": "",
+      "signature": "fn load16_u(_offset : Int) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 37,
+        "column": 8
+      }
+    },
+    {
+      "name": "load32",
+      "docstring": "",
+      "signature": "fn load32(_offset : Int) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 47,
+        "column": 8
+      }
+    },
+    {
+      "name": "load64",
+      "docstring": "",
+      "signature": "fn load64(_offset : Int) -> Int64",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 57,
+        "column": 8
+      }
+    },
+    {
+      "name": "load8",
+      "docstring": "",
+      "signature": "fn load8(_offset : Int) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 22,
+        "column": 8
+      }
+    },
+    {
+      "name": "load8_u",
+      "docstring": "",
+      "signature": "fn load8_u(_offset : Int) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 17,
+        "column": 8
+      }
+    },
+    {
+      "name": "loadf32",
+      "docstring": "",
+      "signature": "fn loadf32(_offset : Int) -> Float",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 67,
+        "column": 8
+      }
+    },
+    {
+      "name": "loadf64",
+      "docstring": "",
+      "signature": "fn loadf64(_offset : Int) -> Double",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 77,
+        "column": 8
+      }
+    },
+    {
+      "name": "malloc",
+      "docstring": "",
+      "signature": "fn malloc(_size : Int) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 92,
+        "column": 8
+      }
+    },
+    {
+      "name": "ptr2bytes",
+      "docstring": "",
+      "signature": "fn ptr2bytes(_ptr : Int) -> Bytes",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 122,
+        "column": 8
+      }
+    },
+    {
+      "name": "ptr2float_array",
+      "docstring": "",
+      "signature": "fn ptr2float_array(_ptr : Int) -> <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Float]",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 167,
+        "column": 8
+      }
+    },
+    {
+      "name": "ptr2int_array",
+      "docstring": "",
+      "signature": "fn ptr2int_array(_ptr : Int) -> <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Int]",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 162,
+        "column": 8
+      }
+    },
+    {
+      "name": "ptr2str",
+      "docstring": "",
+      "signature": "fn ptr2str(_ptr : Int) -> String",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 112,
+        "column": 8
+      }
+    },
+    {
+      "name": "ptr2uint_array",
+      "docstring": "",
+      "signature": "fn ptr2uint_array(_ptr : Int) -> <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[UInt]",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 157,
+        "column": 8
+      }
+    },
+    {
+      "name": "store16",
+      "docstring": "",
+      "signature": "fn store16(_offset : Int, _value : Int) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 27,
+        "column": 8
+      }
+    },
+    {
+      "name": "store32",
+      "docstring": "",
+      "signature": "fn store32(_offset : Int, _value : Int) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 42,
+        "column": 8
+      }
+    },
+    {
+      "name": "store64",
+      "docstring": "",
+      "signature": "fn store64(_offset : Int, _value : Int64) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 52,
+        "column": 8
+      }
+    },
+    {
+      "name": "store8",
+      "docstring": "",
+      "signature": "fn store8(_offset : Int, _value : Int) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 12,
+        "column": 8
+      }
+    },
+    {
+      "name": "storef32",
+      "docstring": "",
+      "signature": "fn storef32(_offset : Int, _value : Float) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 62,
+        "column": 8
+      }
+    },
+    {
+      "name": "storef64",
+      "docstring": "",
+      "signature": "fn storef64(_offset : Int, _value : Double) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 72,
+        "column": 8
+      }
+    },
+    {
+      "name": "str2ptr",
+      "docstring": "",
+      "signature": "fn str2ptr(_str : String) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 107,
+        "column": 8
+      }
+    },
+    {
+      "name": "uint64_array2ptr",
+      "docstring": "",
+      "signature": "fn uint64_array2ptr(_array : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[UInt64]) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 132,
+        "column": 8
+      }
+    },
+    {
+      "name": "uint_array2ptr",
+      "docstring": "",
+      "signature": "fn uint_array2ptr(_array : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[UInt]) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/ffi",
+        "file": "top_notwasm.mbt",
+        "line": 127,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

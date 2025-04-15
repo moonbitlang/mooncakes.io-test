@@ -1,0 +1,18 @@
+{
+  "kind": "module",
+  "meta_info": {
+    "name": "moonbitlang/ulex-runtime",
+    "version": "0.2.4",
+    "readme": "README.md",
+    "repository": "",
+    "license": "Apache-2.0",
+    "keywords": [],
+    "description": "",
+    "source": "src"
+  },
+  "readme_content": "# moonbitlang/ulex/runtime\n",
+  "module_index": "moonbitlang/ulex-runtime/module_index.json",
+  "publish_list": [
+    "0.2.4"
+  ]
+}

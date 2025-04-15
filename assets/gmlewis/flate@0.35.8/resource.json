@@ -1,0 +1,21 @@
+{
+  "kind": "module_and_package",
+  "meta_info": {
+    "name": "gmlewis/flate",
+    "version": "0.35.8",
+    "deps": { "gmlewis/io": "0.22.1" },
+    "readme": "README.md",
+    "repository": "https://github.com/gmlewis/moonbit-flate",
+    "license": "Apache-2.0",
+    "keywords": [ "flate", "algorithm", "lzw", "moonbit" ],
+    "description": "MoonBit flate: provide simplified flate (LZW) compression algorithm."
+  },
+  "readme_content": "# gmlewis/flate\n[![check](https://github.com/gmlewis/moonbit-flate/actions/workflows/check.yml/badge.svg)](https://github.com/gmlewis/moonbit-flate/actions/workflows/check.yml)\n\nThis is a simplified flate compression algorithm based on Go's implementation:\nhttps://cs.opensource.google/go/go/+/refs/tags/go1.23.1:src/compress/flate/deflatefast.go\nwhich has the copyright notice:\n\n```\n// Copyright 2016 The Go Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style\n// license that can be found in the LICENSE file.\n```\n\n## Status\n\nThe code has been updated to support compiler:\n\n```bash\n$ moon version --all\nmoon 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moon\nmoonc v0.1.20250410+15d580434 ~/.moon/bin/moonc\nmoonrun 0.1.20250407 (24afaca 2025-04-07) ~/.moon/bin/moonrun\n```\n",
+  "module_index": "gmlewis/flate/module_index.json",
+  "package_data": "gmlewis/flate/package_data.json",
+  "source_files": [
+    "dict-decoder.mbt", "writer.mbt", "token.mbt", "huffman-code.mbt",
+    "bits.mbt", "simple-quicksort.mbt", "deflate.mbt", "inflate.mbt",
+    "huffman-bit-writer.mbt", "deflate-fast.mbt"
+  ]
+}

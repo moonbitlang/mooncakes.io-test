@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "abeezee_italic",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/abeezee_italic/package_data.json",
+  "source_files": [ "abeezee_italic.mbt" ]
+}

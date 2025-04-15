@@ -1,0 +1,83 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput",
+  "traits": [],
+  "types": [
+    {
+      "name": "TerminalOutput",
+      "docstring": "\n The output side of a terminal.",
+      "signature": "pub(all) type TerminalOutput Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput",
+        "file": "top.mbt",
+        "line": 5,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput#TerminalOutput\">TerminalOutput</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput#TerminalOutput\">TerminalOutput</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput",
+            "file": "top.mbt",
+            "line": 11,
+            "column": 24
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "TerminalOutput",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput#TerminalOutput\">TerminalOutput</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput#TerminalOutput\">TerminalOutput</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput",
+                "file": "top.mbt",
+                "line": 5,
+                "column": 47
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "TerminalOutput",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput#TerminalOutput\">TerminalOutput</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput",
+                "file": "top.mbt",
+                "line": 5,
+                "column": 41
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

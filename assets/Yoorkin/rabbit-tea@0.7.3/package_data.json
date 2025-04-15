@@ -1,0 +1,109 @@
+{
+  "name": "Yoorkin/rabbit-tea",
+  "traits": [],
+  "types": [],
+  "typealias": [
+    {
+      "name": "Cmd",
+      "docstring": " The command type, represents a task that can be executed.\n \n You can define your own command to interoperate Rabbit-Tea with the outside JS world.\n \n Before implementing your own command, check the existing commands in the `nav` and `http` packages.\n \n # Example \n \n ```\n fn delay[M](msg : M, ms : Int) -> Cmd[M] {\n   Cmd(fn(events){\n     set_timeout(fn(){ events.trigger_update(msg) }, ms)\n   })\n } \n \n extern \"js\" fn set_timeout(f : () -> Unit, ms : Int) = \"(f,ms) => setTimeout(f, ms)\"\n ```",
+      "signature": "type Cmd[M] = <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea",
+        "file": "top.mbt",
+        "line": 2,
+        "column": 1
+      }
+    },
+    {
+      "name": "Command",
+      "docstring": " The command type, represents a task that can be executed.\n \n You can define your own command to interoperate Rabbit-Tea with the outside JS world.\n \n Before implementing your own command, check the existing commands in the `nav` and `http` packages.\n \n # Example \n \n ```\n fn delay[M](msg : M, ms : Int) -> Cmd[M] {\n   Cmd(fn(events){\n     set_timeout(fn(){ events.trigger_update(msg) }, ms)\n   })\n } \n \n extern \"js\" fn set_timeout(f : () -> Unit, ms : Int) = \"(f,ms) => setTimeout(f, ms)\"\n ```",
+      "signature": "type Command[M] = <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea",
+        "file": "top.mbt",
+        "line": 2,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "application",
+      "docstring": " Start the application with initial URL. \n \n - `url_changed` is a message that will be passed when the URL is changed by the navigation API in the `@browser` package.\n - `url_request` is a message that will be passed when an `<a>` tag is clicked.\n - `initialize` will be called when the application is started. \n ",
+      "signature": "fn application[Model, Msg](initialize~ : (<a href=\"Yoorkin/rabbit-tea/url#Url\">@Yoorkin/rabbit-tea/url.Url</a>) -> (<a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[Msg], Model), update~ : (Msg, Model) -> (<a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[Msg], Model), view~ : (Model) -> <a href=\"Yoorkin/rabbit-tea/html#T\">@Yoorkin/rabbit-tea/html.T</a>[Msg], url_changed? : (<a href=\"Yoorkin/rabbit-tea/url#Url\">@Yoorkin/rabbit-tea/url.Url</a>) -> Msg, url_request? : (<a href=\"Yoorkin/rabbit-tea/url#UrlRequest\">@Yoorkin/rabbit-tea/url.UrlRequest</a>) -> Msg, mount~ : String = ..) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea",
+        "file": "top.mbt",
+        "line": 47,
+        "column": 8
+      }
+    },
+    {
+      "name": "attempt",
+      "docstring": " Create a command that runs an async function and handles errors.\n \n This is similar to `perform`, but it converts the returned value \n or thrown error into a `Result`.",
+      "signature": "fn attempt[A, E : <a href=\"moonbitlang/core/error#Error\">Error</a>, M](msg : (<a href=\"moonbitlang/core/result#Result\">Result</a>[A, E]) -> M, f : () -> A!E) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 97,
+        "column": 8
+      }
+    },
+    {
+      "name": "batch",
+      "docstring": " Create a command that runs multiple commands.",
+      "signature": "fn batch[M](xs : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 76,
+        "column": 8
+      }
+    },
+    {
+      "name": "none",
+      "docstring": " Create a command that does nothing.",
+      "signature": "fn none[M]() -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 71,
+        "column": 8
+      }
+    },
+    {
+      "name": "perform",
+      "docstring": " Create a command that runs an async function.\n \n The async function `f` will be called, and the result will be wrapped in a \n message `msg`, then trigger another update with this message.",
+      "signature": "fn perform[A, M](msg : (A) -> M, f : () -> A) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 89,
+        "column": 8
+      }
+    },
+    {
+      "name": "startup",
+      "docstring": " Start the application.\n \n - `model` is the state of your application.\n - `view` is a way to turn your model into HTML.\n - `update` a way to update your state based on messages.\n \n These three are the core of the TEA. Rabbit-TEA is highly unstable at this time, \n but it follows the same pattern as Elm. You can visit https://guide.elm-lang.org/ \n to get more intuition!\n \n To start the application with router, you can use the `application` function.",
+      "signature": "fn startup[Model, Message](model~ : Model, update~ : (Message, Model) -> (<a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[Message], Model), view~ : (Model) -> <a href=\"Yoorkin/rabbit-tea/html#T\">@Yoorkin/rabbit-tea/html.T</a>[Message], mount~ : String = ..) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea",
+        "file": "top.mbt",
+        "line": 18,
+        "column": 8
+      }
+    },
+    {
+      "name": "task",
+      "docstring": " Create a command that trigger another update for the given message.",
+      "signature": "fn task[M](message : M) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 81,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

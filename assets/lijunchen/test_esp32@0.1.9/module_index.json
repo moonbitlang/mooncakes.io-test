@@ -1,0 +1,118 @@
+{
+  "name": "lijunchen",
+  "package": null,
+  "childs": [
+    {
+      "name": "test_esp32",
+      "package": null,
+      "childs": [
+        {
+          "name": "components",
+          "package": null,
+          "childs": [
+            {
+              "name": "gpio",
+              "package": {
+                "path": "lijunchen/test_esp32/components/gpio",
+                "traits": [],
+                "types": [
+                  { "name": "GPIOConfig", "impls": [], "methods": [] },
+                  {
+                    "name": "GPIOIntType",
+                    "impls": [],
+                    "methods": [ "to_int" ]
+                  },
+                  {
+                    "name": "GPIOMode",
+                    "impls": [],
+                    "methods": [ "to_int" ]
+                  },
+                  {
+                    "name": "GPIOPulldown",
+                    "impls": [],
+                    "methods": [ "to_int" ]
+                  },
+                  {
+                    "name": "GPIOPullup",
+                    "impls": [],
+                    "methods": [ "to_int" ]
+                  }
+                ],
+                "typealias": [],
+                "values": [
+                  "GPIO_MODE_DEF_DISABLE", "GPIO_MODE_DEF_INPUT",
+                  "GPIO_MODE_DEF_OD", "GPIO_MODE_DEF_OUTPUT", "gpio_config",
+                  "gpio_set_level"
+                ],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "task",
+              "package": {
+                "path": "lijunchen/test_esp32/components/task",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [ "pdMS_TO_TICKS", "vTaskDelay", "xTaskCreate" ],
+                "misc": []
+              },
+              "childs": []
+            }
+          ]
+        },
+        {
+          "name": "ctypes",
+          "package": {
+            "path": "lijunchen/test_esp32/ctypes",
+            "traits": [],
+            "types": [
+              { "name": "CString", "impls": [], "methods": [ "from_bytes" ] },
+              { "name": "Ptr", "impls": [], "methods": [] },
+              { "name": "Void", "impls": [], "methods": [] }
+            ],
+            "typealias": [],
+            "values": [],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "error",
+          "package": {
+            "path": "lijunchen/test_esp32/error",
+            "traits": [],
+            "types": [
+              {
+                "name": "ESPError",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "ESPError",
+                        "path": "lijunchen/test_esp32/error"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": []
+              }
+            ],
+            "typealias": [],
+            "values": [ "esp_err_wrapper" ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

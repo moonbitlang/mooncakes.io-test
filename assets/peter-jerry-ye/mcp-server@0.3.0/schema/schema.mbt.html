@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">// Copyright 2025 International Digital Economy Academy
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+///|
+enum T {
+  Integer
+  String
+  Object(
+    Map[String, T],
+    required~ : Array[String]?,
+    additionalProperties~ : Bool
+  )
+  Array(T)
+  Enum(Array[Json])
+}
+
+///|
+pub fn integer() -> T {
+  T::Integer
+}
+
+///|
+pub fn string() -> T {
+  T::String
+}
+
+///|
+pub fn object(
+  object : Map[String, T],
+  additionalProperties~ : Bool = true,
+  required? : Array[String]
+) -> T {
+  T::Object(object, required~, additionalProperties~)
+}
+
+///|
+pub fn enums(values : Array[Json]) -> T {
+  T::Enum(values)
+}
+
+///|
+pub fn array(schema : T) -> T {
+  T::Array(schema)
+}
+
+///|
+pub fn T::to_json(self : T) -> Json {
+  match self {
+    T::Integer => { "type": "integer" }
+    T::String => { "type": "string" }
+    T::Enum(values) => { "enum": Array(values) }
+    T::Array(schema) => {
+      let result : Map[String, Json] = {
+        "type": "array",
+        "items": schema.to_json(),
+      }
+      Object(result)
+    }
+    T::Object(map, required~, additionalProperties~) => {
+      let json_object = Map::new()
+      for key, value in map {
+        json_object[key] = value.to_json()
+      }
+      let result : Map[String, Json] = {
+        "type": "object",
+        "properties": Object(json_object),
+      }
+      if required is Some(required) {
+        result["required"] = Array(required.map(Json::String))
+      }
+      if not(additionalProperties) {
+        result["additionalProperties"] = false
+      }
+      Object(result)
+    }
+  }
+}
+
+///|
+pub impl ToJson for T with to_json(self) {
+  self.to_json()
+}
+
+///|
+pub fn T::verify(self : T, json : Json) -> Bool {
+  match (self, json) {
+    (T::Integer, Number(n)) => n == n && n.to_int().to_double() == n
+    (T::String, String(_)) => true
+    (T::Enum(values), _) => values.contains(json)
+    (T::Array(schema), Array(values)) =>
+      values.iter().all(fn { value => schema.verify(value) })
+    (T::Object(map, required~, additionalProperties~), Object(json)) => {
+      let required = @sorted_set.from_array(required.or([]))
+      for key, value in map {
+        if json[key] is Some(json) {
+          if not(value.verify(json)) {
+            return false
+          }
+        } else if required.contains(key) {
+          return false
+        }
+      }
+      for key, _ in json {
+        if not(map.contains(key)) && not(additionalProperties) {
+          return false
+        }
+      }
+      true
+    }
+    _ => false
+  }
+}
+
+///|
+test "to_json" {
+  @json.inspect!(
+    object({
+      "name": object({
+        "firstName": string(),
+        "lastName": string(),
+        "middleName": string(),
+      }),
+    }),
+    content={
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "firstName": { "type": "string" },
+            "lastName": { "type": "string" },
+            "middleName": { "type": "string" },
+          },
+        },
+      },
+    },
+  )
+  @json.inspect!(
+    object({
+      "name": object(
+        { "firstName": string(), "lastName": string(), "middleName": string() },
+        required=["firstName", "lastName"],
+      ),
+      "age": integer(),
+    }),
+    content={
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "firstName": { "type": "string" },
+            "lastName": { "type": "string" },
+            "middleName": { "type": "string" },
+          },
+          "required": ["firstName", "lastName"],
+        },
+        "age": { "type": "integer" },
+      },
+    },
+  )
+}
+
+///|
+test "verify" {
+  let schema = object({
+    "name": object({
+      "firstName": string(),
+      "lastName": string(),
+      "middleName": string(),
+    }),
+  })
+  assert_true!(
+    schema.verify({
+      "name": { "firstName": "John", "lastName": "Doe", "middleName": "Smith" },
+    }),
+  )
+  assert_false!(
+    schema.verify({ "name": { "firstName": "John", "lastName": 1 } }),
+  )
+  let schema = object({
+    "name": object(
+      { "firstName": string(), "lastName": string(), "middleName": string() },
+      required=["firstName", "lastName"],
+    ),
+    "age": integer(),
+  })
+  assert_true!(
+    schema.verify({
+      "name": { "firstName": "John", "lastName": "Doe" },
+      "age": 30,
+    }),
+  )
+  assert_false!(schema.verify({ "name": { "firstName": "John" }, "age": 30 }))
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

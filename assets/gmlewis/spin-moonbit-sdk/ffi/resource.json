@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "ffi",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "",
+  "package_data": "gmlewis/spin-moonbit-sdk/ffi/package_data.json",
+  "source_files": [ "top_wasm.mbt", "top_notwasm.mbt" ]
+}

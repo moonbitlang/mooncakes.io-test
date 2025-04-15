@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/llm",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "A WASI interface dedicated to performing inferencing for Large Language Models.",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/llm/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

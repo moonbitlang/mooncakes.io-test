@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/clocks/monotonicClock",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "WASI Monotonic Clock is a clock API intended to let users measure elapsed\ntime.\n\nIt is intended to be portable at least between Unix-family platforms and\nWindows.\n\nA monotonic clock is a clock which has an unspecified initial value, and\nsuccessive reads of the clock will produce non-decreasing values.\n\nIt is intended for measuring elapsed time.",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/clocks/monotonicClock/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

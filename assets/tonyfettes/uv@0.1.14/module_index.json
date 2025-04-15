@@ -1,0 +1,18 @@
+{
+  "name": "tonyfettes",
+  "package": null,
+  "childs": [
+    {
+      "name": "uv",
+      "package": {
+        "path": "tonyfettes/uv",
+        "traits": [],
+        "types": [],
+        "typealias": [],
+        "values": [],
+        "misc": []
+      },
+      "childs": []
+    }
+  ]
+}

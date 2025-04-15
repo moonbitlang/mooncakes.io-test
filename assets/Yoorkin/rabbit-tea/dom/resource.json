@@ -1,0 +1,13 @@
+{
+  "kind": "package",
+  "relative_path": "dom",
+  "module_path": "Yoorkin/rabbit-tea",
+  "readme_content": "",
+  "package_data": "Yoorkin/rabbit-tea/dom/package_data.json",
+  "source_files": [
+    "dom_fragment.mbt", "dom_node.mbt", "data_transfer.mbt", "dom_text.mbt",
+    "dom_cast.mbt", "canvas.mbt", "dom_document.mbt", "dom_window.mbt",
+    "dom_event.mbt", "dom_rect.mbt", "dom_element.mbt",
+    "dom_event_target.mbt"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Yoorkin/rabbit-tea/dialog",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "close",
+      "docstring": " Create a command to close a dialog.\n \n The `return_value` argument is the value that will be filled in the `close` message.",
+      "signature": "fn close[M](id : String, return_value? : String) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dialog",
+        "file": "dialog.mbt",
+        "line": 27,
+        "column": 8
+      }
+    },
+    {
+      "name": "request_close",
+      "docstring": " Create a command to request closing a dialog.\n \n This command will not close the dialog immediately; it will trigger the \n `cancel` message.\n \n The `return_value` argument is the value that will be filled in the `close` message.",
+      "signature": "fn request_close[M](id : String, return_value? : String) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dialog",
+        "file": "dialog.mbt",
+        "line": 49,
+        "column": 8
+      }
+    },
+    {
+      "name": "show",
+      "docstring": " Create a command to show a dialog.\n \n The `modal` argument determines whether the dialog is modal or not.",
+      "signature": "fn show[M](id : String, modal~ : Bool = ..) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/dialog",
+        "file": "dialog.mbt",
+        "line": 4,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

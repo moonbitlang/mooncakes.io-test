@@ -1,0 +1,326 @@
+{
+  "name": "moonbitlang/ulex/lib/type",
+  "traits": [],
+  "types": [
+    {
+      "name": "Lex",
+      "docstring": "",
+      "signature": "pub(all) struct Lex {\n  header : String\n  rules : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/ulex/lib/type#Rule\">Rule</a>]\n  trailer : String\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/type",
+        "file": "type.mbt",
+        "line": 156,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Lex",
+              "path": "moonbitlang/ulex/lib/type"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/type#Lex\">Lex</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/type",
+                "file": "type.mbt",
+                "line": 160,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Lex",
+              "path": "moonbitlang/ulex/lib/type"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "automatically derived",
+              "signature": "fn to_json(<a href=\"moonbitlang/ulex/lib/type#Lex\">Lex</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/type",
+                "file": "type.mbt",
+                "line": 160,
+                "column": 16
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regex",
+      "docstring": "",
+      "signature": "pub(all) enum Regex {\n  EOF\n  Character(<a href=\"moonbitlang/ulex/lib/util/eof_char_set#EofCharSet\">@moonbitlang/ulex/lib/util/eof_char_set.EofCharSet</a>)\n  Repetition(<a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>)\n  Epsilon\n  Alter(<a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>, <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>)\n  Concat(<a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>, <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>)\n  Capture(<a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>, String)\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/type",
+        "file": "type.mbt",
+        "line": 2,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "check_legal",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>::check_legal(self : <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>) -> Bool",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/type",
+            "file": "type.mbt",
+            "line": 19,
+            "column": 8
+          }
+        },
+        {
+          "name": "get_capture_names",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>::get_capture_names(self : <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[(String, <a href=\"moonbitlang/ulex/lib/type#VarType\">VarType</a>)]",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/type",
+            "file": "type.mbt",
+            "line": 117,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Regex",
+              "path": "moonbitlang/ulex/lib/type"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>, <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>) -> Bool",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/type",
+                "file": "type.mbt",
+                "line": 10,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Regex",
+              "path": "moonbitlang/ulex/lib/type"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/type",
+                "file": "type.mbt",
+                "line": 10,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Regex",
+              "path": "moonbitlang/ulex/lib/type"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "automatically derived",
+              "signature": "fn to_json(<a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/type",
+                "file": "type.mbt",
+                "line": 10,
+                "column": 20
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rule",
+      "docstring": "",
+      "signature": "pub(all) struct Rule {\n  name : String\n  signature : String\n  patterns : <a href=\"moonbitlang/core/array#Array\">Array</a>[(<a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>, String)]\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/type",
+        "file": "type.mbt",
+        "line": 149,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Rule",
+              "path": "moonbitlang/ulex/lib/type"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/type#Rule\">Rule</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/type",
+                "file": "type.mbt",
+                "line": 153,
+                "column": 10
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Rule",
+              "path": "moonbitlang/ulex/lib/type"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "automatically derived",
+              "signature": "fn to_json(<a href=\"moonbitlang/ulex/lib/type#Rule\">Rule</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/type",
+                "file": "type.mbt",
+                "line": 153,
+                "column": 16
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "VarType",
+      "docstring": "",
+      "signature": "pub(all) enum VarType {\n  Char\n  String\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/type",
+        "file": "type.mbt",
+        "line": 13,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "VarType",
+              "path": "moonbitlang/ulex/lib/type"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/type#VarType\">VarType</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/type",
+                "file": "type.mbt",
+                "line": 16,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [
+    {
+      "name": "CodeBlock",
+      "docstring": "",
+      "signature": "type CodeBlock = String",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/type",
+        "file": "type.mbt",
+        "line": 146,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "check_legal",
+      "docstring": "",
+      "signature": "fn check_legal(self : <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>) -> Bool",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/type",
+        "file": "type.mbt",
+        "line": 19,
+        "column": 8
+      }
+    },
+    {
+      "name": "get_capture_names",
+      "docstring": "",
+      "signature": "fn get_capture_names(self : <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[(String, <a href=\"moonbitlang/ulex/lib/type#VarType\">VarType</a>)]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/type",
+        "file": "type.mbt",
+        "line": 117,
+        "column": 8
+      }
+    },
+    {
+      "name": "get_char_vars",
+      "docstring": "",
+      "signature": "fn get_char_vars(re : <a href=\"moonbitlang/ulex/lib/type#Regex\">Regex</a>) -> <a href=\"moonbitlang/core/immut/sorted_set#T\">@moonbitlang/core/immut/sorted_set.T</a>[String]",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/type",
+        "file": "type.mbt",
+        "line": 62,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

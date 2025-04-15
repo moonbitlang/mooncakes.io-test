@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "actor_regular",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/actor_regular/package_data.json",
+  "source_files": [ "actor_regular.mbt" ]
+}

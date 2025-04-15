@@ -1,0 +1,1614 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "fonts",
+      "package": {
+        "path": "gmlewis/fonts",
+        "traits": [],
+        "types": [
+          {
+            "name": "AbsoluteCmd",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "AbsoluteCmd",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "AbsoluteCmd",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "Anchor",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Anchor",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Anchor",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "Cmd",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Cmd", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Cmd", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "Font",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Font", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Font", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Font", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "ToJson",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "to_json" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Font", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "FromJson",
+                  "path": "moonbitlang/core/json"
+                },
+                "methods": [ "from_json" ]
+              }
+            ],
+            "methods": [ "gen_path", "gen_paths" ]
+          },
+          {
+            "name": "FontError",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "FontError",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "FontError",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "GerberLP",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "GerberLP",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "GerberLP",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "Glyph",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Glyph", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Glyph", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Glyph", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "ToJson",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "to_json" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Glyph", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "FromJson",
+                  "path": "moonbitlang/core/json"
+                },
+                "methods": [ "from_json" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "ParamPair",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "ParamPair",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              }
+            ],
+            "methods": [ "to_string" ]
+          },
+          {
+            "name": "Params",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Params",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Params",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": [ "length" ]
+          },
+          {
+            "name": "Path",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Path", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Path", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": [ "clone", "from_glyph", "to_glyph" ]
+          },
+          {
+            "name": "PathCmd",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "PathCmd",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "PathCmd",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": [ "bbox", "clone", "from_svg_cmd", "to_svg_cmd" ]
+          },
+          { "name": "PathCmdFn", "impls": [], "methods": [] },
+          {
+            "name": "Point",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Point", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Point", "path": "gmlewis/fonts" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": [
+              "div", "is_in", "mul", "op_add", "op_equal", "op_sub",
+              "to_string"
+            ]
+          },
+          {
+            "name": "Rectangle",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Rectangle",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Rectangle",
+                    "path": "gmlewis/fonts"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": [
+              "add", "bounds", "canon", "clone", "dx", "dy", "empty",
+              "extend", "inset", "intersect", "is_in", "new", "op_equal",
+              "overlaps", "size", "sub", "to_string", "union"
+            ]
+          }
+        ],
+        "typealias": [],
+        "values": [
+          "add", "all_fonts", "bbox", "bounds", "canon", "clone", "div",
+          "dx", "dy", "empty", "extend", "gen_path", "gen_paths",
+          "glyph_bbox", "inset", "intersect", "is_in", "length", "mul",
+          "op_add", "op_equal", "op_sub", "overlaps", "pt", "rect", "size",
+          "sub", "to_glyph", "to_string", "translate_path", "union"
+        ],
+        "misc": []
+      },
+      "childs": [
+        {
+          "name": "canvas",
+          "package": {
+            "path": "gmlewis/fonts/canvas",
+            "traits": [],
+            "types": [
+              {
+                "name": "CanvasCtx",
+                "impls": [],
+                "methods": [ "from_graphic", "get_input_bytes" ]
+              }
+            ],
+            "typealias": [],
+            "values": [ "from_graphic", "get_input_bytes" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "draw",
+          "package": {
+            "path": "gmlewis/fonts/draw",
+            "traits": [
+              { "name": "@gmlewis/fonts/draw.Clonable", "impls": [] }
+            ],
+            "types": [
+              {
+                "name": "AffineMatrix",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "AffineMatrix",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "AffineMatrix",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [
+                  "clone", "copy", "determinant", "from_center_scale",
+                  "from_rotation", "from_scale", "from_scale_scalar",
+                  "from_transform", "from_translation",
+                  "from_translation_points", "invert", "is_identity",
+                  "is_inf", "is_invertible", "is_mirror", "is_nan",
+                  "is_orthogonal", "is_uniform_scale", "mul",
+                  "mul_without_translation", "new", "normalize", "op_mul",
+                  "origin", "pre_mul", "pre_mul_without_translation",
+                  "rotate", "scale", "scale_scalar", "skew", "to_transform",
+                  "translate"
+                ]
+              },
+              {
+                "name": "Anchor",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Anchor",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Anchor",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Anchor",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Anchor",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": [
+                  "affine_transform", "affine_transform_without_translation",
+                  "all_anchors", "bounding_box", "clone", "closest_point",
+                  "has_tangent_handles", "has_zero_handles",
+                  "is_contained_by_bounding_box",
+                  "is_intersected_by_bounding_box",
+                  "is_overlapped_by_bounding_box", "loose_bounding_box",
+                  "new", "reverse", "transform"
+                ]
+              },
+              {
+                "name": "BoundingBox",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "BoundingBox",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "BoundingBox",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [
+                  "area", "boolean_intersect", "canonicalize", "center",
+                  "clone", "contains_bounding_box", "contains_point",
+                  "expand_scalar", "expand_to_include_bounding_box",
+                  "expand_to_include_point", "from_points", "height",
+                  "is_inf", "is_nan", "max_reversed", "new",
+                  "overlaps_bounding_box", "size", "width"
+                ]
+              },
+              {
+                "name": "Color",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Color",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Color",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Color",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Color",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": [
+                  "as_fill", "clone", "from_css_string", "from_hsva",
+                  "from_rgb8_number", "luminance", "mix", "new", "set",
+                  "to_css_hex_string", "to_css_rgba_string", "to_css_string",
+                  "to_hsva", "to_rgb8_number"
+                ]
+              },
+              {
+                "name": "CompoundPath",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "CompoundPath",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "CompoundPath",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "CompoundPath",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": [
+                  "affine_transform", "affine_transform_without_translation",
+                  "all_anchors", "as_graphic", "assign_fill",
+                  "assign_stroke", "assign_style", "bounding_box", "clone",
+                  "closest_point", "contains_point", "copy_style",
+                  "first_styled", "has_style",
+                  "is_contained_by_bounding_box",
+                  "is_intersected_by_bounding_box",
+                  "is_overlapped_by_bounding_box", "loose_bounding_box",
+                  "new", "op_get", "op_set", "primitives", "remove_fill",
+                  "remove_stroke", "reverse", "rotate", "scale",
+                  "scale_stroke", "style_contains_point", "transform",
+                  "translate"
+                ]
+              },
+              {
+                "name": "DrawError",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "DrawError",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "DrawError",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "Fill",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Fill",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Clonable",
+                      "path": "gmlewis/fonts/draw"
+                    },
+                    "methods": [ "clone" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Fill",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Fill",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Fill",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Fill",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": [ "new" ]
+              },
+              {
+                "name": "Graphic",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Graphic",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Graphic",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Graphic",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": [
+                  "affine_transform", "affine_transform_without_translation",
+                  "all_anchors", "all_compound_paths", "all_paths",
+                  "all_paths_and_compound_paths", "assign_fill",
+                  "assign_stroke", "assign_style", "bounding_box", "clone",
+                  "closest_point", "contains_point", "copy_style", "every",
+                  "first_fill", "first_stroke", "first_styled", "fit_to",
+                  "has_style", "is_contained_by_bounding_box",
+                  "is_intersected_by_bounding_box",
+                  "is_overlapped_by_bounding_box", "loose_bounding_box",
+                  "primitives", "remove_fill", "remove_stroke", "reverse",
+                  "rotate", "scale", "scale_stroke", "some",
+                  "style_contains_point", "transform", "translate"
+                ]
+              },
+              {
+                "name": "Group",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Group",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Group",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Group",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": [
+                  "affine_transform", "affine_transform_without_translation",
+                  "all_anchors", "all_compound_paths", "all_paths",
+                  "all_paths_and_compound_paths", "as_graphic",
+                  "assign_fill", "assign_stroke", "assign_style",
+                  "bounding_box", "clone", "closest_point", "contains_point",
+                  "copy_style", "first_fill", "first_stroke", "first_styled",
+                  "has_style", "is_contained_by_bounding_box",
+                  "is_intersected_by_bounding_box",
+                  "is_overlapped_by_bounding_box", "loose_bounding_box",
+                  "new", "op_get", "op_set", "primitives", "remove_fill",
+                  "remove_stroke", "reverse", "rotate", "scale",
+                  "scale_stroke", "style_contains_point", "transform",
+                  "translate"
+                ]
+              },
+              {
+                "name": "Path",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Path",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Path",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Path",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": [
+                  "affine_transform", "affine_transform_without_translation",
+                  "as_graphic", "assign_fill", "assign_stroke",
+                  "assign_style", "bounding_box", "clone", "closest_point",
+                  "contains_point", "copy_style", "first_styled",
+                  "from_points", "has_style", "is_contained_by_bounding_box",
+                  "is_intersected_by_bounding_box",
+                  "is_overlapped_by_bounding_box", "loose_bounding_box",
+                  "new", "op_get", "op_set", "primitives", "remove_fill",
+                  "remove_stroke", "reverse", "rotate", "scale",
+                  "scale_stroke", "style_contains_point", "transform",
+                  "translate"
+                ]
+              },
+              {
+                "name": "Stroke",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Stroke",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Clonable",
+                      "path": "gmlewis/fonts/draw"
+                    },
+                    "methods": [ "clone" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Stroke",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Stroke",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Stroke",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Stroke",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": [ "new" ]
+              },
+              {
+                "name": "StrokeAlignment",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeAlignment",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeAlignment",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeAlignment",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeAlignment",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "StrokeCap",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeCap",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeCap",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeCap",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeCap",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "StrokeJoin",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeJoin",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeJoin",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeJoin",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "StrokeJoin",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "TextAlign",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "TextAlign",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "TextAlign",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": []
+              },
+              {
+                "name": "Transform",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Transform",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Transform",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  }
+                ],
+                "methods": [ "new" ]
+              },
+              {
+                "name": "Vec2",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Vec2",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Eq",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "op_equal" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Vec2",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Show",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "output" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Vec2",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "ToJson",
+                      "path": "moonbitlang/core/builtin"
+                    },
+                    "methods": [ "to_json" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Vec2",
+                        "path": "gmlewis/fonts/draw"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "FromJson",
+                      "path": "moonbitlang/core/json"
+                    },
+                    "methods": [ "from_json" ]
+                  }
+                ],
+                "methods": [
+                  "add", "add_scalar", "affine_transform",
+                  "affine_transform_without_translation", "almost_equals",
+                  "angle", "angle_radians", "apply", "ceil", "clone", "copy",
+                  "cross", "distance", "distance_squared", "div",
+                  "div_scalar", "dot", "floor", "from_angle",
+                  "from_angle_radians", "infinity", "is_clockwise_from",
+                  "is_inf", "is_nan", "is_valid", "is_zero", "length",
+                  "length_squared", "max", "min", "mix", "mul", "mul_scalar",
+                  "neg_infinity", "negate", "new", "normalize", "op_add",
+                  "op_div", "op_mul", "op_neg", "op_sub", "project_onto",
+                  "rotate", "rotate90", "rotate_neg90", "rotate_radians",
+                  "round", "round_to_fixed", "round_to_multiple", "set",
+                  "sub", "sub_scalar", "transform"
+                ]
+              }
+            ],
+            "typealias": [],
+            "values": [
+              "affine_transform", "affine_transform_without_translation",
+              "all_anchors", "almost_equals", "area", "as_fill",
+              "assign_style", "bbox", "boolean_intersect", "bounding_box",
+              "canonicalize", "center", "clone", "closest_point",
+              "contains_bounding_box", "contains_point", "copy",
+              "determinant", "expand_scalar",
+              "expand_to_include_bounding_box", "expand_to_include_point",
+              "fill", "group", "has_tangent_handles", "has_zero_handles",
+              "height", "invert", "is_contained_by_bounding_box",
+              "is_identity", "is_inf", "is_intersected_by_bounding_box",
+              "is_invertible", "is_mirror", "is_nan", "is_orthogonal",
+              "is_overlapped_by_bounding_box", "is_uniform_scale",
+              "loose_bounding_box", "luminance", "mix", "mul",
+              "mul_without_translation", "normalize", "op_mul", "origin",
+              "overlaps_bounding_box", "pre_mul",
+              "pre_mul_without_translation", "reverse", "rgba", "rotate",
+              "scale", "scale_scalar", "set", "size", "skew", "stroke",
+              "text", "to_css_hex_string", "to_css_rgba_string",
+              "to_css_string", "to_hsva", "to_rgb8_number", "to_transform",
+              "transform", "translate", "unit_circle", "unit_square", "vec2",
+              "width"
+            ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "examples",
+          "package": null,
+          "childs": [
+            {
+              "name": "canvas-checkerboard",
+              "package": {
+                "path": "gmlewis/fonts/examples/canvas-checkerboard",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [ "draw" ],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "checkerboard",
+              "package": {
+                "path": "gmlewis/fonts/examples/checkerboard",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [ "checkerboard" ],
+                "misc": []
+              },
+              "childs": []
+            },
+            {
+              "name": "svg-checkerboard",
+              "package": {
+                "path": "gmlewis/fonts/examples/svg-checkerboard",
+                "traits": [],
+                "types": [],
+                "typealias": [],
+                "values": [],
+                "misc": []
+              },
+              "childs": []
+            }
+          ]
+        },
+        {
+          "name": "svg",
+          "package": {
+            "path": "gmlewis/fonts/svg",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "from_graphic" ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

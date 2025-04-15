@@ -1,0 +1,150 @@
+{
+  "name": "ShellWen/sw_ini",
+  "traits": [],
+  "types": [
+    {
+      "name": "IniFile",
+      "docstring": "",
+      "signature": "type IniFile",
+      "loc": {
+        "path": "ShellWen/sw_ini",
+        "file": "ini_file.mbt",
+        "line": 14,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "get",
+          "docstring": " get is a alias for get_string",
+          "signature": "fn <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>::get(self : <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>, section~ : String = .., key : String) -> String?",
+          "loc": {
+            "path": "ShellWen/sw_ini",
+            "file": "ini_file.mbt",
+            "line": 43,
+            "column": 17
+          }
+        },
+        {
+          "name": "get_bool",
+          "docstring": "",
+          "signature": "fn <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>::get_bool(self : <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>, section~ : String = .., key : String) -> Bool?",
+          "loc": {
+            "path": "ShellWen/sw_ini",
+            "file": "ini_file.mbt",
+            "line": 74,
+            "column": 17
+          }
+        },
+        {
+          "name": "get_string",
+          "docstring": "",
+          "signature": "fn <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>::get_string(self : <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>, section~ : String = .., key : String) -> String?",
+          "loc": {
+            "path": "ShellWen/sw_ini",
+            "file": "ini_file.mbt",
+            "line": 52,
+            "column": 17
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>::new(is_case_sensitive~ : Bool = ..) -> <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>",
+          "loc": {
+            "path": "ShellWen/sw_ini",
+            "file": "ini_file.mbt",
+            "line": 21,
+            "column": 17
+          }
+        },
+        {
+          "name": "set",
+          "docstring": "",
+          "signature": "fn <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>::set(self : <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>, section~ : String = .., key : String, value : String) -> Unit",
+          "loc": {
+            "path": "ShellWen/sw_ini",
+            "file": "ini_file.mbt",
+            "line": 121,
+            "column": 17
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "IniParseError",
+      "docstring": "",
+      "signature": "pub enum IniParseError {\n  UnexpectedEqualSign(Int, Int)\n  EmptySection(Int, Int)\n  UnclosedSection(Int, Int)\n  ValueWithoutSection(Int, Int)\n  QuoteMismatch(Int, Int)\n  QuoteNotClosed(Int, Int)\n}",
+      "loc": {
+        "path": "ShellWen/sw_ini",
+        "file": "parser.mbt",
+        "line": 2,
+        "column": 11
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "IniParseState",
+      "docstring": "",
+      "signature": "type IniParseState",
+      "loc": {
+        "path": "ShellWen/sw_ini",
+        "file": "parser.mbt",
+        "line": 38,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "finish",
+          "docstring": "",
+          "signature": "fn <a href=\"ShellWen/sw_ini#IniParseState\">IniParseState</a>::finish(self : <a href=\"ShellWen/sw_ini#IniParseState\">IniParseState</a>) -> <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>!<a href=\"ShellWen/sw_ini#IniParseError\">IniParseError</a>",
+          "loc": {
+            "path": "ShellWen/sw_ini",
+            "file": "parser.mbt",
+            "line": 90,
+            "column": 23
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"ShellWen/sw_ini#IniParseState\">IniParseState</a>::new(is_case_sensitive~ : Bool = ..) -> <a href=\"ShellWen/sw_ini#IniParseState\">IniParseState</a>",
+          "loc": {
+            "path": "ShellWen/sw_ini",
+            "file": "parser.mbt",
+            "line": 54,
+            "column": 23
+          }
+        },
+        {
+          "name": "parse",
+          "docstring": "",
+          "signature": "fn <a href=\"ShellWen/sw_ini#IniParseState\">IniParseState</a>::parse(self : <a href=\"ShellWen/sw_ini#IniParseState\">IniParseState</a>, chunk : String) -> <a href=\"ShellWen/sw_ini#IniParseState\">IniParseState</a>!<a href=\"ShellWen/sw_ini#IniParseError\">IniParseError</a>",
+          "loc": {
+            "path": "ShellWen/sw_ini",
+            "file": "parser.mbt",
+            "line": 78,
+            "column": 23
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "parse",
+      "docstring": "",
+      "signature": "fn parse(str : String, is_case_sensitive~ : Bool = ..) -> <a href=\"ShellWen/sw_ini#IniFile\">IniFile</a>!<a href=\"ShellWen/sw_ini#IniParseError\">IniParseError</a>",
+      "loc": {
+        "path": "ShellWen/sw_ini",
+        "file": "parser.mbt",
+        "line": 70,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "examples/svg-checkerboard",
+  "module_path": "gmlewis/fonts",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts/examples/svg-checkerboard/package_data.json",
+  "source_files": [ "main.mbt" ]
+}

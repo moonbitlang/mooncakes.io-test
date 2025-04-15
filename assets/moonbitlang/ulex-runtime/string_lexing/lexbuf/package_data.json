@@ -1,0 +1,21 @@
+{
+  "name": "moonbitlang/ulex-runtime/string_lexing/lexbuf",
+  "traits": [
+    {
+      "name": "@moonbitlang/ulex-runtime/string_lexing/lexbuf.Lexbuf",
+      "docstring": "",
+      "signature": "pub(open) trait @moonbitlang/ulex-runtime/string_lexing/lexbuf.Lexbuf {\n  next(Self) -> Char?\n  curr_pos(Self) -> Int\n  reset(Self, Int) -> Unit\n  unsafe_get(Self, Int) -> Char\n  sub_lexeme(Self, Int, Int) -> <a href=\"moonbitlang/core/string#StringView\">@moonbitlang/core/string.StringView</a>\n}",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/string_lexing/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 1,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

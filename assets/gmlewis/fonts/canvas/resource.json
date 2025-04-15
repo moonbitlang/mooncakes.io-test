@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "canvas",
+  "module_path": "gmlewis/fonts",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts/canvas/package_data.json",
+  "source_files": [ "ffi.mbt", "canvas.mbt" ]
+}

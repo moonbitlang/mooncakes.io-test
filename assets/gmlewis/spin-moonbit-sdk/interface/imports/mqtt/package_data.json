@@ -1,0 +1,264 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+  "traits": [],
+  "types": [
+    {
+      "name": "Connection",
+      "docstring": "",
+      "signature": "pub(all) type Connection Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+        "file": "top.mbt",
+        "line": 40,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Connection\">Connection</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Connection\">Connection</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+            "file": "top.mbt",
+            "line": 46,
+            "column": 20
+          }
+        },
+        {
+          "name": "open",
+          "docstring": "\n Open a connection to the Mqtt instance at `address`.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Connection\">Connection</a>::open(address : String, username : String, password : String, keep_alive_interval_in_secs : UInt64) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Connection\">Connection</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Error_\">Error_</a>]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+            "file": "top.mbt",
+            "line": 52,
+            "column": 20
+          }
+        },
+        {
+          "name": "publish",
+          "docstring": "\n Publish an Mqtt message to the specified `topic`.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Connection\">Connection</a>::publish(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Connection\">Connection</a>, topic : String, payload : Bytes, qos : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Qos\">Qos</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Error_\">Error_</a>]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+            "file": "top.mbt",
+            "line": 98,
+            "column": 20
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Connection",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Connection\">Connection</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Connection\">Connection</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+                "file": "top.mbt",
+                "line": 40,
+                "column": 43
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Connection",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Connection\">Connection</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+                "file": "top.mbt",
+                "line": 40,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Error_",
+      "docstring": "\n Errors related to interacting with Mqtt",
+      "signature": "pub(all) enum Error_ {\n  InvalidAddress\n  TooManyConnections\n  ConnectionFailed(String)\n  Other(String)\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+        "file": "top.mbt",
+        "line": 5,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Error_",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Error_\">Error_</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Error_\">Error_</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+                "file": "top.mbt",
+                "line": 10,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Error_",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Error_\">Error_</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+                "file": "top.mbt",
+                "line": 10,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Qos",
+      "docstring": "\n QoS for publishing Mqtt messages",
+      "signature": "pub(all) enum Qos {\n  AT_MOST_ONCE\n  AT_LEAST_ONCE\n  EXACTLY_ONCE\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+        "file": "top.mbt",
+        "line": 14,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "from",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Qos\">Qos</a>::from(self : Int) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Qos\">Qos</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+            "file": "top.mbt",
+            "line": 30,
+            "column": 13
+          }
+        },
+        {
+          "name": "ordinal",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Qos\">Qos</a>::ordinal(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Qos\">Qos</a>) -> Int",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+            "file": "top.mbt",
+            "line": 21,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Qos",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Qos\">Qos</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Qos\">Qos</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+                "file": "top.mbt",
+                "line": 18,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Qos",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Qos\">Qos</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+                "file": "top.mbt",
+                "line": 18,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "ordinal",
+      "docstring": "",
+      "signature": "fn ordinal(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/mqtt#Qos\">Qos</a>) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+        "file": "top.mbt",
+        "line": 21,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

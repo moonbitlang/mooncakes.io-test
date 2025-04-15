@@ -1,0 +1,3731 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "spin-moonbit-sdk",
+      "package": null,
+      "childs": [
+        {
+          "name": "common",
+          "package": {
+            "path": "gmlewis/spin-moonbit-sdk/common",
+            "traits": [
+              {
+                "name": "@gmlewis/spin-moonbit-sdk/common.HashFunc",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Digest",
+                        "path": "gmlewis/md5"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "HashFunc",
+                      "path": "gmlewis/spin-moonbit-sdk/common"
+                    },
+                    "methods": [ "check_sum", "name", "write" ]
+                  },
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Digest",
+                        "path": "gmlewis/sha256"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "HashFunc",
+                      "path": "gmlewis/spin-moonbit-sdk/common"
+                    },
+                    "methods": [ "check_sum", "name", "write" ]
+                  }
+                ]
+              }
+            ],
+            "types": [],
+            "typealias": [],
+            "values": [],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "ffi",
+          "package": {
+            "path": "gmlewis/spin-moonbit-sdk/ffi",
+            "traits": [
+              { "name": "@gmlewis/spin-moonbit-sdk/ffi.Any", "impls": [] }
+            ],
+            "types": [ { "name": "Cleanup", "impls": [], "methods": [] } ],
+            "typealias": [],
+            "values": [
+              "bytes2ptr", "copy", "double_array2ptr", "extend16", "extend8",
+              "f32_to_i32", "f32_to_i64", "float_array2ptr", "free",
+              "int64_array2ptr", "int_array2ptr", "load16", "load16_u",
+              "load32", "load64", "load8", "load8_u", "loadf32", "loadf64",
+              "malloc", "ptr2bytes", "ptr2float_array", "ptr2int_array",
+              "ptr2str", "ptr2uint_array", "store16", "store32", "store64",
+              "store8", "storef32", "storef64", "str2ptr",
+              "uint64_array2ptr", "uint_array2ptr"
+            ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "gen",
+          "package": {
+            "path": "gmlewis/spin-moonbit-sdk/gen",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "cabi_realloc" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "interface",
+          "package": null,
+          "childs": [
+            {
+              "name": "imports",
+              "package": null,
+              "childs": [
+                {
+                  "name": "keyValue",
+                  "package": {
+                    "path": "gmlewis/spin-moonbit-sdk/interface/imports/keyValue",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Error_",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/keyValue"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/keyValue"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "Store",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Store",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/keyValue"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Store",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/keyValue"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": [
+                          "delete", "drop", "exists", "get", "get_keys",
+                          "open", "set"
+                        ]
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "llm",
+                  "package": {
+                    "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "EmbeddingsResult",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EmbeddingsResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EmbeddingsResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "EmbeddingsUsage",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EmbeddingsUsage",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "EmbeddingsUsage",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "Error_",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "InferencingParams",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "InferencingParams",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "InferencingParams",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "InferencingResult",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "InferencingResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "InferencingResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "InferencingUsage",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "InferencingUsage",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "InferencingUsage",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/llm"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [ "generate_embeddings", "infer" ],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "mqtt",
+                  "package": {
+                    "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Connection",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": [ "drop", "open", "publish" ]
+                      },
+                      {
+                        "name": "Error_",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "Qos",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Qos",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Qos",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mqtt"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": [ "from", "ordinal" ]
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [ "ordinal" ],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "mysql",
+                  "package": {
+                    "path": "gmlewis/spin-moonbit-sdk/interface/imports/mysql",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Connection",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mysql"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/mysql"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": [ "drop", "execute", "open", "query" ]
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "postgres",
+                  "package": {
+                    "path": "gmlewis/spin-moonbit-sdk/interface/imports/postgres",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Connection",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/postgres"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/postgres"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": [ "drop", "execute", "open", "query" ]
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "rdbmsTypes",
+                  "package": {
+                    "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Column",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Column",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Column",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "DbDataType",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "DbDataType",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "DbDataType",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": [ "from", "ordinal" ]
+                      },
+                      {
+                        "name": "DbValue",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "DbValue",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "DbValue",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "Error_",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "ParameterValue",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "ParameterValue",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "ParameterValue",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "RowSet",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "RowSet",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "RowSet",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/rdbmsTypes"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [ "ordinal" ],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "redis",
+                  "package": {
+                    "path": "gmlewis/spin-moonbit-sdk/interface/imports/redis",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Connection",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/redis"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/redis"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": [
+                          "del", "drop", "execute", "get", "incr", "open",
+                          "publish", "sadd", "set", "smembers", "srem"
+                        ]
+                      },
+                      {
+                        "name": "Error_",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/redis"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/redis"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "RedisParameter",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "RedisParameter",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/redis"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "RedisParameter",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/redis"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "RedisResult",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "RedisResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/redis"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "RedisResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/redis"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "sqlite",
+                  "package": {
+                    "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Connection",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Connection",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": [ "drop", "execute", "open" ]
+                      },
+                      {
+                        "name": "Error_",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "QueryResult",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "QueryResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "QueryResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "RowResult",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "RowResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "RowResult",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      },
+                      {
+                        "name": "Value",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Value",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Value",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/sqlite"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "variables",
+                  "package": {
+                    "path": "gmlewis/spin-moonbit-sdk/interface/imports/variables",
+                    "traits": [],
+                    "types": [
+                      {
+                        "name": "Error_",
+                        "impls": [
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/variables"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Eq",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "op_equal" ]
+                          },
+                          {
+                            "self": {
+                              "kind": "constr",
+                              "constructor": {
+                                "name": "Error_",
+                                "path": "gmlewis/spin-moonbit-sdk/interface/imports/variables"
+                              },
+                              "arguments": []
+                            },
+                            "trait": {
+                              "name": "Show",
+                              "path": "moonbitlang/core/builtin"
+                            },
+                            "methods": [ "output" ]
+                          }
+                        ],
+                        "methods": []
+                      }
+                    ],
+                    "typealias": [],
+                    "values": [ "get" ],
+                    "misc": []
+                  },
+                  "childs": []
+                },
+                {
+                  "name": "wasi",
+                  "package": null,
+                  "childs": [
+                    {
+                      "name": "cli",
+                      "package": null,
+                      "childs": [
+                        {
+                          "name": "environment",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/environment",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [
+                              "get_arguments", "get_environment",
+                              "initial_cwd"
+                            ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "exit",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/exit",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "exit" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "stderr",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/stderr",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "get_stderr" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "stdin",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/stdin",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "get_stdin" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "stdout",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/stdout",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "get_stdout" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "terminalInput",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalInput",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "TerminalInput",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "TerminalInput",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalInput"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "TerminalInput",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalInput"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop" ]
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "terminalOutput",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "TerminalOutput",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "TerminalOutput",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "TerminalOutput",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalOutput"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop" ]
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "terminalStderr",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalStderr",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "get_terminal_stderr" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "terminalStdin",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalStdin",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "get_terminal_stdin" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "terminalStdout",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalStdout",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "get_terminal_stdout" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "clocks",
+                      "package": null,
+                      "childs": [
+                        {
+                          "name": "monotonicClock",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/clocks/monotonicClock",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [
+                              "now", "resolution", "subscribe_duration",
+                              "subscribe_instant"
+                            ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "wallClock",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/clocks/wallClock",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "Datetime",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Datetime",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/clocks/wallClock"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Datetime",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/clocks/wallClock"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [ "now", "resolution" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "filesystem",
+                      "package": null,
+                      "childs": [
+                        {
+                          "name": "preopens",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/preopens",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "get_directories" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "types",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "Advice",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Advice",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Advice",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "from", "ordinal" ]
+                              },
+                              {
+                                "name": "Descriptor",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Descriptor",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Descriptor",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "advise", "append_via_stream",
+                                  "create_directory_at", "drop", "get_flags",
+                                  "get_type", "is_same_object", "link_at",
+                                  "metadata_hash", "metadata_hash_at",
+                                  "open_at", "read", "read_directory",
+                                  "read_via_stream", "readlink_at",
+                                  "remove_directory_at", "rename_at",
+                                  "set_size", "set_times", "set_times_at",
+                                  "stat", "stat_at", "symlink_at", "sync",
+                                  "sync_data", "unlink_file_at", "write",
+                                  "write_via_stream"
+                                ]
+                              },
+                              {
+                                "name": "DescriptorFlags",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DescriptorFlags",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DescriptorFlags",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "default", "is_set", "set", "unset"
+                                ]
+                              },
+                              {
+                                "name": "DescriptorFlagsFlag",
+                                "impls": [],
+                                "methods": []
+                              },
+                              {
+                                "name": "DescriptorStat",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DescriptorStat",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DescriptorStat",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "DescriptorType",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DescriptorType",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DescriptorType",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "from", "ordinal" ]
+                              },
+                              {
+                                "name": "DirectoryEntry",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DirectoryEntry",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DirectoryEntry",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "DirectoryEntryStream",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DirectoryEntryStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DirectoryEntryStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop", "read_directory_entry" ]
+                              },
+                              {
+                                "name": "ErrorCode",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ErrorCode",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ErrorCode",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "from", "ordinal" ]
+                              },
+                              {
+                                "name": "MetadataHashValue",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "MetadataHashValue",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "MetadataHashValue",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "NewTimestamp",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "NewTimestamp",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "NewTimestamp",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "OpenFlags",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OpenFlags",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OpenFlags",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "default", "is_set", "set", "unset"
+                                ]
+                              },
+                              {
+                                "name": "OpenFlagsFlag",
+                                "impls": [],
+                                "methods": []
+                              },
+                              {
+                                "name": "PathFlags",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "PathFlags",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "PathFlags",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/filesystem/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "default", "is_set", "set", "unset"
+                                ]
+                              },
+                              {
+                                "name": "PathFlagsFlag",
+                                "impls": [],
+                                "methods": []
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [ "filesystem_error_code", "ordinal" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "http",
+                      "package": null,
+                      "childs": [
+                        {
+                          "name": "outgoingHandler",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/outgoingHandler",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "handle" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "types",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "DnsErrorPayload",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DnsErrorPayload",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "DnsErrorPayload",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "ErrorCode",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ErrorCode",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ErrorCode",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "FieldSizePayload",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "FieldSizePayload",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "FieldSizePayload",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "Fields",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Fields",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Fields",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "append", "clone", "delete", "drop",
+                                  "entries", "fields", "from_list", "get",
+                                  "has", "set"
+                                ]
+                              },
+                              {
+                                "name": "FutureIncomingResponse",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "FutureIncomingResponse",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "FutureIncomingResponse",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop", "get", "subscribe" ]
+                              },
+                              {
+                                "name": "FutureTrailers",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "FutureTrailers",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "FutureTrailers",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop", "get", "subscribe" ]
+                              },
+                              {
+                                "name": "HeaderError",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "HeaderError",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "HeaderError",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "IncomingBody",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingBody",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingBody",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop", "finish", "stream" ]
+                              },
+                              {
+                                "name": "IncomingRequest",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingRequest",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingRequest",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "authority", "consume", "drop", "headers",
+                                  "http_method", "path_with_query", "scheme"
+                                ]
+                              },
+                              {
+                                "name": "IncomingResponse",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingResponse",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingResponse",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "consume", "drop", "headers", "status"
+                                ]
+                              },
+                              {
+                                "name": "Method",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Method",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Method",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "OutgoingBody",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingBody",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingBody",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop", "finish", "write" ]
+                              },
+                              {
+                                "name": "OutgoingRequest",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingRequest",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingRequest",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "authority", "body", "drop", "headers",
+                                  "http_method", "outgoing_request",
+                                  "path_with_query", "scheme",
+                                  "set_authority", "set_method",
+                                  "set_path_with_query", "set_scheme"
+                                ]
+                              },
+                              {
+                                "name": "OutgoingResponse",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingResponse",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingResponse",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "body", "drop", "headers",
+                                  "outgoing_response", "set_status_code",
+                                  "status_code"
+                                ]
+                              },
+                              {
+                                "name": "RequestOptions",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "RequestOptions",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "RequestOptions",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "between_bytes_timeout", "connect_timeout",
+                                  "drop", "first_byte_timeout",
+                                  "request_options",
+                                  "set_between_bytes_timeout",
+                                  "set_connect_timeout",
+                                  "set_first_byte_timeout"
+                                ]
+                              },
+                              {
+                                "name": "ResponseOutparam",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ResponseOutparam",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ResponseOutparam",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop", "set" ]
+                              },
+                              {
+                                "name": "Scheme",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Scheme",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Scheme",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "TlsAlertReceivedPayload",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "TlsAlertReceivedPayload",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "TlsAlertReceivedPayload",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [ "http_error_code" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "io",
+                      "package": null,
+                      "childs": [
+                        {
+                          "name": "error",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/error",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "Error_",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Error_",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/error"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Error_",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/error"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop", "to_debug_string" ]
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "poll",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/poll",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "Pollable",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Pollable",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/poll"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Pollable",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/poll"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "block", "drop", "ready" ]
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [ "poll" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "streams",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "InputStream",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "InputStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "InputStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "blocking_read", "blocking_skip", "drop",
+                                  "read", "skip", "subscribe"
+                                ]
+                              },
+                              {
+                                "name": "OutputStream",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutputStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutputStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "blocking_flush", "blocking_splice",
+                                  "blocking_write_and_flush",
+                                  "blocking_write_zeroes_and_flush",
+                                  "check_write", "drop", "flush", "splice",
+                                  "subscribe", "write", "write_zeroes"
+                                ]
+                              },
+                              {
+                                "name": "StreamError",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "StreamError",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "StreamError",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [],
+                            "misc": []
+                          },
+                          "childs": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "random",
+                      "package": null,
+                      "childs": [
+                        {
+                          "name": "insecure",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/random/insecure",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [
+                              "get_insecure_random_bytes",
+                              "get_insecure_random_u64"
+                            ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "insecureSeed",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/random/insecureSeed",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "insecure_seed" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "random",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/random/random",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [
+                              "get_random_bytes", "get_random_u64"
+                            ],
+                            "misc": []
+                          },
+                          "childs": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "sockets",
+                      "package": null,
+                      "childs": [
+                        {
+                          "name": "instanceNetwork",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/instanceNetwork",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "instance_network" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "ipNameLookup",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/ipNameLookup",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "ResolveAddressStream",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ResolveAddressStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/ipNameLookup"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ResolveAddressStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/ipNameLookup"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "drop", "resolve_next_address", "subscribe"
+                                ]
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [ "resolve_addresses" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "network",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "ErrorCode",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ErrorCode",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ErrorCode",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "from", "ordinal" ]
+                              },
+                              {
+                                "name": "IpAddress",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IpAddress",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IpAddress",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "IpAddressFamily",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IpAddressFamily",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IpAddressFamily",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "from", "ordinal" ]
+                              },
+                              {
+                                "name": "IpSocketAddress",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IpSocketAddress",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IpSocketAddress",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "Ipv4SocketAddress",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Ipv4SocketAddress",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Ipv4SocketAddress",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "Ipv6SocketAddress",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Ipv6SocketAddress",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Ipv6SocketAddress",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "Network",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Network",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "Network",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/network"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop" ]
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [ "ordinal" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "tcp",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/tcp",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "ShutdownType",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ShutdownType",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/tcp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "ShutdownType",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/tcp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "from", "ordinal" ]
+                              },
+                              {
+                                "name": "TcpSocket",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "TcpSocket",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/tcp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "TcpSocket",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/tcp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "accept", "address_family", "drop",
+                                  "finish_bind", "finish_connect",
+                                  "finish_listen", "hop_limit",
+                                  "is_listening", "keep_alive_count",
+                                  "keep_alive_enabled",
+                                  "keep_alive_idle_time",
+                                  "keep_alive_interval", "local_address",
+                                  "receive_buffer_size", "remote_address",
+                                  "send_buffer_size", "set_hop_limit",
+                                  "set_keep_alive_count",
+                                  "set_keep_alive_enabled",
+                                  "set_keep_alive_idle_time",
+                                  "set_keep_alive_interval",
+                                  "set_listen_backlog_size",
+                                  "set_receive_buffer_size",
+                                  "set_send_buffer_size", "shutdown",
+                                  "start_bind", "start_connect",
+                                  "start_listen", "subscribe"
+                                ]
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [ "ordinal" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "tcpCreateSocket",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/tcpCreateSocket",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "create_tcp_socket" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "udp",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp",
+                            "traits": [],
+                            "types": [
+                              {
+                                "name": "IncomingDatagram",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingDatagram",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingDatagram",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "IncomingDatagramStream",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingDatagramStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "IncomingDatagramStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [ "drop", "receive", "subscribe" ]
+                              },
+                              {
+                                "name": "OutgoingDatagram",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingDatagram",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingDatagram",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": []
+                              },
+                              {
+                                "name": "OutgoingDatagramStream",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingDatagramStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "OutgoingDatagramStream",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "check_send", "drop", "send", "subscribe"
+                                ]
+                              },
+                              {
+                                "name": "UdpSocket",
+                                "impls": [
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "UdpSocket",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Eq",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "op_equal" ]
+                                  },
+                                  {
+                                    "self": {
+                                      "kind": "constr",
+                                      "constructor": {
+                                        "name": "UdpSocket",
+                                        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udp"
+                                      },
+                                      "arguments": []
+                                    },
+                                    "trait": {
+                                      "name": "Show",
+                                      "path": "moonbitlang/core/builtin"
+                                    },
+                                    "methods": [ "output" ]
+                                  }
+                                ],
+                                "methods": [
+                                  "address_family", "drop", "finish_bind",
+                                  "local_address", "receive_buffer_size",
+                                  "remote_address", "send_buffer_size",
+                                  "set_receive_buffer_size",
+                                  "set_send_buffer_size",
+                                  "set_unicast_hop_limit", "start_bind",
+                                  "stream", "subscribe", "unicast_hop_limit"
+                                ]
+                              }
+                            ],
+                            "typealias": [],
+                            "values": [],
+                            "misc": []
+                          },
+                          "childs": []
+                        },
+                        {
+                          "name": "udpCreateSocket",
+                          "package": {
+                            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/sockets/udpCreateSocket",
+                            "traits": [],
+                            "types": [],
+                            "typealias": [],
+                            "values": [ "create_udp_socket" ],
+                            "misc": []
+                          },
+                          "childs": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "log",
+          "package": {
+            "path": "gmlewis/spin-moonbit-sdk/log",
+            "traits": [],
+            "types": [],
+            "typealias": [],
+            "values": [ "debug", "error", "info", "warn" ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "util",
+          "package": {
+            "path": "gmlewis/spin-moonbit-sdk/util",
+            "traits": [],
+            "types": [ { "name": "ByteFunc", "impls": [], "methods": [] } ],
+            "typealias": [],
+            "values": [
+              "consume", "consume_func", "dump_headers", "get_body_bytes",
+              "get_content_length", "make_404_response", "make_500_response",
+              "make_response", "make_response_str", "new_request", "println",
+              "random_int", "respond_404", "respond_500", "respond_bytes",
+              "respond_str", "send_request", "split_path", "stream",
+              "stream_func"
+            ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

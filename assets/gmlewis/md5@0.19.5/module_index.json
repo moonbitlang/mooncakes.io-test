@@ -1,0 +1,34 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "md5",
+      "package": {
+        "path": "gmlewis/md5",
+        "traits": [ { "name": "@gmlewis/md5.HashFunc", "impls": [] } ],
+        "types": [
+          {
+            "name": "Digest",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Digest", "path": "gmlewis/md5" },
+                  "arguments": []
+                },
+                "trait": { "name": "HashFunc", "path": "gmlewis/md5" },
+                "methods": [ "check_sum", "name", "write" ]
+              }
+            ],
+            "methods": [ "new", "reset" ]
+          }
+        ],
+        "typealias": [],
+        "values": [ "reset" ],
+        "misc": []
+      },
+      "childs": []
+    }
+  ]
+}

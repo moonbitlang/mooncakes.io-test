@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "aileron_thinitalic",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/aileron_thinitalic/package_data.json",
+  "source_files": [ "aileron_thinitalic.mbt" ]
+}

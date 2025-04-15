@@ -1,0 +1,213 @@
+{
+  "name": "peter-jerry-ye/io/io",
+  "traits": [],
+  "types": [
+    {
+      "name": "Pollable",
+      "docstring": "",
+      "signature": "pub(all) type Pollable <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/poll#Pollable\">@peter-jerry-ye/wasi-imports/interface/wasi/io/poll.Pollable</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "defs.mbt",
+        "line": 16,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Pollable",
+              "path": "peter-jerry-ye/io/io"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Sync", "path": "peter-jerry-ye/async/loop" },
+          "methods": [
+            {
+              "name": "sync",
+              "docstring": "",
+              "signature": "fn sync(array : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">Pollable</a>]) -> <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[UInt]",
+              "loc": {
+                "path": "peter-jerry-ye/io/io",
+                "file": "defs.mbt",
+                "line": 19,
+                "column": 39
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "event_loop",
+      "docstring": "",
+      "signature": "let event_loop : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">Pollable</a>]",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 16,
+        "column": 9
+      }
+    },
+    {
+      "name": "flush",
+      "docstring": "",
+      "signature": "fn flush(stream : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#OutputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.OutputStream</a>) -> Unit!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 167,
+        "column": 8
+      }
+    },
+    {
+      "name": "pipe",
+      "docstring": "",
+      "signature": "fn pipe(input : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#InputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.InputStream</a>, output : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#OutputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.OutputStream</a>, buffer_size~ : UInt64 = .., event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">Pollable</a>] = ..) -> Unit!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 172,
+        "column": 14
+      }
+    },
+    {
+      "name": "print",
+      "docstring": "",
+      "signature": "fn print(string : String, stream~ : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#OutputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.OutputStream</a> = .., flush~ : Bool = .., event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">Pollable</a>] = ..) -> Unit!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 193,
+        "column": 14
+      }
+    },
+    {
+      "name": "println",
+      "docstring": "",
+      "signature": "fn println(string : String, stream~ : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#OutputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.OutputStream</a> = .., flush~ : Bool = .., event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">Pollable</a>] = ..) -> Unit!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 206,
+        "column": 14
+      }
+    },
+    {
+      "name": "println_sync",
+      "docstring": "",
+      "signature": "fn println_sync(string : String, stream~ : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#OutputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.OutputStream</a> = ..) -> Unit!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 220,
+        "column": 8
+      }
+    },
+    {
+      "name": "read_all",
+      "docstring": "",
+      "signature": "fn read_all(stream~ : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#InputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.InputStream</a> = .., buffer_size~ : UInt64 = .., event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">Pollable</a>] = ..) -> <a href=\"moonbitlang/core/buffer#T\">@moonbitlang/core/buffer.T</a>!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 72,
+        "column": 14
+      }
+    },
+    {
+      "name": "read_all_sync",
+      "docstring": "",
+      "signature": "fn read_all_sync(stream~ : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#InputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.InputStream</a> = .., buffer_size~ : UInt64 = ..) -> <a href=\"moonbitlang/core/buffer#T\">@moonbitlang/core/buffer.T</a>!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 98,
+        "column": 8
+      }
+    },
+    {
+      "name": "read_line",
+      "docstring": "",
+      "signature": "fn read_line(stream~ : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#InputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.InputStream</a> = .., event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">Pollable</a>] = ..) -> String!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 19,
+        "column": 14
+      }
+    },
+    {
+      "name": "read_line_sync",
+      "docstring": "",
+      "signature": "fn read_line_sync(stream~ : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#InputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.InputStream</a> = ..) -> String!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 48,
+        "column": 8
+      }
+    },
+    {
+      "name": "stderr",
+      "docstring": "",
+      "signature": "let stderr : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#OutputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.OutputStream</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "defs.mbt",
+        "line": 34,
+        "column": 9
+      }
+    },
+    {
+      "name": "stdin",
+      "docstring": "",
+      "signature": "let stdin : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#InputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.InputStream</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "defs.mbt",
+        "line": 28,
+        "column": 9
+      }
+    },
+    {
+      "name": "stdout",
+      "docstring": "",
+      "signature": "let stdout : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#OutputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.OutputStream</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "defs.mbt",
+        "line": 31,
+        "column": 9
+      }
+    },
+    {
+      "name": "write",
+      "docstring": "",
+      "signature": "fn write(contents : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Byte], stream : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#OutputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.OutputStream</a>, event_loop~ : <a href=\"peter-jerry-ye/async/loop#T\">@peter-jerry-ye/async/loop.T</a>[<a href=\"peter-jerry-ye/io/io#Pollable\">Pollable</a>] = ..) -> Unit!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 117,
+        "column": 14
+      }
+    },
+    {
+      "name": "write_sync",
+      "docstring": "",
+      "signature": "fn write_sync(contents : <a href=\"moonbitlang/core/array#FixedArray\">FixedArray</a>[Byte], stream : <a href=\"peter-jerry-ye/wasi-imports/interface/wasi/io/streams#OutputStream\">@peter-jerry-ye/wasi-imports/interface/wasi/io/streams.OutputStream</a>) -> Unit!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/io/io",
+        "file": "utils.mbt",
+        "line": 146,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

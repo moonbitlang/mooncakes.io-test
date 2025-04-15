@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/io/streams",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "WASI I/O is an I/O abstraction API which is currently focused on providing\nstream types.\n\nIn the future, the component model is expected to add built-in stream types;\nwhen it does, they are expected to subsume this API.",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

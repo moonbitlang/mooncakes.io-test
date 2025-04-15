@@ -1,0 +1,119 @@
+{
+  "name": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf",
+  "traits": [
+    {
+      "name": "@moonbitlang/ulex-runtime/bytes_lexing/lexbuf.Lexbuf",
+      "docstring": "",
+      "signature": "pub(open) trait @moonbitlang/ulex-runtime/bytes_lexing/lexbuf.Lexbuf {\n  next(Self) -> Byte?\n  curr_pos(Self) -> Int\n  reset(Self, Int) -> Unit\n  unsafe_get(Self, Int) -> Byte\n  sub_lexeme(Self, Int, Int) -> <a href=\"moonbitlang/core/bytes#View\">@moonbitlang/core/bytes.View</a>\n}",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf",
+        "file": "lexbuf.mbt",
+        "line": 1,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [
+    {
+      "name": "BytesLexbuf",
+      "docstring": "",
+      "signature": "type BytesLexbuf",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf",
+        "file": "bytes_lexbuf.mbt",
+        "line": 2,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "BytesLexbuf",
+              "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf"
+            },
+            "arguments": []
+          },
+          "trait": {
+            "name": "Lexbuf",
+            "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf"
+          },
+          "methods": [
+            {
+              "name": "curr_pos",
+              "docstring": "",
+              "signature": "fn curr_pos(self : <a href=\"moonbitlang/ulex-runtime/bytes_lexing/lexbuf#BytesLexbuf\">BytesLexbuf</a>) -> Int",
+              "loc": {
+                "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf",
+                "file": "bytes_lexbuf.mbt",
+                "line": 30,
+                "column": 38
+              }
+            },
+            {
+              "name": "next",
+              "docstring": "",
+              "signature": "fn next(self : <a href=\"moonbitlang/ulex-runtime/bytes_lexing/lexbuf#BytesLexbuf\">BytesLexbuf</a>) -> Byte?",
+              "loc": {
+                "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf",
+                "file": "bytes_lexbuf.mbt",
+                "line": 18,
+                "column": 38
+              }
+            },
+            {
+              "name": "reset",
+              "docstring": "",
+              "signature": "fn reset(self : <a href=\"moonbitlang/ulex-runtime/bytes_lexing/lexbuf#BytesLexbuf\">BytesLexbuf</a>, pos : Int) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf",
+                "file": "bytes_lexbuf.mbt",
+                "line": 35,
+                "column": 38
+              }
+            },
+            {
+              "name": "sub_lexeme",
+              "docstring": "",
+              "signature": "fn sub_lexeme(self : <a href=\"moonbitlang/ulex-runtime/bytes_lexing/lexbuf#BytesLexbuf\">BytesLexbuf</a>, start : Int, end : Int) -> <a href=\"moonbitlang/core/bytes#View\">@moonbitlang/core/bytes.View</a>",
+              "loc": {
+                "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf",
+                "file": "bytes_lexbuf.mbt",
+                "line": 45,
+                "column": 38
+              }
+            },
+            {
+              "name": "unsafe_get",
+              "docstring": "",
+              "signature": "fn unsafe_get(self : <a href=\"moonbitlang/ulex-runtime/bytes_lexing/lexbuf#BytesLexbuf\">BytesLexbuf</a>, pos : Int) -> Byte",
+              "loc": {
+                "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf",
+                "file": "bytes_lexbuf.mbt",
+                "line": 40,
+                "column": 38
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "from_bytes",
+      "docstring": "",
+      "signature": "fn from_bytes(bytes : Bytes, start~ : Int = .., end~ : Int = ..) -> <a href=\"moonbitlang/ulex-runtime/bytes_lexing/lexbuf#BytesLexbuf\">BytesLexbuf</a>",
+      "loc": {
+        "path": "moonbitlang/ulex-runtime/bytes_lexing/lexbuf",
+        "file": "bytes_lexbuf.mbt",
+        "line": 9,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,45 @@
+{
+  "name": "gmlewis/hash",
+  "traits": [
+    {
+      "name": "@gmlewis/hash.Hash",
+      "docstring": "\n Hash is the common interface implemented by all hash functions.\n\n Hash implementations in the standard library (e.g. [hash/crc32] and\n [crypto/sha256]) implement the [encoding.BinaryMarshaler] and\n [encoding.BinaryUnmarshaler] interfaces. Marshaling a hash implementation\n allows its internal state to be saved and used for additional processing\n later, without having to re-write the data previously written to the hash.\n The hash state may contain portions of the input in its original form,\n which users are expected to handle for any possible security implications.\n\n Compatibility: Any future changes to hash or crypto packages will endeavor\n to maintain compatibility with state encoded using previous versions.\n That is, any released versions of the packages should be able to\n decode data written with any previously released version,\n subject to issues such as security fixes.\n See the Go compatibility document for background: https://golang.org/doc/go1compat",
+      "signature": "pub(open) trait @gmlewis/hash.Hash {\n  write(Self, <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)\n  sum(Self, <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]\n  reset(Self) -> Unit\n  size(Self) -> Int\n  block_size(Self) -> Int\n}",
+      "loc": {
+        "path": "gmlewis/hash",
+        "file": "hash.mbt",
+        "line": 32,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@gmlewis/hash.Hash32",
+      "docstring": "\n Hash32 is the common interface implemented by all 32-bit hash functions.",
+      "signature": "pub(open) trait @gmlewis/hash.Hash32 {\n  sum32(Self) -> UInt\n  write(Self, <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)\n  sum(Self, <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]\n  reset(Self) -> Unit\n  size(Self) -> Int\n  block_size(Self) -> Int\n}",
+      "loc": {
+        "path": "gmlewis/hash",
+        "file": "hash.mbt",
+        "line": 57,
+        "column": 1
+      },
+      "impls": []
+    },
+    {
+      "name": "@gmlewis/hash.Hash64",
+      "docstring": "\n Hash64 is the common interface implemented by all 64-bit hash functions.",
+      "signature": "pub(open) trait @gmlewis/hash.Hash64 {\n  sum64() -> UInt64\n  write(Self, <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)\n  sum(Self, <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]\n  reset(Self) -> Unit\n  size(Self) -> Int\n  block_size(Self) -> Int\n}",
+      "loc": {
+        "path": "gmlewis/hash",
+        "file": "hash.mbt",
+        "line": 69,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

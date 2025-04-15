@@ -1,0 +1,114 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/common",
+  "traits": [
+    {
+      "name": "@gmlewis/spin-moonbit-sdk/common.HashFunc",
+      "docstring": "\n `HashFunc` represents a hash algorithm like `@md5` or `@sha256`.",
+      "signature": "pub(open) trait @gmlewis/spin-moonbit-sdk/common.HashFunc {\n  name(Self) -> String\n  write(Self, Byte) -> Unit\n  check_sum(Self) -> String\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/common",
+        "file": "hash-func.mbt",
+        "line": 3,
+        "column": 1
+      },
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Digest", "path": "gmlewis/md5" },
+            "arguments": []
+          },
+          "trait": {
+            "name": "HashFunc",
+            "path": "gmlewis/spin-moonbit-sdk/common"
+          },
+          "methods": [
+            {
+              "name": "check_sum",
+              "docstring": "",
+              "signature": "fn check_sum(self : <a href=\"gmlewis/md5#Digest\">@gmlewis/md5.Digest</a>) -> String",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/common",
+                "file": "hash-func.mbt",
+                "line": 26,
+                "column": 40
+              }
+            },
+            {
+              "name": "name",
+              "docstring": "",
+              "signature": "fn name(self : <a href=\"gmlewis/md5#Digest\">@gmlewis/md5.Digest</a>) -> String",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/common",
+                "file": "hash-func.mbt",
+                "line": 16,
+                "column": 40
+              }
+            },
+            {
+              "name": "write",
+              "docstring": "",
+              "signature": "fn write(self : <a href=\"gmlewis/md5#Digest\">@gmlewis/md5.Digest</a>, b : Byte) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/common",
+                "file": "hash-func.mbt",
+                "line": 21,
+                "column": 40
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Digest", "path": "gmlewis/sha256" },
+            "arguments": []
+          },
+          "trait": {
+            "name": "HashFunc",
+            "path": "gmlewis/spin-moonbit-sdk/common"
+          },
+          "methods": [
+            {
+              "name": "check_sum",
+              "docstring": "",
+              "signature": "fn check_sum(self : <a href=\"gmlewis/sha256#Digest\">@gmlewis/sha256.Digest</a>) -> String",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/common",
+                "file": "hash-func.mbt",
+                "line": 41,
+                "column": 43
+              }
+            },
+            {
+              "name": "name",
+              "docstring": "",
+              "signature": "fn name(self : <a href=\"gmlewis/sha256#Digest\">@gmlewis/sha256.Digest</a>) -> String",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/common",
+                "file": "hash-func.mbt",
+                "line": 31,
+                "column": 43
+              }
+            },
+            {
+              "name": "write",
+              "docstring": "",
+              "signature": "fn write(self : <a href=\"gmlewis/sha256#Digest\">@gmlewis/sha256.Digest</a>, b : Byte) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/common",
+                "file": "hash-func.mbt",
+                "line": 36,
+                "column": 43
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "types": [],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

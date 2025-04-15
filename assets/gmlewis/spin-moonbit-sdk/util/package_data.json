@@ -1,0 +1,243 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/util",
+  "traits": [],
+  "types": [
+    {
+      "name": "ByteFunc",
+      "docstring": "\n `ByteFunc` is a function that operates on a stream of bytes, one byte at a time.",
+      "signature": "type ByteFunc",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "consume.mbt",
+        "line": 3,
+        "column": 6
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "consume",
+      "docstring": "\n `consume` performs the provided `request`\n then consumes its output and optionally calculates\n the stream's hash, reporting the byte count and hash back to the caller.",
+      "signature": "fn consume(request : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingRequest</a>, hash : <a href=\"gmlewis/spin-moonbit-sdk/common#HashFunc\">@gmlewis/spin-moonbit-sdk/common.HashFunc</a>?, debug~ : Bool = ..) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[(Int64, String), <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ErrorCode</a>]",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "consume.mbt",
+        "line": 12,
+        "column": 8
+      }
+    },
+    {
+      "name": "consume_func",
+      "docstring": "\n `consume_func` performs the provided `request`\n then consumes its output and runs the optional\n `byte_func` on each byte, then returns the content length\n back to the caller.",
+      "signature": "fn consume_func(request : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingRequest</a>, byte_func : <a href=\"gmlewis/spin-moonbit-sdk/util#ByteFunc\">ByteFunc</a>?, debug~ : Bool = ..) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Int64, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ErrorCode</a>]",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "consume.mbt",
+        "line": 37,
+        "column": 8
+      }
+    },
+    {
+      "name": "dump_headers",
+      "docstring": "\n `dump_headers` dumps the headers to stderr as INFO lines.",
+      "signature": "fn dump_headers(headers : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.Fields</a>) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "dump-headers.mbt",
+        "line": 3,
+        "column": 8
+      }
+    },
+    {
+      "name": "get_body_bytes",
+      "docstring": "\n `get_body_bytes` returns the incoming request body as `Bytes`.",
+      "signature": "fn get_body_bytes(request : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.IncomingRequest</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Bytes, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams#StreamError\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams.StreamError</a>]",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "get-body-bytes.mbt",
+        "line": 3,
+        "column": 8
+      }
+    },
+    {
+      "name": "get_content_length",
+      "docstring": "",
+      "signature": "fn get_content_length(fields : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.Fields</a>) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "send-request.mbt",
+        "line": 92,
+        "column": 8
+      }
+    },
+    {
+      "name": "make_404_response",
+      "docstring": "\n `make_404_response` makes a new `OutgoingResponse` with \"404 Not Found\".",
+      "signature": "fn make_404_response() -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingResponse</a>",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "make-response.mbt",
+        "line": 56,
+        "column": 8
+      }
+    },
+    {
+      "name": "make_500_response",
+      "docstring": "\n `make_500_response` makes a new `OutgoingResponse` with \"500 Internal Server Error\".",
+      "signature": "fn make_500_response() -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingResponse</a>",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "make-response.mbt",
+        "line": 68,
+        "column": 8
+      }
+    },
+    {
+      "name": "make_response",
+      "docstring": "\n `make_response` makes a new `OutgoingResponse`.",
+      "signature": "fn make_response(body : Bytes, content_type~ : Bytes = .., status_code~ : UInt = ..) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingResponse</a>",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "make-response.mbt",
+        "line": 3,
+        "column": 8
+      }
+    },
+    {
+      "name": "make_response_str",
+      "docstring": "\n `make_response_str` makes a new `OutgoingResponse` from the provided `String`.",
+      "signature": "fn make_response_str(body : String, content_type~ : Bytes = .., status_code~ : UInt = ..) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingResponse</a>",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "make-response.mbt",
+        "line": 34,
+        "column": 8
+      }
+    },
+    {
+      "name": "new_request",
+      "docstring": "\n `new_request` creates a new outgoing request.",
+      "signature": "fn new_request(http_method : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Method\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.Method</a>, url : String, fields~ : <a href=\"moonbitlang/core/array#Array\">Array</a>[(String, Bytes)] = ..) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingRequest</a>",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "new-request.mbt",
+        "line": 3,
+        "column": 8
+      }
+    },
+    {
+      "name": "println",
+      "docstring": "\n `println` prints a string to wasi stdout with a newline.",
+      "signature": "fn println(s : String) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "println.mbt",
+        "line": 3,
+        "column": 8
+      }
+    },
+    {
+      "name": "random_int",
+      "docstring": "\n `random_int` returns a random Int between [0..n). If n<=1, 0 is always returned.",
+      "signature": "fn random_int(n : Int) -> Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "random-int.mbt",
+        "line": 3,
+        "column": 8
+      }
+    },
+    {
+      "name": "respond_404",
+      "docstring": "\n `respond_404` sets response_out to an `OutgoingResponse` with \"404 Not Found\".",
+      "signature": "fn respond_404(response_out : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ResponseOutparam</a>) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "make-response.mbt",
+        "line": 62,
+        "column": 8
+      }
+    },
+    {
+      "name": "respond_500",
+      "docstring": "\n `respond_500` sets response_out to an `OutgoingResponse` with \"500 Internal Server Error\".",
+      "signature": "fn respond_500(response_out : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ResponseOutparam</a>) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "make-response.mbt",
+        "line": 74,
+        "column": 8
+      }
+    },
+    {
+      "name": "respond_bytes",
+      "docstring": "\n `respond_bytes` sets response_out to an `OutgoingResponse` from the provided `Bytes`.",
+      "signature": "fn respond_bytes(response_out : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ResponseOutparam</a>, body : Bytes, content_type~ : Bytes = .., status_code~ : UInt = ..) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "make-response.mbt",
+        "line": 23,
+        "column": 8
+      }
+    },
+    {
+      "name": "respond_str",
+      "docstring": "\n `respond_str` sets response_out to an `OutgoingResponse` from the provided `String`.",
+      "signature": "fn respond_str(response_out : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ResponseOutparam</a>, body : String, content_type~ : Bytes = .., status_code~ : UInt = ..) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "make-response.mbt",
+        "line": 45,
+        "column": 8
+      }
+    },
+    {
+      "name": "send_request",
+      "docstring": "\n `send_request` sends an outgoing request and waits for the response.",
+      "signature": "fn send_request(request : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingRequest</a>, debug~ : Bool = ..) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Bytes, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ErrorCode</a>]",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "send-request.mbt",
+        "line": 33,
+        "column": 8
+      }
+    },
+    {
+      "name": "split_path",
+      "docstring": "\n `split_path` splits an incoming request into its method and path parts by splitting on \"/\".",
+      "signature": "fn split_path(request : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.IncomingRequest</a>) -> (<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Method\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.Method</a>, <a href=\"moonbitlang/core/array#Array\">Array</a>[String])",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "split-path.mbt",
+        "line": 3,
+        "column": 8
+      }
+    },
+    {
+      "name": "stream",
+      "docstring": "\n `stream` performs the provided `request`\n then streams its output to the provided `response_out` and optionally calculates\n the stream's hash, reporting the byte count and hash back to the caller.",
+      "signature": "fn stream(request : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingRequest</a>, response_out : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ResponseOutparam</a>, hash : <a href=\"gmlewis/spin-moonbit-sdk/common#HashFunc\">@gmlewis/spin-moonbit-sdk/common.HashFunc</a>?, debug~ : Bool = ..) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[(Int64, String), <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ErrorCode</a>]",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "stream.mbt",
+        "line": 5,
+        "column": 8
+      }
+    },
+    {
+      "name": "stream_func",
+      "docstring": "\n `stream_func` performs the provided `request`\n then streams its output to the provided `response_out` and runs the\n provided `byte_func` on each byte, then returns the content length\n back to the caller.",
+      "signature": "fn stream_func(request : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.OutgoingRequest</a>, response_out : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ResponseOutparam</a>, byte_func : <a href=\"gmlewis/spin-moonbit-sdk/util#ByteFunc\">ByteFunc</a>?, debug~ : Bool = ..) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Int64, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ErrorCode</a>]",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/util",
+        "file": "stream.mbt",
+        "line": 31,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

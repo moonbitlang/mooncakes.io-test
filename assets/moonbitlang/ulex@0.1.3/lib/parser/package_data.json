@@ -1,0 +1,192 @@
+{
+  "name": "moonbitlang/ulex/lib/parser",
+  "traits": [],
+  "types": [
+    {
+      "name": "ParseError",
+      "docstring": "",
+      "signature": "pub enum ParseError {\n  UnexpectedToken(<a href=\"moonbitlang/ulex/lib/parser#Token\">Token</a>, (Unit, Unit), <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/ulex/lib/parser#TokenKind\">TokenKind</a>])\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/parser",
+        "file": "parser.mbt",
+        "line": 127,
+        "column": 11
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "ParseError",
+              "path": "moonbitlang/ulex/lib/parser"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/parser#ParseError\">ParseError</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/parser",
+                "file": "parser.mbt",
+                "line": 129,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Token",
+      "docstring": "",
+      "signature": "pub(all) enum Token {\n  EOI\n  EOF\n  PARSE_LBRACE\n  LET\n  AS\n  UNDERSCORE\n  RBRACE\n  LPAREN\n  RPAREN\n  LBRACKET\n  RBRACKET\n  EQ\n  SEMICOLON\n  FAT_ARROW\n  BAR\n  STAR\n  PLUS\n  QUESTION\n  MINUS\n  CARET\n  RULE_LC_IDENT_LPAREN_CODE_RPAREN_ARROW_CODE_LBRACE((String, String))\n  LBRACE_CODE_RBRACE(String)\n  LC_IDENT(String)\n  CHAR(Char)\n  STRING(String)\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/parser",
+        "file": "parser.mbt",
+        "line": 9,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "kind",
+          "docstring": "",
+          "signature": "fn <a href=\"moonbitlang/ulex/lib/parser#Token\">Token</a>::kind(self : <a href=\"moonbitlang/ulex/lib/parser#Token\">Token</a>) -> <a href=\"moonbitlang/ulex/lib/parser#TokenKind\">TokenKind</a>",
+          "loc": {
+            "path": "moonbitlang/ulex/lib/parser",
+            "file": "parser.mbt",
+            "line": 37,
+            "column": 15
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Token",
+              "path": "moonbitlang/ulex/lib/parser"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"moonbitlang/ulex/lib/parser#Token\">Token</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/parser",
+                "file": "parser.mbt",
+                "line": 35,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TokenKind",
+      "docstring": "",
+      "signature": "pub(all) enum TokenKind {\n  TK_EOI\n  TK_EOF\n  TK_PARSE_LBRACE\n  TK_LET\n  TK_AS\n  TK_UNDERSCORE\n  TK_RBRACE\n  TK_LPAREN\n  TK_RPAREN\n  TK_LBRACKET\n  TK_RBRACKET\n  TK_EQ\n  TK_SEMICOLON\n  TK_FAT_ARROW\n  TK_BAR\n  TK_STAR\n  TK_PLUS\n  TK_QUESTION\n  TK_MINUS\n  TK_CARET\n  TK_RULE_LC_IDENT_LPAREN_CODE_RPAREN_ARROW_CODE_LBRACE\n  TK_LBRACE_CODE_RBRACE\n  TK_LC_IDENT\n  TK_CHAR\n  TK_STRING\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/parser",
+        "file": "parser.mbt",
+        "line": 67,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "TokenKind",
+              "path": "moonbitlang/ulex/lib/parser"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "",
+              "signature": "fn output(self : <a href=\"moonbitlang/ulex/lib/parser#TokenKind\">TokenKind</a>, logger : <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "moonbitlang/ulex/lib/parser",
+                "file": "parser.mbt",
+                "line": 95,
+                "column": 34
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [
+    {
+      "name": "Position",
+      "docstring": "",
+      "signature": "type Position = Unit",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/parser",
+        "file": "parser.mbt",
+        "line": 7,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "lex_eoi",
+      "docstring": "",
+      "signature": "fn lex_eoi(read_token : () -> (<a href=\"moonbitlang/ulex/lib/parser#Token\">Token</a>, Unit, Unit), start_pos : Unit) -> <a href=\"moonbitlang/ulex/lib/type#Lex\">@moonbitlang/ulex/lib/type.Lex</a>!<a href=\"moonbitlang/ulex/lib/parser#ParseError\">ParseError</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/parser",
+        "file": "parser.mbt",
+        "line": 1429,
+        "column": 8
+      }
+    },
+    {
+      "name": "parse_lex_from_string",
+      "docstring": "",
+      "signature": "fn parse_lex_from_string(input : String) -> <a href=\"moonbitlang/ulex/lib/type#Lex\">@moonbitlang/ulex/lib/type.Lex</a>!<a href=\"moonbitlang/ulex/lib/parser#ParseError\">ParseError</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/parser",
+        "file": "parse.mbt",
+        "line": 2,
+        "column": 8
+      }
+    },
+    {
+      "name": "parse_regex_from_string",
+      "docstring": "",
+      "signature": "fn parse_regex_from_string(input : String) -> <a href=\"moonbitlang/ulex/lib/type#Regex\">@moonbitlang/ulex/lib/type.Regex</a>!<a href=\"moonbitlang/ulex/lib/parser#ParseError\">ParseError</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/parser",
+        "file": "parse.mbt",
+        "line": 14,
+        "column": 8
+      }
+    },
+    {
+      "name": "regex_eoi",
+      "docstring": "",
+      "signature": "fn regex_eoi(read_token : () -> (<a href=\"moonbitlang/ulex/lib/parser#Token\">Token</a>, Unit, Unit), start_pos : Unit) -> <a href=\"moonbitlang/ulex/lib/type#Regex\">@moonbitlang/ulex/lib/type.Regex</a>!<a href=\"moonbitlang/ulex/lib/parser#ParseError\">ParseError</a>",
+      "loc": {
+        "path": "moonbitlang/ulex/lib/parser",
+        "file": "parser.mbt",
+        "line": 1440,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

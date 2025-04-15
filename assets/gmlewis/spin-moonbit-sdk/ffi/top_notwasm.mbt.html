@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+pub fn extend16(_value : Int) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn extend8(_value : Int) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn store8(_offset : Int, _value : Int) -> Unit {
+  abort("not wasm")
+}
+
+///|
+pub fn load8_u(_offset : Int) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn load8(_offset : Int) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn store16(_offset : Int, _value : Int) -> Unit {
+  abort("not wasm")
+}
+
+///|
+pub fn load16(_offset : Int) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn load16_u(_offset : Int) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn store32(_offset : Int, _value : Int) -> Unit {
+  abort("not wasm")
+}
+
+///|
+pub fn load32(_offset : Int) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn store64(_offset : Int, _value : Int64) -> Unit {
+  abort("not wasm")
+}
+
+///|
+pub fn load64(_offset : Int) -> Int64 {
+  abort("not wasm")
+}
+
+///|
+pub fn storef32(_offset : Int, _value : Float) -> Unit {
+  abort("not wasm")
+}
+
+///|
+pub fn loadf32(_offset : Int) -> Float {
+  abort("not wasm")
+}
+
+///|
+pub fn storef64(_offset : Int, _value : Double) -> Unit {
+  abort("not wasm")
+}
+
+///|
+pub fn loadf64(_offset : Int) -> Double {
+  abort("not wasm")
+}
+
+///|
+pub fn f32_to_i32(_value : Float) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn f32_to_i64(_value : Float) -> Int64 {
+  abort("not wasm")
+}
+
+///|
+pub fn malloc(_size : Int) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn free(_position : Int) -> Unit {
+  abort("not wasm")
+}
+
+///|
+pub fn copy(_dest : Int, _src : Int) -> Unit {
+  abort("not wasm")
+}
+
+///|
+pub fn str2ptr(_str : String) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn ptr2str(_ptr : Int) -> String {
+  abort("not wasm")
+}
+
+///|
+pub fn bytes2ptr(_bytes : Bytes) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn ptr2bytes(_ptr : Int) -> Bytes {
+  abort("not wasm")
+}
+
+///|
+pub fn uint_array2ptr(_array : FixedArray[UInt]) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn uint64_array2ptr(_array : FixedArray[UInt64]) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn int_array2ptr(_array : FixedArray[Int]) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn int64_array2ptr(_array : FixedArray[Int64]) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn float_array2ptr(_array : FixedArray[Float]) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn double_array2ptr(_array : FixedArray[Double]) -> Int {
+  abort("not wasm")
+}
+
+///|
+pub fn ptr2uint_array(_ptr : Int) -> FixedArray[UInt] {
+  abort("not wasm")
+}
+
+///|
+pub fn ptr2int_array(_ptr : Int) -> FixedArray[Int] {
+  abort("not wasm")
+}
+
+///|
+pub fn ptr2float_array(_ptr : Int) -> FixedArray[Float] {
+  abort("not wasm")
+}
+
+///|
+pub(open) trait Any {}
+
+///|
+pub(all) struct Cleanup {
+  address : Int
+  size : Int
+  align : Int
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+{
+  "name": "peter-jerry-ye/mcp-server/schema",
+  "traits": [],
+  "types": [
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server/schema",
+        "file": "schema.mbt",
+        "line": 16,
+        "column": 6
+      },
+      "methods": [
+        {
+          "name": "to_json",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>::to_json(self : <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+          "loc": {
+            "path": "peter-jerry-ye/mcp-server/schema",
+            "file": "schema.mbt",
+            "line": 58,
+            "column": 11
+          }
+        },
+        {
+          "name": "verify",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>::verify(self : <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>, json : <a href=\"moonbitlang/core/json#Json\">Json</a>) -> Bool",
+          "loc": {
+            "path": "peter-jerry-ye/mcp-server/schema",
+            "file": "schema.mbt",
+            "line": 96,
+            "column": 11
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "T",
+              "path": "peter-jerry-ye/mcp-server/schema"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "ToJson", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "to_json",
+              "docstring": "",
+              "signature": "fn to_json(self : <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>) -> <a href=\"moonbitlang/core/json#Json\">Json</a>",
+              "loc": {
+                "path": "peter-jerry-ye/mcp-server/schema",
+                "file": "schema.mbt",
+                "line": 91,
+                "column": 28
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "array",
+      "docstring": "",
+      "signature": "fn array(schema : <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>) -> <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server/schema",
+        "file": "schema.mbt",
+        "line": 53,
+        "column": 8
+      }
+    },
+    {
+      "name": "enums",
+      "docstring": "",
+      "signature": "fn enums(values : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/core/json#Json\">Json</a>]) -> <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server/schema",
+        "file": "schema.mbt",
+        "line": 48,
+        "column": 8
+      }
+    },
+    {
+      "name": "integer",
+      "docstring": "",
+      "signature": "fn integer() -> <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server/schema",
+        "file": "schema.mbt",
+        "line": 29,
+        "column": 8
+      }
+    },
+    {
+      "name": "object",
+      "docstring": "",
+      "signature": "fn object(object : <a href=\"moonbitlang/core/builtin#Map\">Map</a>[String, <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>], additionalProperties~ : Bool = .., required? : <a href=\"moonbitlang/core/array#Array\">Array</a>[String]) -> <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server/schema",
+        "file": "schema.mbt",
+        "line": 39,
+        "column": 8
+      }
+    },
+    {
+      "name": "string",
+      "docstring": "",
+      "signature": "fn string() -> <a href=\"peter-jerry-ye/mcp-server/schema#T\">T</a>",
+      "loc": {
+        "path": "peter-jerry-ye/mcp-server/schema",
+        "file": "schema.mbt",
+        "line": 34,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,69 @@
+{
+  "name": "peter-jerry-ye",
+  "package": null,
+  "childs": [
+    {
+      "name": "io",
+      "package": null,
+      "childs": [
+        {
+          "name": "http",
+          "package": {
+            "path": "peter-jerry-ye/io/http",
+            "traits": [],
+            "types": [
+              { "name": "IllegalArgument", "impls": [], "methods": [] }
+            ],
+            "typealias": [],
+            "values": [
+              "bytes", "bytes_sync", "fetch", "fetch_sync", "headers",
+              "json", "json_sync", "request", "response", "text", "text_sync"
+            ],
+            "misc": []
+          },
+          "childs": []
+        },
+        {
+          "name": "io",
+          "package": {
+            "path": "peter-jerry-ye/io/io",
+            "traits": [],
+            "types": [
+              {
+                "name": "Pollable",
+                "impls": [
+                  {
+                    "self": {
+                      "kind": "constr",
+                      "constructor": {
+                        "name": "Pollable",
+                        "path": "peter-jerry-ye/io/io"
+                      },
+                      "arguments": []
+                    },
+                    "trait": {
+                      "name": "Sync",
+                      "path": "peter-jerry-ye/async/loop"
+                    },
+                    "methods": [ "sync" ]
+                  }
+                ],
+                "methods": []
+              }
+            ],
+            "typealias": [],
+            "values": [
+              "event_loop", "flush", "pipe", "print", "println",
+              "println_sync", "read_all", "read_all_sync", "read_line",
+              "read_line_sync", "stderr", "stderr_stream", "stdin",
+              "stdin_stream", "stdout", "stdout_stream", "write",
+              "write_sync"
+            ],
+            "misc": []
+          },
+          "childs": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/cli/terminalStdout",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "An interface providing an optional `terminal-output` for stdout as a\nlink-time authority.",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/terminalStdout/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

@@ -1,0 +1,171 @@
+{
+  "name": "Yoorkin/rabbit-tea/cmd",
+  "traits": [],
+  "types": [
+    {
+      "name": "Cmd",
+      "docstring": " The command type, represents a task that can be executed.\n \n You can define your own command to interoperate Rabbit-Tea with the outside JS world.\n \n Before implementing your own command, check the existing commands in the `nav` and `http` packages.\n \n # Example \n \n ```\n fn delay[M](msg : M, ms : Int) -> Cmd[M] {\n   Cmd(fn(events){\n     set_timeout(fn(){ events.trigger_update(msg) }, ms)\n   })\n } \n \n extern \"js\" fn set_timeout(f : () -> Unit, ms : Int) = \"(f,ms) => setTimeout(f, ms)\"\n ```",
+      "signature": "pub(all) type Cmd[M] (<a href=\"Yoorkin/rabbit-tea/cmd#Events\">Events</a>[M]) -> Unit",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 52,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "map",
+          "docstring": " Map the messages in the command to another type.",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>::map[A, B](self : <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[A], f : (A) -> B) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[B]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/cmd",
+            "file": "command.mbt",
+            "line": 58,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Events",
+      "docstring": " Store the events that can be triggered by the command.",
+      "signature": "type Events[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 2,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "new",
+          "docstring": " Used by the runtime.",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/cmd#Events\">Events</a>::new[M](on_url_changed : (<a href=\"Yoorkin/rabbit-tea/url#Url\">@Yoorkin/rabbit-tea/url.Url</a>) -> Unit, on_url_request : (<a href=\"Yoorkin/rabbit-tea/url#UrlRequest\">@Yoorkin/rabbit-tea/url.UrlRequest</a>) -> Unit, on_update : (M) -> Unit) -> <a href=\"Yoorkin/rabbit-tea/cmd#Events\">Events</a>[M]",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/cmd",
+            "file": "command.mbt",
+            "line": 9,
+            "column": 16
+          }
+        },
+        {
+          "name": "trigger_update",
+          "docstring": " Trigger the update function with message `msg`.",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/cmd#Events\">Events</a>::trigger_update[M](self : <a href=\"Yoorkin/rabbit-tea/cmd#Events\">Events</a>[M], msg : M) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/cmd",
+            "file": "command.mbt",
+            "line": 31,
+            "column": 16
+          }
+        },
+        {
+          "name": "trigger_url_changed",
+          "docstring": " Trigger the update function with `url_changed` message config by the user.",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/cmd#Events\">Events</a>::trigger_url_changed[M](self : <a href=\"Yoorkin/rabbit-tea/cmd#Events\">Events</a>[M], url : <a href=\"Yoorkin/rabbit-tea/url#Url\">@Yoorkin/rabbit-tea/url.Url</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/cmd",
+            "file": "command.mbt",
+            "line": 18,
+            "column": 16
+          }
+        },
+        {
+          "name": "trigger_url_request",
+          "docstring": " Trigger the update function with `url_request` message config by the user.",
+          "signature": "fn <a href=\"Yoorkin/rabbit-tea/cmd#Events\">Events</a>::trigger_url_request[M](self : <a href=\"Yoorkin/rabbit-tea/cmd#Events\">Events</a>[M], url : <a href=\"Yoorkin/rabbit-tea/url#UrlRequest\">@Yoorkin/rabbit-tea/url.UrlRequest</a>) -> Unit",
+          "loc": {
+            "path": "Yoorkin/rabbit-tea/cmd",
+            "file": "command.mbt",
+            "line": 23,
+            "column": 16
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [
+    {
+      "name": "Command",
+      "docstring": " The command type, represents a task that can be executed.\n \n You can define your own command to interoperate Rabbit-Tea with the outside JS world.\n \n Before implementing your own command, check the existing commands in the `nav` and `http` packages.\n \n # Example \n \n ```\n fn delay[M](msg : M, ms : Int) -> Cmd[M] {\n   Cmd(fn(events){\n     set_timeout(fn(){ events.trigger_update(msg) }, ms)\n   })\n } \n \n extern \"js\" fn set_timeout(f : () -> Unit, ms : Int) = \"(f,ms) => setTimeout(f, ms)\"\n ```",
+      "signature": "type Command[M] = <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 55,
+        "column": 1
+      }
+    }
+  ],
+  "values": [
+    {
+      "name": "attempt",
+      "docstring": " Create a command that runs an async function and handles errors.\n \n This is similar to `perform`, but it converts the returned value \n or thrown error into a `Result`.",
+      "signature": "fn attempt[A, E : <a href=\"moonbitlang/core/error#Error\">Error</a>, M](msg : (<a href=\"moonbitlang/core/result#Result\">Result</a>[A, E]) -> M, f : () -> A!E) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 97,
+        "column": 8
+      }
+    },
+    {
+      "name": "batch",
+      "docstring": " Create a command that runs multiple commands.",
+      "signature": "fn batch[M](xs : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[M]]) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 76,
+        "column": 8
+      }
+    },
+    {
+      "name": "map",
+      "docstring": " Map the messages in the command to another type.",
+      "signature": "fn map[A, B](self : <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[A], f : (A) -> B) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[B]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 58,
+        "column": 8
+      }
+    },
+    {
+      "name": "none",
+      "docstring": " Create a command that does nothing.",
+      "signature": "fn none[M]() -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 71,
+        "column": 8
+      }
+    },
+    {
+      "name": "perform",
+      "docstring": " Create a command that runs an async function.\n \n The async function `f` will be called, and the result will be wrapped in a \n message `msg`, then trigger another update with this message.",
+      "signature": "fn perform[A, M](msg : (A) -> M, f : () -> A) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 89,
+        "column": 8
+      }
+    },
+    {
+      "name": "task",
+      "docstring": " Create a command that trigger another update for the given message.",
+      "signature": "fn task[M](message : M) -> <a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">Cmd</a>[M]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/cmd",
+        "file": "command.mbt",
+        "line": 81,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

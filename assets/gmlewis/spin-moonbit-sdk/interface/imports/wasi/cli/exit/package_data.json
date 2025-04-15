@@ -1,0 +1,20 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/exit",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "exit",
+      "docstring": "\n Exit the current instance and any linked instances.",
+      "signature": "fn exit(status : <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, Unit]) -> Unit",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/exit",
+        "file": "top.mbt",
+        "line": 5,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

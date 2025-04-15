@@ -1,0 +1,472 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "jsonrpc2",
+      "package": {
+        "path": "gmlewis/jsonrpc2",
+        "traits": [
+          { "name": "@gmlewis/jsonrpc2.Framer", "impls": [] },
+          { "name": "@gmlewis/jsonrpc2.Reader", "impls": [] },
+          { "name": "@gmlewis/jsonrpc2.Writer", "impls": [] }
+        ],
+        "types": [
+          {
+            "name": "HeaderFramer",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "HeaderFramer",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Framer", "path": "gmlewis/jsonrpc2" },
+                "methods": [ "reader", "writer" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "HeaderReader",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "HeaderReader",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Reader", "path": "gmlewis/jsonrpc2" },
+                "methods": [ "read" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "HeaderWriter",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "HeaderWriter",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Writer", "path": "gmlewis/jsonrpc2" },
+                "methods": [ "write" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "ID",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "ID", "path": "gmlewis/jsonrpc2" },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "ID", "path": "gmlewis/jsonrpc2" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": [ "number", "string" ]
+          },
+          {
+            "name": "LineFramer",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "LineFramer",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Framer", "path": "gmlewis/jsonrpc2" },
+                "methods": [ "reader", "writer" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "LineReader",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "LineReader",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Reader", "path": "gmlewis/jsonrpc2" },
+                "methods": [ "read" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "LineWriter",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "LineWriter",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Writer", "path": "gmlewis/jsonrpc2" },
+                "methods": [ "write" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "Message",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Message",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Message",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Message",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "ToJson",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "to_json" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Message",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "FromJson",
+                  "path": "moonbitlang/core/json"
+                },
+                "methods": [ "from_json" ]
+              }
+            ],
+            "methods": [
+              "as_batch_request", "as_batch_response", "as_call",
+              "as_notification", "as_request", "as_response"
+            ]
+          },
+          {
+            "name": "RawFramer",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "RawFramer",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Framer", "path": "gmlewis/jsonrpc2" },
+                "methods": [ "reader", "writer" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "RawReader",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "RawReader",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Reader", "path": "gmlewis/jsonrpc2" },
+                "methods": [ "read" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "RawWriter",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "RawWriter",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Writer", "path": "gmlewis/jsonrpc2" },
+                "methods": [ "write" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "Request",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Request",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Request",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Request",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "ToJson",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "to_json" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Request",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "FromJson",
+                  "path": "moonbitlang/core/json"
+                },
+                "methods": [ "from_json" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "Response",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Response",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Response",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Response",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "ToJson",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "to_json" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "Response",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "FromJson",
+                  "path": "moonbitlang/core/json"
+                },
+                "methods": [ "from_json" ]
+              }
+            ],
+            "methods": []
+          },
+          {
+            "name": "WireError",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "WireError",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "WireError",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "WireError",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "ToJson",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "to_json" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "WireError",
+                    "path": "gmlewis/jsonrpc2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "FromJson",
+                  "path": "moonbitlang/core/json"
+                },
+                "methods": [ "from_json" ]
+              }
+            ],
+            "methods": []
+          }
+        ],
+        "typealias": [],
+        "values": [
+          "as_batch_request", "as_batch_response", "as_call",
+          "as_notification", "as_request", "as_response", "header_framer",
+          "line_framer", "new_batch_request", "new_batch_response",
+          "new_call", "new_notification", "new_response", "raw_framer"
+        ],
+        "misc": []
+      },
+      "childs": []
+    }
+  ]
+}

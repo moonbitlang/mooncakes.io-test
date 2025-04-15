@@ -1,0 +1,359 @@
+{
+  "name": "peter-jerry-ye/async/promise",
+  "traits": [],
+  "types": [
+    {
+      "name": "AggregateError",
+      "docstring": "",
+      "signature": "pub type! AggregateError <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"moonbitlang/core/error#Error\">Error</a>]\n",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 178,
+        "column": 11
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Resolver",
+      "docstring": "",
+      "signature": "type Resolver[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 31,
+        "column": 6
+      },
+      "methods": [
+        {
+          "name": "future",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>::future[A](self : <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>[A]) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 94,
+            "column": 8
+          }
+        },
+        {
+          "name": "reject",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>::reject[A](self : <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>[A], err : <a href=\"moonbitlang/core/error#Error\">Error</a>) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 76,
+            "column": 18
+          }
+        },
+        {
+          "name": "resolve",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>::resolve[A](self : <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>[A], result : A) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 71,
+            "column": 18
+          }
+        },
+        {
+          "name": "try_complete",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>::try_complete[A](self : <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>[A], result : () -> A!<a href=\"moonbitlang/core/error#Error\">Error</a>) -> Bool",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 58,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "T",
+      "docstring": "",
+      "signature": "type T[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 26,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "await",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#T\">T</a>::await[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]) -> A!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 216,
+            "column": 14
+          }
+        },
+        {
+          "name": "bind",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#T\">T</a>::bind[A, B](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], callback : (A) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[B]) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[B]",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 125,
+            "column": 8
+          }
+        },
+        {
+          "name": "finally",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#T\">T</a>::finally[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], callback : () -> Unit) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 146,
+            "column": 8
+          }
+        },
+        {
+          "name": "get",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#T\">T</a>::get[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[A, <a href=\"moonbitlang/core/error#Error\">Error</a>]?",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 49,
+            "column": 8
+          }
+        },
+        {
+          "name": "on_failure",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#T\">T</a>::on_failure[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], callback : (<a href=\"moonbitlang/core/error#Error\">Error</a>) -> Unit) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 112,
+            "column": 8
+          }
+        },
+        {
+          "name": "on_success",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#T\">T</a>::on_success[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], callback : (A) -> Unit) -> Unit",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 99,
+            "column": 8
+          }
+        },
+        {
+          "name": "zip",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#T\">T</a>::zip[A, B](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], that : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[B]) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[(A, B)]",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 200,
+            "column": 8
+          }
+        },
+        {
+          "name": "zip_with",
+          "docstring": "",
+          "signature": "fn <a href=\"peter-jerry-ye/async/promise#T\">T</a>::zip_with[A, B, C](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], that : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[B], f : (A, B) -> C) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[C]",
+          "loc": {
+            "path": "peter-jerry-ye/async/promise",
+            "file": "top.mbt",
+            "line": 205,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "all",
+      "docstring": "",
+      "signature": "fn all[A](promises : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]]) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[<a href=\"moonbitlang/core/array#Array\">Array</a>[A]]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 159,
+        "column": 8
+      }
+    },
+    {
+      "name": "any",
+      "docstring": "",
+      "signature": "fn any[A](promises : <a href=\"moonbitlang/core/array#Array\">Array</a>[<a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]]) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 181,
+        "column": 8
+      }
+    },
+    {
+      "name": "await",
+      "docstring": "",
+      "signature": "fn await[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]) -> A!<a href=\"moonbitlang/core/error#Error\">Error</a>",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 216,
+        "column": 14
+      }
+    },
+    {
+      "name": "bind",
+      "docstring": "",
+      "signature": "fn bind[A, B](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], callback : (A) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[B]) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[B]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 125,
+        "column": 8
+      }
+    },
+    {
+      "name": "finally",
+      "docstring": "",
+      "signature": "fn finally[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], callback : () -> Unit) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 146,
+        "column": 8
+      }
+    },
+    {
+      "name": "future",
+      "docstring": "",
+      "signature": "fn future[A](self : <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>[A]) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 94,
+        "column": 8
+      }
+    },
+    {
+      "name": "get",
+      "docstring": "",
+      "signature": "fn get[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[A, <a href=\"moonbitlang/core/error#Error\">Error</a>]?",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 49,
+        "column": 8
+      }
+    },
+    {
+      "name": "make",
+      "docstring": "",
+      "signature": "fn make[A]() -> <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 34,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_failure",
+      "docstring": "",
+      "signature": "fn on_failure[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], callback : (<a href=\"moonbitlang/core/error#Error\">Error</a>) -> Unit) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 112,
+        "column": 8
+      }
+    },
+    {
+      "name": "on_success",
+      "docstring": "",
+      "signature": "fn on_success[A](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], callback : (A) -> Unit) -> Unit",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 99,
+        "column": 8
+      }
+    },
+    {
+      "name": "reject",
+      "docstring": "",
+      "signature": "fn reject[A](err : <a href=\"moonbitlang/core/error#Error\">Error</a>) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 44,
+        "column": 8
+      }
+    },
+    {
+      "name": "resolve",
+      "docstring": "",
+      "signature": "fn resolve[A](a : A) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 39,
+        "column": 8
+      }
+    },
+    {
+      "name": "spawn",
+      "docstring": "",
+      "signature": "fn spawn[A](cb : ((() -> Unit) -> Unit) -> A!<a href=\"moonbitlang/core/error#Error\">Error</a>) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 224,
+        "column": 8
+      }
+    },
+    {
+      "name": "try_complete",
+      "docstring": "",
+      "signature": "fn try_complete[A](self : <a href=\"peter-jerry-ye/async/promise#Resolver\">Resolver</a>[A], result : () -> A!<a href=\"moonbitlang/core/error#Error\">Error</a>) -> Bool",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 58,
+        "column": 8
+      }
+    },
+    {
+      "name": "zip",
+      "docstring": "",
+      "signature": "fn zip[A, B](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], that : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[B]) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[(A, B)]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 200,
+        "column": 8
+      }
+    },
+    {
+      "name": "zip_with",
+      "docstring": "",
+      "signature": "fn zip_with[A, B, C](self : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[A], that : <a href=\"peter-jerry-ye/async/promise#T\">T</a>[B], f : (A, B) -> C) -> <a href=\"peter-jerry-ye/async/promise#T\">T</a>[C]",
+      "loc": {
+        "path": "peter-jerry-ye/async/promise",
+        "file": "top.mbt",
+        "line": 205,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

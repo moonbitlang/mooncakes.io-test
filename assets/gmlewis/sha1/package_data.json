@@ -1,0 +1,122 @@
+{
+  "name": "gmlewis/sha1",
+  "traits": [],
+  "types": [
+    {
+      "name": "Digest",
+      "docstring": "\n `Digest` represents the partial evaluation of a checksum.",
+      "signature": "type Digest",
+      "loc": {
+        "path": "gmlewis/sha1",
+        "file": "sha1.mbt",
+        "line": 36,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "check_sum",
+          "docstring": "\n `check_sum` returns the final sha1sum as a hex string.",
+          "signature": "fn <a href=\"gmlewis/sha1#Digest\">Digest</a>::check_sum(self : <a href=\"gmlewis/sha1#Digest\">Digest</a>) -> String",
+          "loc": {
+            "path": "gmlewis/sha1",
+            "file": "sha1.mbt",
+            "line": 56,
+            "column": 8
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "\n `Digest::new` returns a new, reset Digest, ready to sum.",
+          "signature": "fn <a href=\"gmlewis/sha1#Digest\">Digest</a>::new() -> <a href=\"gmlewis/sha1#Digest\">Digest</a>",
+          "loc": {
+            "path": "gmlewis/sha1",
+            "file": "sha1.mbt",
+            "line": 45,
+            "column": 16
+          }
+        },
+        {
+          "name": "reset",
+          "docstring": "\n `reset` resets a digest for re-use.",
+          "signature": "fn <a href=\"gmlewis/sha1#Digest\">Digest</a>::reset(self : <a href=\"gmlewis/sha1#Digest\">Digest</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/sha1",
+            "file": "sha1.mbt",
+            "line": 104,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Digest", "path": "gmlewis/sha1" },
+            "arguments": []
+          },
+          "trait": { "name": "ByteWriter", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "write_byte",
+              "docstring": "\n `write_byte` writes a byte to the digest.",
+              "signature": "fn write_byte(self : <a href=\"gmlewis/sha1#Digest\">Digest</a>, b : Byte) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+              "loc": {
+                "path": "gmlewis/sha1",
+                "file": "sha1.mbt",
+                "line": 130,
+                "column": 41
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Digest", "path": "gmlewis/sha1" },
+            "arguments": []
+          },
+          "trait": { "name": "Writer", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "write",
+              "docstring": "\n `write` writes a slice of bytes to the digest.",
+              "signature": "fn write(self : <a href=\"gmlewis/sha1#Digest\">Digest</a>, buf : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/sha1",
+                "file": "sha1.mbt",
+                "line": 119,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "check_sum",
+      "docstring": "\n `check_sum` returns the final sha1sum as a hex string.",
+      "signature": "fn check_sum(self : <a href=\"gmlewis/sha1#Digest\">Digest</a>) -> String",
+      "loc": {
+        "path": "gmlewis/sha1",
+        "file": "sha1.mbt",
+        "line": 56,
+        "column": 8
+      }
+    },
+    {
+      "name": "reset",
+      "docstring": "\n `reset` resets a digest for re-use.",
+      "signature": "fn reset(self : <a href=\"gmlewis/sha1#Digest\">Digest</a>) -> Unit",
+      "loc": {
+        "path": "gmlewis/sha1",
+        "file": "sha1.mbt",
+        "line": 104,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

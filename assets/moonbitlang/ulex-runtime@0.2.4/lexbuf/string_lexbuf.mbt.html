@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+struct StringLexbuf {
+  content : String
+  mut pos : Int
+  end : Int
+}
+
+///|
+fn StringLexbuf::from_string(
+  str : String,
+  start~ : Int = 0,
+  end~ : Int = str.length()
+) -> StringLexbuf {
+  return { content: str, pos: start, end }
+}
+
+///|
+fn StringLexbuf::next(self : StringLexbuf) -> Char? {
+  let pos = self.pos
+  let end = self.end
+  if self.pos < end {
+    let c = self.content.unsafe_charcode_at(pos)
+    if c >= 0xD800 && c <= 0xDBFF {
+      let pos2 = pos + 1
+      if pos2 < end {
+        let c2 = self.content.unsafe_charcode_at(pos2)
+        if c2 >= 0xDC00 && c2 <= 0xDFFF {
+          self.pos = pos2 + 1
+          return Some(
+            Char::from_int((c - 0xD800) * 0x400 + c2 - 0xDC00 + 0x10000),
+          )
+        }
+      }
+    }
+    self.pos = pos + 1
+    return Some(Char::from_int(c))
+  }
+  None
+}
+
+///|
+fn StringLexbuf::curr_pos(self : StringLexbuf) -> Int {
+  return self.pos
+}
+
+///|
+fn StringLexbuf::reset(self : StringLexbuf, pos : Int) -> Unit {
+  self.pos = pos
+}
+
+fn StringLexbuf::unsafe_get(self : StringLexbuf, pos : Int) -> Char {
+  return self.content.char_at(pos)
+}
+
+///|
+fn StringLexbuf::sub_lexeme(
+  self : StringLexbuf,
+  start : Int,
+  end : Int
+) -> String {
+  return self.content.substring(start~, end~)
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

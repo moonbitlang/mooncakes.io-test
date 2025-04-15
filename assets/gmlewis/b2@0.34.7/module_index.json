@@ -1,0 +1,63 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "b2",
+      "package": {
+        "path": "gmlewis/b2",
+        "traits": [],
+        "types": [
+          {
+            "name": "Client",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Client", "path": "gmlewis/b2" },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": [
+              "consume_object", "get_download_authorization_url", "new",
+              "stream_object"
+            ]
+          },
+          {
+            "name": "ClientError",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "ClientError",
+                    "path": "gmlewis/b2"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          }
+        ],
+        "typealias": [],
+        "values": [
+          "consume_object", "get_download_authorization_url", "stream_object"
+        ],
+        "misc": []
+      },
+      "childs": []
+    }
+  ]
+}

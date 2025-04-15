@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "example/dialog",
+  "module_path": "Yoorkin/rabbit-tea",
+  "readme_content": "# Dialog Example\n\nRun the example with the following command:\n\n```bash\ncd src/example/dialog\nbash ./launch.sh\n```\n\nThis command will build the project with js backend, and launch the server with node.\n",
+  "package_data": "Yoorkin/rabbit-tea/example/dialog/package_data.json",
+  "source_files": [ "main.mbt" ]
+}

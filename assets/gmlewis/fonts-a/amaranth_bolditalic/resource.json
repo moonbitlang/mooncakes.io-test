@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "amaranth_bolditalic",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/amaranth_bolditalic/package_data.json",
+  "source_files": [ "amaranth_bolditalic.mbt" ]
+}

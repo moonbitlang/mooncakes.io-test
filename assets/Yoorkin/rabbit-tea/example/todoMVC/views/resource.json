@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "example/todoMVC/views",
+  "module_path": "Yoorkin/rabbit-tea",
+  "readme_content": "",
+  "package_data": "Yoorkin/rabbit-tea/example/todoMVC/views/package_data.json",
+  "source_files": [ "button.mbt" ]
+}

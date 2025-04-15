@@ -1,0 +1,20 @@
+{
+  "name": "moonbitlang/ulex/tests/named_regexes",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "is_number",
+      "docstring": "",
+      "signature": "fn is_number(str : String) -> Bool",
+      "loc": {
+        "path": "moonbitlang/ulex/tests/named_regexes",
+        "file": "named_regexes.mbt",
+        "line": 132,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

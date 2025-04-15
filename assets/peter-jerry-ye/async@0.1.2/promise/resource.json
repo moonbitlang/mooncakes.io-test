@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "promise",
+  "module_path": "peter-jerry-ye/async",
+  "readme_content": "",
+  "package_data": "peter-jerry-ye/async/promise/package_data.json",
+  "source_files": [ "top.mbt" ]
+}

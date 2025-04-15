@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "components/gpio",
+  "module_path": "lijunchen/test_esp32",
+  "readme_content": "",
+  "package_data": "lijunchen/test_esp32/components/gpio/package_data.json",
+  "source_files": [ "gpio.mbt" ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Yoorkin/rabbit-tea/example/dialog",
+  "traits": [],
+  "types": [
+    {
+      "name": "Msg",
+      "docstring": "",
+      "signature": "type Msg",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/dialog",
+        "file": "main.mbt",
+        "line": 20,
+        "column": 6
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

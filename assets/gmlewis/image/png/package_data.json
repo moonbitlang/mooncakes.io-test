@@ -1,0 +1,158 @@
+{
+  "name": "gmlewis/image/png",
+  "traits": [],
+  "types": [
+    {
+      "name": "Decoder",
+      "docstring": "",
+      "signature": "type Decoder",
+      "loc": {
+        "path": "gmlewis/image/png",
+        "file": "reader.mbt",
+        "line": 163,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Decoder", "path": "gmlewis/image/png" },
+            "arguments": []
+          },
+          "trait": { "name": "Reader", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "read",
+              "docstring": "\n Read presents one or more IDAT chunks as one continuous stream (minus the\n intermediate chunk headers and footers). If the PNG data looked like:\n\n\t... len0 IDAT xxx crc0 len1 IDAT yy crc1 len2 IEND crc2\n\n then this reader presents xxxyy. For well-formed PNG data, the decoder state\n immediately before the first Read call is that d.r is positioned between the\n first IDAT and xxx, and the decoder state immediately after the last Read\n call is that d.r is positioned between yy and crc1.",
+              "signature": "fn read(self : <a href=\"gmlewis/image/png#Decoder\">Decoder</a>, p : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/image/png",
+                "file": "reader.mbt",
+                "line": 459,
+                "column": 38
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Encoder",
+      "docstring": "\n Encoder encodes PNG images.",
+      "signature": "type Encoder",
+      "loc": {
+        "path": "gmlewis/image/png",
+        "file": "writer.mbt",
+        "line": 10,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "enc",
+          "docstring": "\n enc writes the Image m to w in PNG format.",
+          "signature": "fn <a href=\"gmlewis/image/png#Encoder\">Encoder</a>::enc(self : <a href=\"gmlewis/image/png#Encoder\">Encoder</a>, w : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>, m : <a href=\"gmlewis/image#Image\">@gmlewis/image.Image</a>) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+          "loc": {
+            "path": "gmlewis/image/png",
+            "file": "writer.mbt",
+            "line": 553,
+            "column": 8
+          }
+        },
+        {
+          "name": "write",
+          "docstring": "\n An Encoder is an io.Writer that satisfies writes by writing PNG IDAT chunks,\n including an 8-byte header and 4-byte CRC checksum per write call. Such calls\n should be relatively infrequent, since write_idats uses a [io.Buffer].\n\n This method should only be called from write_idats (via write_image).\n No other code should treat an Encoder as an io.Writer.",
+          "signature": "fn <a href=\"gmlewis/image/png#Encoder\">Encoder</a>::write(self : <a href=\"gmlewis/image/png#Encoder\">Encoder</a>, b : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+          "loc": {
+            "path": "gmlewis/image/png",
+            "file": "writer.mbt",
+            "line": 182,
+            "column": 8
+          }
+        }
+      ],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "chunk_order_error",
+      "docstring": "",
+      "signature": "let chunk_order_error : <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>",
+      "loc": {
+        "path": "gmlewis/image/png",
+        "file": "reader.mbt",
+        "line": 220,
+        "column": 9
+      }
+    },
+    {
+      "name": "decode",
+      "docstring": "\n decode reads a PNG image from r and returns it as an [image.Image].\n The type of Image returned depends on the PNG contents.",
+      "signature": "fn decode(r : <a href=\"gmlewis/io#Reader\">@gmlewis/io.Reader</a>) -> (<a href=\"gmlewis/image#Image\">@gmlewis/image.Image</a>, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+      "loc": {
+        "path": "gmlewis/image/png",
+        "file": "reader.mbt",
+        "line": 1238,
+        "column": 8
+      }
+    },
+    {
+      "name": "decode_config",
+      "docstring": "\n decode_config returns the color model and dimensions of a PNG image without\n decoding the entire image.",
+      "signature": "fn decode_config(r : <a href=\"gmlewis/io#Reader\">@gmlewis/io.Reader</a>) -> (<a href=\"gmlewis/image#Config\">@gmlewis/image.Config</a>, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+      "loc": {
+        "path": "gmlewis/image/png",
+        "file": "reader.mbt",
+        "line": 1262,
+        "column": 8
+      }
+    },
+    {
+      "name": "enc",
+      "docstring": "\n enc writes the Image m to w in PNG format.",
+      "signature": "fn enc(self : <a href=\"gmlewis/image/png#Encoder\">Encoder</a>, w : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>, m : <a href=\"gmlewis/image#Image\">@gmlewis/image.Image</a>) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+      "loc": {
+        "path": "gmlewis/image/png",
+        "file": "writer.mbt",
+        "line": 553,
+        "column": 8
+      }
+    },
+    {
+      "name": "encode",
+      "docstring": "",
+      "signature": "fn encode(w : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>, m : <a href=\"gmlewis/image#Image\">@gmlewis/image.Image</a>) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+      "loc": {
+        "path": "gmlewis/image/png",
+        "file": "writer.mbt",
+        "line": 546,
+        "column": 8
+      }
+    },
+    {
+      "name": "err_negative_read",
+      "docstring": "",
+      "signature": "let err_negative_read : <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>",
+      "loc": {
+        "path": "gmlewis/image/png",
+        "file": "bufio.mbt",
+        "line": 58,
+        "column": 9
+      }
+    },
+    {
+      "name": "write",
+      "docstring": "\n An Encoder is an io.Writer that satisfies writes by writing PNG IDAT chunks,\n including an 8-byte header and 4-byte CRC checksum per write call. Such calls\n should be relatively infrequent, since write_idats uses a [io.Buffer].\n\n This method should only be called from write_idats (via write_image).\n No other code should treat an Encoder as an io.Writer.",
+      "signature": "fn write(self : <a href=\"gmlewis/image/png#Encoder\">Encoder</a>, b : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+      "loc": {
+        "path": "gmlewis/image/png",
+        "file": "writer.mbt",
+        "line": 182,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+extern type Element
+
+///|
+pub extern "js" fn Element::to_html_element(
+  self : Element
+) -> @js.Nullable[HTMLElement] =
+  #| (x) => x instanceof HTMLElement ? x : null
+
+///|
+pub extern "js" fn Element::children(self : Element) -> Array[Element] =
+  #| (self) => self.children
+
+///|
+pub extern "js" fn Element::append_children(
+  self : Element,
+  child : Element
+) -> Unit = "(self, child) => self.append(child)"
+
+///|
+pub extern "js" fn Element::remove_children(
+  self : Element,
+  child : Element
+) -> Unit = " (self,child) => self.remove(child) "
+
+// NOTE: The DOM tree also includes the TEXT_NODE, which is not an element.
+// Therefore, a vdom patch algorithm should not be based on the ffi above.
+// https://dom.spec.whatwg.org/#ref-for-dom-node-nodetype%E2%91%A0
+
+///|
+pub extern "js" fn Element::set_attribute(
+  self : Element,
+  attr : String,
+  value : String
+) -> Unit = "(self,attr,value) => self.setAttribute(attr, value)"
+
+///|
+pub extern "js" fn Element::get_attribute(
+  self : Element,
+  attr : String
+) -> String = "(self,attr) => self.getAttribute(attr)"
+
+///|
+pub extern "js" fn Element::remove_attribute(
+  self : Element,
+  attr : String
+) -> Unit = "(self,attr) => self.removeAttribute(attr)"
+
+///| 
+pub extern "js" fn Element::set_property(
+  self : Element,
+  prop : String,
+  value : @js.Value
+) = "(self,prop,value) => self[prop] = value"
+
+///|
+pub extern "js" fn Element::remove_property(
+  self : Element,
+  prop : String
+) -> Unit = "(self,prop) => delete self[prop]"
+
+///|
+pub extern "js" fn Element::get_property(
+  self : Element,
+  prop : String
+) -> String = "(self,prop) => self[prop]"
+
+///|
+pub extern "js" fn Element::scroll_into_view(self : Element) -> Unit =
+  #| (self) => self.scrollIntoView()
+
+///|
+pub extern "js" fn Element::set_inner_html(
+  self : Element,
+  html : String
+) -> Unit = "(self,html) => self.innerHTML = html"
+
+///|
+pub extern "js" fn Element::get_bounding_client_rect(self : Element) -> DOMRect =
+  #| (self) => self.getBoundingClientRect()
+
+///|
+extern type HTMLElement
+
+///|
+pub extern "js" fn HTMLElement::to_element(self : HTMLElement) -> Element = "(x) => x"
+
+///|
+pub extern "js" fn HTMLElement::to_html_canvas_element(
+  self : HTMLElement
+) -> @js.Nullable[HTMLCanvasElement] =
+  #| (x) => x instanceof HTMLCanvasElement ? x : null
+
+///|
+pub extern "js" fn HTMLElement::to_html_input_element(
+  self : HTMLElement
+) -> @js.Nullable[HTMLInputElement] =
+  #| (x) => x instanceof HTMLInputElement ? x : null
+
+///|
+pub extern "js" fn HTMLElement::to_html_select_element(
+  self : HTMLElement
+) -> @js.Nullable[HTMLSelectElement] =
+  #| (x) => x instanceof HTMLSelectElement ? x : null
+
+///|
+pub extern "js" fn HTMLElement::to_html_dialog_element(
+  self : HTMLElement
+) -> @js.Nullable[HTMLDialogElement] =
+  #| (x) => x instanceof HTMLDialogElement ? x : null
+
+///|
+pub extern "js" fn HTMLElement::set_style(
+  self : HTMLElement,
+  key : String,
+  value : String
+) -> Unit =
+  #| (self,key,value) => self.style[key] = value
+
+///|
+pub extern "js" fn HTMLElement::remove_style(self : HTMLElement, key : String) =
+  #| (self,key) => self.style[key] = ''
+
+///|
+extern type HTMLInputElement
+
+///|
+pub extern "js" fn HTMLInputElement::value(self : HTMLInputElement) -> String = "(self) => self.value"
+
+///|
+extern type HTMLSelectElement
+
+///|
+pub extern "js" fn HTMLSelectElement::value(self : HTMLSelectElement) -> String = "(self) => self.value"
+
+///|
+extern type HTMLDialogElement
+
+///|
+pub extern "js" fn HTMLDialogElement::open(self : HTMLDialogElement) -> Bool = "(self) => self.open"
+
+///|
+pub extern "js" fn HTMLDialogElement::return_value(
+  self : HTMLDialogElement
+) -> String = "(self) => self.returnValue"
+
+///|
+pub extern "js" fn HTMLDialogElement::close(
+  self : HTMLDialogElement,
+  return_value~ : @js.Optional[String] = @js.Optional::undefined()
+) = "(self,returnValue) => self.close(returnValue)"
+
+///|
+pub extern "js" fn HTMLDialogElement::request_close(
+  self : HTMLDialogElement,
+  return_value~ : @js.Optional[String] = @js.Optional::undefined()
+) = "(self, returnValue) => self.requestClose(returnValue)"
+
+///|
+pub extern "js" fn HTMLDialogElement::show(self : HTMLDialogElement) = "(self) => self.show()"
+
+///|
+pub extern "js" fn HTMLDialogElement::show_modal(self : HTMLDialogElement) = "(self) => self.showModal()"
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

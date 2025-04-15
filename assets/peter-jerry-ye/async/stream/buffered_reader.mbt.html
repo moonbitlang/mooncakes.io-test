@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">// Copyright 2025 International Digital Economy Academy
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+///| A reader that buffers the input stream and provides line reading capabilities.
+pub struct BufferedReader {
+  stream : &Reader
+  mut buffer : String
+  mut offset : UInt
+  mut len : UInt
+}
+
+///| Create a buffered reader from a reader
+pub fn buffered_reader(stream : &Reader) -> BufferedReader {
+  { stream, buffer: "", offset: 0, len: 0 }
+}
+
+///|
+pub impl Closable for BufferedReader with closed(self) {
+  self.stream.closed() && self.len == 0
+}
+
+///|
+pub impl Closable for BufferedReader with close(self) {
+  self.stream.close()
+  self.buffer = ""
+  self.offset = 0
+  self.len = 0
+}
+
+///|
+pub impl Reader for BufferedReader with readable(self) {
+  self.stream.readable() || self.len > 0
+}
+
+///|
+pub impl Reader for BufferedReader with read(self, size) {
+  @promise.spawn(async fn(_defer) {
+    // Only handles requests within uint
+    let size = size.to_uint()
+    let builder = StringBuilder::new()
+    if self.len > size {
+      builder.write_substring(
+        self.buffer,
+        self.offset.reinterpret_as_int(),
+        size.reinterpret_as_int(),
+      )
+      self.offset += size
+      self.len -= size
+    } else if self.len > 0 {
+      builder.write_substring(
+        self.buffer,
+        self.offset.reinterpret_as_int(),
+        self.len.reinterpret_as_int(),
+      )
+      self.buffer = ""
+      self.offset = 0
+      self.len = 0
+    }
+    if self.stream.readable() {
+      builder.write_string(
+        self.stream.read((size - self.len).to_uint64()).await!!(),
+      )
+    }
+    builder.to_string()
+  })
+}
+
+///|
+pub fn BufferedReader::read_line(self : BufferedReader) -> @promise.T[String] {
+  @promise.spawn(async fn(_defer) {
+    let result = StringBuilder::new()
+    if split_line(self.buffer, self.offset) is Some((line, rest)) {
+      self.buffer = rest
+      self.offset = 0
+      self.len = rest.length().reinterpret_as_uint()
+      return line
+    } else {
+      result.write_substring(
+        self.buffer,
+        self.offset.reinterpret_as_int(),
+        self.len.reinterpret_as_int(),
+      )
+    }
+    while self.readable() {
+      let next_str = self.stream.read(1024).await!!()
+      if split_line(next_str, 0) is Some((line, rest)) {
+        result.write_string(line)
+        self.buffer = rest
+        self.offset = 0
+        self.len = rest.length().reinterpret_as_uint()
+        return result.to_string()
+      } else {
+        result.write_string(next_str)
+      }
+    }
+    result.to_string()
+  })
+}
+
+///|
+fn split_line(str : String, start_offset : UInt) -> (String, String)? {
+  let mut index = start_offset.reinterpret_as_int()
+  for ch in str.view(start_offset=start_offset.reinterpret_as_int()) {
+    if ch == '\n' {
+      let line = str.substring(
+        start=start_offset.reinterpret_as_int(),
+        end=index,
+      )
+      let rest = str.substring(start=index + 1)
+      break Some((line, rest))
+    } else if ch == '\r' {
+      // Check if the next character is '\n'
+      let next_index = index + 1
+      if next_index < str.length() && str.char_at(next_index) == '\n' {
+        let line = str.substring(
+          start=start_offset.reinterpret_as_int(),
+          end=index,
+        )
+        let rest = str.substring(start=index + 2)
+        break Some((line, rest))
+      } else {
+        let line = str.substring(
+          start=start_offset.reinterpret_as_int(),
+          end=index,
+        )
+        let rest = str.substring(start=index + 1)
+        break Some((line, rest))
+      }
+    }
+    // Handle surrogate pairs
+    if ch.to_int() < 0x10000 {
+      index += 1
+    } else {
+      index += 2
+    }
+  } else {
+    None
+  }
+}
+
+///|
+test "split line" {
+  let str = "Hello, world!\nThis is a test.\r\nAnother line."
+  let (line, rest) = split_line(str, 0).unwrap()
+  inspect!(line, content="Hello, world!")
+  inspect!(rest, content="This is a test.\r\nAnother line.")
+  let (line, rest) = split_line(str, 14).unwrap()
+  inspect!(line, content="This is a test.")
+  inspect!(rest, content="Another line.")
+  let (line, rest) = split_line(str, 30).unwrap()
+  inspect!(line, content="")
+  inspect!(rest, content="Another line.")
+  inspect!(split_line(str, 31), content="None")
+}
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

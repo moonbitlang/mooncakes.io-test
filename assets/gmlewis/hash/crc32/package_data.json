@@ -1,0 +1,111 @@
+{
+  "name": "gmlewis/hash/crc32",
+  "traits": [],
+  "types": [
+    {
+      "name": "Digest",
+      "docstring": "",
+      "signature": "type Digest",
+      "loc": {
+        "path": "gmlewis/hash/crc32",
+        "file": "crc32.mbt",
+        "line": 10,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Digest", "path": "gmlewis/hash/crc32" },
+            "arguments": []
+          },
+          "trait": { "name": "Hash32", "path": "gmlewis/hash" },
+          "methods": [
+            {
+              "name": "block_size",
+              "docstring": "",
+              "signature": "fn block_size(_self : <a href=\"gmlewis/hash/crc32#Digest\">Digest</a>) -> Int",
+              "loc": {
+                "path": "gmlewis/hash/crc32",
+                "file": "crc32.mbt",
+                "line": 64,
+                "column": 39
+              }
+            },
+            {
+              "name": "reset",
+              "docstring": "",
+              "signature": "fn reset(self : <a href=\"gmlewis/hash/crc32#Digest\">Digest</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/hash/crc32",
+                "file": "crc32.mbt",
+                "line": 54,
+                "column": 39
+              }
+            },
+            {
+              "name": "size",
+              "docstring": "",
+              "signature": "fn size(_self : <a href=\"gmlewis/hash/crc32#Digest\">Digest</a>) -> Int",
+              "loc": {
+                "path": "gmlewis/hash/crc32",
+                "file": "crc32.mbt",
+                "line": 59,
+                "column": 39
+              }
+            },
+            {
+              "name": "sum",
+              "docstring": "",
+              "signature": "fn sum(self : <a href=\"gmlewis/hash/crc32#Digest\">Digest</a>, p : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]",
+              "loc": {
+                "path": "gmlewis/hash/crc32",
+                "file": "crc32.mbt",
+                "line": 42,
+                "column": 39
+              }
+            },
+            {
+              "name": "sum32",
+              "docstring": "\n `sum32` returns the final crc32 as a UInt.",
+              "signature": "fn sum32(self : <a href=\"gmlewis/hash/crc32#Digest\">Digest</a>) -> UInt",
+              "loc": {
+                "path": "gmlewis/hash/crc32",
+                "file": "crc32.mbt",
+                "line": 26,
+                "column": 39
+              }
+            },
+            {
+              "name": "write",
+              "docstring": "\n `write` writes `p` to the digest.",
+              "signature": "fn write(self : <a href=\"gmlewis/hash/crc32#Digest\">Digest</a>, p : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/hash/crc32",
+                "file": "crc32.mbt",
+                "line": 32,
+                "column": 39
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "new",
+      "docstring": "\n `new` returns a new, reset Digest, ready to sum.",
+      "signature": "fn new() -> <a href=\"gmlewis/hash/crc32#Digest\">Digest</a>",
+      "loc": {
+        "path": "gmlewis/hash/crc32",
+        "file": "crc32.mbt",
+        "line": 16,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

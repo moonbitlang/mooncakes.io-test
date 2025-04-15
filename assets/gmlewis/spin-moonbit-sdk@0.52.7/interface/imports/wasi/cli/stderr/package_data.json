@@ -1,0 +1,20 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/stderr",
+  "traits": [],
+  "types": [],
+  "typealias": [],
+  "values": [
+    {
+      "name": "get_stderr",
+      "docstring": "",
+      "signature": "fn get_stderr() -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams#OutputStream\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams.OutputStream</a>",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/cli/stderr",
+        "file": "top.mbt",
+        "line": 4,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

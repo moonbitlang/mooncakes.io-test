@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "channel",
+  "module_path": "peter-jerry-ye/async",
+  "readme_content": "",
+  "package_data": "peter-jerry-ye/async/channel/package_data.json",
+  "source_files": [ "top.mbt" ]
+}

@@ -1,0 +1,158 @@
+{
+  "name": "gmlewis/b2",
+  "traits": [],
+  "types": [
+    {
+      "name": "Client",
+      "docstring": "\n `Client` represents an authorized b2 client.",
+      "signature": "type Client",
+      "loc": {
+        "path": "gmlewis/b2",
+        "file": "client.mbt",
+        "line": 3,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "consume_object",
+          "docstring": "\n `consume_object` performs a GET to retrieve the b2 object, consumes it\n and optionally returns the object's hash using the provided HashFunc.",
+          "signature": "fn <a href=\"gmlewis/b2#Client\">Client</a>::consume_object(self : <a href=\"gmlewis/b2#Client\">Client</a>, filename : String, hash~ : <a href=\"gmlewis/spin-moonbit-sdk/common#HashFunc\">@gmlewis/spin-moonbit-sdk/common.HashFunc</a>?, debug~ : Bool = ..) -> String!<a href=\"gmlewis/b2#ClientError\">ClientError</a>",
+          "loc": {
+            "path": "gmlewis/b2",
+            "file": "consume-object.mbt",
+            "line": 4,
+            "column": 8
+          }
+        },
+        {
+          "name": "get_download_authorization_url",
+          "docstring": "\n `get_download_authorization_url` returns a URL that can be used in an\n https GET call to download any files in a bucket with the given `file_name_prefix`.\n Note that if `file_name_prefix` needs to be escaped for suitability within a query parameter,\n you must do that first before calling this function.",
+          "signature": "fn <a href=\"gmlewis/b2#Client\">Client</a>::get_download_authorization_url(self : <a href=\"gmlewis/b2#Client\">Client</a>, file_name_prefix : String, valid_duration_in_seconds~ : Int = .., debug~ : Bool = ..) -> String!<a href=\"gmlewis/b2#ClientError\">ClientError</a>",
+          "loc": {
+            "path": "gmlewis/b2",
+            "file": "get-download-authorization-url.mbt",
+            "line": 6,
+            "column": 8
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "\n `Client::new` returns a new client to communicate with the b2 (Backblaze) API\n for the provided `bucket_id` and `bucket_name`.",
+          "signature": "fn <a href=\"gmlewis/b2#Client\">Client</a>::new(key_id : String, key_secret : String, bucket_id : String, bucket_name : String, debug~ : Bool = ..) -> <a href=\"gmlewis/b2#Client\">Client</a>!<a href=\"gmlewis/b2#ClientError\">ClientError</a>",
+          "loc": {
+            "path": "gmlewis/b2",
+            "file": "b2.mbt",
+            "line": 10,
+            "column": 16
+          }
+        },
+        {
+          "name": "stream_object",
+          "docstring": "\n `stream_object` performs a GET to retrieve the b2 object, streams it to\n its https `response_out`, and optionally returns the object's hash using the\n provided HashFunc.",
+          "signature": "fn <a href=\"gmlewis/b2#Client\">Client</a>::stream_object(self : <a href=\"gmlewis/b2#Client\">Client</a>, filename : String, response_out : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ResponseOutparam</a>, hash~ : <a href=\"gmlewis/spin-moonbit-sdk/common#HashFunc\">@gmlewis/spin-moonbit-sdk/common.HashFunc</a>?, debug~ : Bool = ..) -> String!<a href=\"gmlewis/b2#ClientError\">ClientError</a>",
+          "loc": {
+            "path": "gmlewis/b2",
+            "file": "stream-object.mbt",
+            "line": 5,
+            "column": 8
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Client", "path": "gmlewis/b2" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/b2#Client\">Client</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/b2",
+                "file": "client.mbt",
+                "line": 16,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ClientError",
+      "docstring": "",
+      "signature": "pub(all) type! ClientError String\n",
+      "loc": {
+        "path": "gmlewis/b2",
+        "file": "b2.mbt",
+        "line": 5,
+        "column": 16
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "ClientError", "path": "gmlewis/b2" },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/b2#ClientError\">ClientError</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/b2",
+                "file": "b2.mbt",
+                "line": 5,
+                "column": 42
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "consume_object",
+      "docstring": "\n `consume_object` performs a GET to retrieve the b2 object, consumes it\n and optionally returns the object's hash using the provided HashFunc.",
+      "signature": "fn consume_object(self : <a href=\"gmlewis/b2#Client\">Client</a>, filename : String, hash~ : <a href=\"gmlewis/spin-moonbit-sdk/common#HashFunc\">@gmlewis/spin-moonbit-sdk/common.HashFunc</a>?, debug~ : Bool = ..) -> String!<a href=\"gmlewis/b2#ClientError\">ClientError</a>",
+      "loc": {
+        "path": "gmlewis/b2",
+        "file": "consume-object.mbt",
+        "line": 4,
+        "column": 8
+      }
+    },
+    {
+      "name": "get_download_authorization_url",
+      "docstring": "\n `get_download_authorization_url` returns a URL that can be used in an\n https GET call to download any files in a bucket with the given `file_name_prefix`.\n Note that if `file_name_prefix` needs to be escaped for suitability within a query parameter,\n you must do that first before calling this function.",
+      "signature": "fn get_download_authorization_url(self : <a href=\"gmlewis/b2#Client\">Client</a>, file_name_prefix : String, valid_duration_in_seconds~ : Int = .., debug~ : Bool = ..) -> String!<a href=\"gmlewis/b2#ClientError\">ClientError</a>",
+      "loc": {
+        "path": "gmlewis/b2",
+        "file": "get-download-authorization-url.mbt",
+        "line": 6,
+        "column": 8
+      }
+    },
+    {
+      "name": "stream_object",
+      "docstring": "\n `stream_object` performs a GET to retrieve the b2 object, streams it to\n its https `response_out`, and optionally returns the object's hash using the\n provided HashFunc.",
+      "signature": "fn stream_object(self : <a href=\"gmlewis/b2#Client\">Client</a>, filename : String, response_out : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types.ResponseOutparam</a>, hash~ : <a href=\"gmlewis/spin-moonbit-sdk/common#HashFunc\">@gmlewis/spin-moonbit-sdk/common.HashFunc</a>?, debug~ : Bool = ..) -> String!<a href=\"gmlewis/b2#ClientError\">ClientError</a>",
+      "loc": {
+        "path": "gmlewis/b2",
+        "file": "stream-object.mbt",
+        "line": 5,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

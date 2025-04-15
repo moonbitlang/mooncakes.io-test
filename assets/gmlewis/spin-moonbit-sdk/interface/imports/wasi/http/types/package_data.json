@@ -1,0 +1,1819 @@
+{
+  "name": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+  "traits": [],
+  "types": [
+    {
+      "name": "DnsErrorPayload",
+      "docstring": "\n Defines the case payload type for `DNS-error` above:",
+      "signature": "pub(all) struct DnsErrorPayload {\n  rcode : String?\n  info_code : UInt?\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 27,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "DnsErrorPayload",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#DnsErrorPayload\">DnsErrorPayload</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#DnsErrorPayload\">DnsErrorPayload</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 30,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "DnsErrorPayload",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#DnsErrorPayload\">DnsErrorPayload</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 30,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ErrorCode",
+      "docstring": "\n These cases are inspired by the IANA HTTP Proxy Error Types:\n https://www.iana.org/assignments/http-proxy-status/http-proxy-status.xhtml#table-http-proxy-error-types",
+      "signature": "pub(all) enum ErrorCode {\n  DnsTimeout\n  DnsError(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#DnsErrorPayload\">DnsErrorPayload</a>)\n  DestinationNotFound\n  DestinationUnavailable\n  DestinationIpProhibited\n  DestinationIpUnroutable\n  ConnectionRefused\n  ConnectionTerminated\n  ConnectionTimeout\n  ConnectionReadTimeout\n  ConnectionWriteTimeout\n  ConnectionLimitReached\n  TlsProtocolError\n  TlsCertificateError\n  TlsAlertReceived(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#TlsAlertReceivedPayload\">TlsAlertReceivedPayload</a>)\n  HttpRequestDenied\n  HttpRequestLengthRequired\n  HttpRequestBodySize(UInt64?)\n  HttpRequestMethodInvalid\n  HttpRequestUriInvalid\n  HttpRequestUriTooLong\n  HttpRequestHeaderSectionSize(UInt?)\n  HttpRequestHeaderSize(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FieldSizePayload\">FieldSizePayload</a>?)\n  HttpRequestTrailerSectionSize(UInt?)\n  HttpRequestTrailerSize(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FieldSizePayload\">FieldSizePayload</a>)\n  HttpResponseIncomplete\n  HttpResponseHeaderSectionSize(UInt?)\n  HttpResponseHeaderSize(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FieldSizePayload\">FieldSizePayload</a>)\n  HttpResponseBodySize(UInt64?)\n  HttpResponseTrailerSectionSize(UInt?)\n  HttpResponseTrailerSize(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FieldSizePayload\">FieldSizePayload</a>)\n  HttpResponseTransferCoding(String?)\n  HttpResponseContentCoding(String?)\n  HttpResponseTimeout\n  HttpUpgradeFailed\n  HttpProtocolError\n  LoopDetected\n  ConfigurationError\n  InternalError(String?)\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 49,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "ErrorCode",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">ErrorCode</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">ErrorCode</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 89,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "ErrorCode",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">ErrorCode</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 89,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FieldSizePayload",
+      "docstring": "\n Defines the case payload type for `HTTP-response-{header,trailer}-size` above:",
+      "signature": "pub(all) struct FieldSizePayload {\n  field_name : String?\n  field_size : UInt?\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 41,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "FieldSizePayload",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FieldSizePayload\">FieldSizePayload</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FieldSizePayload\">FieldSizePayload</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 44,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "FieldSizePayload",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FieldSizePayload\">FieldSizePayload</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 44,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fields",
+      "docstring": "\n This following block defines the `fields` resource which corresponds to\n HTTP standard Fields. Fields are a common representation used for both\n Headers and Trailers.\n\n A `fields` may be mutable or immutable. A `fields` created using the\n constructor, `from-list`, or `clone` will be mutable, but a `fields`\n resource given by other means (including, but not limited to,\n `incoming-request.headers`, `outgoing-request.headers`) might be be\n immutable. In an immutable fields, the `set`, `append`, and `delete`\n operations will fail with `header-error.immutable`.",
+      "signature": "pub(all) type Fields Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 111,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "append",
+          "docstring": "\n Append a value for a key. Does not change or delete any existing\n values for that key.\n\n Fails with `header-error.immutable` if the `fields` are immutable.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::append(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>, name : String, value : Bytes) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#HeaderError\">HeaderError</a>]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 747,
+            "column": 16
+          }
+        },
+        {
+          "name": "clone",
+          "docstring": "\n Make a deep copy of the Fields. Equivelant in behavior to calling the\n `fields` constructor on the return value of `entries`. The resulting\n `fields` is mutable.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::clone(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 806,
+            "column": 16
+          }
+        },
+        {
+          "name": "delete",
+          "docstring": "\n Delete all values for a key. Does nothing if no values for the key\n exist.\n\n Fails with `header-error.immutable` if the `fields` are immutable.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::delete(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>, name : String) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#HeaderError\">HeaderError</a>]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 713,
+            "column": 16
+          }
+        },
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 117,
+            "column": 16
+          }
+        },
+        {
+          "name": "entries",
+          "docstring": "\n Retrieve the full set of keys and values in the Fields. Like the\n constructor, the list represents each key-value pair.\n\n The outer list represents each key-value pair in the Fields. Keys\n which have multiple values are represented by multiple entries in this\n list with the same key.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::entries(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[(String, Bytes)]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 787,
+            "column": 16
+          }
+        },
+        {
+          "name": "fields",
+          "docstring": "\n Construct an empty HTTP Fields.\n\n The resulting `fields` is mutable.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::fields() -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 561,
+            "column": 16
+          }
+        },
+        {
+          "name": "from_list",
+          "docstring": "\n Construct an HTTP Fields.\n\n The resulting `fields` is mutable.\n\n The list represents each key-value pair in the Fields. Keys\n which have multiple values are represented by multiple entries in this\n list with the same key.\n\n The tuple is a pair of the field key, represented as a string, and\n Value, represented as a list of bytes. In a valid Fields, all keys\n and values are valid UTF-8 strings. However, values are not always\n well-formed, so they are represented as a raw list of bytes.\n\n An error result will be returned if any header or value was\n syntactically invalid, or if a header was forbidden.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::from_list(entries : <a href=\"moonbitlang/core/array#Array\">Array</a>[(String, Bytes)]) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#HeaderError\">HeaderError</a>]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 582,
+            "column": 16
+          }
+        },
+        {
+          "name": "get",
+          "docstring": "\n Get all of the values corresponding to a key. If the key is not present\n in this `fields`, an empty list is returned. However, if the key is\n present but empty, this is represented by a list with one or more\n empty field-values present.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::get(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>, name : String) -> <a href=\"moonbitlang/core/array#Array\">Array</a>[Bytes]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 625,
+            "column": 16
+          }
+        },
+        {
+          "name": "has",
+          "docstring": "\n Returns `true` when the key is present in this `fields`. If the key is\n syntactically invalid, `false` is returned.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::has(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>, name : String) -> Bool",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 648,
+            "column": 16
+          }
+        },
+        {
+          "name": "set",
+          "docstring": "\n Set all of the values for a key. Clears any existing values for that\n key, if they have been set.\n\n Fails with `header-error.immutable` if the `fields` are immutable.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>::set(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>, name : String, value : <a href=\"moonbitlang/core/array#Array\">Array</a>[Bytes]) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#HeaderError\">HeaderError</a>]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 663,
+            "column": 16
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Fields",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 111,
+                "column": 39
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Fields",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 111,
+                "column": 33
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FutureIncomingResponse",
+      "docstring": "\n Represents a future which may eventaully return an incoming HTTP\n Response, or an error.\n\n This resource is returned by the `wasi:http/outgoing-handler` interface to\n provide the HTTP Response corresponding to the sent Request.",
+      "signature": "pub(all) type FutureIncomingResponse Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 270,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureIncomingResponse\">FutureIncomingResponse</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureIncomingResponse\">FutureIncomingResponse</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 276,
+            "column": 32
+          }
+        },
+        {
+          "name": "get",
+          "docstring": "\n Returns the incoming HTTP Response, or an error, once one is ready.\n\n The outer `option` represents future readiness. Users can wait on this\n `option` to become `some` using the `subscribe` method.\n\n The outer `result` is used to retrieve the response or error at most\n once. It will be success on the first call in which the outer option\n is `some`, and error on subsequent calls.\n\n The inner `result` represents that either the incoming HTTP Response\n status and headers have recieved successfully, or that an error\n occured. Errors may also occur while consuming the response body,\n but those will be reported by the `incoming-body` and its\n `output-stream` child.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureIncomingResponse\">FutureIncomingResponse</a>::get(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureIncomingResponse\">FutureIncomingResponse</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">ErrorCode</a>], Unit]?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 2489,
+            "column": 32
+          }
+        },
+        {
+          "name": "subscribe",
+          "docstring": "\n Returns a pollable which becomes ready when either the Response has\n been received, or an error has occured. When this pollable is ready,\n the `get` method will return `some`.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureIncomingResponse\">FutureIncomingResponse</a>::subscribe(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureIncomingResponse\">FutureIncomingResponse</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/poll#Pollable\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/poll.Pollable</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 2467,
+            "column": 32
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "FutureIncomingResponse",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureIncomingResponse\">FutureIncomingResponse</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureIncomingResponse\">FutureIncomingResponse</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 270,
+                "column": 55
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "FutureIncomingResponse",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureIncomingResponse\">FutureIncomingResponse</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 270,
+                "column": 49
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FutureTrailers",
+      "docstring": "\n Represents a future which may eventaully return trailers, or an error.\n\n In the case that the incoming HTTP Request or Response did not have any\n trailers, this future will resolve to the empty set of trailers once the\n complete Request or Response body has been received.",
+      "signature": "pub(all) type FutureTrailers Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 215,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 221,
+            "column": 24
+          }
+        },
+        {
+          "name": "get",
+          "docstring": "\n Returns the contents of the trailers, or an error which occured,\n once the future is ready.\n\n The outer `option` represents future readiness. Users can wait on this\n `option` to become `some` using the `subscribe` method.\n\n The outer `result` is used to retrieve the trailers or error at most\n once. It will be success on the first call in which the outer option\n is `some`, and error on subsequent calls.\n\n The inner `result` represents that either the HTTP Request or Response\n body, as well as any trailers, were received successfully, or that an\n error occured receiving them. The optional `trailers` indicates whether\n or not trailers were present in the body.\n\n When some `trailers` are returned by this method, the `trailers`\n resource is immutable, and a child. Use of the `set`, `append`, or\n `delete` methods will return an error, and the resource must be\n dropped before the parent `future-trailers` is dropped.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>::get(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>?, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">ErrorCode</a>], Unit]?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1752,
+            "column": 24
+          }
+        },
+        {
+          "name": "subscribe",
+          "docstring": "\n Returns a pollable which becomes ready when either the trailers have\n been received, or an error has occured. When this pollable is ready,\n the `get` method will return `some`.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>::subscribe(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/poll#Pollable\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/poll.Pollable</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1727,
+            "column": 24
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "FutureTrailers",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 215,
+                "column": 47
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "FutureTrailers",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 215,
+                "column": 41
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HeaderError",
+      "docstring": "\n This type enumerates the different kinds of errors that may occur when\n setting or appending to a `fields` resource.",
+      "signature": "pub(all) enum HeaderError {\n  InvalidSyntax\n  Forbidden\n  Immutable\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 94,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "HeaderError",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#HeaderError\">HeaderError</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#HeaderError\">HeaderError</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 98,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "HeaderError",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#HeaderError\">HeaderError</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 98,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IncomingBody",
+      "docstring": "\n Represents an incoming HTTP Request or Response's Body.\n\n A body has both its contents - a stream of bytes - and a (possibly\n empty) set of trailers, indicating that the full contents of the\n body have been received. This resource represents the contents as\n an `input-stream` and the delivery of trailers as a `future-trailers`,\n and ensures that the user of this interface may only be consuming either\n the body contents or waiting on trailers at any given time.",
+      "signature": "pub(all) type IncomingBody Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 199,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 205,
+            "column": 22
+          }
+        },
+        {
+          "name": "finish",
+          "docstring": "\n Takes ownership of `incoming-body`, and returns a `future-trailers`.\n This function will trap if the `input-stream` child is still alive.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>::finish(this : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#FutureTrailers\">FutureTrailers</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1718,
+            "column": 22
+          }
+        },
+        {
+          "name": "stream",
+          "docstring": "\n Returns the contents of the body, as a stream of bytes.\n\n Returns success on first call: the stream representing the contents\n can be retrieved at most once. Subsequent calls will return error.\n\n The returned `input-stream` resource is a child: it must be dropped\n before the parent `incoming-body` is dropped, or consumed by\n `incoming-body.finish`.\n\n This invariant ensures that the implementation can determine whether\n the user is consuming the contents of the body, waiting on the\n `future-trailers` to be ready, or neither. This allows for network\n backpressure is to be applied when the user is consuming the body,\n and for that backpressure to not inhibit delivery of the trailers if\n the user does not read the entire body.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>::stream(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams#InputStream\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams.InputStream</a>, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1698,
+            "column": 22
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "IncomingBody",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 199,
+                "column": 45
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "IncomingBody",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 199,
+                "column": 39
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IncomingRequest",
+      "docstring": "\n Represents an incoming HTTP Request.",
+      "signature": "pub(all) type IncomingRequest Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 123,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "authority",
+          "docstring": "\n Returns the authority from the request, if it was present.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>::authority(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>) -> String?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 880,
+            "column": 25
+          }
+        },
+        {
+          "name": "consume",
+          "docstring": "\n Gives the `incoming-body` associated with this request. Will only\n return success at most once, and subsequent calls will return error.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>::consume(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 912,
+            "column": 25
+          }
+        },
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 129,
+            "column": 25
+          }
+        },
+        {
+          "name": "headers",
+          "docstring": "\n Get the `headers` associated with the request.\n\n The returned `headers` resource is immutable: `set`, `append`, and\n `delete` operations will fail with `header-error.immutable`.\n\n The `headers` returned are a child resource: it must be dropped before\n the parent `incoming-request` is dropped. Dropping this\n `incoming-request` before all children are dropped will trap.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>::headers(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 904,
+            "column": 25
+          }
+        },
+        {
+          "name": "http_method",
+          "docstring": "\n Returns the method of the incoming request.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>::http_method(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Method\">Method</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 813,
+            "column": 25
+          }
+        },
+        {
+          "name": "path_with_query",
+          "docstring": "\n Returns the path with query parameters from the request, as a string.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>::path_with_query(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>) -> String?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 838,
+            "column": 25
+          }
+        },
+        {
+          "name": "scheme",
+          "docstring": "\n Returns the protocol scheme from the request.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>::scheme(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Scheme\">Scheme</a>?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 855,
+            "column": 25
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "IncomingRequest",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 123,
+                "column": 48
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "IncomingRequest",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingRequest\">IncomingRequest</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 123,
+                "column": 42
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IncomingResponse",
+      "docstring": "\n Represents an incoming HTTP Response.",
+      "signature": "pub(all) type IncomingResponse Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 180,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "consume",
+          "docstring": "\n Returns the incoming body. May be called at most once. Returns error\n if called additional times.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>::consume(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingBody\">IncomingBody</a>, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1668,
+            "column": 26
+          }
+        },
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 186,
+            "column": 26
+          }
+        },
+        {
+          "name": "headers",
+          "docstring": "\n Returns the headers from the incoming response.\n\n The returned `headers` resource is immutable: `set`, `append`, and\n `delete` operations will fail with `header-error.immutable`.\n\n This headers resource is a child: it must be dropped before the parent\n `incoming-response` is dropped.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>::headers(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1660,
+            "column": 26
+          }
+        },
+        {
+          "name": "status",
+          "docstring": "\n Returns the status code from the incoming response.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>::status(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>) -> UInt",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1647,
+            "column": 26
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "IncomingResponse",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 180,
+                "column": 49
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "IncomingResponse",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#IncomingResponse\">IncomingResponse</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 180,
+                "column": 43
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Method",
+      "docstring": "\n This type corresponds to HTTP standard Methods.",
+      "signature": "pub(all) enum Method {\n  Get\n  Head\n  Post\n  Put\n  Delete\n  Connect\n  Options\n  Trace\n  Patch\n  Other(String)\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 4,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Method",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Method\">Method</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Method\">Method</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 15,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Method",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Method\">Method</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 15,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OutgoingBody",
+      "docstring": "\n Represents an outgoing HTTP Request or Response's Body.\n\n A body has both its contents - a stream of bytes - and a (possibly\n empty) set of trailers, inducating the full contents of the body\n have been sent. This resource represents the contents as an\n `output-stream` child resource, and the completion of the body (with\n optional trailers) with a static function that consumes the\n `outgoing-body` resource, and ensures that the user of this interface\n may not write to the body contents after the body has been finished.\n\n If the user code drops this resource, as opposed to calling the static\n method `finish`, the implementation should treat the body as incomplete,\n and that an error has occured. The implementation should propogate this\n error to the HTTP protocol by whatever means it has available,\n including: corrupting the body on the wire, aborting the associated\n Request, or sending a late status code for the Response.",
+      "signature": "pub(all) type OutgoingBody Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 254,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 260,
+            "column": 22
+          }
+        },
+        {
+          "name": "finish",
+          "docstring": "\n Finalize an outgoing body, optionally providing trailers. This must be\n called to signal that the response is complete. If the `outgoing-body`\n is dropped without calling `outgoing-body.finalize`, the implementation\n should treat the body as corrupted.\n\n Fails if the body's `outgoing-request` or `outgoing-response` was\n constructed with a Content-Length header, and the contents written\n to the body (via `write`) does not match the value given in the\n Content-Length.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>::finish(this : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>, trailers : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>?) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">ErrorCode</a>]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 2191,
+            "column": 22
+          }
+        },
+        {
+          "name": "write",
+          "docstring": "\n Returns a stream for writing the body contents.\n\n The returned `output-stream` is a child resource: it must be dropped\n before the parent `outgoing-body` resource is dropped (or finished),\n otherwise the `outgoing-body` drop or `finish` will trap.\n\n Returns success on the first call: the `output-stream` resource for\n this `outgoing-body` may be retrieved at most once. Subsequent calls\n will return error.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>::write(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams#OutputStream\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/streams.OutputStream</a>, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 2164,
+            "column": 22
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "OutgoingBody",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 254,
+                "column": 45
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "OutgoingBody",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 254,
+                "column": 39
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OutgoingRequest",
+      "docstring": "\n Represents an outgoing HTTP Request.",
+      "signature": "pub(all) type OutgoingRequest Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 135,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "authority",
+          "docstring": "\n Get the HTTP Authority for the Request. A value of `none` may be used\n with Related Schemes which do not require an Authority. The HTTP and\n HTTPS schemes always require an authority.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::authority(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>) -> String?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1152,
+            "column": 25
+          }
+        },
+        {
+          "name": "body",
+          "docstring": "\n Returns the resource corresponding to the outgoing Body for this\n Request.\n\n Returns success on the first call: the `outgoing-body` resource for\n this `outgoing-request` can be retrieved at most once. Subsequent\n calls will return error.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::body(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 949,
+            "column": 25
+          }
+        },
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 141,
+            "column": 25
+          }
+        },
+        {
+          "name": "headers",
+          "docstring": "\n Get the headers associated with the Request.\n\n The returned `headers` resource is immutable: `set`, `append`, and\n `delete` operations will fail with `header-error.immutable`.\n\n This headers resource is a child: it must be dropped before the parent\n `outgoing-request` is dropped, or its ownership is transfered to\n another component by e.g. `outgoing-handler.handle`.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::headers(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1210,
+            "column": 25
+          }
+        },
+        {
+          "name": "http_method",
+          "docstring": "\n Get the Method for the Request.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::http_method(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Method\">Method</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 965,
+            "column": 25
+          }
+        },
+        {
+          "name": "outgoing_request",
+          "docstring": "\n Construct a new `outgoing-request` with a default `method` of `GET`, and\n `none` values for `path-with-query`, `scheme`, and `authority`.\n\n * `headers` is the HTTP Headers for the Request.\n\n It is possible to construct, or manipulate with the accessor functions\n below, an `outgoing-request` with an invalid combination of `scheme`\n and `authority`, or `headers` which are not permitted to be sent.\n It is the obligation of the `outgoing-handler.handle` implementation\n to reject invalid constructions of `outgoing-request`.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::outgoing_request(headers : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 937,
+            "column": 25
+          }
+        },
+        {
+          "name": "path_with_query",
+          "docstring": "\n Get the combination of the HTTP Path and Query for the Request.\n When `none`, this represents an empty Path and empty Query.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::path_with_query(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>) -> String?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1032,
+            "column": 25
+          }
+        },
+        {
+          "name": "scheme",
+          "docstring": "\n Get the HTTP Related Scheme for the Request. When `none`, the\n implementation may choose an appropriate default scheme.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::scheme(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Scheme\">Scheme</a>?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1083,
+            "column": 25
+          }
+        },
+        {
+          "name": "set_authority",
+          "docstring": "\n Set the HTTP Authority for the Request. A value of `none` may be used\n with Related Schemes which do not require an Authority. The HTTP and\n HTTPS schemes always require an authority. Fails if the string given is\n not a syntactically valid uri authority.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::set_authority(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>, authority : String?) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1172,
+            "column": 25
+          }
+        },
+        {
+          "name": "set_method",
+          "docstring": "\n Set the Method for the Request. Fails if the string present in a\n `method.other` argument is not a syntactically valid method.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::set_method(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>, http_method : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Method\">Method</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 991,
+            "column": 25
+          }
+        },
+        {
+          "name": "set_path_with_query",
+          "docstring": "\n Set the combination of the HTTP Path and Query for the Request.\n When `none`, this represents an empty Path and empty Query. Fails if the\n string given is not a syntactically valid path and query uri component.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::set_path_with_query(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>, path_with_query : String?) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1051,
+            "column": 25
+          }
+        },
+        {
+          "name": "set_scheme",
+          "docstring": "\n Set the HTTP Related Scheme for the Request. When `none`, the\n implementation may choose an appropriate default scheme. Fails if the\n string given is not a syntactically valid uri scheme.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>::set_scheme(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>, scheme : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Scheme\">Scheme</a>?) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1110,
+            "column": 25
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "OutgoingRequest",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 135,
+                "column": 48
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "OutgoingRequest",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingRequest\">OutgoingRequest</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 135,
+                "column": 42
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OutgoingResponse",
+      "docstring": "\n Represents an outgoing HTTP Response.",
+      "signature": "pub(all) type OutgoingResponse Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 227,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "body",
+          "docstring": "\n Returns the resource corresponding to the outgoing Body for this Response.\n\n Returns success on the first call: the `outgoing-body` resource for\n this `outgoing-response` can be retrieved at most once. Subsequent\n calls will return error.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>::body(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingBody\">OutgoingBody</a>, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 2140,
+            "column": 26
+          }
+        },
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 233,
+            "column": 26
+          }
+        },
+        {
+          "name": "headers",
+          "docstring": "\n Get the headers associated with the Request.\n\n The returned `headers` resource is immutable: `set`, `append`, and\n `delete` operations will fail with `header-error.immutable`.\n\n This headers resource is a child: it must be dropped before the parent\n `outgoing-request` is dropped, or its ownership is transfered to\n another component by e.g. `outgoing-handler.handle`.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>::headers(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 2129,
+            "column": 26
+          }
+        },
+        {
+          "name": "outgoing_response",
+          "docstring": "\n Construct an `outgoing-response`, with a default `status-code` of `200`.\n If a different `status-code` is needed, it must be set via the\n `set-status-code` method.\n\n * `headers` is the HTTP Headers for the Response.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>::outgoing_response(headers : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Fields\">Fields</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 2087,
+            "column": 26
+          }
+        },
+        {
+          "name": "set_status_code",
+          "docstring": "\n Set the HTTP Status Code for the Response. Fails if the status-code\n given is not a valid http status code.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>::set_status_code(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>, status_code : UInt) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 2104,
+            "column": 26
+          }
+        },
+        {
+          "name": "status_code",
+          "docstring": "\n Get the HTTP Status Code for the Response.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>::status_code(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>) -> UInt",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 2096,
+            "column": 26
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "OutgoingResponse",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 227,
+                "column": 49
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "OutgoingResponse",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 227,
+                "column": 43
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RequestOptions",
+      "docstring": "\n Parameters for making an HTTP Request. Each of these parameters is\n currently an optional timeout applicable to the transport layer of the\n HTTP protocol.\n\n These timeouts are separate from any the user may use to bound a\n blocking call to `wasi:io/poll.poll`.",
+      "signature": "pub(all) type RequestOptions Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 152,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "between_bytes_timeout",
+          "docstring": "\n The timeout for receiving subsequent chunks of bytes in the Response\n body stream.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>::between_bytes_timeout(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>) -> UInt64?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1301,
+            "column": 24
+          }
+        },
+        {
+          "name": "connect_timeout",
+          "docstring": "\n The timeout for the initial connect to the HTTP Server.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>::connect_timeout(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>) -> UInt64?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1224,
+            "column": 24
+          }
+        },
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 158,
+            "column": 24
+          }
+        },
+        {
+          "name": "first_byte_timeout",
+          "docstring": "\n The timeout for receiving the first byte of the Response body.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>::first_byte_timeout(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>) -> UInt64?",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1262,
+            "column": 24
+          }
+        },
+        {
+          "name": "request_options",
+          "docstring": "\n Construct a default `request-options` value.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>::request_options() -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1217,
+            "column": 24
+          }
+        },
+        {
+          "name": "set_between_bytes_timeout",
+          "docstring": "\n Set the timeout for receiving subsequent chunks of bytes in the Response\n body stream. An error return value indicates that this timeout is not\n supported.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>::set_between_bytes_timeout(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>, duration : UInt64?) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1317,
+            "column": 24
+          }
+        },
+        {
+          "name": "set_connect_timeout",
+          "docstring": "\n Set the timeout for the initial connect to the HTTP Server. An error\n return value indicates that this timeout is not supported.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>::set_connect_timeout(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>, duration : UInt64?) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1239,
+            "column": 24
+          }
+        },
+        {
+          "name": "set_first_byte_timeout",
+          "docstring": "\n Set the timeout for receiving the first byte of the Response body. An\n error return value indicates that this timeout is not supported.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>::set_first_byte_timeout(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>, duration : UInt64?) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[Unit, Unit]",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1277,
+            "column": 24
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RequestOptions",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 152,
+                "column": 47
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "RequestOptions",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#RequestOptions\">RequestOptions</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 152,
+                "column": 41
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ResponseOutparam",
+      "docstring": "\n Represents the ability to send an HTTP Response.\n\n This resource is used by the `wasi:http/incoming-handler` interface to\n allow a Response to be sent corresponding to the Request provided as the\n other argument to `incoming-handler.handle`.",
+      "signature": "pub(all) type ResponseOutparam Int",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 168,
+        "column": 15
+      },
+      "methods": [
+        {
+          "name": "drop",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">ResponseOutparam</a>::drop(self : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">ResponseOutparam</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 174,
+            "column": 26
+          }
+        },
+        {
+          "name": "set",
+          "docstring": "\n Set the value of the `response-outparam` to either send a response,\n or indicate an error.\n\n This method consumes the `response-outparam` to ensure that it is\n called at most once. If it is never called, the implementation\n will respond with an error.\n\n The user may provide an `error` to `response` to allow the\n implementation determine how to respond with an HTTP error response.",
+          "signature": "fn <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">ResponseOutparam</a>::set(param : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">ResponseOutparam</a>, response : <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#OutgoingResponse\">OutgoingResponse</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">ErrorCode</a>]) -> Unit",
+          "loc": {
+            "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+            "file": "top.mbt",
+            "line": 1348,
+            "column": 26
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "ResponseOutparam",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">ResponseOutparam</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">ResponseOutparam</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 168,
+                "column": 49
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "ResponseOutparam",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ResponseOutparam\">ResponseOutparam</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 168,
+                "column": 43
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scheme",
+      "docstring": "\n This type corresponds to HTTP standard Related Schemes.",
+      "signature": "pub(all) enum Scheme {\n  Http\n  Https\n  Other(String)\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 19,
+        "column": 15
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Scheme",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Scheme\">Scheme</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Scheme\">Scheme</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 23,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Scheme",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#Scheme\">Scheme</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 23,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TlsAlertReceivedPayload",
+      "docstring": "\n Defines the case payload type for `TLS-alert-received` above:",
+      "signature": "pub(all) struct TlsAlertReceivedPayload {\n  alert_id : Byte?\n  alert_message : String?\n}",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 34,
+        "column": 17
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "TlsAlertReceivedPayload",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "op_equal",
+              "docstring": "automatically derived",
+              "signature": "fn op_equal(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#TlsAlertReceivedPayload\">TlsAlertReceivedPayload</a>, <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#TlsAlertReceivedPayload\">TlsAlertReceivedPayload</a>) -> Bool",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 37,
+                "column": 16
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "TlsAlertReceivedPayload",
+              "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#TlsAlertReceivedPayload\">TlsAlertReceivedPayload</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+                "file": "top.mbt",
+                "line": 37,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "http_error_code",
+      "docstring": "\n Attempts to extract a http-related `error` from the wasi:io `error`\n provided.\n\n Stream operations which return\n `wasi:io/stream/stream-error::last-operation-failed` have a payload of\n type `wasi:io/error/error` with more information about the operation\n that failed. This payload can be passed through to this function to see\n if there's http-related information about the error to return.\n\n Note that this function is fallible because not all io-errors are\n http-related errors.",
+      "signature": "fn http_error_code(err : <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/error#Error_\">@gmlewis/spin-moonbit-sdk/interface/imports/wasi/io/error.Error_</a>) -> <a href=\"gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types#ErrorCode\">ErrorCode</a>?",
+      "loc": {
+        "path": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/http/types",
+        "file": "top.mbt",
+        "line": 292,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

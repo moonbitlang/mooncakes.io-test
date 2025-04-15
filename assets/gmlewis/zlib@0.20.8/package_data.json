@@ -1,0 +1,268 @@
+{
+  "name": "gmlewis/zlib",
+  "traits": [
+    {
+      "name": "@gmlewis/zlib.Resetter",
+      "docstring": "\n Resetter resets a ReadCloser returned by [Reader::new] or [Reader::new_dict]\n to switch to a new underlying Reader. This permits reusing a ReadCloser\n instead of allocating a new one.",
+      "signature": "pub(open) trait @gmlewis/zlib.Resetter {\n  reset(Self, <a href=\"gmlewis/flate#Reader\">@gmlewis/flate.Reader</a>, <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?\n}",
+      "loc": {
+        "path": "gmlewis/zlib",
+        "file": "reader.mbt",
+        "line": 62,
+        "column": 1
+      },
+      "impls": []
+    }
+  ],
+  "types": [
+    {
+      "name": "Reader",
+      "docstring": "",
+      "signature": "type Reader",
+      "loc": {
+        "path": "gmlewis/zlib",
+        "file": "reader.mbt",
+        "line": 50,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "new",
+          "docstring": "\n Reader::new creates a new ReadCloser.\n Reads from the returned ReadCloser read and decompress data from r.\n If r does not implement [io.ByteReader], the decompressor may read more\n data than necessary from r.\n It is the caller's responsibility to call close on the ReadCloser when done.\n\n The [io.ReadCloser] returned by Reader::new also implements [Resetter].",
+          "signature": "fn <a href=\"gmlewis/zlib#Reader\">Reader</a>::new(r : <a href=\"gmlewis/flate#Reader\">@gmlewis/flate.Reader</a>) -> (<a href=\"gmlewis/io#ReadCloser\">@gmlewis/io.ReadCloser</a>, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+          "loc": {
+            "path": "gmlewis/zlib",
+            "file": "reader.mbt",
+            "line": 76,
+            "column": 16
+          }
+        },
+        {
+          "name": "new_dict",
+          "docstring": "\n Reader::new_dict is like [Reader::new] but uses a preset dictionary.\n Reader::new_dict ignores the dictionary if the compressed data does not refer to it.\n If the compressed data refers to a different dictionary, Reader::new_dict returns [err_dictionary].\n\n The ReadCloser returned by Reader::new_dict also implements [Resetter].",
+          "signature": "fn <a href=\"gmlewis/zlib#Reader\">Reader</a>::new_dict(r : <a href=\"gmlewis/flate#Reader\">@gmlewis/flate.Reader</a>, dict : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (<a href=\"gmlewis/io#ReadCloser\">@gmlewis/io.ReadCloser</a>, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+          "loc": {
+            "path": "gmlewis/zlib",
+            "file": "reader.mbt",
+            "line": 86,
+            "column": 16
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Reader", "path": "gmlewis/zlib" },
+            "arguments": []
+          },
+          "trait": { "name": "Closer", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "close",
+              "docstring": "\n Calling close does not close the wrapped [io.Reader] originally passed to [Reader::new].\n In order for the ZLIB checksum to be verified, the reader must be\n fully consumed until the [io.eof].",
+              "signature": "fn close(self : <a href=\"gmlewis/zlib#Reader\">Reader</a>) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+              "loc": {
+                "path": "gmlewis/zlib",
+                "file": "reader.mbt",
+                "line": 150,
+                "column": 37
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Reader", "path": "gmlewis/zlib" },
+            "arguments": []
+          },
+          "trait": { "name": "Reader", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "read",
+              "docstring": "",
+              "signature": "fn read(self : <a href=\"gmlewis/zlib#Reader\">Reader</a>, p : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/zlib",
+                "file": "reader.mbt",
+                "line": 102,
+                "column": 37
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Reader", "path": "gmlewis/zlib" },
+            "arguments": []
+          },
+          "trait": { "name": "Resetter", "path": "gmlewis/zlib" },
+          "methods": [
+            {
+              "name": "reset",
+              "docstring": "",
+              "signature": "fn reset(self : <a href=\"gmlewis/zlib#Reader\">Reader</a>, r : <a href=\"gmlewis/flate#Reader\">@gmlewis/flate.Reader</a>, dict : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+              "loc": {
+                "path": "gmlewis/zlib",
+                "file": "reader.mbt",
+                "line": 159,
+                "column": 35
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Writer",
+      "docstring": "",
+      "signature": "type Writer",
+      "loc": {
+        "path": "gmlewis/zlib",
+        "file": "writer.mbt",
+        "line": 11,
+        "column": 8
+      },
+      "methods": [
+        {
+          "name": "flush",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/zlib#Writer\">Writer</a>::flush(self : <a href=\"gmlewis/zlib#Writer\">Writer</a>) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+          "loc": {
+            "path": "gmlewis/zlib",
+            "file": "writer.mbt",
+            "line": 135,
+            "column": 8
+          }
+        },
+        {
+          "name": "new",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/zlib#Writer\">Writer</a>::new(w : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>) -> <a href=\"gmlewis/zlib#Writer\">Writer</a>",
+          "loc": {
+            "path": "gmlewis/zlib",
+            "file": "writer.mbt",
+            "line": 28,
+            "column": 16
+          }
+        },
+        {
+          "name": "new_dict",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/zlib#Writer\">Writer</a>::new_dict(w : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>, dict : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> <a href=\"gmlewis/zlib#Writer\">Writer</a>",
+          "loc": {
+            "path": "gmlewis/zlib",
+            "file": "writer.mbt",
+            "line": 34,
+            "column": 16
+          }
+        },
+        {
+          "name": "reset",
+          "docstring": "",
+          "signature": "fn <a href=\"gmlewis/zlib#Writer\">Writer</a>::reset(self : <a href=\"gmlewis/zlib#Writer\">Writer</a>, w : <a href=\"gmlewis/io#Writer\">@gmlewis/io.Writer</a>) -> Unit",
+          "loc": {
+            "path": "gmlewis/zlib",
+            "file": "writer.mbt",
+            "line": 50,
+            "column": 16
+          }
+        }
+      ],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Writer", "path": "gmlewis/zlib" },
+            "arguments": []
+          },
+          "trait": { "name": "Closer", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "close",
+              "docstring": "",
+              "signature": "fn close(self : <a href=\"gmlewis/zlib#Writer\">Writer</a>) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+              "loc": {
+                "path": "gmlewis/zlib",
+                "file": "writer.mbt",
+                "line": 149,
+                "column": 37
+              }
+            }
+          ]
+        },
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": { "name": "Writer", "path": "gmlewis/zlib" },
+            "arguments": []
+          },
+          "trait": { "name": "Writer", "path": "gmlewis/io" },
+          "methods": [
+            {
+              "name": "write",
+              "docstring": "\n write writes a compressed form of p to the underlying io.Writer. The\n compressed bytes are not necessarily flushed until the Writer is closed or\n explicitly flushed.",
+              "signature": "fn write(self : <a href=\"gmlewis/zlib#Writer\">Writer</a>, p : <a href=\"gmlewis/io#Slice\">@gmlewis/io.Slice</a>[Byte]) -> (Int, <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?)",
+              "loc": {
+                "path": "gmlewis/zlib",
+                "file": "writer.mbt",
+                "line": 114,
+                "column": 37
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "err_checksum",
+      "docstring": "\n err_checksum is returned when reading ZLIB data that has an invalid checksum.",
+      "signature": "let err_checksum : <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>",
+      "loc": {
+        "path": "gmlewis/zlib",
+        "file": "reader.mbt",
+        "line": 39,
+        "column": 9
+      }
+    },
+    {
+      "name": "err_dictionary",
+      "docstring": "\n err_dictionary is returned when reading ZLIB data that has an invalid dictionary.",
+      "signature": "let err_dictionary : <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>",
+      "loc": {
+        "path": "gmlewis/zlib",
+        "file": "reader.mbt",
+        "line": 43,
+        "column": 9
+      }
+    },
+    {
+      "name": "err_header",
+      "docstring": "\n err_header is returned when reading ZLIB data that has an invalid header.",
+      "signature": "let err_header : <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>",
+      "loc": {
+        "path": "gmlewis/zlib",
+        "file": "reader.mbt",
+        "line": 47,
+        "column": 9
+      }
+    },
+    {
+      "name": "flush",
+      "docstring": "",
+      "signature": "fn flush(self : <a href=\"gmlewis/zlib#Writer\">Writer</a>) -> <a href=\"gmlewis/io#IOError\">@gmlewis/io.IOError</a>?",
+      "loc": {
+        "path": "gmlewis/zlib",
+        "file": "writer.mbt",
+        "line": 135,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "module",
+  "meta_info": {
+    "name": "peter-jerry-ye/io",
+    "version": "0.2.3",
+    "deps": {
+      "peter-jerry-ye/async": "0.1.1",
+      "peter-jerry-ye/wasi-imports": "0.1.4",
+      "moonbitlang/x": "0.4.23"
+    },
+    "readme": "README.md",
+    "repository": "https://github.com/peter-jerry-ye/io.mbt",
+    "license": "Apache-2.0",
+    "keywords": [],
+    "description": "",
+    "source": "src"
+  },
+  "readme_content": "# IO Library\n\nThis library provides:\n\n- `channel`: an async channel\n- `io`: performing an IO operation, provided by wasi-cli v0.2.0\n- `http`: sending HTTP requests, provided by wasi-http v0.2.0\n\n## Usage\n\nThis project relies on the [async library](https://github.com/peter-jerry-ye/async.mbt).\n\nTypically, one should first define operations using `@promise.spawn`, and then use `@io.event_loop.run()` (this requires importing `@peter-jerry-ye/async/loop`) to start the event loop.\n\n## TODO\n\n- Add more utility functions, such as read a buffer\n- Add sync operations so that we don't rely on the event loop\n- Add documentation",
+  "module_index": "peter-jerry-ye/io/module_index.json"
+}

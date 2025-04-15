@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/random/insecure",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "The insecure interface for insecure pseudo-random numbers.\n\nIt is intended to be portable at least between Unix-family platforms and\nWindows.",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/random/insecure/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

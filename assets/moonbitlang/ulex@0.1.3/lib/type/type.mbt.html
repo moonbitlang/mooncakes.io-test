@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Moonbit docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/one-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script
+    src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+  <pre><code class="moonbit">///|
+pub(all) enum Regex {
+  EOF
+  Character(@eof_char_set.T)
+  Repetition(Regex) // repeat at least once
+  Epsilon
+  Alter(Regex, Regex)
+  Concat(Regex, Regex)
+  Capture(Regex, String)
+} derive(Show, Eq, ToJson)
+
+///|
+pub(all) enum VarType {
+  Char
+  String
+} derive(Show)
+
+///|
+pub fn check_legal(self : Regex) -> Bool {
+  // there're two special rules for our regex
+  // 1. Capture can't be inside of Option/Repetition/Alter
+  // 2. Capture names can't duplicate
+
+  self.check_legal_rec(Set::from_array([]), false)
+}
+
+///|
+fn check_legal_rec(
+  self : Regex,
+  names : Set[String],
+  ban_capture : Bool
+) -> Bool {
+  match self {
+    Capture(re, name) =>
+      if ban_capture {
+        false
+      } else if names.contains(name) {
+        false
+      } else {
+        names.add(name)
+        re.check_legal_rec(names, ban_capture)
+      }
+    Character(_) | EOF => true
+    Concat(re1, re2) =>
+      re1.check_legal_rec(names, ban_capture) &&
+      re2.check_legal_rec(names, ban_capture)
+    Alter(re1, re2) =>
+      re1.check_legal_rec(names, true) && re2.check_legal_rec(names, true)
+    Repetition(re) => re.check_legal_rec(names, true)
+    Epsilon => true
+  }
+}
+
+///|
+priv enum ReLen {
+  Zero
+  One
+  Many
+}
+
+///|
+pub fn get_char_vars(re : Regex) -> @immut/sorted_set.T[String] {
+  fn analyze(
+    re : Regex
+  ) -> (@immut/sorted_set.T[String], @immut/sorted_set.T[String], ReLen) {
+    match re {
+      Epsilon | EOF => (@immut/sorted_set.new(), @immut/sorted_set.new(), Zero)
+      Character(_) => (@immut/sorted_set.new(), @immut/sorted_set.new(), One)
+      Repetition(re) => {
+        let (char_vars, str_vars, len) = analyze(re)
+        match len {
+          Zero => (char_vars, str_vars, Zero)
+          One => (char_vars, str_vars, Many)
+          Many => (char_vars, str_vars, Many)
+        }
+      }
+      Concat(re1, re2) => {
+        let (char_vars1, str_vars1, len1) = analyze(re1)
+        let (char_vars2, str_vars2, len2) = analyze(re2)
+        (
+          char_vars1.union(char_vars2),
+          str_vars1.union(str_vars2),
+          match (len1, len2) {
+            (Zero, len) | (len, Zero) => len
+            (Many, _) | (_, Many) => Many
+            (One, One) => Many
+          },
+        )
+      }
+      Alter(re1, re2) => {
+        let (char_vars1, str_vars1, len1) = analyze(re1)
+        let (char_vars2, str_vars2, len2) = analyze(re2)
+        (
+          char_vars1.union(char_vars2),
+          str_vars1.union(str_vars2),
+          match (len1, len2) {
+            (One, One) => One
+            (Zero | Many, _) | (_, Zero | Many) => Many
+          },
+        )
+      }
+      Capture(re, var) => {
+        let (char_vars, str_vars, len) = analyze(re)
+        match len {
+          One => (char_vars.add(var), str_vars, One)
+          Zero | Many => (char_vars, str_vars.add(var), len)
+        }
+      }
+    }
+  }
+
+  let (char_vars, str_vars, _len) = analyze(re)
+  char_vars.difference(str_vars)
+}
+
+///|
+pub fn get_capture_names(self : Regex) -> Array[(String, VarType)] {
+  let char_vars = get_char_vars(self)
+  let result = self
+    .get_capture_names_rec()
+    .map(fn(var) {
+      match char_vars.contains(var) {
+        true => (var, Char)
+        false => (var, String)
+      }
+    })
+    .to_array()
+  if Map::from_array(result).size() != result.length() {
+    abort("Duplicate capture names")
+  }
+  result
+}
+
+///|
+fn get_capture_names_rec(self : Regex) -> Iter[String] {
+  match self {
+    Capture(re, name) => re.get_capture_names_rec().append(name)
+    Repetition(re) => re.get_capture_names_rec()
+    Alter(re1, re2) | Concat(re1, re2) =>
+      re1.get_capture_names_rec().concat(re2.get_capture_names_rec())
+    EOF | Character(_) | Epsilon => Iter::empty()
+  }
+}
+
+///|
+pub typealias CodeBlock = String
+
+///|
+pub(all) struct Rule {
+  name : String
+  signature : String
+  patterns : Array[(Regex, CodeBlock)]
+} derive(Show, ToJson)
+
+///|
+pub(all) struct Lex {
+  header : CodeBlock
+  rules : Array[Rule]
+  trailer : CodeBlock
+} derive(Show, ToJson)
+</code></pre>
+  <script>
+    let moonbitLanguageFn = hljs => {
+      return {
+        case_insensitive: true,
+        keywords: {
+          keyword: 'func fn enum struct type if else match return continue break while let var interface pub priv readonly',
+          literal: 'true false',
+          type: "Int Int64 Double String Bool Char Bytes Option Array Result",
+          built_in: 'lsl lsr asr shl shr land lor lxor Show Debug Hash Eq Compare Some None'
+        },
+        contains: [
+          {
+            scope: "char",
+            begin: "'", end: "'"
+          },
+          {
+            scope: "string",
+            begin: "\"", end: "\""
+          },
+          {
+            scope: "number",
+            begin: "\\b\\d+(\\.\\d+)?\\b"
+          },
+          {
+            scope: "codelink",
+            match: /\<a href\="(?<link>[^<>]+?)"\>(?<code>[^\/<>]+?)\<\/a\>/g
+          },
+          hljs.COMMENT(
+            '//', // begin
+            '\n', // end
+          )
+        ]
+      }
+    }
+
+    hljs.registerLanguage('moonbit', moonbitLanguageFn);
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+
+    const number = window.location.href.split('#')[1];
+
+    function waitForLineNumbers() {
+      setTimeout(function () {
+        const target = document.querySelector(`.hljs-ln-line[data-line-number="${number}"]`);
+        if (target == null) waitForLineNumbers();
+        else target.scrollIntoView();
+      }, 50);
+    }
+
+    waitForLineNumbers()
+
+  </script>
+  <style>
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .hljs-ln-n {
+      color: #ccc;
+      border-right: 1px solid #dfdddd;
+      margin-right: 1em;
+      text-align: center;
+      vertical-align: top;
+      padding-right: 0.5em;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+  </style>
+</body>
+
+</html>

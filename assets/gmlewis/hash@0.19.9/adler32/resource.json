@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "adler32",
+  "module_path": "gmlewis/hash",
+  "readme_content": "",
+  "package_data": "gmlewis/hash/adler32/package_data.json",
+  "source_files": [ "adler32.mbt" ]
+}

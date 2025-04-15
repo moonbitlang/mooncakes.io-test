@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "string_lexing/lexengine",
+  "module_path": "moonbitlang/ulex-runtime",
+  "readme_content": "",
+  "package_data": "moonbitlang/ulex-runtime/string_lexing/lexengine/package_data.json",
+  "source_files": [ "lexengine.mbt" ]
+}

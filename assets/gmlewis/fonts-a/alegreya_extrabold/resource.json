@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "alegreya_extrabold",
+  "module_path": "gmlewis/fonts-a",
+  "readme_content": "",
+  "package_data": "gmlewis/fonts-a/alegreya_extrabold/package_data.json",
+  "source_files": [ "alegreya_extrabold.mbt" ]
+}

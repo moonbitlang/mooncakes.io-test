@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "dialog",
+  "module_path": "Yoorkin/rabbit-tea",
+  "readme_content": "",
+  "package_data": "Yoorkin/rabbit-tea/dialog/package_data.json",
+  "source_files": [ "aliases.mbt", "dialog.mbt" ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "sha1",
+      "package": {
+        "path": "gmlewis/sha1",
+        "traits": [],
+        "types": [
+          {
+            "name": "Digest",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Digest", "path": "gmlewis/sha1" },
+                  "arguments": []
+                },
+                "trait": { "name": "ByteWriter", "path": "gmlewis/io" },
+                "methods": [ "write_byte" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Digest", "path": "gmlewis/sha1" },
+                  "arguments": []
+                },
+                "trait": { "name": "Writer", "path": "gmlewis/io" },
+                "methods": [ "write" ]
+              }
+            ],
+            "methods": [ "check_sum", "new", "reset" ]
+          }
+        ],
+        "typealias": [],
+        "values": [ "check_sum", "reset" ],
+        "misc": []
+      },
+      "childs": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "ctypes",
+  "module_path": "lijunchen/test_esp32",
+  "readme_content": "",
+  "package_data": "lijunchen/test_esp32/ctypes/package_data.json",
+  "source_files": [ "lib.mbt", "c_string.mbt" ]
+}

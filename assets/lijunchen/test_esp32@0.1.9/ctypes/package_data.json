@@ -1,0 +1,60 @@
+{
+  "name": "lijunchen/test_esp32/ctypes",
+  "traits": [],
+  "types": [
+    {
+      "name": "CString",
+      "docstring": "",
+      "signature": "pub type CString Bytes",
+      "loc": {
+        "path": "lijunchen/test_esp32/ctypes",
+        "file": "c_string.mbt",
+        "line": 2,
+        "column": 10
+      },
+      "methods": [
+        {
+          "name": "from_bytes",
+          "docstring": "",
+          "signature": "fn <a href=\"lijunchen/test_esp32/ctypes#CString\">CString</a>::from_bytes(data : Bytes) -> <a href=\"lijunchen/test_esp32/ctypes#CString\">CString</a>",
+          "loc": {
+            "path": "lijunchen/test_esp32/ctypes",
+            "file": "c_string.mbt",
+            "line": 5,
+            "column": 17
+          }
+        }
+      ],
+      "impls": []
+    },
+    {
+      "name": "Ptr",
+      "docstring": "",
+      "signature": "pub extern type Ptr[_]",
+      "loc": {
+        "path": "lijunchen/test_esp32/ctypes",
+        "file": "lib.mbt",
+        "line": 2,
+        "column": 17
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Void",
+      "docstring": "",
+      "signature": "pub extern type Void",
+      "loc": {
+        "path": "lijunchen/test_esp32/ctypes",
+        "file": "lib.mbt",
+        "line": 5,
+        "column": 17
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

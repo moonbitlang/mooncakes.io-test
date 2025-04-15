@@ -1,0 +1,119 @@
+{
+  "name": "gmlewis",
+  "package": null,
+  "childs": [
+    {
+      "name": "gzip",
+      "package": {
+        "path": "gmlewis/gzip",
+        "traits": [],
+        "types": [
+          {
+            "name": "CompressionLevel",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "CompressionLevel",
+                    "path": "gmlewis/gzip"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Compare",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "compare" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "CompressionLevel",
+                    "path": "gmlewis/gzip"
+                  },
+                  "arguments": []
+                },
+                "trait": { "name": "Eq", "path": "moonbitlang/core/builtin" },
+                "methods": [ "op_equal" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": {
+                    "name": "CompressionLevel",
+                    "path": "gmlewis/gzip"
+                  },
+                  "arguments": []
+                },
+                "trait": {
+                  "name": "Show",
+                  "path": "moonbitlang/core/builtin"
+                },
+                "methods": [ "output" ]
+              }
+            ],
+            "methods": []
+          },
+          { "name": "Header", "impls": [], "methods": [ "new" ] },
+          {
+            "name": "Reader",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Reader", "path": "gmlewis/gzip" },
+                  "arguments": []
+                },
+                "trait": { "name": "Closer", "path": "gmlewis/io" },
+                "methods": [ "close" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Reader", "path": "gmlewis/gzip" },
+                  "arguments": []
+                },
+                "trait": { "name": "Reader", "path": "gmlewis/io" },
+                "methods": [ "read" ]
+              }
+            ],
+            "methods": [ "multistream", "new", "reset" ]
+          },
+          {
+            "name": "Writer",
+            "impls": [
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Writer", "path": "gmlewis/gzip" },
+                  "arguments": []
+                },
+                "trait": { "name": "Closer", "path": "gmlewis/io" },
+                "methods": [ "close" ]
+              },
+              {
+                "self": {
+                  "kind": "constr",
+                  "constructor": { "name": "Writer", "path": "gmlewis/gzip" },
+                  "arguments": []
+                },
+                "trait": { "name": "Writer", "path": "gmlewis/io" },
+                "methods": [ "write" ]
+              }
+            ],
+            "methods": [ "flush", "new" ]
+          }
+        ],
+        "typealias": [],
+        "values": [
+          "best_speed", "err_checksum", "err_header", "err_unexpected_eof",
+          "flush", "ioeof", "multistream", "reset"
+        ],
+        "misc": []
+      },
+      "childs": []
+    }
+  ]
+}

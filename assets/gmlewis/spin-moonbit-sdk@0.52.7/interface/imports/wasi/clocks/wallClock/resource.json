@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "interface/imports/wasi/clocks/wallClock",
+  "module_path": "gmlewis/spin-moonbit-sdk",
+  "readme_content": "WASI Wall Clock is a clock API intended to let users query the current\ntime. The name \"wall\" makes an analogy to a \"clock on the wall\", which\nis not necessarily monotonic as it may be reset.\n\nIt is intended to be portable at least between Unix-family platforms and\nWindows.\n\nA wall clock is a clock which measures the date and time according to\nsome external reference.\n\nExternal references may be reset, so this clock is not necessarily\nmonotonic, making it unsuitable for measuring elapsed time.\n\nIt is intended for reporting the current date and time for humans.",
+  "package_data": "gmlewis/spin-moonbit-sdk/interface/imports/wasi/clocks/wallClock/package_data.json",
+  "source_files": [ "ffi.mbt", "top.mbt" ]
+}

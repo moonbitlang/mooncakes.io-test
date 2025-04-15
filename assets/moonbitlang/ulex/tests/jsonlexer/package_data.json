@@ -1,0 +1,22 @@
+{
+  "name": "moonbitlang/ulex/tests/jsonlexer",
+  "traits": [],
+  "types": [
+    {
+      "name": "LexError",
+      "docstring": "",
+      "signature": "pub enum LexError {\n  EndOfFile\n  UnexpectedEndOfFile\n  Unrecognized(String)\n}",
+      "loc": {
+        "path": "moonbitlang/ulex/tests/jsonlexer",
+        "file": "jsonlexer.mbt",
+        "line": 17,
+        "column": 11
+      },
+      "methods": [],
+      "impls": []
+    }
+  ],
+  "typealias": [],
+  "values": [],
+  "misc": []
+}

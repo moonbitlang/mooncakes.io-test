@@ -1,0 +1,8 @@
+{
+  "kind": "package",
+  "relative_path": "lib/codegen",
+  "module_path": "moonbitlang/ulex",
+  "readme_content": "",
+  "package_data": "moonbitlang/ulex/lib/codegen/package_data.json",
+  "source_files": [ "typealias.mbt", "codegen.mbt" ]
+}

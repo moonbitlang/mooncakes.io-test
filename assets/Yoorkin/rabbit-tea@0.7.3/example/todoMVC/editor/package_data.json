@@ -1,0 +1,143 @@
+{
+  "name": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+  "traits": [],
+  "types": [
+    {
+      "name": "Card",
+      "docstring": "",
+      "signature": "type Card",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+        "file": "editor.mbt",
+        "line": 9,
+        "column": 8
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Card",
+              "path": "Yoorkin/rabbit-tea/example/todoMVC/editor"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Card\">Card</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+                "file": "editor.mbt",
+                "line": 13,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Model",
+      "docstring": "",
+      "signature": "type Model",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+        "file": "editor.mbt",
+        "line": 2,
+        "column": 6
+      },
+      "methods": [],
+      "impls": []
+    },
+    {
+      "name": "Msg",
+      "docstring": "",
+      "signature": "type Msg",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+        "file": "editor.mbt",
+        "line": 16,
+        "column": 6
+      },
+      "methods": [],
+      "impls": [
+        {
+          "self": {
+            "kind": "constr",
+            "constructor": {
+              "name": "Msg",
+              "path": "Yoorkin/rabbit-tea/example/todoMVC/editor"
+            },
+            "arguments": []
+          },
+          "trait": { "name": "Show", "path": "moonbitlang/core/builtin" },
+          "methods": [
+            {
+              "name": "output",
+              "docstring": "automatically derived",
+              "signature": "fn output(<a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Msg\">Msg</a>, <a href=\"moonbitlang/core/builtin#Logger\">Logger</a>) -> Unit",
+              "loc": {
+                "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+                "file": "editor.mbt",
+                "line": 22,
+                "column": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typealias": [],
+  "values": [
+    {
+      "name": "decode_card",
+      "docstring": "",
+      "signature": "fn decode_card(data : <a href=\"moonbitlang/core/json#Json\">Json</a>) -> <a href=\"moonbitlang/core/result#Result\">Result</a>[<a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Card\">Card</a>, String]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+        "file": "editor.mbt",
+        "line": 40,
+        "column": 8
+      }
+    },
+    {
+      "name": "load",
+      "docstring": "",
+      "signature": "fn load(index : Int?) -> (<a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[<a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Msg\">Msg</a>], <a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Model\">Model</a>)",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+        "file": "editor.mbt",
+        "line": 25,
+        "column": 8
+      }
+    },
+    {
+      "name": "update",
+      "docstring": "",
+      "signature": "fn update(msg : <a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Msg\">Msg</a>, model : <a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Model\">Model</a>) -> (<a href=\"Yoorkin/rabbit-tea/cmd#Cmd\">@Yoorkin/rabbit-tea/cmd.Cmd</a>[<a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Msg\">Msg</a>], <a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Model\">Model</a>)",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+        "file": "editor.mbt",
+        "line": 49,
+        "column": 8
+      }
+    },
+    {
+      "name": "view",
+      "docstring": "",
+      "signature": "fn view(model : <a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Model\">Model</a>) -> <a href=\"Yoorkin/rabbit-tea/html#T\">@Yoorkin/rabbit-tea/html.T</a>[<a href=\"Yoorkin/rabbit-tea/example/todoMVC/editor#Msg\">Msg</a>]",
+      "loc": {
+        "path": "Yoorkin/rabbit-tea/example/todoMVC/editor",
+        "file": "editor.mbt",
+        "line": 97,
+        "column": 8
+      }
+    }
+  ],
+  "misc": []
+}
